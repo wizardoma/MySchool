@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="Add React initial setup" />
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="Add Spring Boot initial setup">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,8 +31,11 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -65,7 +72,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1619291712048</updated>
-      <workItem from="1619291718186" duration="1690000" />
+      <workItem from="1619291718186" duration="6562000" />
+      <workItem from="1619353189485" duration="595000" />
+      <workItem from="1619412557024" duration="447000" />
     </task>
     <task id="LOCAL-00001" summary="Add Readme.md File">
       <created>1619292309474</created>
@@ -88,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619293007862</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add Spring Boot initial setup">
+      <created>1619293485981</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1619293485981</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,13 +114,18 @@
     <MESSAGE value="Add Readme.md File" />
     <MESSAGE value="Add .gitignore File" />
     <MESSAGE value="Add React initial setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add React initial setup" />
+    <MESSAGE value="Add Spring Boot initial setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Spring Boot initial setup" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="#Project_Structure/0.0.1600.860@0.0.1600.860" timestamp="1619291730634" />
+    <state x="580" y="127" key="FileChooserDialogImpl" timestamp="1619412936855">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="580" y="127" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1619412936855" />
     <state x="658" y="328" width="283" height="287" key="Github.ShareDialog" timestamp="1619292050525">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -113,13 +134,13 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="589" y="135" key="Github.UntrackedFilesDialog/0.0.1600.860@0.0.1600.860" timestamp="1619292079863" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1619293014540">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1619293490742">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1619293014540" />
-    <state x="182" y="51" key="new project wizard" timestamp="1619293271286">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1619293490742" />
+    <state x="182" y="51" width="1235" height="649" key="new project wizard" timestamp="1619412998592">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="182" y="51" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1619293271286" />
+    <state x="182" y="51" width="1235" height="649" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1619412998592" />
   </component>
 </project>
