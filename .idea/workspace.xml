@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="remove reactjs from project">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add necessary packages">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/pubspec.yaml" afterDir="false" />
     </list>
@@ -32,11 +34,20 @@
     <execution />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="Huawei_Android_10_API_29_" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1rd2asS3JvBByg79NAVInNTU5oD" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -99,7 +110,7 @@
       <workItem from="1619353189485" duration="595000" />
       <workItem from="1619412557024" duration="447000" />
       <workItem from="1619413039726" duration="344000" />
-      <workItem from="1623856399210" duration="906000" />
+      <workItem from="1623856399210" duration="5648000" />
     </task>
     <task id="LOCAL-00001" summary="Add Readme.md File">
       <created>1619292309474</created>
@@ -143,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623856551218</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add necessary packages">
+      <created>1623858051476</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1623858051476</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,7 +186,8 @@
     <MESSAGE value="Add Spring Boot initial setup" />
     <MESSAGE value="Add Flutter for Mobile Application" />
     <MESSAGE value="remove reactjs from project" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove reactjs from project" />
+    <MESSAGE value="add necessary packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="add necessary packages" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
@@ -191,10 +210,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="465" y="135" key="NewModule_or_Project.wizard/0.0.1600.860@0.0.1600.860" timestamp="1619413260096" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1623856553999">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1623858055287">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1623856553999" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1623858055287" />
     <state x="182" y="51" width="1235" height="649" key="new project wizard" timestamp="1619412998592">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
