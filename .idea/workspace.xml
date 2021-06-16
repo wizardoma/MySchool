@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="Add Spring Boot initial setup">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="Add Flutter for Mobile Application">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +30,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Huawei_Android_10_API_29_" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -30,6 +47,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -50,7 +68,11 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Debug Application">
+  <component name="RunManager" selected="Flutter.main.dart">
+    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
+      <option name="filePath" value="$PROJECT_DIR$/app/lib/main.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -75,6 +97,7 @@
       <workItem from="1619291718186" duration="6562000" />
       <workItem from="1619353189485" duration="595000" />
       <workItem from="1619412557024" duration="447000" />
+      <workItem from="1619413039726" duration="344000" />
     </task>
     <task id="LOCAL-00001" summary="Add Readme.md File">
       <created>1619292309474</created>
@@ -104,28 +127,47 @@
       <option name="project" value="LOCAL" />
       <updated>1619293485981</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add Flutter for Mobile Application">
+      <created>1619413341058</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1619413341058</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add Readme.md File" />
     <MESSAGE value="Add .gitignore File" />
     <MESSAGE value="Add React initial setup" />
     <MESSAGE value="Add Spring Boot initial setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Spring Boot initial setup" />
+    <MESSAGE value="Add Flutter for Mobile Application" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Flutter for Mobile Application" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="#Project_Structure/0.0.1600.860@0.0.1600.860" timestamp="1619291730634" />
-    <state x="580" y="127" key="FileChooserDialogImpl" timestamp="1619412936855">
+    <state x="580" y="127" key="FileChooserDialogImpl" timestamp="1619413232366">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="580" y="127" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1619412936855" />
+    <state x="580" y="127" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1619413232366" />
     <state x="658" y="328" width="283" height="287" key="Github.ShareDialog" timestamp="1619292050525">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -134,10 +176,14 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="589" y="135" key="Github.UntrackedFilesDialog/0.0.1600.860@0.0.1600.860" timestamp="1619292079863" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1619293490742">
+    <state x="465" y="135" key="NewModule_or_Project.wizard" timestamp="1619413260096">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1619293490742" />
+    <state x="465" y="135" key="NewModule_or_Project.wizard/0.0.1600.860@0.0.1600.860" timestamp="1619413260096" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1619413345741">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1619413345741" />
     <state x="182" y="51" width="1235" height="649" key="new project wizard" timestamp="1619412998592">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
