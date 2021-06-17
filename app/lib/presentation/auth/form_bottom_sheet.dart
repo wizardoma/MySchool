@@ -14,6 +14,7 @@ class FormBottomSheet extends StatelessWidget {
     return Container(
       height: mQ.height * 0.9,
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             height: kToolbarHeight,
@@ -79,7 +80,7 @@ class FormBottomSheet extends StatelessWidget {
                         padding: EdgeInsets.symmetric(vertical: 10),
                         height: kToolbarHeight,
                         child: Text(
-                          "$title on MySchool",
+                          "$title for MySchool",
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 20),
                         ),
