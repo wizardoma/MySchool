@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="enforce portrait orientation">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="fix: keyboard overflow on bottomsheet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/pubspec.yaml" afterDir="false" />
@@ -32,10 +32,11 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="DEFNW18C21001964" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Huawei_Android_10_API_29_" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="stateful_widget" />
         <option value="Dart File" />
       </list>
     </option>
@@ -122,7 +123,9 @@
       <workItem from="1619412557024" duration="447000" />
       <workItem from="1619413039726" duration="344000" />
       <workItem from="1623856399210" duration="11676000" />
-      <workItem from="1623934373743" duration="4809000" />
+      <workItem from="1623934373743" duration="20503000" />
+      <workItem from="1623996032270" duration="1482000" />
+      <workItem from="1624001941670" duration="9013000" />
     </task>
     <task id="LOCAL-00001" summary="Add Readme.md File">
       <created>1619292309474</created>
@@ -180,7 +183,42 @@
       <option name="project" value="LOCAL" />
       <updated>1623867589597</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add home screen">
+      <created>1623939468012</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1623939468012</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add form button sheet for login and signup">
+      <created>1623943477932</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1623943477932</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add login screen">
+      <created>1623945419701</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1623945419701</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add login screen">
+      <created>1623945443304</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1623945443304</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fix: keyboard overflow on bottomsheet">
+      <created>1623997139027</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1623997139027</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,13 +245,25 @@
     <MESSAGE value="remove reactjs from project" />
     <MESSAGE value="add necessary packages" />
     <MESSAGE value="enforce portrait orientation" />
-    <option name="LAST_COMMIT_MESSAGE" value="enforce portrait orientation" />
+    <MESSAGE value="add home screen" />
+    <MESSAGE value="Add form button sheet for login and signup" />
+    <MESSAGE value="Add login screen" />
+    <MESSAGE value="fix: keyboard overflow on bottomsheet" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: keyboard overflow on bottomsheet" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="#Project_Structure/0.0.1600.860@0.0.1600.860" timestamp="1619291730634" />
+    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1623942059686">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1623942059686" />
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1623997523851">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1623997523851" />
     <state x="580" y="127" key="FileChooserDialogImpl" timestamp="1619413232366">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -226,33 +276,37 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="589" y="135" key="Github.UntrackedFilesDialog/0.0.1600.860@0.0.1600.860" timestamp="1619292079863" />
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1623939230304">
+    <state width="1557" height="216" key="GridCell.Tab.0.bottom" timestamp="1624012381433">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1623939230304" />
-    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1623939230303">
+    <state width="1557" height="216" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1624012381433" />
+    <state width="1557" height="216" key="GridCell.Tab.0.center" timestamp="1624012381432">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1623939230303" />
-    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1623939230303">
+    <state width="1557" height="216" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1624012381432" />
+    <state width="1557" height="216" key="GridCell.Tab.0.left" timestamp="1624012381430">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1623939230303" />
-    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1623939230304">
+    <state width="1557" height="216" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1624012381430" />
+    <state width="1557" height="216" key="GridCell.Tab.0.right" timestamp="1624012381432">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1623939230304" />
+    <state width="1557" height="216" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1624012381432" />
     <state x="465" y="135" key="NewModule_or_Project.wizard" timestamp="1619413260096">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="465" y="135" key="NewModule_or_Project.wizard/0.0.1600.860@0.0.1600.860" timestamp="1619413260096" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1623867592079">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1623997143046">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1623867592079" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1623997143046" />
     <state x="182" y="51" width="1235" height="649" key="new project wizard" timestamp="1623934816219">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="182" y="51" width="1235" height="649" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1623934816219" />
+    <state x="456" y="195" key="run.anything.popup" timestamp="1624003288452">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1624003288452" />
   </component>
 </project>
