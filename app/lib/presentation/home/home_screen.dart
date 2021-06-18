@@ -1,3 +1,4 @@
+import 'package:app/presentation/home/drawer/drawer.dart';
 import 'package:app/presentation/home/follows/following_screen.dart';
 import 'package:app/presentation/home/home_feeds.dart';
 import 'package:app/presentation/home/notifications/notifications_screen.dart';
@@ -39,12 +40,17 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: HomeDrawer(),
+      ),
       appBar: AppBar(
         elevation: 0.5,
-        leading: Image.asset(
-          "assets/icons/student.png",
-          width: 45,
-          height: 45,
+        leading: GestureDetector(
+          child: Image.asset(
+            "assets/icons/student.png",
+            width: 45,
+            height: 45,
+          ),
         ),
         backgroundColor: Colors.grey.shade100,
         title: Text(
