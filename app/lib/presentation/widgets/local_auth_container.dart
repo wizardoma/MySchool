@@ -13,15 +13,15 @@ class LocalAuthContainer extends StatelessWidget {
       padding: EdgeInsets.all(10),
       margin: EdgeInsets.symmetric(horizontal: 5),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30),
+        borderRadius: BorderRadius.circular(30),
         color: Colors.grey.shade600,
       ),
-      child: Text(
-        title,
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.bold
+      child: InkWell(
+        onTap: onTap,
+        child: Text(
+          title,
+          textAlign: TextAlign.center,
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
       ),
     );

@@ -2,12 +2,12 @@ import 'package:app/presentation/auth/form_bottom_sheet.dart';
 import 'package:app/presentation/widgets/text_input_field.dart';
 import 'package:flutter/material.dart';
 
-class LoginContainer extends StatefulWidget {
+class LoginScreen extends StatefulWidget {
   @override
-  _LoginContainerState createState() => _LoginContainerState();
+  _LoginScreenState createState() => _LoginScreenState();
 }
 
-class _LoginContainerState extends State<LoginContainer> {
+class _LoginScreenState extends State<LoginScreen> {
   TextEditingController _emailController;
   TextEditingController _passwordController;
 
@@ -39,6 +39,7 @@ class _LoginContainerState extends State<LoginContainer> {
               textEditingController: _passwordController,
               title: "Password",
               placeholder: "Your password",
+              isPassword: true,
             ),
             Text(
               "Forgot password?",
