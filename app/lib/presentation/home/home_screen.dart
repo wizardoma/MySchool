@@ -25,6 +25,10 @@ class _HomeScreenState extends State<HomeScreen> {
   int _currNavIndex = 0;
   List<Widget> _children;
 
+  void _openDrawer(BuildContext ctx) {
+    Scaffold.of(ctx).openDrawer();
+  }
+
   @override
   void initState() {
     _children = [
@@ -40,16 +44,18 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        child: HomeDrawer(),
-      ),
+      drawerEnableOpenDragGesture: false,
+      drawer: HomeDrawer(),
       appBar: AppBar(
         elevation: 0.5,
-        leading: GestureDetector(
-          child: Image.asset(
-            "assets/icons/student.png",
-            width: 45,
-            height: 45,
+        leading: Builder(
+          builder:(context)=> GestureDetector(
+            onTap:() =>_openDrawer(context),
+            child: Image.asset(
+              "assets/icons/student.png",
+              width: 45,
+              height: 45,
+            ),
           ),
         ),
         backgroundColor: Colors.grey.shade100,

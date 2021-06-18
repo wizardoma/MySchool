@@ -59,6 +59,8 @@ flutter:
     - assets/icons/facebook.png
     - assets/icons/google.png
     - assets/images/myschool_landing.jpg
+    - assets/icons/student.png
+
 
 
   # To add custom fonts to your application, add a fonts section here,
