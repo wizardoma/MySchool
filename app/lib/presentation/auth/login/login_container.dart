@@ -1,6 +1,12 @@
+import 'package:app/application/auth/auth_bloc.dart';
+import 'package:app/application/auth/auth_event.dart';
+import 'package:app/application/auth/auth_state.dart';
+import 'package:app/application/auth/login_request.dart';
 import 'package:app/presentation/auth/form_bottom_sheet.dart';
+import 'package:app/presentation/home/home_screen.dart';
 import 'package:app/presentation/widgets/text_input_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -10,6 +16,14 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   TextEditingController _emailController;
   TextEditingController _passwordController;
+
+  void _login() {
+    print("login pressed");
+    var loginRequest =
+        LoginRequest(_emailController.text, _passwordController.text);
+    var authenticationBloc = context.read<AuthenticationBloc>();
+    authenticationBloc.add(LoginEvent(loginRequest));
+  }
 
   @override
   void initState() {
@@ -22,7 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return FormBottomSheet(
       title: "Login",
-      onButtonPressed: () => print("pressed login"),
+      onButtonPressed: _login,
       form: Container(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
