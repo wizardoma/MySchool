@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 class SignUpRequest {
   final String name;
   final String password;
@@ -6,7 +8,7 @@ class SignUpRequest {
   final String level;
   final String school;
 
-  const SignUpRequest({this.name, this.password, this.email, this.department, this.level, this.school});
+  const SignUpRequest({this.name, @required this.password, @required this.email, this.department, this.level, this.school});
 
 
 

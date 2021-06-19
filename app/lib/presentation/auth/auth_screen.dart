@@ -36,6 +36,7 @@ class _AuthScreenState extends State<AuthScreen> {
                 context, HomeScreen.routeName, (route) => false);
           }
           if (state is AuthenticationErrorState) {
+            ScaffoldMessenger.of(context).hideCurrentSnackBar();
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
                 content: Container(

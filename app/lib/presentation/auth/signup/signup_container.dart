@@ -1,7 +1,11 @@
+import 'package:app/application/auth/auth_bloc.dart';
+import 'package:app/application/auth/auth_event.dart';
+import 'package:app/application/auth/signup_request.dart';
 import 'package:app/presentation/auth/form_bottom_sheet.dart';
 import 'package:app/presentation/widgets/text_input_field.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SignUpScreen extends StatefulWidget {
   @override
@@ -9,24 +13,27 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
-  final _schools = <String,String>{
+  final _schools = <String, String>{
     "futo": "Federal University of Technology, Owerri",
     "imsu": "Imo State University",
-    "palm" :"Eastern Palm University",
+    "palm": "Eastern Palm University",
   };
 
   final _levels = [
     "Jupeg",
     "Predegree",
     "Post graduate",
-    ...List.generate(7, (index) => "${index+1}00L")
+    ...List.generate(7, (index) => "${index + 1}00L")
   ];
 
   var _selectedUniversity = "Select university";
   var _selectedLevel = "Select your level";
 
-  void _signUp(){
-
+  void _signUp() {
+    var signUpRequest = SignUpRequest(
+        email: _emailController.text, password: _passwordController.text);
+    var authenticationBloc = context.read<AuthenticationBloc>();
+    authenticationBloc.add(SignUpEvent(signUpRequest));
   }
 
   TextEditingController _nameController;
@@ -48,7 +55,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Widget build(BuildContext context) {
     return FormBottomSheet(
       title: "Sign up",
-      onButtonPressed: () => print("pressed login"),
+      onButtonPressed: _signUp,
       form: ListView(
         shrinkWrap: true,
         physics: ScrollPhysics(),
@@ -59,7 +66,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             placeholder: "What would you like to be called?",
           ),
           TextInputField(
-            textEditingController: _passwordController,
+            textEditingController: _emailController,
             title: "Email",
             placeholder: "Your email",
           ),
@@ -71,31 +78,27 @@ class _SignUpScreenState extends State<SignUpScreen> {
           ),
           Container(
             padding: EdgeInsets.all(5),
-
             decoration: BoxDecoration(
-              border: Border.all(
-                color: Colors.grey.shade300,
-                width: 0.5
-              )
-            ),
+                border: Border.all(color: Colors.grey.shade300, width: 0.5)),
             child: DropdownButton(
               isExpanded: true,
               iconSize: 30,
               underline: SizedBox(),
               iconEnabledColor: Theme.of(context).primaryColor,
-
               hint: Text(_selectedUniversity),
-              onChanged: (s){
+              onChanged: (s) {
                 setState(() {
                   _selectedUniversity = _schools["$s"];
                 });
               },
-              items: _schools.keys.map(
-                (e) => DropdownMenuItem(
-                  value: e,
-                  child: Text(_schools["$e"]),
-                ),
-              ).toList(),
+              items: _schools.keys
+                  .map(
+                    (e) => DropdownMenuItem(
+                      value: e,
+                      child: Text(_schools["$e"]),
+                    ),
+                  )
+                  .toList(),
             ),
           ),
           SizedBox(
@@ -103,31 +106,27 @@ class _SignUpScreenState extends State<SignUpScreen> {
           ),
           Container(
             padding: EdgeInsets.all(5),
-
             decoration: BoxDecoration(
-                border: Border.all(
-                    color: Colors.grey.shade300,
-                    width: 0.5
-                )
-            ),
+                border: Border.all(color: Colors.grey.shade300, width: 0.5)),
             child: DropdownButton(
               isExpanded: true,
               iconSize: 30,
               underline: SizedBox(),
               iconEnabledColor: Theme.of(context).primaryColor,
-
               hint: Text(_selectedLevel),
-              onChanged: (s){
+              onChanged: (s) {
                 setState(() {
                   _selectedLevel = s.toString();
                 });
               },
-              items: _levels.map(
+              items: _levels
+                  .map(
                     (e) => DropdownMenuItem(
-                  value: e,
-                  child: Text(e),
-                ),
-              ).toList(),
+                      value: e,
+                      child: Text(e),
+                    ),
+                  )
+                  .toList(),
             ),
           ),
           SizedBox(

@@ -1,4 +1,7 @@
+import 'package:app/application/auth/auth_bloc.dart';
+import 'package:app/application/auth/auth_state.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class FormBottomSheet extends StatelessWidget {
   final String title;
@@ -41,19 +44,35 @@ class FormBottomSheet extends StatelessWidget {
                               color: Theme.of(context).primaryColor,
                               fontSize: 40,
                               fontWeight: FontWeight.w800)),
-                      Container(
-                        padding:
-                            EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                        decoration: BoxDecoration(
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                        child: Text(
-                          title,
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18),
+                      InkWell(
+                        onTap: onButtonPressed,
+                        child: Container(
+                          padding: EdgeInsets.symmetric(
+                              vertical: 10, horizontal: 25),
+                          decoration: BoxDecoration(
+                            color: Colors.blue,
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          child: BlocBuilder<AuthenticationBloc,
+                              AuthenticationState>(
+                            builder: (context, state) {
+                              if (state is AuthenticatingState) {
+                                return SizedBox(
+                                  height: 20,
+                                  width: 20,
+                                  child: CircularProgressIndicator(
+                                  ),
+                                );
+                              }
+                              return Text(
+                                title,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18),
+                              );
+                            },
+                          ),
                         ),
                       )
                     ],
@@ -68,8 +87,6 @@ class FormBottomSheet extends StatelessWidget {
                   ),
                 ),
                 Container(
-//                  height: mQ.size.height * 0.6,
-//                  padding: EdgeInsets.only(bottom: mQ.viewInsets.bottom),
                   child: form,
                 ),
               ],
