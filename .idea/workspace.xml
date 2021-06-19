@@ -19,9 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="fix: keyboard overflow on bottomsheet">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="enable programmatically open drawer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/drawer/drawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/home/drawer/drawer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +127,8 @@
       <workItem from="1623856399210" duration="11676000" />
       <workItem from="1623934373743" duration="20503000" />
       <workItem from="1623996032270" duration="1482000" />
-      <workItem from="1624001941670" duration="9013000" />
+      <workItem from="1624001941670" duration="13700000" />
+      <workItem from="1624082046214" duration="3752000" />
     </task>
     <task id="LOCAL-00001" summary="Add Readme.md File">
       <created>1619292309474</created>
@@ -218,7 +221,42 @@
       <option name="project" value="LOCAL" />
       <updated>1623997139027</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add routes">
+      <created>1624013245933</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1624013245933</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add signup screen">
+      <created>1624013303596</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1624013303596</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add homescreen for users">
+      <created>1624013431019</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1624013431019</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add home drawer">
+      <created>1624016129092</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1624016129092</updated>
+    </task>
+    <task id="LOCAL-00018" summary="enable programmatically open drawer">
+      <created>1624017271017</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1624017271017</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,7 +287,12 @@
     <MESSAGE value="Add form button sheet for login and signup" />
     <MESSAGE value="Add login screen" />
     <MESSAGE value="fix: keyboard overflow on bottomsheet" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: keyboard overflow on bottomsheet" />
+    <MESSAGE value="add routes" />
+    <MESSAGE value="add signup screen" />
+    <MESSAGE value="add homescreen for users" />
+    <MESSAGE value="add home drawer" />
+    <MESSAGE value="enable programmatically open drawer" />
+    <option name="LAST_COMMIT_MESSAGE" value="enable programmatically open drawer" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
@@ -260,10 +303,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1623942059686" />
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1623997523851">
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1624017564363">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1623997523851" />
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1624017564363" />
     <state x="580" y="127" key="FileChooserDialogImpl" timestamp="1619413232366">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -276,30 +319,30 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="589" y="135" key="Github.UntrackedFilesDialog/0.0.1600.860@0.0.1600.860" timestamp="1619292079863" />
-    <state width="1557" height="216" key="GridCell.Tab.0.bottom" timestamp="1624012381433">
+    <state width="1557" height="253" key="GridCell.Tab.0.bottom" timestamp="1624088702233">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="216" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1624012381433" />
-    <state width="1557" height="216" key="GridCell.Tab.0.center" timestamp="1624012381432">
+    <state width="1557" height="253" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1624088702233" />
+    <state width="1557" height="253" key="GridCell.Tab.0.center" timestamp="1624088702232">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="216" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1624012381432" />
-    <state width="1557" height="216" key="GridCell.Tab.0.left" timestamp="1624012381430">
+    <state width="1557" height="253" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1624088702232" />
+    <state width="1557" height="253" key="GridCell.Tab.0.left" timestamp="1624088702232">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="216" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1624012381430" />
-    <state width="1557" height="216" key="GridCell.Tab.0.right" timestamp="1624012381432">
+    <state width="1557" height="253" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1624088702232" />
+    <state width="1557" height="253" key="GridCell.Tab.0.right" timestamp="1624088702233">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="216" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1624012381432" />
+    <state width="1557" height="253" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1624088702233" />
     <state x="465" y="135" key="NewModule_or_Project.wizard" timestamp="1619413260096">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="465" y="135" key="NewModule_or_Project.wizard/0.0.1600.860@0.0.1600.860" timestamp="1619413260096" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1623997143046">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1624017496453">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1623997143046" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1624017496453" />
     <state x="182" y="51" width="1235" height="649" key="new project wizard" timestamp="1623934816219">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

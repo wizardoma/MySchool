@@ -1,5 +1,7 @@
+import 'package:app/application/theme/theme_cubit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeDrawer extends StatelessWidget {
 
@@ -102,7 +104,9 @@ class HomeDrawer extends StatelessWidget {
                       children: [
                         IconButton(
                           icon: Icon(Icons.lightbulb, color: Colors.black54,),
-                          onPressed: null,
+                          onPressed: () {
+                            BlocProvider.of<ThemeCubit>(context).setTheme();
+                          },
                         ),
                         IconButton(
                             icon: Icon(Icons.more_horiz, color: Colors.black54,), onPressed: null),
