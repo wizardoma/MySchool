@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 
 class SocialMediaLoginContainer extends StatelessWidget {
-  final String asset;
+  final String image;
   final String title;
+  final Function onTap;
 
-  SocialMediaLoginContainer(this.asset, this.title);
+  SocialMediaLoginContainer({this.image, this.title, this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 5),
       child: ListTile(
+        onTap: onTap,
 //        contentPadding: EdgeInsets.all(8),
         leading: Image.asset(
-          asset,
+          image,
           width: 30,
           height: 30,
         ),
