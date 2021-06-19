@@ -19,15 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="Add change dark theme toggle">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="refractor package folders">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/drawer/drawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/drawer/drawer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/follows/following_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/follows/following_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/home/home_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/notifications/notifications_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/notifications/notifications_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/post/post_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/post/post_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/questions/questions_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/questions_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/spaces/spaces_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +34,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="DEFNW18C21001964" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Huawei_Android_10_API_29_" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -66,7 +62,7 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/assets/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/android/app" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -82,6 +78,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\android\app" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\assets\images" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\assets\icons" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\auth" />
@@ -134,7 +131,7 @@
       <workItem from="1623934373743" duration="20503000" />
       <workItem from="1623996032270" duration="1482000" />
       <workItem from="1624001941670" duration="13700000" />
-      <workItem from="1624082046214" duration="4976000" />
+      <workItem from="1624082046214" duration="7613000" />
     </task>
     <task id="LOCAL-00001" summary="Add Readme.md File">
       <created>1619292309474</created>
@@ -269,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624089173796</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="refractor package folders">
+      <created>1624090460152</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1624090460152</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,7 +310,8 @@
     <MESSAGE value="add home drawer" />
     <MESSAGE value="enable programmatically open drawer" />
     <MESSAGE value="Add change dark theme toggle" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add change dark theme toggle" />
+    <MESSAGE value="refractor package folders" />
+    <option name="LAST_COMMIT_MESSAGE" value="refractor package folders" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
@@ -317,10 +322,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1623942059686" />
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1624017564363">
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1624090845649">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1624017564363" />
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1624090845649" />
     <state x="580" y="127" key="FileChooserDialogImpl" timestamp="1619413232366">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -333,30 +338,30 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="589" y="135" key="Github.UntrackedFilesDialog/0.0.1600.860@0.0.1600.860" timestamp="1619292079863" />
-    <state width="1557" height="253" key="GridCell.Tab.0.bottom" timestamp="1624089794800">
+    <state width="1557" height="253" key="GridCell.Tab.0.bottom" timestamp="1624090854018">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="253" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1624089794800" />
-    <state width="1557" height="253" key="GridCell.Tab.0.center" timestamp="1624089794799">
+    <state width="1557" height="253" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1624090854018" />
+    <state width="1557" height="253" key="GridCell.Tab.0.center" timestamp="1624090854017">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="253" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1624089794799" />
-    <state width="1557" height="253" key="GridCell.Tab.0.left" timestamp="1624089794799">
+    <state width="1557" height="253" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1624090854017" />
+    <state width="1557" height="253" key="GridCell.Tab.0.left" timestamp="1624090854017">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="253" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1624089794799" />
-    <state width="1557" height="253" key="GridCell.Tab.0.right" timestamp="1624089794800">
+    <state width="1557" height="253" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1624090854017" />
+    <state width="1557" height="253" key="GridCell.Tab.0.right" timestamp="1624090854017">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="253" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1624089794800" />
+    <state width="1557" height="253" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1624090854017" />
     <state x="465" y="135" key="NewModule_or_Project.wizard" timestamp="1619413260096">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="465" y="135" key="NewModule_or_Project.wizard/0.0.1600.860@0.0.1600.860" timestamp="1619413260096" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1624089176160">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1624090462613">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1624089176160" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1624090462613" />
     <state x="182" y="51" width="1235" height="649" key="new project wizard" timestamp="1623934816219">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
