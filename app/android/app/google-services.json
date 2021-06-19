@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "306689641883",
+    "project_id": "myschool-futo-project",
+    "storage_bucket": "myschool-futo-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:306689641883:android:9e2dac5a8974c35626653e",
+        "android_client_info": {
+          "package_name": "com.wizardom.myschool"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "306689641883-34gutr2resg9rkh2vtlt8at1j4sj37tv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wizardom.myschool",
+            "certificate_hash": "a5ce559ab78cdd254f3d665ecd2d40112c152aaa"
+          }
+        },
+        {
+          "client_id": "306689641883-v1ttekefjjkk40omtck86gn7fg18d3ng.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhoUxjq-uiN56o1w5_p7uj_QE5RTtYWZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "306689641883-v1ttekefjjkk40omtck86gn7fg18d3ng.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
