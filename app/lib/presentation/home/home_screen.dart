@@ -1,9 +1,9 @@
-import 'package:app/presentation/home/drawer/drawer.dart';
-import 'package:app/presentation/home/follows/following_screen.dart';
+import 'package:app/presentation/follows/following_screen.dart';
 import 'package:app/presentation/home/home_feeds.dart';
-import 'package:app/presentation/home/notifications/notifications_screen.dart';
-import 'package:app/presentation/home/questions/questions_screen.dart';
-import 'package:app/presentation/home/spaces/spaces_screen.dart';
+import 'package:app/presentation/notifications/notifications_screen.dart';
+import 'package:app/presentation/questions/questions_screen.dart';
+import 'package:app/presentation/spaces/spaces_screen.dart';
+import 'package:app/presentation/widgets/drawer/drawer.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {

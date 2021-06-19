@@ -19,11 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="enable programmatically open drawer">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="Add change dark theme toggle">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/drawer/drawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/home/drawer/drawer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/drawer/drawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/drawer/drawer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/follows/following_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/follows/following_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/home/home_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/notifications/notifications_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/notifications/notifications_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/post/post_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/post/post_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/questions/questions_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/questions_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/spaces/spaces_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +38,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Huawei_Android_10_API_29_" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="DEFNW18C21001964" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -77,14 +81,16 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\auth" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\assets\images" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\assets\icons" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\auth" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\presentation\widgets" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\presentation" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\auth" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -128,7 +134,7 @@
       <workItem from="1623934373743" duration="20503000" />
       <workItem from="1623996032270" duration="1482000" />
       <workItem from="1624001941670" duration="13700000" />
-      <workItem from="1624082046214" duration="3752000" />
+      <workItem from="1624082046214" duration="4976000" />
     </task>
     <task id="LOCAL-00001" summary="Add Readme.md File">
       <created>1619292309474</created>
@@ -256,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624017271017</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Add change dark theme toggle">
+      <created>1624089173794</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1624089173796</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,7 +305,8 @@
     <MESSAGE value="add homescreen for users" />
     <MESSAGE value="add home drawer" />
     <MESSAGE value="enable programmatically open drawer" />
-    <option name="LAST_COMMIT_MESSAGE" value="enable programmatically open drawer" />
+    <MESSAGE value="Add change dark theme toggle" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add change dark theme toggle" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
@@ -319,30 +333,30 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="589" y="135" key="Github.UntrackedFilesDialog/0.0.1600.860@0.0.1600.860" timestamp="1619292079863" />
-    <state width="1557" height="253" key="GridCell.Tab.0.bottom" timestamp="1624088702233">
+    <state width="1557" height="253" key="GridCell.Tab.0.bottom" timestamp="1624089794800">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="253" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1624088702233" />
-    <state width="1557" height="253" key="GridCell.Tab.0.center" timestamp="1624088702232">
+    <state width="1557" height="253" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1624089794800" />
+    <state width="1557" height="253" key="GridCell.Tab.0.center" timestamp="1624089794799">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="253" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1624088702232" />
-    <state width="1557" height="253" key="GridCell.Tab.0.left" timestamp="1624088702232">
+    <state width="1557" height="253" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1624089794799" />
+    <state width="1557" height="253" key="GridCell.Tab.0.left" timestamp="1624089794799">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="253" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1624088702232" />
-    <state width="1557" height="253" key="GridCell.Tab.0.right" timestamp="1624088702233">
+    <state width="1557" height="253" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1624089794799" />
+    <state width="1557" height="253" key="GridCell.Tab.0.right" timestamp="1624089794800">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="253" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1624088702233" />
+    <state width="1557" height="253" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1624089794800" />
     <state x="465" y="135" key="NewModule_or_Project.wizard" timestamp="1619413260096">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="465" y="135" key="NewModule_or_Project.wizard/0.0.1600.860@0.0.1600.860" timestamp="1619413260096" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1624017496453">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1624089176160">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1624017496453" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1624089176160" />
     <state x="182" y="51" width="1235" height="649" key="new project wizard" timestamp="1623934816219">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
