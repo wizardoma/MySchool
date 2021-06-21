@@ -23,7 +23,7 @@ public class StudentController {
     @PostMapping("")
     public ResponseEntity<?> saveUser(@ModelAttribute CreateStudentRequest userRequest) {
         Student student = studentService.saveStudent(userRequest);
-        return ok(StudentMapper.toDto(student));
+        return created(StudentMapper.toDto(student));
     }
 
 
