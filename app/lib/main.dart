@@ -69,7 +69,7 @@ class MyApp extends StatelessWidget {
                   }
                 }),
             routes: appRoutes,
-            theme: context.watch<ThemeCubit>().state
+            theme: !context.watch<ThemeCubit>().state
                 ? ThemeData.light()
                 : ThemeData.dark(),
           );
