@@ -19,15 +19,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add firebase auth dependency">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="fix form bottom sheet keyboard padding">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/android/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/android/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/application/auth/auth_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/auth/auth_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/application/auth/auth_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/auth/auth_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/application/auth/signup_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/auth/signup_request.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/auth/authentication_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/auth/authentication_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/auth/firebase_auth_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/auth/firebase_auth_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/auth/model/user.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/auth/model/authUser.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/error_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/error_response.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/ioc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/ioc.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/presentation/auth/auth_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/auth/auth_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/social_media_login_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/social_media_login_container.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/auth/form_bottom_sheet.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/auth/form_bottom_sheet.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/auth/login/login_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/auth/login/login_container.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/auth/signup/signup_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/auth/signup/signup_container.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/drawer/drawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/drawer/drawer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/controller/StudentController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +48,15 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="DEFNW18C21001964" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Huawei_Android_10_API_29_" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="stateful_widget" />
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="Dart File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -65,7 +79,7 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/android/app/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -73,25 +87,26 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Dart" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\presentation\widgets" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\presentation" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\auth" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\android\app\src" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\android\app" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\assets\images" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\assets\icons" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\auth" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\android\app" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\presentation\widgets" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\presentation" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\auth" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -137,7 +152,14 @@
       <workItem from="1624001941670" duration="13700000" />
       <workItem from="1624082046214" duration="14698000" />
       <workItem from="1624104595248" duration="2245000" />
-      <workItem from="1624119728033" duration="5580000" />
+      <workItem from="1624119728033" duration="9381000" />
+      <workItem from="1624176744297" duration="10371000" />
+      <workItem from="1624209746099" duration="9527000" />
+      <workItem from="1624248455261" duration="9675000" />
+      <workItem from="1624273420095" duration="376000" />
+      <workItem from="1624274142402" duration="3666000" />
+      <workItem from="1624306826589" duration="6040000" />
+      <workItem from="1624389847031" duration="569000" />
     </task>
     <task id="LOCAL-00001" summary="Add Readme.md File">
       <created>1619292309474</created>
@@ -286,7 +308,112 @@
       <option name="project" value="LOCAL" />
       <updated>1624093397846</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="add base service abstraction">
+      <created>1624125512065</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1624125512066</updated>
+    </task>
+    <task id="LOCAL-00023" summary="add firebase authentication service impl">
+      <created>1624125607673</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1624125607673</updated>
+    </task>
+    <task id="LOCAL-00024" summary="add authentication state management">
+      <created>1624125662943</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1624125662943</updated>
+    </task>
+    <task id="LOCAL-00025" summary="add Inversion of control container">
+      <created>1624125703543</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1624125703543</updated>
+    </task>
+    <task id="LOCAL-00026" summary="create base entity">
+      <created>1624210951112</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1624210951112</updated>
+    </task>
+    <task id="LOCAL-00027" summary="create base service">
+      <created>1624216497423</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1624216497423</updated>
+    </task>
+    <task id="LOCAL-00028" summary="refractor: replace webflux dependency with spring web">
+      <created>1624255433637</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1624255433637</updated>
+    </task>
+    <task id="LOCAL-00029" summary="add h2 dependency for dev persistence">
+      <created>1624255493902</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1624255493902</updated>
+    </task>
+    <task id="LOCAL-00030" summary="create backend domain entities">
+      <created>1624255593818</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1624255593818</updated>
+    </task>
+    <task id="LOCAL-00031" summary="add global exception handling">
+      <created>1624255642404</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1624255642404</updated>
+    </task>
+    <task id="LOCAL-00032" summary="add abstract rest response utilities">
+      <created>1624255693652</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1624255693652</updated>
+    </task>
+    <task id="LOCAL-00033" summary="add crud operations for university">
+      <created>1624255770046</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1624255770046</updated>
+    </task>
+    <task id="LOCAL-00034" summary="add crud operations for Students">
+      <created>1624255807459</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1624255807459</updated>
+    </task>
+    <task id="LOCAL-00035" summary="fix: create user returns 200 instead of 201">
+      <created>1624257099155</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1624257099156</updated>
+    </task>
+    <task id="LOCAL-00036" summary="fix form bottom sheet keyboard padding">
+      <created>1624308685541</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1624308685541</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,16 +432,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add Readme.md File" />
-    <MESSAGE value="Add .gitignore File" />
-    <MESSAGE value="Add React initial setup" />
-    <MESSAGE value="Add Spring Boot initial setup" />
-    <MESSAGE value="Add Flutter for Mobile Application" />
-    <MESSAGE value="remove reactjs from project" />
-    <MESSAGE value="add necessary packages" />
-    <MESSAGE value="enforce portrait orientation" />
-    <MESSAGE value="add home screen" />
-    <MESSAGE value="Add form button sheet for login and signup" />
     <MESSAGE value="Add login screen" />
     <MESSAGE value="fix: keyboard overflow on bottomsheet" />
     <MESSAGE value="add routes" />
@@ -325,25 +442,48 @@
     <MESSAGE value="Add change dark theme toggle" />
     <MESSAGE value="refractor package folders" />
     <MESSAGE value="add firebase auth dependency" />
-    <option name="LAST_COMMIT_MESSAGE" value="add firebase auth dependency" />
+    <MESSAGE value="add base service abstraction" />
+    <MESSAGE value="add firebase authentication service impl" />
+    <MESSAGE value="add authentication state management" />
+    <MESSAGE value="add Inversion of control container" />
+    <MESSAGE value="create base entity" />
+    <MESSAGE value="create base service" />
+    <MESSAGE value="refractor: replace webflux dependency with spring web" />
+    <MESSAGE value="add h2 dependency for dev persistence" />
+    <MESSAGE value="create backend domain entities" />
+    <MESSAGE value="add global exception handling" />
+    <MESSAGE value="add abstract rest response utilities" />
+    <MESSAGE value="add crud operations for university" />
+    <MESSAGE value="add crud operations for Students" />
+    <MESSAGE value="fix: create user returns 200 instead of 201" />
+    <MESSAGE value="fix form bottom sheet keyboard padding" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix form bottom sheet keyboard padding" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="#Project_Structure/0.0.1600.860@0.0.1600.860" timestamp="1619291730634" />
-    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1624124011930">
+    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1624309320309">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1624124011930" />
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1624090845649">
+    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1624309320309" />
+    <state x="626" y="356" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1624212009488">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1624090845649" />
-    <state x="580" y="127" key="FileChooserDialogImpl" timestamp="1619413232366">
+    <state x="626" y="356" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1600.860@0.0.1600.860" timestamp="1624212009488" />
+    <state x="541" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1624251443504">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="580" y="127" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1619413232366" />
+    <state x="541" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1624251443504" />
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1624255817740">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1624255817740" />
+    <state x="580" y="127" key="FileChooserDialogImpl" timestamp="1624254206192">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="580" y="127" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1624254206192" />
     <state x="658" y="328" width="283" height="287" key="Github.ShareDialog" timestamp="1619292050525">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -352,30 +492,42 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="589" y="135" key="Github.UntrackedFilesDialog/0.0.1600.860@0.0.1600.860" timestamp="1619292079863" />
-    <state width="1557" height="253" key="GridCell.Tab.0.bottom" timestamp="1624125355360">
+    <state width="1557" height="331" key="GridCell.Tab.0.bottom" timestamp="1624313060507">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="253" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1624125355360" />
-    <state width="1557" height="253" key="GridCell.Tab.0.center" timestamp="1624125355359">
+    <state width="1557" height="331" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1624313060507" />
+    <state width="1557" height="331" key="GridCell.Tab.0.center" timestamp="1624313060506">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="253" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1624125355359" />
-    <state width="1557" height="253" key="GridCell.Tab.0.left" timestamp="1624125355359">
+    <state width="1557" height="331" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1624313060506" />
+    <state width="1557" height="331" key="GridCell.Tab.0.left" timestamp="1624313060506">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="253" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1624125355359" />
-    <state width="1557" height="253" key="GridCell.Tab.0.right" timestamp="1624125355360">
+    <state width="1557" height="331" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1624313060506" />
+    <state width="1557" height="331" key="GridCell.Tab.0.right" timestamp="1624313060507">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="253" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1624125355360" />
+    <state width="1557" height="331" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1624313060507" />
+    <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="330" y="85" key="Maven.ArtifactSearchDialog/0.0.1600.860@0.0.1600.860" timestamp="1624250579299" />
     <state x="465" y="135" key="NewModule_or_Project.wizard" timestamp="1619413260096">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="465" y="135" key="NewModule_or_Project.wizard/0.0.1600.860@0.0.1600.860" timestamp="1619413260096" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1624093400389">
+    <state x="280" y="4" key="SettingsEditor" timestamp="1624273821651">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1624093400389" />
+    <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1624308687955">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1624308687955" />
+    <state x="510" y="172" width="579" height="516" key="find.popup" timestamp="1624128756379">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="510" y="172" width="579" height="516" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1624128756379" />
     <state x="182" y="51" width="1235" height="649" key="new project wizard" timestamp="1623934816219">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

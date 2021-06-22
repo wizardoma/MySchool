@@ -5,5 +5,8 @@ class ErrorResponse {
 
   ErrorResponse({ this.id, this.message, this.url = ""});
 
-
+  @override
+  String toString() {
+    return 'ErrorResponse{id: $id, message: $message, url: $url}';
+  }
 }

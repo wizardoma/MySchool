@@ -1,14 +1,13 @@
 import 'package:app/application/auth/login_request.dart';
 import 'package:app/application/auth/signup_request.dart';
-import 'package:app/domain/auth/authentication_service.dart';
-import 'package:app/domain/auth/model/user.dart';
+import 'package:app/domain/auth/authentication_client.dart';
+import 'package:app/domain/auth/model/authUser.dart';
 import 'package:app/domain/response.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-class FirebaseAuthService extends AuthenticationService {
+class FirebaseAuthService extends AuthenticationClient {
   @override
   Future<ResponseEntity> login(LoginRequest request) async {
     FirebaseAuth auth = FirebaseAuth.instance;
@@ -24,9 +23,15 @@ class FirebaseAuthService extends AuthenticationService {
   }
 
   @override
-  Future<AuthUser> checkAuthentication() async {
+  Future<ResponseEntity> checkAuthentication() async {
     FirebaseAuth auth = FirebaseAuth.instance;
-    return AuthUser.fromFirebaseUser(auth.currentUser);
+
+    var authUser = AuthUser.fromFirebaseUser(auth.currentUser);
+    if (authUser == null) {
+      return ResponseEntity.Error(null);
+    } else {
+      return ResponseEntity.Data(authUser);
+    }
   }
 
   @override
@@ -36,23 +41,23 @@ class FirebaseAuthService extends AuthenticationService {
   }
 
   @override
-  Future<ResponseEntity> googleSignIn() async {
+  Future<ResponseEntity> loginWithGoogle() async {
     FirebaseAuth auth = FirebaseAuth.instance;
     User user;
     try {
-    final GoogleSignIn googleSignIn = GoogleSignIn();
+      final GoogleSignIn googleSignIn = GoogleSignIn();
 
-    final GoogleSignInAccount googleSignInAccount = await googleSignIn.signIn();
+      final GoogleSignInAccount googleSignInAccount =
+          await googleSignIn.signIn();
 
-    if (googleSignInAccount != null) {
-      final GoogleSignInAuthentication googleSignInAuthentication =
-          await googleSignInAccount.authentication;
+      if (googleSignInAccount != null) {
+        final GoogleSignInAuthentication googleSignInAuthentication =
+            await googleSignInAccount.authentication;
 
-      final AuthCredential credential = GoogleAuthProvider.credential(
-        accessToken: googleSignInAuthentication.accessToken,
-        idToken: googleSignInAuthentication.idToken,
-      );
-
+        final AuthCredential credential = GoogleAuthProvider.credential(
+          accessToken: googleSignInAuthentication.accessToken,
+          idToken: googleSignInAuthentication.idToken,
+        );
 
         final UserCredential userCredential =
             await auth.signInWithCredential(credential);
@@ -60,18 +65,16 @@ class FirebaseAuthService extends AuthenticationService {
         user = userCredential.user;
       }
     } on FirebaseAuthException catch (e) {
-          return ResponseEntity.Error(e.message);
+      return ResponseEntity.Error(e.message);
+    } on PlatformException catch (e) {
+      return ResponseEntity.Error(e.code);
+    } catch (e) {
+      return ResponseEntity.Error("An error occurred signing you in");
+    }
 
-      }
-      on PlatformException catch (e) {
-        return ResponseEntity.Error(e.code);
-      }
-
-      catch (e) {
-        return ResponseEntity.Error("An error occurred signing you in");
-      }
-
-
+    if (user == null) {
+      return ResponseEntity.Error("An error occurred signing you in");
+    }
     return ResponseEntity.Data(AuthUser.fromFirebaseUser(user));
   }
 
@@ -83,12 +86,20 @@ class FirebaseAuthService extends AuthenticationService {
       userCredential = await auth.createUserWithEmailAndPassword(
           email: signUpRequest.email, password: signUpRequest.password);
       if (userCredential.user == null) {
-        return ResponseEntity.Error("An error occured while registering");
+        return ResponseEntity.Error("An error occurred while registering");
       }
     } on FirebaseAuthException catch (e) {
       return ResponseEntity.Error(e.message);
     }
 
     return ResponseEntity.Data(AuthUser.fromFirebaseUser(userCredential.user));
+  }
+
+  @override
+  Future<void> delete() {
+    var firebaseAuth = FirebaseAuth.instance;
+    if (firebaseAuth.currentUser != null) {
+      firebaseAuth.currentUser.delete();
+    }
   }
 }
