@@ -3,7 +3,6 @@ import 'package:app/application/auth/auth_event.dart';
 import 'package:app/application/auth/signup_request.dart';
 import 'package:app/presentation/auth/form_bottom_sheet.dart';
 import 'package:app/presentation/widgets/text_input_field.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -31,7 +30,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   void _signUp() {
     var signUpRequest = SignUpRequest(
-        email: _emailController.text, password: _passwordController.text);
+      email: _emailController.text.trim(),
+      password: _passwordController.text,
+      department: _departmentController.text.trim(),
+      university: _universityController,
+      name: _nameController.text.trim(),
+      level: _levelController,
+    );
     var authenticationBloc = context.read<AuthenticationBloc>();
     authenticationBloc.add(SignUpEvent(signUpRequest));
   }
@@ -40,6 +45,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
   TextEditingController _departmentController;
   TextEditingController _emailController;
   TextEditingController _passwordController;
+  var _levelController = "";
+  var _universityController = "";
 
   @override
   void initState() {
@@ -50,6 +57,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
     super.initState();
   }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -88,6 +97,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               hint: Text(_selectedUniversity),
               onChanged: (s) {
                 setState(() {
+                  _universityController = s.toString();
                   _selectedUniversity = _schools["$s"];
                 });
               },
@@ -116,6 +126,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               hint: Text(_selectedLevel),
               onChanged: (s) {
                 setState(() {
+                  _levelController = s.toString();
                   _selectedLevel = s.toString();
                 });
               },
@@ -151,6 +162,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
   void dispose() {
     _emailController.dispose();
     _passwordController.dispose();
+    _nameController.dispose();
+    _departmentController.dispose();
     super.dispose();
   }
 }

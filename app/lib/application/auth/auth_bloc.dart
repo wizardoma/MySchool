@@ -4,7 +4,6 @@ import 'package:app/application/auth/login_request.dart';
 import 'package:app/application/auth/signup_request.dart';
 import 'package:app/domain/auth/authentication_service.dart';
 import 'package:app/domain/response.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AuthenticationBloc
@@ -42,10 +41,10 @@ class AuthenticationBloc
   }
 
   Future<AuthenticationState> checkAuth() async {
-    var authUser = await authenticationService.checkAuthentication();
-    return authUser == null
+    var response = await authenticationService.checkAuthentication();
+    return response.isError
         ? NotAuthenticatedState()
-        : AuthenticatedState(authUser);
+        : AuthenticatedState(response.data);
   }
 
   Future<AuthenticationState> logout() async {
@@ -70,14 +69,11 @@ class AuthenticationBloc
   }
 
   Future<AuthenticationState> googleSignIn() async {
-    print("Google sign in in transit");
-    ResponseEntity responseEntity = await authenticationService.googleSignIn();
-    print("Google sign result $responseEntity");
-
+    ResponseEntity responseEntity = await authenticationService.loginWithGoogle();
     if (responseEntity.isError) {
       return AuthenticationErrorState(responseEntity.errors.message);
-    }
 
+    }
     return AuthenticatedState(responseEntity.data);
   }
 }

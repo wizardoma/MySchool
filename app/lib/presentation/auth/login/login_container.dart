@@ -1,9 +1,7 @@
 import 'package:app/application/auth/auth_bloc.dart';
 import 'package:app/application/auth/auth_event.dart';
-import 'package:app/application/auth/auth_state.dart';
 import 'package:app/application/auth/login_request.dart';
 import 'package:app/presentation/auth/form_bottom_sheet.dart';
-import 'package:app/presentation/home/home_screen.dart';
 import 'package:app/presentation/widgets/text_input_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -31,6 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
     _passwordController = TextEditingController();
     super.initState();
   }
+
 
   @override
   Widget build(BuildContext context) {
