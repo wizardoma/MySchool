@@ -9,6 +9,8 @@ import 'package:app/domain/response.dart';
 import 'package:dio/dio.dart';
 import 'package:http_code_util/http_code_util.dart';
 
+/// Author: Ibekason Alexander
+
 class AuthenticationServiceImpl extends AuthenticationService with StatusCodeUtil {
   AuthenticationServiceImpl(AuthenticationClient authenticationClient) : super(authenticationClient);
 

@@ -1,5 +1,8 @@
 import 'package:flutter/foundation.dart';
 
+/// Author: Ibekason Alexander
+
+
 class SignUpRequest {
   final String name;
   final String password;

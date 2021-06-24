@@ -6,6 +6,8 @@ import 'package:app/domain/auth/authentication_service.dart';
 import 'package:app/domain/response.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+/// Author: Ibekason Alexander
+
 class AuthenticationBloc
     extends Bloc<AuthenticationEvent, AuthenticationState> {
   final AuthenticationService authenticationService;

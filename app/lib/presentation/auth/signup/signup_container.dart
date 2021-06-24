@@ -5,6 +5,8 @@ import 'package:app/presentation/auth/form_bottom_sheet.dart';
 import 'package:app/presentation/widgets/text_input_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+/// Author: Ibekason Alexander
+
 
 class SignUpScreen extends StatefulWidget {
   @override
