@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="refractor">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add user service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,8 +37,9 @@
         <option value="stateful_widget" />
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Dart File" />
         <option value="Class" />
+        <option value="package" />
+        <option value="Dart File" />
       </list>
     </option>
   </component>
@@ -69,6 +70,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -143,7 +145,8 @@
       <workItem from="1624306826589" duration="6040000" />
       <workItem from="1624389847031" duration="1306000" />
       <workItem from="1624477904819" duration="1470000" />
-      <workItem from="1624554982115" duration="1854000" />
+      <workItem from="1624554982115" duration="2500000" />
+      <workItem from="1624639184394" duration="4339000" />
     </task>
     <task id="LOCAL-00001" summary="Add Readme.md File">
       <created>1619292309474</created>
@@ -439,7 +442,21 @@
       <option name="project" value="LOCAL" />
       <updated>1624392884516</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="refractor: add name of editor">
+      <created>1624566330581</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1624566330582</updated>
+    </task>
+    <task id="LOCAL-00044" summary="add user service">
+      <created>1624657399069</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1624657399069</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,8 +475,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="enable programmatically open drawer" />
-    <MESSAGE value="Add change dark theme toggle" />
     <MESSAGE value="refractor package folders" />
     <MESSAGE value="add firebase auth dependency" />
     <MESSAGE value="add base service abstraction" />
@@ -483,7 +498,9 @@
     <MESSAGE value="refractor signup classes" />
     <MESSAGE value="implement logging out" />
     <MESSAGE value="refractor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refractor" />
+    <MESSAGE value="refractor: add name of editor" />
+    <MESSAGE value="add user service" />
+    <option name="LAST_COMMIT_MESSAGE" value="add user service" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
@@ -502,10 +519,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="541" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1624251443504" />
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1624392957619">
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1624658540108">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1624392957619" />
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1624658540108" />
     <state x="580" y="127" key="FileChooserDialogImpl" timestamp="1624254206192">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -546,10 +563,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1624392886904">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1624657401127">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1624392886904" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1624657401127" />
     <state x="510" y="172" width="579" height="516" key="find.popup" timestamp="1624128756379">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
