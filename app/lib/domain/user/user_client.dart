@@ -1,9 +1,7 @@
-
-
 import 'package:app/domain/user/user.dart';
 
 class UserClient {
-  final User currentUser = User(
+  static final User currentUser = User(
     id: "sfsff",
     email: "alibeson@gmail.com",
     department: "Computer science",
@@ -11,4 +9,15 @@ class UserClient {
     level: "500L",
   );
 
+  List<User> users = [
+    currentUser,
+    ...List.generate(
+        10,
+        (index) => User(
+            id: "$index hellow",
+            name: "name of you",
+            department: "EEE",
+            university: "futo",
+            email: "Bla bla bla"))
+  ];
 }

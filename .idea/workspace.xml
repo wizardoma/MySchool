@@ -19,8 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add user service">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add user client">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/user/user_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/user/user_client.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,6 +148,8 @@
       <workItem from="1624477904819" duration="1470000" />
       <workItem from="1624554982115" duration="2500000" />
       <workItem from="1624639184394" duration="4339000" />
+      <workItem from="1624739609445" duration="200000" />
+      <workItem from="1624829860762" duration="719000" />
     </task>
     <task id="LOCAL-00001" summary="Add Readme.md File">
       <created>1619292309474</created>
@@ -456,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624657399069</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="add user client">
+      <created>1624739799634</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1624739799634</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,7 +485,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refractor package folders" />
     <MESSAGE value="add firebase auth dependency" />
     <MESSAGE value="add base service abstraction" />
     <MESSAGE value="add firebase authentication service impl" />
@@ -500,7 +509,8 @@
     <MESSAGE value="refractor" />
     <MESSAGE value="refractor: add name of editor" />
     <MESSAGE value="add user service" />
-    <option name="LAST_COMMIT_MESSAGE" value="add user service" />
+    <MESSAGE value="add user client" />
+    <option name="LAST_COMMIT_MESSAGE" value="add user client" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
@@ -563,10 +573,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1624657401127">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1624739803596">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1624657401127" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1624739803596" />
     <state x="510" y="172" width="579" height="516" key="find.popup" timestamp="1624128756379">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
