@@ -12,12 +12,13 @@ class UserClient {
   List<User> users = [
     currentUser,
     ...List.generate(
-        10,
-        (index) => User(
-            id: "$index hellow",
-            name: "name of you",
-            department: "EEE",
-            university: "futo",
-            email: "Bla bla bla"))
+      10,
+      (index) => User(
+          id: "$index hellow",
+          name: "name of you",
+          department: "EEE",
+          university: "futo",
+          email: "Bla bla bla"),
+    )
   ];
 }
