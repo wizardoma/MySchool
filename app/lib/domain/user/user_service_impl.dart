@@ -1,3 +1,4 @@
+import 'package:app/domain/response.dart';
 import 'package:app/domain/user/user.dart';
 import 'package:app/domain/user/user_client.dart';
 import 'package:app/domain/user/user_service.dart';
@@ -12,12 +13,12 @@ class UserServiceImpl extends UserService {
 
 
   @override
-  User editName(String name) {
+  Future<ResponseEntity> editName(String name) {
 
   }
 
   @override
-  User getUserById(String id) {
+  Future<ResponseEntity> getUserById(String id) {
 
   }
 
