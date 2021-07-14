@@ -1,6 +1,7 @@
 import 'package:app/application/homefeeds/home_feeds_bloc.dart';
 import 'package:app/application/homefeeds/homefeeds_event.dart';
 import 'package:app/application/homefeeds/homefeeds_state.dart';
+import 'package:app/presentation/widgets/post_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -33,9 +34,17 @@ class _HomeFeedsState extends State<HomeFeeds> {
         return Center(child: CircularProgressIndicator());
       }
       if (state is FetchHomeFeedsSuccessState) {
-        return Container(
-          child: Text(state.feeds.length.toString()),
+        var feeds = state.feeds;
+        return ListView.separated(
+          separatorBuilder: (context, index) => Divider(height: 5, thickness: 5,),
+          itemCount: feeds.length,
+            itemBuilder: (context, index) {
+            return PostView( post: feeds[index],
+
+            );
+        }
         );
+
       }
     });
   }
