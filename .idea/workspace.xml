@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="Add dummy users">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="refractor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/user/user_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/user/user_client.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/posts/model/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/posts/model/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/pubspec.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +31,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Huawei_Android_10_API_29_" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="DEFNW18C21001964" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -46,7 +45,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/backend" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1rd2asS3JvBByg79NAVInNTU5oD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -152,6 +151,17 @@
       <workItem from="1624739609445" duration="200000" />
       <workItem from="1624829860762" duration="2305000" />
       <workItem from="1624865911280" duration="1993000" />
+      <workItem from="1624917291393" duration="260000" />
+      <workItem from="1625001598818" duration="1193000" />
+      <workItem from="1625058376959" duration="396000" />
+      <workItem from="1625130661679" duration="635000" />
+      <workItem from="1625139019210" duration="604000" />
+      <workItem from="1625151984621" duration="1182000" />
+      <workItem from="1625260132201" duration="561000" />
+      <workItem from="1625317108831" duration="215000" />
+      <workItem from="1625331210724" duration="1425000" />
+      <workItem from="1625453368017" duration="74000" />
+      <workItem from="1626242067082" duration="766000" />
     </task>
     <task id="LOCAL-00001" summary="Add Readme.md File">
       <created>1619292309474</created>
@@ -475,7 +485,28 @@
       <option name="project" value="LOCAL" />
       <updated>1624833329538</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="inject user client to service">
+      <created>1624917427070</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1624917427071</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Add user state management">
+      <created>1625332403938</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1625332403938</updated>
+    </task>
+    <task id="LOCAL-00049" summary="refractor">
+      <created>1625332424039</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1625332424039</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,8 +525,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add base service abstraction" />
-    <MESSAGE value="add firebase authentication service impl" />
     <MESSAGE value="add authentication state management" />
     <MESSAGE value="add Inversion of control container" />
     <MESSAGE value="create base entity" />
@@ -514,12 +543,14 @@
     <MESSAGE value="update inversion of control container" />
     <MESSAGE value="refractor signup classes" />
     <MESSAGE value="implement logging out" />
-    <MESSAGE value="refractor" />
     <MESSAGE value="refractor: add name of editor" />
     <MESSAGE value="add user service" />
     <MESSAGE value="add user client" />
     <MESSAGE value="Add dummy users" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add dummy users" />
+    <MESSAGE value="inject user client to service" />
+    <MESSAGE value="Add user state management" />
+    <MESSAGE value="refractor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refractor" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
@@ -582,10 +613,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1624833333305">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1625332426348">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1624833333305" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1625332426348" />
     <state x="510" y="172" width="579" height="516" key="find.popup" timestamp="1624128756379">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
