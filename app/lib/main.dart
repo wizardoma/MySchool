@@ -1,5 +1,6 @@
 import 'package:app/application/auth/auth_bloc.dart';
 import 'package:app/application/auth/auth_state.dart';
+import 'package:app/application/homefeeds/home_feeds_bloc.dart';
 import 'package:app/application/theme/theme_cubit.dart';
 import 'package:app/commons/routes.dart';
 import 'package:app/domain/auth/firebase_initializer.dart';
@@ -39,7 +40,8 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider.value(
           value: (ioC.getBloc("auth") as AuthenticationBloc),
-        )
+        ),
+        BlocProvider.value(value: (ioC.getBloc("home_feeds")as HomeFeedsBloc),)
       ],
       child: Builder(
         builder: (context) {
