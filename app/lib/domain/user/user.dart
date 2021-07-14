@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:app/domain/auth/model/signUpUser.dart';
 
 class User {
@@ -25,6 +27,17 @@ class User {
       name: user.name,
       university: user.university,
       level: user.level,
+    );
+  }
+
+  factory User.Random() {
+    return User(
+      id: DateTime.now().add(Duration(seconds: Random().nextInt(100000))).toString(),
+      name: "Hina Anser",
+      email: "alib@gmail.com",
+      department: "Computer Science",
+      university: "Federal University of Technology, Owerri",
+      level: "400"
     );
   }
 }
