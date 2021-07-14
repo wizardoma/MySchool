@@ -125,6 +125,6 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Icon getIcon(IconData icon) {
-    return Icon(icon, size: 30);
+    return Icon(icon, size: 25);
   }
 }
