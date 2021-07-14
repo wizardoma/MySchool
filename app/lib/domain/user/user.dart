@@ -40,4 +40,9 @@ class User {
       level: "400"
     );
   }
+
+  @override
+  String toString() {
+    return 'User{id: $id, name: $name, department: $department, university: $university, email: $email, level: $level}';
+  }
 }

@@ -5,8 +5,8 @@ class HomeFeedsClient {
 
   List<Post> _dummyFeeds =List.generate(20, (index) => Post.Random());
 
-  Future<ResponseEntity> fetchFeeds() {
-    Future.delayed(Duration(seconds: 5), () => ResponseEntity.Data(_dummyFeeds));
+  Future<ResponseEntity> fetchFeeds() async{
+   return await Future.delayed(Duration(seconds: 5), () => ResponseEntity.Data(_dummyFeeds));
 
   }
 

@@ -68,11 +68,11 @@ class Post {
     int noOfShares = Random().nextInt(5000);
     int noOfComments = Random().nextInt(1000);
     String title =
-        generalPostTitles[Random().nextInt(generalPostTitles.length + 1)];
-    String imageUrl = imageUrls[Random().nextInt(imageUrls.length + 1)];
+        generalPostTitles[Random().nextInt(generalPostTitles.length)];
+    String imageUrl = imageUrls[Random().nextInt(imageUrls.length)];
     DateTime date =
         DateTime.now().subtract(Duration(hours: Random().nextInt(7000)));
-    String body = postBody[Random().nextInt(postBody.length + 1)];
+    String body = postBody[Random().nextInt(postBody.length)];
     String id = "${Random().nextInt(1000000)}";
     User user = User.Random();
     return Post(
@@ -87,5 +87,10 @@ class Post {
       noOfViews: noOfViews,
       noOfShares: noOfShares,
     );
+  }
+
+  @override
+  String toString() {
+    return 'Post{user: $user, id: $id, title: $title, body: $body, imageUrl: $imageUrl, noOfLikes: $noOfLikes, noOfViews: $noOfViews, noOfShares: $noOfShares, date: $date, noOfComments: $noOfComments}';
   }
 }
