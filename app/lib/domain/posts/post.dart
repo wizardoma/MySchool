@@ -42,6 +42,7 @@ class Post {
   final User user;
   final String id;
   final String title;
+  final bool isFollowing;
   final String body;
   final String imageUrl;
   final int noOfLikes;
@@ -52,6 +53,7 @@ class Post {
 
   const Post(
       {this.user,
+      this.isFollowing = false,
       this.id,
       this.date,
       this.title,
@@ -76,6 +78,7 @@ class Post {
     String id = "${Random().nextInt(1000000)}";
     User user = User.Random();
     return Post(
+
       id: id,
       date: date,
       user: user,
@@ -86,6 +89,52 @@ class Post {
       noOfLikes: noOfLikes,
       noOfViews: noOfViews,
       noOfShares: noOfShares,
+    );
+  }
+
+  factory Post.RandomFollowings() {
+    return Post.Random().copyWith(isFollowing: true);
+  }
+
+  Post copyWith({
+    User user,
+    String id,
+    String title,
+    bool isFollowing,
+    String body,
+    String imageUrl,
+    int noOfLikes,
+    int noOfViews,
+    int noOfShares,
+    DateTime date,
+    int noOfComments,
+  }) {
+    if ((user == null || identical(user, this.user)) &&
+        (id == null || identical(id, this.id)) &&
+        (title == null || identical(title, this.title)) &&
+        (isFollowing == null || identical(isFollowing, this.isFollowing)) &&
+        (body == null || identical(body, this.body)) &&
+        (imageUrl == null || identical(imageUrl, this.imageUrl)) &&
+        (noOfLikes == null || identical(noOfLikes, this.noOfLikes)) &&
+        (noOfViews == null || identical(noOfViews, this.noOfViews)) &&
+        (noOfShares == null || identical(noOfShares, this.noOfShares)) &&
+        (date == null || identical(date, this.date)) &&
+        (noOfComments == null || identical(noOfComments, this.noOfComments))) {
+      return this;
+    }
+
+    return new Post(
+      user: user ?? this.user,
+      id: id ?? this.id,
+      title: title ?? this.title,
+      isFollowing: isFollowing ?? this.isFollowing,
+      body: body ?? this.body,
+      imageUrl: imageUrl ?? this.imageUrl,
+      noOfLikes: noOfLikes ?? this.noOfLikes,
+      noOfViews: noOfViews ?? this.noOfViews,
+      noOfShares: noOfShares ?? this.noOfShares,
+      date: date ?? this.date,
+      noOfComments: noOfComments ?? this.noOfComments,
     );
   }
 

@@ -84,7 +84,10 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       bottomNavigationBar: getNavBar(),
-      body: _children[_currNavIndex],
+      body: IndexedStack(
+        children: _children,
+        index: _currNavIndex,
+      ),
     );
   }
 

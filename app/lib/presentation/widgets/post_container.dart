@@ -72,16 +72,14 @@ class _PostContainerState extends State<PostContainer> {
                                             style: kAuthorNameStyle,
                                           ),
                                           kHorizontalSpaceSmall,
-                                          Text(
+                                          if (!widget.post.isFollowing) Text(
                                             "Follow",
                                             style:
                                                 TextStyle(color: Colors.blue),
-                                          ),
+                                          )
                                         ],
                                       ),
-                                      LayoutBuilder(
-                                        builder: (context, constraint) =>
-                                            Container(
+                                      Container(
 //                                         width: constraint.maxWidth,
                                           child: Column(
                                             crossAxisAlignment:
@@ -99,7 +97,7 @@ class _PostContainerState extends State<PostContainer> {
                                             ],
                                           ),
                                         ),
-                                      ),
+
                                     ],
                                   )
                                 ],

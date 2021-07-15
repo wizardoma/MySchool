@@ -1,10 +1,10 @@
 import 'package:app/application/homefeeds/homefeeds_event.dart';
 import 'package:app/application/homefeeds/homefeeds_state.dart';
-import 'package:app/domain/feeds/homefeeds_service.dart';
+import 'package:app/domain/feeds/posts_service.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeFeedsBloc extends Bloc<HomeFeedsEvent, HomeFeedsState> {
-  final HomeFeedsService homeFeedsService;
+  final PostService homeFeedsService;
 
   HomeFeedsBloc(this.homeFeedsService) : super(HomeFeedsUnInitializedState());
 
