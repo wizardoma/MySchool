@@ -1,11 +1,12 @@
 import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
 import 'package:app/domain/posts/post.dart';
+import 'package:app/presentation/widgets/post_view_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-class PostView extends StatelessWidget {
+class PostContainer extends StatelessWidget {
   final Post post;
   final Function onPostTap;
   final Function onPostLike;
@@ -15,7 +16,7 @@ class PostView extends StatelessWidget {
   final Function onPostComment;
   final Function onPostDismiss;
 
-  const PostView(
+  const PostContainer(
       {Key key,
       this.post,
       this.onPostTap,
@@ -31,116 +32,129 @@ class PostView extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: const EdgeInsets.all(12),
+          GestureDetector(
+            onTap: () => openPost(context),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                Padding(
+                  padding: const EdgeInsets.all(12),
+                  child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                              height: 50,
-                              width: 50,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                image: DecorationImage(
-                                  image: AssetImage("assets/icons/google.png"),
-                                ),
+                              child: Row(
+                                children: [
+                                  Container(
+                                    height: 50,
+                                    width: 50,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                            "assets/icons/google.png"),
+                                      ),
+                                    ),
+                                  ),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Text(
+                                            post.user.name,
+                                            style: kAuthorNameStyle,
+                                          ),
+                                          kHorizontalSpaceSmall,
+                                          Text(
+                                            "Follow",
+                                            style:
+                                                TextStyle(color: Colors.blue),
+                                          ),
+                                        ],
+                                      ),
+                                      Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            post.user.university,
+                                            style: kSubtitleTextStyle,
+                                          ),
+                                          kHorizontalSpaceTiny,
+                                          Align(
+                                            child: Text("."),
+                                            alignment: Alignment.topCenter,
+                                          ),
+                                          kHorizontalSpaceTiny,
+                                          Text(
+                                            DateFormat('MMM d, y')
+                                                .format(post.date),
+                                            style: kSubtitleTextStyle,
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  )
+                                ],
                               ),
                             ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  children: [
-                                    Text(
-                                      post.user.name,
-                                      style: kAuthorNameStyle,
-                                    ),
-                                    kHorizontalSpaceSmall,
-                                    Text(
-                                      "Follow",
-                                      style: TextStyle(color: Colors.blue),
-                                    ),
-                                  ],
-                                ),
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      post.user.university,
-                                      style: kSubtitleTextStyle,
-                                    ),
-                                    kHorizontalSpaceTiny,
-                                    Align(
-                                      child: Text("."),
-                                      alignment: Alignment.topCenter,
-                                    ),
-                                    kHorizontalSpaceTiny,
-                                    Text(
-                                      DateFormat('MMM d, y').format(post.date),
-                                      style: kSubtitleTextStyle,
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            )
+                            CloseButton(
+                              onPressed: onPostDismiss,
+                            ),
                           ],
                         ),
                       ),
-                      CloseButton(
-                        onPressed: onPostDismiss,
+                      kVerticalSpaceTiny,
+                      Container(
+                        child: Text(
+                          post.title,
+                          style: kPostTitleTextStyle,
+                        ),
+                      ),
+                      kVerticalSpaceSmall,
+                      Container(
+                        height: 50,
+                        child: Stack(children: [
+                          Positioned.fill(
+                            child: Text(
+                              post.body,
+                              maxLines: 2,
+                              style: TextStyle(height: 1.3),
+                            ),
+                          ),
+                          Positioned(
+                              right: 0,
+                              bottom: 8,
+                              child: Container(
+                                padding: EdgeInsets.all(3),
+                                color: Colors.white.withOpacity(0.7),
+                                child: Text(
+                                  "Read More",
+                                  style: TextStyle(color: Colors.grey),
+                                ),
+                              ))
+                        ]),
                       ),
                     ],
                   ),
                 ),
-                kVerticalSpaceTiny,
-                Container(
-                  child: Text(
-                    post.title,
-                    style: kPostTitleTextStyle,
-                  ),
-                ),
                 kVerticalSpaceSmall,
                 Container(
-                  height: 50,
-                  child: Stack(children: [
-                    Positioned.fill(
-                      child: Text(
-                        post.body,
-                        maxLines: 2,
-                        style: TextStyle(height: 1.3),
-                      ),
-                    ),
-                    Positioned(
-                        right: 0,
-                        bottom: 8,
-                        child: Container(
-                          padding: EdgeInsets.all(3),
-                          color: Colors.white.withOpacity(0.7),
-                          child: Text(
-                            "Read More",
-                            style: TextStyle(color: Colors.grey),
-                          ),
-                        ))
-                  ]),
+                  height: 400,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: NetworkImage(post.imageUrl),
+                          fit: BoxFit.cover)),
                 ),
               ],
             ),
-          ),
-          kVerticalSpaceSmall,
-          Container(
-            height: 400,
-            width: double.infinity,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: NetworkImage(post.imageUrl), fit: BoxFit.cover)),
           ),
           Container(
             padding: EdgeInsets.symmetric(horizontal: 10),
@@ -260,6 +274,13 @@ class PostView extends StatelessWidget {
                 );
               });
         });
+  }
+
+  void openPost(BuildContext context) {
+    Navigator.pushNamed(context, PostViewScreen.routeName, arguments: {
+      "post": post,
+      "onPostOptionsTap": (context) => onPostOptionsTap(context)
+    });
   }
 
   Widget bottomSheetItem(String title) => Container(

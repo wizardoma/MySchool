@@ -1,7 +1,7 @@
 import 'package:app/application/homefeeds/home_feeds_bloc.dart';
 import 'package:app/application/homefeeds/homefeeds_event.dart';
 import 'package:app/application/homefeeds/homefeeds_state.dart';
-import 'package:app/presentation/widgets/post_view.dart';
+import 'package:app/presentation/widgets/post_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -24,7 +24,6 @@ class _HomeFeedsState extends State<HomeFeeds> {
 
   @override
   Widget build(BuildContext context) {
-    print(_feedsBloc);
     return BlocBuilder<HomeFeedsBloc, HomeFeedsState>(
         // ignore: missing_return
         builder: (context, state) {
@@ -38,7 +37,7 @@ class _HomeFeedsState extends State<HomeFeeds> {
           separatorBuilder: (context, index) => Divider(height: 5, thickness: 5,),
           itemCount: feeds.length,
             itemBuilder: (context, index) {
-            return PostView( post: feeds[index],
+            return PostContainer( post: feeds[index],
 
             );
         }

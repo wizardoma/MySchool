@@ -17,9 +17,7 @@ class HomeFeedsBloc extends Bloc<HomeFeedsEvent, HomeFeedsState> {
   }
 
   Future<HomeFeedsState> fetchHomeFeeds() async {
-    print("fetching feeds");
     var response = await homeFeedsService.fetchFeeds();
-    print("response :${response.isError}");
 
     if (!response.isError) {
       return FetchHomeFeedsSuccessState(response.data);

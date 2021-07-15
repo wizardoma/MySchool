@@ -19,9 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="refractor">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add post details to post view">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/application/homefeeds/home_feeds_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/homefeeds/home_feeds_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/commons/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/commons/routes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/home_feeds.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/home/home_feeds.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +34,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="DEFNW18C21001964" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Huawei_Android_10_API_29_" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -161,112 +164,10 @@
       <workItem from="1625317108831" duration="215000" />
       <workItem from="1625331210724" duration="1425000" />
       <workItem from="1625453368017" duration="74000" />
-      <workItem from="1626242067082" duration="766000" />
-    </task>
-    <task id="LOCAL-00001" summary="Add Readme.md File">
-      <created>1619292309474</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1619292309474</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Add .gitignore File">
-      <created>1619292820081</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1619292820081</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Add React initial setup">
-      <created>1619293007862</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1619293007862</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Add Spring Boot initial setup">
-      <created>1619293485981</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1619293485981</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Add Flutter for Mobile Application">
-      <created>1619413341058</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1619413341058</updated>
-    </task>
-    <task id="LOCAL-00006" summary="remove reactjs from project">
-      <created>1623856551218</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1623856551218</updated>
-    </task>
-    <task id="LOCAL-00007" summary="add necessary packages">
-      <created>1623858051476</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1623858051476</updated>
-    </task>
-    <task id="LOCAL-00008" summary="enforce portrait orientation">
-      <created>1623867589597</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1623867589597</updated>
-    </task>
-    <task id="LOCAL-00009" summary="add home screen">
-      <created>1623939468012</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1623939468012</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Add form button sheet for login and signup">
-      <created>1623943477932</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1623943477932</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Add login screen">
-      <created>1623945419701</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1623945419701</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Add login screen">
-      <created>1623945443304</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1623945443304</updated>
-    </task>
-    <task id="LOCAL-00013" summary="fix: keyboard overflow on bottomsheet">
-      <created>1623997139027</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1623997139027</updated>
-    </task>
-    <task id="LOCAL-00014" summary="add routes">
-      <created>1624013245933</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1624013245933</updated>
-    </task>
-    <task id="LOCAL-00015" summary="add signup screen">
-      <created>1624013303596</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1624013303596</updated>
+      <workItem from="1626242067082" duration="14563000" />
+      <workItem from="1626328122962" duration="5096000" />
+      <workItem from="1626338724646" duration="645000" />
+      <workItem from="1626340912169" duration="3073000" />
     </task>
     <task id="LOCAL-00016" summary="add homescreen for users">
       <created>1624013431019</created>
@@ -506,7 +407,112 @@
       <option name="project" value="LOCAL" />
       <updated>1625332424039</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Add native splash dependency">
+      <created>1626243191872</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1626243191875</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Add posts">
+      <created>1626246905005</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1626246905005</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Add random user generator">
+      <created>1626246923351</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1626246923351</updated>
+    </task>
+    <task id="LOCAL-00053" summary="refractor">
+      <created>1626246951398</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1626246951398</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Add homeFeeds domain layer">
+      <created>1626246968122</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1626246968122</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Add homeFeeds state management">
+      <created>1626251446115</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1626251446115</updated>
+    </task>
+    <task id="LOCAL-00056" summary="update Ioc with homefeeds">
+      <created>1626251534674</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1626251534674</updated>
+    </task>
+    <task id="LOCAL-00057" summary="refractor">
+      <created>1626251659852</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1626251659852</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Add ui_helper widgets">
+      <created>1626288690438</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1626288690439</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Add central styles">
+      <created>1626288717440</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1626288717440</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Add post view ui display">
+      <created>1626288757374</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1626288757374</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Add read more button to post">
+      <created>1626330176642</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1626330176646</updated>
+    </task>
+    <task id="LOCAL-00062" summary="refractor: add color to circularprogress and make social media button white">
+      <created>1626330251361</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1626330251361</updated>
+    </task>
+    <task id="LOCAL-00063" summary="add bottomsheet for posts">
+      <created>1626331499667</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1626331499668</updated>
+    </task>
+    <task id="LOCAL-00064" summary="add post details to post view">
+      <created>1626332697050</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1626332697050</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,19 +531,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add authentication state management" />
-    <MESSAGE value="add Inversion of control container" />
-    <MESSAGE value="create base entity" />
-    <MESSAGE value="create base service" />
-    <MESSAGE value="refractor: replace webflux dependency with spring web" />
-    <MESSAGE value="add h2 dependency for dev persistence" />
-    <MESSAGE value="create backend domain entities" />
-    <MESSAGE value="add global exception handling" />
-    <MESSAGE value="add abstract rest response utilities" />
-    <MESSAGE value="add crud operations for university" />
-    <MESSAGE value="add crud operations for Students" />
-    <MESSAGE value="fix: create user returns 200 instead of 201" />
-    <MESSAGE value="fix form bottom sheet keyboard padding" />
     <MESSAGE value="add authentication client abstraction" />
     <MESSAGE value="refractor authentication service" />
     <MESSAGE value="update inversion of control container" />
@@ -549,18 +542,31 @@
     <MESSAGE value="Add dummy users" />
     <MESSAGE value="inject user client to service" />
     <MESSAGE value="Add user state management" />
+    <MESSAGE value="Add native splash dependency" />
+    <MESSAGE value="Add posts" />
+    <MESSAGE value="Add random user generator" />
+    <MESSAGE value="Add homeFeeds domain layer" />
+    <MESSAGE value="Add homeFeeds state management" />
+    <MESSAGE value="update Ioc with homefeeds" />
     <MESSAGE value="refractor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refractor" />
+    <MESSAGE value="Add ui_helper widgets" />
+    <MESSAGE value="Add central styles" />
+    <MESSAGE value="Add post view ui display" />
+    <MESSAGE value="Add read more button to post" />
+    <MESSAGE value="refractor: add color to circularprogress and make social media button white" />
+    <MESSAGE value="add bottomsheet for posts" />
+    <MESSAGE value="add post details to post view" />
+    <option name="LAST_COMMIT_MESSAGE" value="add post details to post view" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="#Project_Structure/0.0.1600.860@0.0.1600.860" timestamp="1619291730634" />
-    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1624309320309">
+    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1626248352629">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1624309320309" />
+    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1626248352629" />
     <state x="626" y="356" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1624212009488">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -569,10 +575,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="541" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1624251443504" />
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1624658540108">
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1626330550380">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1624658540108" />
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1626330550380" />
     <state x="580" y="127" key="FileChooserDialogImpl" timestamp="1624254206192">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -585,22 +591,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="589" y="135" key="Github.UntrackedFilesDialog/0.0.1600.860@0.0.1600.860" timestamp="1619292079863" />
-    <state width="1557" height="331" key="GridCell.Tab.0.bottom" timestamp="1624479410583">
+    <state width="1557" height="165" key="GridCell.Tab.0.bottom" timestamp="1626341460601">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="331" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1624479410583" />
-    <state width="1557" height="331" key="GridCell.Tab.0.center" timestamp="1624479410583">
+    <state width="1557" height="165" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1626341460601" />
+    <state width="1557" height="165" key="GridCell.Tab.0.center" timestamp="1626341460601">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="331" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1624479410583" />
-    <state width="1557" height="331" key="GridCell.Tab.0.left" timestamp="1624479410582">
+    <state width="1557" height="165" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1626341460601" />
+    <state width="1557" height="165" key="GridCell.Tab.0.left" timestamp="1626341460599">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="331" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1624479410582" />
-    <state width="1557" height="331" key="GridCell.Tab.0.right" timestamp="1624479410583">
+    <state width="1557" height="165" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1626341460599" />
+    <state width="1557" height="165" key="GridCell.Tab.0.right" timestamp="1626341460601">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="331" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1624479410583" />
+    <state width="1557" height="165" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1626341460601" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -613,14 +619,14 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1625332426348">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626332699212">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1625332426348" />
-    <state x="510" y="172" width="579" height="516" key="find.popup" timestamp="1624128756379">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626332699212" />
+    <state x="510" y="172" width="579" height="516" key="find.popup" timestamp="1626342238560">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="510" y="172" width="579" height="516" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1624128756379" />
+    <state x="510" y="172" width="579" height="516" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1626342238560" />
     <state x="182" y="51" width="1235" height="649" key="new project wizard" timestamp="1624565512819">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
