@@ -68,6 +68,7 @@ flutter:
     - assets/icons/student.png
     - assets/images/mailbox_opened_flag_up.png
     - assets/images/question_mark.png
+    - assets/images/group_task.png
 
 
   # To add custom fonts to your application, add a fonts section here,
