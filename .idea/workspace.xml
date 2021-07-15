@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="refractor">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="Add spaces screen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +31,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Huawei_Android_10_API_29_" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="DEFNW18C21001964" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -167,14 +166,7 @@
       <workItem from="1626338724646" duration="645000" />
       <workItem from="1626340912169" duration="4321000" />
       <workItem from="1626351230745" duration="17446000" />
-      <workItem from="1626373280767" duration="1007000" />
-    </task>
-    <task id="LOCAL-00026" summary="create base entity">
-      <created>1624210951112</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1624210951112</updated>
+      <workItem from="1626373280767" duration="2641000" />
     </task>
     <task id="LOCAL-00027" summary="create base service">
       <created>1624216497423</created>
@@ -512,7 +504,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626366364451</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Add spaces screen+">
+      <created>1626374397194</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1626374397195</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -531,7 +530,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="inject user client to service" />
     <MESSAGE value="Add user state management" />
     <MESSAGE value="Add native splash dependency" />
     <MESSAGE value="Add posts" />
@@ -556,7 +554,8 @@
     <MESSAGE value="refractor: update ui to accommodate recent changes" />
     <MESSAGE value="Add question screen" />
     <MESSAGE value="refractor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refractor" />
+    <MESSAGE value="Add spaces screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add spaces screen" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
@@ -591,22 +590,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="589" y="135" key="Github.UntrackedFilesDialog/0.0.1600.860@0.0.1600.860" timestamp="1619292079863" />
-    <state width="1557" height="233" key="GridCell.Tab.0.bottom" timestamp="1626373182372">
+    <state width="1557" height="198" key="GridCell.Tab.0.bottom" timestamp="1626378781037">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="233" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1626373182372" />
-    <state width="1557" height="233" key="GridCell.Tab.0.center" timestamp="1626373182371">
+    <state width="1557" height="198" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1626378781037" />
+    <state width="1557" height="198" key="GridCell.Tab.0.center" timestamp="1626378781036">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="233" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1626373182371" />
-    <state width="1557" height="233" key="GridCell.Tab.0.left" timestamp="1626373182371">
+    <state width="1557" height="198" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1626378781036" />
+    <state width="1557" height="198" key="GridCell.Tab.0.left" timestamp="1626378781034">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="233" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1626373182371" />
-    <state width="1557" height="233" key="GridCell.Tab.0.right" timestamp="1626373182371">
+    <state width="1557" height="198" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1626378781034" />
+    <state width="1557" height="198" key="GridCell.Tab.0.right" timestamp="1626378781036">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="233" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1626373182371" />
+    <state width="1557" height="198" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1626378781036" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -619,10 +618,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626366394048">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626374401285">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626366394048" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626374401285" />
     <state x="510" y="172" width="579" height="516" key="find.popup" timestamp="1626342238560">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
