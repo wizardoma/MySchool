@@ -78,26 +78,26 @@ class PostContainer extends StatelessWidget {
                                           ),
                                         ],
                                       ),
-                                      Row(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            post.user.university,
-                                            style: kSubtitleTextStyle,
+                                      LayoutBuilder(
+                                        builder: (context, constraint) =>
+                                            Container(
+//                                         width: constraint.maxWidth,
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                post.user.university,
+                                                style: kSubtitleTextStyle,
+                                              ),
+                                              Text(
+                                                DateFormat('MMM d, y')
+                                                    .format(post.date),
+                                                style: kSubtitleTextStyle,
+                                              ),
+                                            ],
                                           ),
-                                          kHorizontalSpaceTiny,
-                                          Align(
-                                            child: Text("."),
-                                            alignment: Alignment.topCenter,
-                                          ),
-                                          kHorizontalSpaceTiny,
-                                          Text(
-                                            DateFormat('MMM d, y')
-                                                .format(post.date),
-                                            style: kSubtitleTextStyle,
-                                          ),
-                                        ],
+                                        ),
                                       ),
                                     ],
                                   )

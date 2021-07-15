@@ -11,5 +11,6 @@ const kPostTitleTextStyle = TextStyle(
 );
 
 const kSubtitleTextStyle = TextStyle(
+  fontSize: 12,
   color: Colors.grey
 );

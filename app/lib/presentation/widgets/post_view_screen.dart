@@ -36,7 +36,9 @@ class _PostViewScreenState extends State<PostViewScreen> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
+        leadingWidth: 15,
         leading: BackButton(
+
           color: Colors.black54,
         ),
         backgroundColor: Colors.white,
@@ -69,26 +71,16 @@ class _PostViewScreenState extends State<PostViewScreen> {
                       ),
                     ],
                   ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      FittedBox(
-                        child: Text(
-                          _post.user.university,
-                          style: kSubtitleTextStyle.copyWith(fontSize: 13),
-                        ),
+                      Text(
+                        _post.user.university,
+                        style: kSubtitleTextStyle,
                       ),
-                      kHorizontalSpaceTiny,
-                      Align(
-                        child: Text("."),
-                        alignment: Alignment.topCenter,
-                      ),
-                      kHorizontalSpaceTiny,
-                      FittedBox(
-                        child: Text(
-                          DateFormat('MMM d, y').format(_post.date),
-                          style: kSubtitleTextStyle.copyWith(fontSize: 13),
-                        ),
+                      Text(
+                        DateFormat('MMM d, y').format(_post.date),
+                        style: kSubtitleTextStyle,
                       ),
                     ],
                   ),
@@ -125,7 +117,6 @@ class _PostViewScreenState extends State<PostViewScreen> {
             ),
           ),
           kVerticalSpaceSmall,
-
         ],
       ),
       bottomNavigationBar: Container(

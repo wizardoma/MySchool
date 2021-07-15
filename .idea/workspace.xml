@@ -19,12 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add post details to post view">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="Add post view screen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/application/homefeeds/home_feeds_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/homefeeds/home_feeds_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/commons/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/commons/routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/home_feeds.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/home/home_feeds.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/commons/styles.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/commons/styles.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_view_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_view_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +33,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Huawei_Android_10_API_29_" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="DEFNW18C21001964" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -167,14 +166,7 @@
       <workItem from="1626242067082" duration="14563000" />
       <workItem from="1626328122962" duration="5096000" />
       <workItem from="1626338724646" duration="645000" />
-      <workItem from="1626340912169" duration="3073000" />
-    </task>
-    <task id="LOCAL-00016" summary="add homescreen for users">
-      <created>1624013431019</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1624013431019</updated>
+      <workItem from="1626340912169" duration="4041000" />
     </task>
     <task id="LOCAL-00017" summary="add home drawer">
       <created>1624016129092</created>
@@ -512,7 +504,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626332697050</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Add post view screen">
+      <created>1626344211638</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1626344211640</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -531,7 +530,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add authentication client abstraction" />
     <MESSAGE value="refractor authentication service" />
     <MESSAGE value="update inversion of control container" />
     <MESSAGE value="refractor signup classes" />
@@ -556,7 +554,8 @@
     <MESSAGE value="refractor: add color to circularprogress and make social media button white" />
     <MESSAGE value="add bottomsheet for posts" />
     <MESSAGE value="add post details to post view" />
-    <option name="LAST_COMMIT_MESSAGE" value="add post details to post view" />
+    <MESSAGE value="Add post view screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add post view screen" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
@@ -591,22 +590,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="589" y="135" key="Github.UntrackedFilesDialog/0.0.1600.860@0.0.1600.860" timestamp="1619292079863" />
-    <state width="1557" height="165" key="GridCell.Tab.0.bottom" timestamp="1626341460601">
+    <state width="1557" height="354" key="GridCell.Tab.0.bottom" timestamp="1626344266492">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="165" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1626341460601" />
-    <state width="1557" height="165" key="GridCell.Tab.0.center" timestamp="1626341460601">
+    <state width="1557" height="354" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1626344266492" />
+    <state width="1557" height="354" key="GridCell.Tab.0.center" timestamp="1626344266492">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="165" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1626341460601" />
-    <state width="1557" height="165" key="GridCell.Tab.0.left" timestamp="1626341460599">
+    <state width="1557" height="354" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1626344266492" />
+    <state width="1557" height="354" key="GridCell.Tab.0.left" timestamp="1626344266492">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="165" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1626341460599" />
-    <state width="1557" height="165" key="GridCell.Tab.0.right" timestamp="1626341460601">
+    <state width="1557" height="354" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1626344266492" />
+    <state width="1557" height="354" key="GridCell.Tab.0.right" timestamp="1626344266492">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="165" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1626341460601" />
+    <state width="1557" height="354" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1626344266492" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -619,10 +618,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626332699212">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626344214670">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626332699212" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626344214670" />
     <state x="510" y="172" width="579" height="516" key="find.popup" timestamp="1626342238560">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
