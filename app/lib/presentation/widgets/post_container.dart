@@ -6,25 +6,26 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-class PostContainer extends StatelessWidget {
+class PostContainer extends StatefulWidget {
   final Post post;
-  final Function onPostTap;
-  final Function onPostLike;
-  final Function onPostShare;
+
+  const PostContainer({
+    Key key,
+    this.post,
+  }) : super(key: key);
+
+  @override
+  _PostContainerState createState() => _PostContainerState();
+}
+
+class _PostContainerState extends State<PostContainer> {
+  Function _onPostTap;
+  Function _onPostLike;
+  Function _onPostShare;
 
 //  final Function onPostOptionsTap;
-  final Function onPostComment;
-  final Function onPostDismiss;
-
-  const PostContainer(
-      {Key key,
-      this.post,
-      this.onPostTap,
-      this.onPostLike,
-      this.onPostShare,
-      this.onPostComment,
-      this.onPostDismiss})
-      : super(key: key);
+  Function _onPostComment;
+  Function _onPostDismiss;
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +68,7 @@ class PostContainer extends StatelessWidget {
                                       Row(
                                         children: [
                                           Text(
-                                            post.user.name,
+                                            widget.post.user.name,
                                             style: kAuthorNameStyle,
                                           ),
                                           kHorizontalSpaceSmall,
@@ -87,12 +88,12 @@ class PostContainer extends StatelessWidget {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                post.user.university,
+                                                widget.post.user.university,
                                                 style: kSubtitleTextStyle,
                                               ),
                                               Text(
                                                 DateFormat('MMM d, y')
-                                                    .format(post.date),
+                                                    .format(widget.post.date),
                                                 style: kSubtitleTextStyle,
                                               ),
                                             ],
@@ -105,7 +106,7 @@ class PostContainer extends StatelessWidget {
                               ),
                             ),
                             CloseButton(
-                              onPressed: onPostDismiss,
+                              onPressed: _onPostDismiss,
                             ),
                           ],
                         ),
@@ -113,7 +114,7 @@ class PostContainer extends StatelessWidget {
                       kVerticalSpaceTiny,
                       Container(
                         child: Text(
-                          post.title,
+                          widget.post.title,
                           style: kPostTitleTextStyle,
                         ),
                       ),
@@ -123,7 +124,7 @@ class PostContainer extends StatelessWidget {
                         child: Stack(children: [
                           Positioned.fill(
                             child: Text(
-                              post.body,
+                              widget.post.body,
                               maxLines: 2,
                               style: TextStyle(height: 1.3),
                             ),
@@ -150,7 +151,7 @@ class PostContainer extends StatelessWidget {
                   width: double.infinity,
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: NetworkImage(post.imageUrl),
+                          image: NetworkImage(widget.post.imageUrl),
                           fit: BoxFit.cover)),
                 ),
               ],
@@ -192,7 +193,7 @@ class PostContainer extends StatelessWidget {
                             color: Colors.black54,
                           ),
                           kHorizontalSpaceTiny,
-                          Text(post.noOfShares.toString()),
+                          Text(widget.post.noOfShares.toString()),
                         ],
                       ),
                       kHorizontalSpaceSmall,
@@ -204,7 +205,7 @@ class PostContainer extends StatelessWidget {
                             color: Colors.black54,
                           ),
                           kHorizontalSpaceTiny,
-                          Text(post.noOfComments.toString()),
+                          Text(widget.post.noOfComments.toString()),
                         ],
                       ),
                     ],
@@ -215,7 +216,7 @@ class PostContainer extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       IconButton(
-                          onPressed: onPostShare,
+                          onPressed: _onPostShare,
                           icon: Icon(
                             Icons.share,
                             color: Colors.black54,
@@ -278,7 +279,7 @@ class PostContainer extends StatelessWidget {
 
   void openPost(BuildContext context) {
     Navigator.pushNamed(context, PostViewScreen.routeName, arguments: {
-      "post": post,
+      "post": widget.post,
       "onPostOptionsTap": (context) => onPostOptionsTap(context)
     });
   }

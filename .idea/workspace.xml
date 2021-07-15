@@ -19,9 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="refractor: Adjust post author section design">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/home/home_screen.dart" afterDir="false" />
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add floatingActionBar for specific tabs">
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,14 +164,7 @@
       <workItem from="1626328122962" duration="5096000" />
       <workItem from="1626338724646" duration="645000" />
       <workItem from="1626340912169" duration="4321000" />
-      <workItem from="1626351230745" duration="1253000" />
-    </task>
-    <task id="LOCAL-00018" summary="enable programmatically open drawer">
-      <created>1624017271017</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1624017271017</updated>
+      <workItem from="1626351230745" duration="1498000" />
     </task>
     <task id="LOCAL-00019" summary="Add change dark theme toggle">
       <created>1624089173794</created>
@@ -510,7 +502,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626345243832</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="add floatingActionBar for specific tabs">
+      <created>1626352911942</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1626352911945</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -529,7 +528,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update inversion of control container" />
     <MESSAGE value="refractor signup classes" />
     <MESSAGE value="implement logging out" />
     <MESSAGE value="refractor: add name of editor" />
@@ -554,7 +552,8 @@
     <MESSAGE value="add post details to post view" />
     <MESSAGE value="Add post view screen" />
     <MESSAGE value="refractor: Adjust post author section design" />
-    <option name="LAST_COMMIT_MESSAGE" value="refractor: Adjust post author section design" />
+    <MESSAGE value="add floatingActionBar for specific tabs" />
+    <option name="LAST_COMMIT_MESSAGE" value="add floatingActionBar for specific tabs" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
@@ -617,10 +616,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626345245634">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626352913789">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626345245634" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626352913789" />
     <state x="510" y="172" width="579" height="516" key="find.popup" timestamp="1626342238560">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
