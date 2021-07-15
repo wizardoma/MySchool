@@ -1,5 +1,6 @@
 import 'package:app/application/auth/auth_bloc.dart';
 import 'package:app/application/auth/auth_state.dart';
+import 'package:app/application/following/following_posts_bloc.dart';
 import 'package:app/application/homefeeds/home_feeds_bloc.dart';
 import 'package:app/application/theme/theme_cubit.dart';
 import 'package:app/commons/routes.dart';
@@ -12,8 +13,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
-/// Author: Ibekason Alexander
 
+/// Author: Ibekason Alexander
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -41,7 +42,12 @@ class MyApp extends StatelessWidget {
         BlocProvider.value(
           value: (ioC.getBloc("auth") as AuthenticationBloc),
         ),
-        BlocProvider.value(value: (ioC.getBloc("home_feeds")as HomeFeedsBloc),)
+        BlocProvider.value(
+          value: (ioC.getBloc("home_feeds") as HomeFeedsBloc),
+        ),
+        BlocProvider.value(
+          value: (ioC.getBloc("following") as FollowingPostBloc),
+        ),
       ],
       child: Builder(
         builder: (context) {
@@ -52,22 +58,20 @@ class MyApp extends StatelessWidget {
                     BlocProvider.of<AuthenticationBloc>(context).checkAuth(),
                 // ignore: missing_return
                 builder: (context, snapshot) {
-                  if (snapshot.connectionState == ConnectionState.waiting)
-                    {return Scaffold(
-                    body: CircularProgressIndicator(),
-                  );}
-
-                  else {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return Scaffold(
+                      body: CircularProgressIndicator(),
+                    );
+                  } else {
                     if (snapshot.hasData) {
-                    var state = snapshot.data as AuthenticationState;
-                    if (state is AuthenticatedState) {
-                      return HomeScreen();
-                    }
-                    if (state is NotAuthenticatedState) {
-                      return AuthScreen();
-                    }
+                      var state = snapshot.data as AuthenticationState;
+                      if (state is AuthenticatedState) {
+                        return HomeScreen();
+                      }
+                      if (state is NotAuthenticatedState) {
+                        return AuthScreen();
+                      }
 //                    (snapshot.connectionState == ConnectionState.waiting)
-
 
                     }
                   }
