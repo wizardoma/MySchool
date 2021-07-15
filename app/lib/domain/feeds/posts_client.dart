@@ -15,6 +15,10 @@ class PostClient {
 
   }
 
+  Future<ResponseEntity> fetchQuestionsPost() async {
+    return await Future.delayed(Duration(seconds: 1), () => ResponseEntity.Data(List.generate(20, (index) => Post.RandomQuestions())));
+  }
+
 
 
 }

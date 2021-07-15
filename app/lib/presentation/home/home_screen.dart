@@ -43,7 +43,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    print(_currNavIndex);
     return Scaffold(
       floatingActionButton: Visibility(
         visible: _currNavIndex <=2,

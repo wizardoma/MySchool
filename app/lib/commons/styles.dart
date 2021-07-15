@@ -8,6 +8,7 @@ const kAuthorNameStyle = TextStyle(
 const kPostTitleTextStyle = TextStyle(
   fontSize: 16,
   fontWeight: FontWeight.bold,
+  color: Colors.black87
 );
 
 const kSubtitleTextStyle = TextStyle(

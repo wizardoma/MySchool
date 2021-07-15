@@ -3,6 +3,8 @@ import 'dart:math';
 import 'package:app/domain/user/user.dart';
 import 'package:flutter/material.dart';
 
+enum PostType { post, question }
+
 final String postBodyFull =
     "lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus lorem non mollis suscipit. Proin eget dui fermentum, maximus purus a, convallis sem. Praesent sollicitudin ipsum eget finibus lacinia. Cras molestie erat vel ligula congue euismod. Proin non leo leo. Maecenas in malesuada sem. Nullam congue consectetur nibh vitae accumsan. Suspendisse vel lacus cursus, dictum orci at, ultricies sapien. Sed consequat nisl vel orci facilisis tempor. Nulla sed placerat mi. Suspendisse auctor, sem ac convallis porttitor, erat nisi condimentum lacus, eget tempus eros sapien nec nulla. Nulla nec dolor quis mauris pulvinar eleifend sed et turpis. Sed at hendrerit enim. Pellentesque condimentum neque mi, sed euismod enim euismod ut. "
     "Etiam bibendum faucibus ipsum et suscipit. In hac habitasse platea dictumst. Nam quis gravida dui. Proin consequat cursus ex ac volutpat. Donec nec lacinia ipsum. Sed lectus eros, rhoncus vel dolor eu, volutpat aliquam est. Quisque est dolor, lobortis et metus eget, rhoncus vehicula arcu. Aliquam erat volutpat. Aenean consectetur tincidunt facilisis. Aenean eu risus in metus gravida convallis sed non augue. In ac dui tincidunt, elementum velit a, vulputate mauris. Nullam rhoncus, est sed venenatis eleifend, sapien massa laoreet lorem, in mattis lorem quam vitae libero. Nunc tempus accumsan nisi, ac tincidunt nibh elementum ornare. Nulla lobortis neque vel turpis vulputate, at imperdiet lacus rutrum. "
@@ -44,6 +46,7 @@ class Post {
   final String title;
   final bool isFollowing;
   final String body;
+  final PostType postType;
   final String imageUrl;
   final int noOfLikes;
   final int noOfViews;
@@ -57,6 +60,7 @@ class Post {
       this.id,
       this.date,
       this.title,
+      this.postType = PostType.post,
       this.body,
       this.imageUrl,
       this.noOfLikes,
@@ -78,7 +82,6 @@ class Post {
     String id = "${Random().nextInt(1000000)}";
     User user = User.Random();
     return Post(
-
       id: id,
       date: date,
       user: user,
@@ -93,12 +96,21 @@ class Post {
   }
 
   factory Post.RandomFollowings() {
-    return Post.Random().copyWith(isFollowing: true);
+    return Post.Random().copyWith(
+      isFollowing: true,
+    );
+  }
+
+  factory Post.RandomQuestions() {
+    return Post.Random().copyWith(
+      postType: PostType.question,
+    );
   }
 
   Post copyWith({
     User user,
     String id,
+    PostType postType,
     String title,
     bool isFollowing,
     String body,
@@ -114,6 +126,7 @@ class Post {
         (title == null || identical(title, this.title)) &&
         (isFollowing == null || identical(isFollowing, this.isFollowing)) &&
         (body == null || identical(body, this.body)) &&
+        (postType == null || identical(postType, this.postType)) &&
         (imageUrl == null || identical(imageUrl, this.imageUrl)) &&
         (noOfLikes == null || identical(noOfLikes, this.noOfLikes)) &&
         (noOfViews == null || identical(noOfViews, this.noOfViews)) &&
@@ -131,6 +144,7 @@ class Post {
       body: body ?? this.body,
       imageUrl: imageUrl ?? this.imageUrl,
       noOfLikes: noOfLikes ?? this.noOfLikes,
+      postType: postType ?? this.postType,
       noOfViews: noOfViews ?? this.noOfViews,
       noOfShares: noOfShares ?? this.noOfShares,
       date: date ?? this.date,
