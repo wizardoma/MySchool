@@ -62,7 +62,9 @@ class FormBottomSheet extends StatelessWidget {
                                 return SizedBox(
                                   height: 20,
                                   width: 20,
-                                  child: CircularProgressIndicator(),
+                                  child: CircularProgressIndicator(
+                                    valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                                  ),
                                 );
                               }
                               return Text(
