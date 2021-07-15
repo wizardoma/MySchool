@@ -9,3 +9,7 @@ const kPostTitleTextStyle = TextStyle(
   fontSize: 16,
   fontWeight: FontWeight.bold,
 );
+
+const kSubtitleTextStyle = TextStyle(
+  color: Colors.grey
+);

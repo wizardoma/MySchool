@@ -3,6 +3,7 @@ import 'package:app/commons/ui_helpers.dart';
 import 'package:app/domain/posts/post.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class PostView extends StatelessWidget {
   final Post post;
@@ -59,7 +60,7 @@ class PostView extends StatelessWidget {
                                 Row(
                                   children: [
                                     Text(
-                                      "Asma Hadad",
+                                      post.user.name,
                                       style: kAuthorNameStyle,
                                     ),
                                     kHorizontalSpaceSmall,
@@ -69,7 +70,25 @@ class PostView extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-                                Text("April 16"),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      post.user.university,
+                                      style: kSubtitleTextStyle,
+                                    ),
+                                    kHorizontalSpaceTiny,
+                                    Align(
+                                      child: Text("."),
+                                      alignment: Alignment.topCenter,
+                                    ),
+                                    kHorizontalSpaceTiny,
+                                    Text(
+                                      DateFormat('MMM d, y').format(post.date),
+                                      style: kSubtitleTextStyle,
+                                    ),
+                                  ],
+                                ),
                               ],
                             )
                           ],
@@ -216,22 +235,25 @@ class PostView extends StatelessWidget {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                  Container(
-                  padding: EdgeInsets.symmetric(vertical: 15),
-                  child: Center(
-                    child: Text("Answer", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, ),),
-                  ),
-                ),
+                      Container(
+                        padding: EdgeInsets.symmetric(vertical: 15),
+                        child: Center(
+                          child: Text(
+                            "Answer",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+                      ),
                       Divider(),
                       bottomSheetItem("Thank"),
                       Divider(),
-
                       bottomSheetItem("Downvote Question"),
                       Divider(),
-
                       bottomSheetItem("Log"),
                       Divider(),
-
                       bottomSheetItem("Report"),
                     ],
                   ),
@@ -241,7 +263,7 @@ class PostView extends StatelessWidget {
   }
 
   Widget bottomSheetItem(String title) => Container(
-    padding: EdgeInsets.symmetric(vertical: 15),
+        padding: EdgeInsets.symmetric(vertical: 15),
         child: Center(
           child: Text(title),
         ),
