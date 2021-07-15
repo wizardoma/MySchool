@@ -9,6 +9,8 @@ class PostView extends StatelessWidget {
   final Function onPostTap;
   final Function onPostLike;
   final Function onPostShare;
+
+//  final Function onPostOptionsTap;
   final Function onPostComment;
   final Function onPostDismiss;
 
@@ -89,27 +91,26 @@ class PostView extends StatelessWidget {
                 kVerticalSpaceSmall,
                 Container(
                   height: 50,
-                  child: Stack(
-                    children: [
-                      Positioned.fill(
-                        child: Text(
+                  child: Stack(children: [
+                    Positioned.fill(
+                      child: Text(
                         post.body,
                         maxLines: 2,
-                          style: TextStyle(
-                            height: 1.3
-                          ),
-                    ),
+                        style: TextStyle(height: 1.3),
                       ),
+                    ),
                     Positioned(
-                      right: 0,
+                        right: 0,
                         bottom: 8,
                         child: Container(
                           padding: EdgeInsets.all(3),
                           color: Colors.white.withOpacity(0.7),
-                          child: Text("Read More", style: TextStyle(color: Colors.grey),),
+                          child: Text(
+                            "Read More",
+                            style: TextStyle(color: Colors.grey),
+                          ),
                         ))
-                    ]
-                  ),
+                  ]),
                 ),
               ],
             ),
@@ -188,7 +189,7 @@ class PostView extends StatelessWidget {
                           )),
                       kHorizontalSpaceTiny,
                       IconButton(
-                          onPressed: null,
+                          onPressed: () => onPostOptionsTap(context),
                           icon: Icon(
                             Icons.more_horiz,
                             color: Colors.black54,
@@ -203,4 +204,46 @@ class PostView extends StatelessWidget {
       ),
     );
   }
+
+  void onPostOptionsTap(BuildContext context) {
+    showModalBottomSheet(
+        context: context,
+        builder: (context) {
+          return BottomSheet(
+              onClosing: () => print("on close"),
+              builder: (context) {
+                return Container(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                  Container(
+                  padding: EdgeInsets.symmetric(vertical: 15),
+                  child: Center(
+                    child: Text("Answer", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, ),),
+                  ),
+                ),
+                      Divider(),
+                      bottomSheetItem("Thank"),
+                      Divider(),
+
+                      bottomSheetItem("Downvote Question"),
+                      Divider(),
+
+                      bottomSheetItem("Log"),
+                      Divider(),
+
+                      bottomSheetItem("Report"),
+                    ],
+                  ),
+                );
+              });
+        });
+  }
+
+  Widget bottomSheetItem(String title) => Container(
+    padding: EdgeInsets.symmetric(vertical: 15),
+        child: Center(
+          child: Text(title),
+        ),
+      );
 }

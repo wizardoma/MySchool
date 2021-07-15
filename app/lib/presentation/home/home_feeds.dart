@@ -28,7 +28,6 @@ class _HomeFeedsState extends State<HomeFeeds> {
     return BlocBuilder<HomeFeedsBloc, HomeFeedsState>(
         // ignore: missing_return
         builder: (context, state) {
-          print(state);
       if (state is FetchingHomeFeedsState ||
           state is HomeFeedsUnInitializedState) {
         return Center(child: CircularProgressIndicator());
@@ -48,4 +47,6 @@ class _HomeFeedsState extends State<HomeFeeds> {
       }
     });
   }
+
+
 }
