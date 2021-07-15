@@ -43,7 +43,15 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    print(_currNavIndex);
     return Scaffold(
+      floatingActionButton: Visibility(
+        visible: _currNavIndex <=2,
+        child: FloatingActionButton(
+          onPressed: onFabTapped,
+          child: Icon(Icons.add, color: Colors.white),
+        ),
+      ),
       drawerEnableOpenDragGesture: false,
       drawer: HomeDrawer(),
       appBar: AppBar(
@@ -126,5 +134,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Icon getIcon(IconData icon) {
     return Icon(icon, size: 25);
+  }
+
+  void onFabTapped() {
+    print("Fab typed");
   }
 }
