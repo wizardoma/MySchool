@@ -88,9 +88,27 @@ class PostView extends StatelessWidget {
                 ),
                 kVerticalSpaceSmall,
                 Container(
-                  child: Text(
-                    post.body,
-                    maxLines: 2,
+                  height: 50,
+                  child: Stack(
+                    children: [
+                      Positioned.fill(
+                        child: Text(
+                        post.body,
+                        maxLines: 2,
+                          style: TextStyle(
+                            height: 1.3
+                          ),
+                    ),
+                      ),
+                    Positioned(
+                      right: 0,
+                        bottom: 8,
+                        child: Container(
+                          padding: EdgeInsets.all(3),
+                          color: Colors.white.withOpacity(0.7),
+                          child: Text("Read More", style: TextStyle(color: Colors.grey),),
+                        ))
+                    ]
                   ),
                 ),
               ],
