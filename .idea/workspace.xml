@@ -19,10 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="refractor: update">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add notification screen design">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/notification/notification.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/notification/notification.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/notifications/notifications_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/notifications/notifications_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/commons/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/commons/routes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/drawer/drawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/drawer/drawer.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,14 +169,7 @@
       <workItem from="1626351230745" duration="17446000" />
       <workItem from="1626373280767" duration="3395000" />
       <workItem from="1626416115824" duration="5788000" />
-      <workItem from="1626439045785" duration="1443000" />
-    </task>
-    <task id="LOCAL-00034" summary="add crud operations for Students">
-      <created>1624255807459</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1624255807459</updated>
+      <workItem from="1626439045785" duration="2711000" />
     </task>
     <task id="LOCAL-00035" summary="fix: create user returns 200 instead of 201">
       <created>1624257099155</created>
@@ -514,7 +507,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626425210052</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="add notification screen design">
+      <created>1626456391044</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1626456391046</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,7 +533,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add ui_helper widgets" />
     <MESSAGE value="Add central styles" />
     <MESSAGE value="Add post view ui display" />
     <MESSAGE value="Add read more button to post" />
@@ -558,7 +557,8 @@
     <MESSAGE value="add notification state management layer" />
     <MESSAGE value="update inversion of Control with notification domain" />
     <MESSAGE value="refractor: update" />
-    <option name="LAST_COMMIT_MESSAGE" value="refractor: update" />
+    <MESSAGE value="add notification screen design" />
+    <option name="LAST_COMMIT_MESSAGE" value="add notification screen design" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
@@ -621,10 +621,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626425085570">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626456394229">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626425085570" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626456394229" />
     <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1626424702719">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

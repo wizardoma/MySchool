@@ -8,7 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeDrawer extends StatelessWidget {
-
   final _items = [
     {
       "icon": Icons.message_outlined,
@@ -39,13 +38,13 @@ class HomeDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return SafeArea(
       child: BlocListener<AuthenticationBloc, AuthenticationState>(
-        listener: (context,state) {
+        listener: (context, state) {
           if (state is NotAuthenticatedState) {
             Future.delayed(Duration(seconds: 2), () {
-              Navigator.pushNamedAndRemoveUntil(context, AuthScreen.routeName, (route) => false);
+              Navigator.pushNamedAndRemoveUntil(
+                  context, AuthScreen.routeName, (route) => false);
             });
           }
         },
@@ -57,7 +56,6 @@ class HomeDrawer extends StatelessWidget {
               Column(
                 children: [
                   Container(
-
                     child: DrawerHeader(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -90,6 +88,8 @@ class HomeDrawer extends StatelessWidget {
                       shrinkWrap: true,
                       children: _items.map((e) {
                         return ListTile(
+                          onTap: () =>
+                              Navigator.pushNamed(context, e["routeName"]),
                           leading: Icon(e["icon"]),
                           title: Text(e["title"]),
                         );
@@ -107,7 +107,9 @@ class HomeDrawer extends StatelessWidget {
                       child: Row(
                         children: [
                           Icon(Icons.settings_outlined),
-                          SizedBox(width: 5,),
+                          SizedBox(
+                            width: 5,
+                          ),
                           Text("Settings"),
                         ],
                       ),
@@ -116,13 +118,22 @@ class HomeDrawer extends StatelessWidget {
                       child: Row(
                         children: [
                           IconButton(
-                            icon: Icon(Icons.lightbulb, color: Colors.black54,),
+                            icon: Icon(
+                              Icons.lightbulb,
+                              color: Colors.black54,
+                            ),
                             onPressed: () {
                               BlocProvider.of<ThemeCubit>(context).setTheme();
                             },
                           ),
                           IconButton(
-                              icon: Icon(Icons.logout, color: Colors.black54,), onPressed:() => context.read<AuthenticationBloc>().add(LogoutEvent())),
+                              icon: Icon(
+                                Icons.logout,
+                                color: Colors.black54,
+                              ),
+                              onPressed: () => context
+                                  .read<AuthenticationBloc>()
+                                  .add(LogoutEvent())),
                         ],
                       ),
                     ),
