@@ -1,4 +1,5 @@
 import 'package:app/commons/ui_helpers.dart';
+import 'package:app/domain/space/spaces_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -12,19 +13,7 @@ class SpacesScreen extends StatefulWidget {
 }
 
 class _SpacesScreenState extends State<SpacesScreen> {
-  final List<String> _spaces = [
-    "Computer Science",
-    "Electrical and Electronics Engineering",
-    "Pharmacy",
-    "Medical Science",
-    "Mechatronics",
-    "MicroBiology",
-    "Agricultural Engineering",
-    "Chemistry",
-    "Physics",
-    "Political Science",
-    "Architecture",
-  ];
+
 
   @override
   Widget build(BuildContext context) {
@@ -122,14 +111,14 @@ class _SpacesScreenState extends State<SpacesScreen> {
                         leading: Image.asset("assets/images/group_task.png",
                             width: 20, height: 20),
                         title: Text(
-                          _spaces[index],
+                          spacesList[index],
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 15
                           ),
                         ),
                         trailing: Icon(Icons.arrow_forward_ios),
-                      ), itemCount: _spaces.length,)
+                      ), itemCount: spacesList.length,)
                   ,
             ),
           ]
@@ -171,4 +160,3 @@ class CustomListTile extends StatelessWidget {
     );
   }
 }
-

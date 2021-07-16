@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:app/domain/auth/model/signUpUser.dart';
+import 'package:app/domain/user/usersList.dart';
 
 class User {
   final String id;
@@ -33,7 +34,7 @@ class User {
   factory User.Random() {
     return User(
       id: DateTime.now().add(Duration(seconds: Random().nextInt(100000))).toString(),
-      name: "Hina Anser",
+      name: usersList[Random().nextInt(usersList.length)],
       email: "alib@gmail.com",
       department: "Computer Science",
       university: "Federal University of Technology, Owerri",

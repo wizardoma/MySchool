@@ -71,8 +71,8 @@ class Post {
   factory Post.Random() {
     int noOfLikes = Random().nextInt(50000);
     int noOfViews = Random().nextInt(500000);
-    int noOfShares = Random().nextInt(5000);
-    int noOfComments = Random().nextInt(1000);
+    int noOfShares = Random().nextInt(200);
+    int noOfComments = Random().nextInt(500);
     String title =
         generalPostTitles[Random().nextInt(generalPostTitles.length)];
     String imageUrl = imageUrls[Random().nextInt(imageUrls.length)];
