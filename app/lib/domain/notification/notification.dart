@@ -21,10 +21,11 @@ class Notification {
       this.isPost});
 
   factory Notification.Random() {
+
     String spaceName = spacesList[Random().nextInt(spacesList.length)];
     String userName = usersList[Random().nextInt(usersList.length)];
-    bool isRead = Random().nextInt(2) == 1;
-    bool isPost = Random().nextInt(2) == 1;
+    bool isRead = Random().nextInt(3) != 1;
+    bool isPost = Random().nextInt(3) != 1;
     DateTime date =
         DateTime.now().subtract(Duration(hours: Random().nextInt(7000)));
     String postTitle = generalPostTitles.followedBy(mathPostTitles).toList()[

@@ -19,9 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="Add spaces screen">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="refractor: update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/notification/notification.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/notification/notification.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/notifications/notifications_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/notifications/notifications_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +64,7 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/lib/application/notification" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -79,19 +80,19 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\following" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\android\app" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\presentation\widgets" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\presentation" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\notification" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\android\app\src" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\android\app" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\assets\images" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\assets\icons" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\auth" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain\notification" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\following" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\android\app" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\presentation\widgets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -166,56 +167,9 @@
       <workItem from="1626338724646" duration="645000" />
       <workItem from="1626340912169" duration="4321000" />
       <workItem from="1626351230745" duration="17446000" />
-      <workItem from="1626373280767" duration="2641000" />
-    </task>
-    <task id="LOCAL-00027" summary="create base service">
-      <created>1624216497423</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1624216497423</updated>
-    </task>
-    <task id="LOCAL-00028" summary="refractor: replace webflux dependency with spring web">
-      <created>1624255433637</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1624255433637</updated>
-    </task>
-    <task id="LOCAL-00029" summary="add h2 dependency for dev persistence">
-      <created>1624255493902</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1624255493902</updated>
-    </task>
-    <task id="LOCAL-00030" summary="create backend domain entities">
-      <created>1624255593818</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1624255593818</updated>
-    </task>
-    <task id="LOCAL-00031" summary="add global exception handling">
-      <created>1624255642404</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1624255642404</updated>
-    </task>
-    <task id="LOCAL-00032" summary="add abstract rest response utilities">
-      <created>1624255693652</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1624255693652</updated>
-    </task>
-    <task id="LOCAL-00033" summary="add crud operations for university">
-      <created>1624255770046</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1624255770046</updated>
+      <workItem from="1626373280767" duration="3395000" />
+      <workItem from="1626416115824" duration="5788000" />
+      <workItem from="1626439045785" duration="1443000" />
     </task>
     <task id="LOCAL-00034" summary="add crud operations for Students">
       <created>1624255807459</created>
@@ -511,7 +465,56 @@
       <option name="project" value="LOCAL" />
       <updated>1626374397195</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="refractor: improve space screen design">
+      <created>1626380217769</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1626380217769</updated>
+    </task>
+    <task id="LOCAL-00077" summary="add random list of users">
+      <created>1626425083057</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1626425083059</updated>
+    </task>
+    <task id="LOCAL-00078" summary="add random list of spaces">
+      <created>1626425100889</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1626425100889</updated>
+    </task>
+    <task id="LOCAL-00079" summary="add notification domain layer">
+      <created>1626425128091</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1626425128091</updated>
+    </task>
+    <task id="LOCAL-00080" summary="add notification state management layer">
+      <created>1626425152085</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1626425152085</updated>
+    </task>
+    <task id="LOCAL-00081" summary="update inversion of Control with notification domain">
+      <created>1626425180450</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1626425180451</updated>
+    </task>
+    <task id="LOCAL-00082" summary="refractor: update">
+      <created>1626425210052</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1626425210052</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,13 +533,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add user state management" />
-    <MESSAGE value="Add native splash dependency" />
-    <MESSAGE value="Add posts" />
-    <MESSAGE value="Add random user generator" />
-    <MESSAGE value="Add homeFeeds domain layer" />
-    <MESSAGE value="Add homeFeeds state management" />
-    <MESSAGE value="update Ioc with homefeeds" />
     <MESSAGE value="Add ui_helper widgets" />
     <MESSAGE value="Add central styles" />
     <MESSAGE value="Add post view ui display" />
@@ -555,7 +551,14 @@
     <MESSAGE value="Add question screen" />
     <MESSAGE value="refractor" />
     <MESSAGE value="Add spaces screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add spaces screen" />
+    <MESSAGE value="refractor: improve space screen design" />
+    <MESSAGE value="add random list of users" />
+    <MESSAGE value="add random list of spaces" />
+    <MESSAGE value="add notification domain layer" />
+    <MESSAGE value="add notification state management layer" />
+    <MESSAGE value="update inversion of Control with notification domain" />
+    <MESSAGE value="refractor: update" />
+    <option name="LAST_COMMIT_MESSAGE" value="refractor: update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
@@ -574,10 +577,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="541" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1624251443504" />
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1626370663402">
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1626426705623">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1626370663402" />
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1626426705623" />
     <state x="580" y="127" key="FileChooserDialogImpl" timestamp="1624254206192">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -590,22 +593,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="589" y="135" key="Github.UntrackedFilesDialog/0.0.1600.860@0.0.1600.860" timestamp="1619292079863" />
-    <state width="1557" height="198" key="GridCell.Tab.0.bottom" timestamp="1626378781037">
+    <state width="1557" height="197" key="GridCell.Tab.0.bottom" timestamp="1626455623191">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="198" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1626378781037" />
-    <state width="1557" height="198" key="GridCell.Tab.0.center" timestamp="1626378781036">
+    <state width="1557" height="197" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1626455623191" />
+    <state width="1557" height="197" key="GridCell.Tab.0.center" timestamp="1626455623191">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="198" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1626378781036" />
-    <state width="1557" height="198" key="GridCell.Tab.0.left" timestamp="1626378781034">
+    <state width="1557" height="197" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1626455623191" />
+    <state width="1557" height="197" key="GridCell.Tab.0.left" timestamp="1626455623189">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="198" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1626378781034" />
-    <state width="1557" height="198" key="GridCell.Tab.0.right" timestamp="1626378781036">
+    <state width="1557" height="197" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1626455623189" />
+    <state width="1557" height="197" key="GridCell.Tab.0.right" timestamp="1626455623191">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="198" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1626378781036" />
+    <state width="1557" height="197" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1626455623191" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -618,14 +621,14 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626374401285">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626425085570">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626374401285" />
-    <state x="510" y="172" width="579" height="516" key="find.popup" timestamp="1626342238560">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626425085570" />
+    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1626424702719">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="510" y="172" width="579" height="516" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1626342238560" />
+    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1626424702719" />
     <state x="182" y="51" width="1235" height="649" key="new project wizard" timestamp="1624565512819">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
