@@ -1,12 +1,15 @@
 import 'package:app/application/auth/auth_bloc.dart';
 import 'package:app/application/following/following_posts_bloc.dart';
 import 'package:app/application/homefeeds/home_feeds_bloc.dart';
+import 'package:app/application/notification/notification_bloc.dart';
 import 'package:app/domain/auth/authentication_client.dart';
 import 'package:app/domain/auth/authentication_service.dart';
 import 'package:app/domain/auth/authentication_service_impl.dart';
 import 'package:app/domain/auth/firebase_auth_service.dart';
 import 'package:app/domain/feeds/posts_client.dart';
 import 'package:app/domain/feeds/posts_service.dart';
+import 'package:app/domain/notification/notification_client.dart';
+import 'package:app/domain/notification/notification_service.dart';
 import 'package:app/domain/service.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -15,6 +18,9 @@ class IoC {
   Map<String, Bloc> _blocs;
 
   AuthenticationClient _authenticationClient;
+  NotificationClient _notificationClient;
+  NotificationService _notificationService;
+  NotificationBloc _notificationBloc;
   AuthenticationService _authenticationService;
   AuthenticationBloc _authenticationBloc;
   HomeFeedsBloc _homeFeedsBloc;
@@ -24,11 +30,14 @@ class IoC {
 
   IoC() {
     _authenticationClient = FirebaseAuthService();
+    _notificationClient = NotificationClient();
+    _notificationService = NotificationService(_notificationClient);
     _authenticationService = AuthenticationServiceImpl(_authenticationClient);
     _authenticationBloc =
         AuthenticationBloc(authenticationService: _authenticationService);
     _postClient = PostClient();
     _postService = PostService(_postClient);
+    _notificationBloc = NotificationBloc(_notificationService);
     _homeFeedsBloc = HomeFeedsBloc(_postService);
     _followingPostBloc = FollowingPostBloc(_postService);
     _services = {
@@ -40,6 +49,7 @@ class IoC {
       "auth": _authenticationBloc,
       "home_feeds": _homeFeedsBloc,
       "following": _followingPostBloc,
+      "notification": _notificationBloc,
     };
   }
 
