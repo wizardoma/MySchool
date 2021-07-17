@@ -1,6 +1,7 @@
 import 'package:app/presentation/follows/following_screen.dart';
 import 'package:app/presentation/home/home_feeds.dart';
 import 'package:app/presentation/notifications/notifications_screen.dart';
+import 'package:app/presentation/post/create_post_screen.dart';
 import 'package:app/presentation/questions/questions_screen.dart';
 import 'package:app/presentation/spaces/spaces_screen.dart';
 import 'package:app/presentation/widgets/drawer/drawer.dart';
@@ -45,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: Visibility(
-        visible: _currNavIndex <=2,
+        visible: _currNavIndex <= 2,
         child: FloatingActionButton(
           onPressed: onFabTapped,
           child: Icon(Icons.add, color: Colors.white),
@@ -56,8 +57,8 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         elevation: 0.5,
         leading: Builder(
-          builder:(context)=> GestureDetector(
-            onTap:() =>_openDrawer(context),
+          builder: (context) => GestureDetector(
+            onTap: () => _openDrawer(context),
             child: Image.asset(
               "assets/icons/student.png",
               width: 45,
@@ -139,6 +140,11 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void onFabTapped() {
-    print("Fab typed");
+    showModalBottomSheet(
+      isScrollControlled: true,
+      enableDrag: false,
+      context: context,
+      builder: (context) => CreatePostScreen(),
+    );
   }
 }
