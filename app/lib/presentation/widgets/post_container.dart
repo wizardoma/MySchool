@@ -2,6 +2,7 @@ import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
 import 'package:app/domain/posts/post.dart';
 import 'package:app/presentation/widgets/post_view_screen.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -33,12 +34,13 @@ class _PostContainerState extends State<PostContainer> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          kVerticalSpaceSmall,
           GestureDetector(
             onTap: () => openPost(context),
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(12),
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -72,32 +74,32 @@ class _PostContainerState extends State<PostContainer> {
                                             style: kAuthorNameStyle,
                                           ),
                                           kHorizontalSpaceSmall,
-                                          if (!widget.post.isFollowing) Text(
-                                            "Follow",
-                                            style:
-                                                TextStyle(color: Colors.blue),
-                                          )
+                                          if (!widget.post.isFollowing)
+                                            Text(
+                                              "Follow",
+                                              style:
+                                                  TextStyle(color: Colors.blue),
+                                            )
                                         ],
                                       ),
                                       Container(
 //                                         width: constraint.maxWidth,
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Text(
-                                                widget.post.user.university,
-                                                style: kSubtitleTextStyle,
-                                              ),
-                                              Text(
-                                                DateFormat('MMM d, y')
-                                                    .format(widget.post.date),
-                                                style: kSubtitleTextStyle,
-                                              ),
-                                            ],
-                                          ),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              widget.post.user.university,
+                                              style: kSubtitleTextStyle,
+                                            ),
+                                            Text(
+                                              DateFormat('MMM d, y')
+                                                  .format(widget.post.date),
+                                              style: kSubtitleTextStyle,
+                                            ),
+                                          ],
                                         ),
-
+                                      ),
                                     ],
                                   )
                                 ],
@@ -117,41 +119,39 @@ class _PostContainerState extends State<PostContainer> {
                         ),
                       ),
                       kVerticalSpaceSmall,
-                      Container(
-                        height: 50,
-                        child: Stack(children: [
-                          Positioned.fill(
-                            child: Text(
+                      AutoSizeText(
+                        widget.post.body,
+                        maxLines: 2,
+                        style: TextStyle(height: 1.3),
+                        overflowReplacement: Column( // This widget will be replaced.
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
                               widget.post.body,
                               maxLines: 2,
-                              style: TextStyle(height: 1.3),
+                              overflow: TextOverflow.ellipsis,
                             ),
-                          ),
-                          Positioned(
-                              right: 0,
-                              bottom: 8,
-                              child: Container(
-                                padding: EdgeInsets.all(3),
-                                color: Colors.white.withOpacity(0.7),
-                                child: Text(
-                                  "Read More",
-                                  style: TextStyle(color: Colors.grey),
-                                ),
-                              ))
-                        ]),
+                            Text(
+                              "Read more",
+                              style: TextStyle(color: Colors.grey, fontSize: 17),
+                            )
+                          ],
+                        ),
+
                       ),
                     ],
                   ),
                 ),
                 kVerticalSpaceSmall,
-                Container(
-                  height: 400,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: NetworkImage(widget.post.imageUrl),
-                          fit: BoxFit.cover)),
-                ),
+                if (widget.post.imageUrl != null)
+                  Container(
+                    height: 400,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: NetworkImage(widget.post.imageUrl),
+                            fit: BoxFit.cover)),
+                  ),
               ],
             ),
           ),

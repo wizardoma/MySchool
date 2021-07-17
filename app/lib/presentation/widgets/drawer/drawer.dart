@@ -88,8 +88,9 @@ class HomeDrawer extends StatelessWidget {
                       shrinkWrap: true,
                       children: _items.map((e) {
                         return ListTile(
-                          onTap: () =>
-                              Navigator.pushNamed(context, e["routeName"]),
+                          onTap: () {
+                            Navigator.popAndPushNamed(context, e["routeName"]);
+                          },
                           leading: Icon(e["icon"]),
                           title: Text(e["title"]),
                         );
