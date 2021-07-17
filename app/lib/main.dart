@@ -74,7 +74,6 @@ class MyApp extends StatelessWidget {
                       if (state is NotAuthenticatedState) {
                         return AuthScreen();
                       }
-//                    (snapshot.connectionState == ConnectionState.waiting)
 
                     }
                   }

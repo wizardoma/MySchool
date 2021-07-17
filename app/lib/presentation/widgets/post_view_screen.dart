@@ -36,7 +36,7 @@ class _PostViewScreenState extends State<PostViewScreen> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        leadingWidth: 15,
+        leadingWidth: 30,
         leading: BackButton(
 
           color: Colors.black54,
@@ -111,12 +111,20 @@ class _PostViewScreenState extends State<PostViewScreen> {
           kVerticalSpaceSmall,
           Container(
             padding: EdgeInsets.all(15),
-            child: Text(
-              _post.body,
-              style: TextStyle(height: 1.3),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  _post.body,
+                  style: TextStyle(height: 1.3),
+                ),
+                kVerticalSpaceMedium,
+                Text(_post.noOfViews.toString() + " views", style: kSubtitleTextStyle,),
+              ],
             ),
           ),
           kVerticalSpaceSmall,
+
         ],
       ),
       bottomNavigationBar: Container(

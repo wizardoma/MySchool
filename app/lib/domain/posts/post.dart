@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:app/domain/user/user.dart';
-import 'package:flutter/material.dart';
 
 enum PostType { post, question }
 
@@ -21,7 +20,8 @@ final List<String> mathPostTitles = [
   "Convert NFA to DFA using intersection",
   "Approximation for three homogeneous equations wihtout zeros as results",
   "Good initial guesses for n×n system of equations numerical solution",
-  "Is F(x) the same as ⋃{y∣⟨x,y⟩ ∈ F}?"
+  "Is F(x) the same as ⋃{y∣⟨x,y⟩ ∈ F}?",
+  "what is Eucleadon Division Theorem"
 ];
 
 final List<String> generalPostTitles = [
@@ -29,11 +29,16 @@ final List<String> generalPostTitles = [
   "Is there any interesting event coming up in your area?",
   "Why we are not making straight A's",
   "How to combine skills and work with school",
-  "What is the secret to insane productivity"
+  "What is the secret to insane productivity",
+  "How i never miss any lectures."
 ];
 
 final List<String> imageUrls = [
   "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c3R1ZGVudHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+  "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2Nob29sfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+  "https://images.unsplash.com/photo-1509191436522-d296cf87d244?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c2Nob29sfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8c2Nob29sfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+  "https://images.unsplash.com/photo-1596496050755-c923e73e42e1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHNjaG9vbHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
   "https://images.unsplash.com/photo-1596495578065-6e0763fa1178?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGVudHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
   "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c3R1ZGVudHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
   "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c3R1ZGVudHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",

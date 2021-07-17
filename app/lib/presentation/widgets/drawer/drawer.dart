@@ -62,7 +62,8 @@ class HomeDrawer extends StatelessWidget {
                                 AssetImage("assets/icons/student.png"),
                           ),
                           ListTile(
-                            onTap: () => Navigator.popAndPushNamed(context, ProfileScreen.routeName),
+                            onTap: () => Navigator.popAndPushNamed(
+                                context, ProfileScreen.routeName),
                             title: Text(
                               "Alexander Ibekason",
                               style: TextStyle(
@@ -97,7 +98,7 @@ class HomeDrawer extends StatelessWidget {
                 ],
               ),
               Container(
-                padding: EdgeInsets.all(5),
+                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
