@@ -4,6 +4,7 @@ import 'package:app/presentation/content/content_screen.dart';
 import 'package:app/presentation/draft/draft_screen.dart';
 import 'package:app/presentation/home/home_screen.dart';
 import 'package:app/presentation/messages/message_screen.dart';
+import 'package:app/presentation/profile/profile_screen.dart';
 import 'package:app/presentation/widgets/post_view_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -15,4 +16,5 @@ Map<String, WidgetBuilder> appRoutes = {
   BookMarkScreen.routeName: (_) => BookMarkScreen(),
   ContentsScreen.routeName: (_) => ContentsScreen(),
   MessagesScreen.routeName: (_) => MessagesScreen(),
+  ProfileScreen.routeName: (_) => ProfileScreen(),
 };

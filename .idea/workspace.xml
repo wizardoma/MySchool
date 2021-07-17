@@ -19,12 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add messages screen">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="Add create post widget and page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/auth/form_bottom_sheet.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/form_bottom_sheet.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/auth/login/login_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/auth/login/login_container.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/auth/signup/signup_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/auth/signup/signup_container.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/home/home_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/commons/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/commons/routes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/user/user.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/user/user.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/drawer/drawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/drawer/drawer.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,14 +173,8 @@
       <workItem from="1626439045785" duration="6356000" />
       <workItem from="1626507305292" duration="2971000" />
       <workItem from="1626513988297" duration="1913000" />
-      <workItem from="1626515987543" duration="4436000" />
-    </task>
-    <task id="LOCAL-00040" summary="refractor signup classes">
-      <created>1624392773603</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1624392773603</updated>
+      <workItem from="1626515987543" duration="6485000" />
+      <workItem from="1626523260710" duration="7719000" />
     </task>
     <task id="LOCAL-00041" summary="implement logging out">
       <created>1624392831864</created>
@@ -519,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626516535013</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="Add create post widget and page">
+      <created>1626521250641</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1626521250641</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -538,7 +538,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add post details to post view" />
     <MESSAGE value="Add post view screen" />
     <MESSAGE value="refractor: Adjust post author section design" />
     <MESSAGE value="add floatingActionBar for specific tabs" />
@@ -563,7 +562,8 @@
     <MESSAGE value="add autosize text package" />
     <MESSAGE value="refractor post container using AutoSizeText" />
     <MESSAGE value="add messages screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="add messages screen" />
+    <MESSAGE value="Add create post widget and page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add create post widget and page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
@@ -598,22 +598,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="589" y="135" key="Github.UntrackedFilesDialog/0.0.1600.860@0.0.1600.860" timestamp="1619292079863" />
-    <state width="1557" height="197" key="GridCell.Tab.0.bottom" timestamp="1626520825505">
+    <state width="1557" height="197" key="GridCell.Tab.0.bottom" timestamp="1626523198206">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="197" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1626520825505" />
-    <state width="1557" height="197" key="GridCell.Tab.0.center" timestamp="1626520825505">
+    <state width="1557" height="197" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1626523198206" />
+    <state width="1557" height="197" key="GridCell.Tab.0.center" timestamp="1626523198205">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="197" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1626520825505" />
-    <state width="1557" height="197" key="GridCell.Tab.0.left" timestamp="1626520825505">
+    <state width="1557" height="197" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1626523198205" />
+    <state width="1557" height="197" key="GridCell.Tab.0.left" timestamp="1626523198205">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="197" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1626520825505" />
-    <state width="1557" height="197" key="GridCell.Tab.0.right" timestamp="1626520825505">
+    <state width="1557" height="197" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1626523198205" />
+    <state width="1557" height="197" key="GridCell.Tab.0.right" timestamp="1626523198205">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="197" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1626520825505" />
+    <state width="1557" height="197" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1626523198205" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -626,10 +626,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626516537068">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626521252445">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626516537068" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626521252445" />
     <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1626424702719">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

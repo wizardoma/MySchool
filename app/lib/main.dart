@@ -81,7 +81,9 @@ class MyApp extends StatelessWidget {
                 }),
             routes: appRoutes,
             theme: !context.watch<ThemeCubit>().state
-                ? ThemeData.light()
+                ? ThemeData.light().copyWith(
+                    scaffoldBackgroundColor: Colors.white,
+                  )
                 : ThemeData.dark(),
           );
         },

@@ -35,10 +35,10 @@ class User {
     return User(
       id: DateTime.now().add(Duration(seconds: Random().nextInt(100000))).toString(),
       name: usersList[Random().nextInt(usersList.length)],
-      email: "alib@gmail.com",
+      email: "alibekason@gmail.com",
       department: "Computer Science",
       university: "Federal University of Technology, Owerri",
-      level: "400"
+      level: "Postgraduate"
     );
   }
 

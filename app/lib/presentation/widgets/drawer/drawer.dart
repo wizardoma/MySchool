@@ -3,6 +3,7 @@ import 'package:app/application/auth/auth_event.dart';
 import 'package:app/application/auth/auth_state.dart';
 import 'package:app/application/theme/theme_cubit.dart';
 import 'package:app/presentation/auth/auth_screen.dart';
+import 'package:app/presentation/profile/profile_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -61,6 +62,7 @@ class HomeDrawer extends StatelessWidget {
                                 AssetImage("assets/icons/student.png"),
                           ),
                           ListTile(
+                            onTap: () => Navigator.popAndPushNamed(context, ProfileScreen.routeName),
                             title: Text(
                               "Alexander Ibekason",
                               style: TextStyle(
