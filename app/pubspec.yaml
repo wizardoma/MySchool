@@ -39,6 +39,7 @@ dependencies:
   pull_to_refresh: ^2.0.0
   hive: ^2.0.4
   intl: ^0.17.0
+  auto_size_text: ^2.1.0
   flutter_native_splash: ^1.2.0
   firebase_core:
   firebase_auth:
