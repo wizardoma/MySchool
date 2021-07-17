@@ -15,11 +15,6 @@ class HomeDrawer extends StatelessWidget {
       "routeName": "/messages",
     },
     {
-      "icon": Icons.insert_chart_outlined,
-      "title": "Stats",
-      "routeName": "/stats",
-    },
-    {
       "icon": Icons.book_outlined,
       "title": "Your content",
       "routeName": "/content",

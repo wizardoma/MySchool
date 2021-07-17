@@ -59,7 +59,7 @@ class _PostContainerState extends State<PostContainer> {
                                       shape: BoxShape.circle,
                                       image: DecorationImage(
                                         image: AssetImage(
-                                            "assets/icons/google.png"),
+                                            "assets/icons/student.png"),
                                       ),
                                     ),
                                   ),

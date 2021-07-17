@@ -19,8 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add draft screen">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="refractor post container using AutoSizeText">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/commons/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/commons/routes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/drawer/drawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/drawer/drawer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +33,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Huawei_Android_10_API_29_" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="DEFNW18C21001964" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -167,28 +170,10 @@
       <workItem from="1626351230745" duration="17446000" />
       <workItem from="1626373280767" duration="3395000" />
       <workItem from="1626416115824" duration="5788000" />
-      <workItem from="1626439045785" duration="3807000" />
-    </task>
-    <task id="LOCAL-00036" summary="fix form bottom sheet keyboard padding">
-      <created>1624308685541</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1624308685541</updated>
-    </task>
-    <task id="LOCAL-00037" summary="add authentication client abstraction">
-      <created>1624392483728</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1624392483729</updated>
-    </task>
-    <task id="LOCAL-00038" summary="refractor authentication service">
-      <created>1624392538775</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1624392538775</updated>
+      <workItem from="1626439045785" duration="6356000" />
+      <workItem from="1626507305292" duration="2971000" />
+      <workItem from="1626513988297" duration="1913000" />
+      <workItem from="1626515987543" duration="518000" />
     </task>
     <task id="LOCAL-00039" summary="update inversion of control container">
       <created>1624392612408</created>
@@ -512,7 +497,28 @@
       <option name="project" value="LOCAL" />
       <updated>1626457885343</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="add bookmarks screen">
+      <created>1626459739499</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1626459739499</updated>
+    </task>
+    <task id="LOCAL-00086" summary="add autosize text package">
+      <created>1626508597205</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1626508597206</updated>
+    </task>
+    <task id="LOCAL-00087" summary="refractor post container using AutoSizeText">
+      <created>1626509329396</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1626509329396</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -531,9 +537,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add post view ui display" />
-    <MESSAGE value="Add read more button to post" />
-    <MESSAGE value="refractor: add color to circularprogress and make social media button white" />
     <MESSAGE value="add bottomsheet for posts" />
     <MESSAGE value="add post details to post view" />
     <MESSAGE value="Add post view screen" />
@@ -556,7 +559,10 @@
     <MESSAGE value="refractor: update" />
     <MESSAGE value="add notification screen design" />
     <MESSAGE value="add draft screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="add draft screen" />
+    <MESSAGE value="add bookmarks screen" />
+    <MESSAGE value="add autosize text package" />
+    <MESSAGE value="refractor post container using AutoSizeText" />
+    <option name="LAST_COMMIT_MESSAGE" value="refractor post container using AutoSizeText" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
@@ -591,22 +597,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="589" y="135" key="Github.UntrackedFilesDialog/0.0.1600.860@0.0.1600.860" timestamp="1619292079863" />
-    <state width="1557" height="197" key="GridCell.Tab.0.bottom" timestamp="1626455623191">
+    <state width="1557" height="197" key="GridCell.Tab.0.bottom" timestamp="1626515926044">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="197" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1626455623191" />
-    <state width="1557" height="197" key="GridCell.Tab.0.center" timestamp="1626455623191">
+    <state width="1557" height="197" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1626515926044" />
+    <state width="1557" height="197" key="GridCell.Tab.0.center" timestamp="1626515926044">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="197" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1626455623191" />
-    <state width="1557" height="197" key="GridCell.Tab.0.left" timestamp="1626455623189">
+    <state width="1557" height="197" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1626515926044" />
+    <state width="1557" height="197" key="GridCell.Tab.0.left" timestamp="1626515926044">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="197" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1626455623189" />
-    <state width="1557" height="197" key="GridCell.Tab.0.right" timestamp="1626455623191">
+    <state width="1557" height="197" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1626515926044" />
+    <state width="1557" height="197" key="GridCell.Tab.0.right" timestamp="1626515926044">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="197" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1626455623191" />
+    <state width="1557" height="197" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1626515926044" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -619,10 +625,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626457886952">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626509331394">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626457886952" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626509331394" />
     <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1626424702719">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
