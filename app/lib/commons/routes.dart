@@ -9,6 +9,9 @@ import 'package:app/presentation/spaces/space_page_screen.dart';
 import 'package:app/presentation/widgets/post_view_screen.dart';
 import 'package:flutter/material.dart';
 
+/// author: Ibekason Alexander
+/// Handles application routes
+
 Map<String, WidgetBuilder> appRoutes = {
   HomeScreen.routeName: (_) => HomeScreen(),
   AuthScreen.routeName: (_) => AuthScreen(),

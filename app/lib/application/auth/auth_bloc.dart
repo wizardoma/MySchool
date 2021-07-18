@@ -71,10 +71,10 @@ class AuthenticationBloc
   }
 
   Future<AuthenticationState> googleSignIn() async {
-    ResponseEntity responseEntity = await authenticationService.loginWithGoogle();
+    ResponseEntity responseEntity =
+        await authenticationService.loginWithGoogle();
     if (responseEntity.isError) {
       return AuthenticationErrorState(responseEntity.errors.message);
-
     }
     return AuthenticatedState(responseEntity.data);
   }

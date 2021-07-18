@@ -7,6 +7,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
+/// author: Ibekason Alexander
+
 class FirebaseAuthService extends AuthenticationClient {
   @override
   Future<ResponseEntity> login(LoginRequest request) async {

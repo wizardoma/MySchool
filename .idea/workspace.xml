@@ -19,13 +19,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add spaces screen">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="refractor: abstract user details">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/user/user.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/user/user.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/auth/signup/signup_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/auth/signup/signup_container.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/profile/profile_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/profile/profile_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_view_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_view_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/application/auth/auth_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/auth/auth_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/commons/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/commons/routes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/auth/authentication_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/auth/authentication_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/auth/firebase_auth_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/auth/firebase_auth_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/auth/login/login_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/auth/login/login_container.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/question_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/question_item.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/mapper/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/mapper/StudentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/service/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/service/StudentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/service/UniversityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/service/UniversityServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +39,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="DEFNW18C21001964" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Huawei_Android_10_API_29_" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -83,19 +87,19 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\presentation\widgets" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain\notification" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\following" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\android\app" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\notification" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\android\app\src" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\android\app" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\assets\images" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\assets\icons" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\presentation\widgets" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain\notification" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\following" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\android\app" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -178,14 +182,7 @@
       <workItem from="1626515987543" duration="6485000" />
       <workItem from="1626523260710" duration="12415000" />
       <workItem from="1626616615960" duration="3262000" />
-      <workItem from="1626629086686" duration="8732000" />
-    </task>
-    <task id="LOCAL-00045" summary="add user client">
-      <created>1624739799634</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1624739799634</updated>
+      <workItem from="1626629086686" duration="14838000" />
     </task>
     <task id="LOCAL-00046" summary="Add dummy users">
       <created>1624833329538</created>
@@ -523,7 +520,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626636974552</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="refractor: abstract user details">
+      <created>1626637990615</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1626637990615</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -542,7 +546,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refractor: make post container stateful" />
     <MESSAGE value="Add following posts state management" />
     <MESSAGE value="Add following bloc to IoC" />
     <MESSAGE value="Implement following screen" />
@@ -567,7 +570,8 @@
     <MESSAGE value="refractor" />
     <MESSAGE value="add profile screen" />
     <MESSAGE value="add spaces screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="add spaces screen" />
+    <MESSAGE value="refractor: abstract user details" />
+    <option name="LAST_COMMIT_MESSAGE" value="refractor: abstract user details" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
@@ -602,22 +606,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="589" y="135" key="Github.UntrackedFilesDialog/0.0.1600.860@0.0.1600.860" timestamp="1619292079863" />
-    <state width="1557" height="218" key="GridCell.Tab.0.bottom" timestamp="1626637306156">
+    <state width="1557" height="133" key="GridCell.Tab.0.bottom" timestamp="1626643443049">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="218" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1626637306156" />
-    <state width="1557" height="218" key="GridCell.Tab.0.center" timestamp="1626637306155">
+    <state width="1557" height="133" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1626643443049" />
+    <state width="1557" height="133" key="GridCell.Tab.0.center" timestamp="1626643443048">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="218" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1626637306155" />
-    <state width="1557" height="218" key="GridCell.Tab.0.left" timestamp="1626637306155">
+    <state width="1557" height="133" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1626643443048" />
+    <state width="1557" height="133" key="GridCell.Tab.0.left" timestamp="1626643443048">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="218" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1626637306155" />
-    <state width="1557" height="218" key="GridCell.Tab.0.right" timestamp="1626637306155">
+    <state width="1557" height="133" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1626643443048" />
+    <state width="1557" height="133" key="GridCell.Tab.0.right" timestamp="1626643443048">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="218" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1626637306155" />
+    <state width="1557" height="133" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1626643443048" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -630,10 +634,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626636976916">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626637992602">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626636976916" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626637992602" />
     <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1626634968432">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

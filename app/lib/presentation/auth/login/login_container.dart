@@ -16,7 +16,6 @@ class _LoginScreenState extends State<LoginScreen> {
   TextEditingController _passwordController;
 
   void _login() {
-    print("login pressed");
     var loginRequest =
         LoginRequest(_emailController.text, _passwordController.text);
     var authenticationBloc = context.read<AuthenticationBloc>();

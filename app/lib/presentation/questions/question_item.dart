@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
 import 'package:app/domain/posts/post.dart';
@@ -24,7 +26,7 @@ class QuestionItem extends StatelessWidget {
           kVerticalSpaceSmall,
           Container(
             child: Text(
-              mathPostTitles.first,
+              mathPostTitles[Random().nextInt(mathPostTitles.length)],
               style: kPostTitleTextStyle,
             ),
           ),

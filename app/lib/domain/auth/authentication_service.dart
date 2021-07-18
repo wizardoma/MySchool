@@ -4,6 +4,8 @@ import 'package:app/domain/auth/authentication_client.dart';
 import 'package:app/domain/response.dart';
 import 'package:app/domain/service.dart';
 
+/// author: Ibekason Alexander Onyebuchi
+
 abstract class AuthenticationService extends Service {
   final AuthenticationClient authenticationClient;
 
