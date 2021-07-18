@@ -19,11 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="Add profile page">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add profile screen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/commons/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/commons/routes.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/domain/posts/post.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/posts/post.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_view_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_view_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/drawer/drawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/drawer/drawer.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,21 +175,9 @@
       <workItem from="1626507305292" duration="2971000" />
       <workItem from="1626513988297" duration="1913000" />
       <workItem from="1626515987543" duration="6485000" />
-      <workItem from="1626523260710" duration="8591000" />
-    </task>
-    <task id="LOCAL-00042" summary="refractor">
-      <created>1624392884516</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1624392884516</updated>
-    </task>
-    <task id="LOCAL-00043" summary="refractor: add name of editor">
-      <created>1624566330581</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1624566330582</updated>
+      <workItem from="1626523260710" duration="12415000" />
+      <workItem from="1626616615960" duration="3262000" />
+      <workItem from="1626629086686" duration="7696000" />
     </task>
     <task id="LOCAL-00044" summary="add user service">
       <created>1624657399069</created>
@@ -519,7 +508,21 @@
       <option name="project" value="LOCAL" />
       <updated>1626531559072</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="refractor">
+      <created>1626532539324</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1626532539324</updated>
+    </task>
+    <task id="LOCAL-00092" summary="add profile screen">
+      <created>1626634547093</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1626634547094</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -538,7 +541,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refractor: Adjust post author section design" />
     <MESSAGE value="add floatingActionBar for specific tabs" />
     <MESSAGE value="refractor: make post container stateful" />
     <MESSAGE value="Add following posts state management" />
@@ -546,7 +548,6 @@
     <MESSAGE value="Implement following screen" />
     <MESSAGE value="refractor: update ui to accommodate recent changes" />
     <MESSAGE value="Add question screen" />
-    <MESSAGE value="refractor" />
     <MESSAGE value="Add spaces screen" />
     <MESSAGE value="refractor: improve space screen design" />
     <MESSAGE value="add random list of users" />
@@ -563,7 +564,9 @@
     <MESSAGE value="add messages screen" />
     <MESSAGE value="Add create post widget and page" />
     <MESSAGE value="Add profile page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add profile page" />
+    <MESSAGE value="refractor" />
+    <MESSAGE value="add profile screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="add profile screen" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
@@ -598,22 +601,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="589" y="135" key="Github.UntrackedFilesDialog/0.0.1600.860@0.0.1600.860" timestamp="1619292079863" />
-    <state width="1557" height="197" key="GridCell.Tab.0.bottom" timestamp="1626531768917">
+    <state width="1557" height="218" key="GridCell.Tab.0.bottom" timestamp="1626635027425">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="197" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1626531768917" />
-    <state width="1557" height="197" key="GridCell.Tab.0.center" timestamp="1626531768916">
+    <state width="1557" height="218" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1626635027425" />
+    <state width="1557" height="218" key="GridCell.Tab.0.center" timestamp="1626635027425">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="197" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1626531768916" />
-    <state width="1557" height="197" key="GridCell.Tab.0.left" timestamp="1626531768915">
+    <state width="1557" height="218" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1626635027425" />
+    <state width="1557" height="218" key="GridCell.Tab.0.left" timestamp="1626635027424">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="197" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1626531768915" />
-    <state width="1557" height="197" key="GridCell.Tab.0.right" timestamp="1626531768916">
+    <state width="1557" height="218" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1626635027424" />
+    <state width="1557" height="218" key="GridCell.Tab.0.right" timestamp="1626635027425">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="197" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1626531768916" />
+    <state width="1557" height="218" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1626635027425" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -626,14 +629,14 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626531561062">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626634551223">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626531561062" />
-    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1626424702719">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626634551223" />
+    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1626634968432">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1626424702719" />
+    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1626634968432" />
     <state x="182" y="51" width="1235" height="649" key="new project wizard" timestamp="1624565512819">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
