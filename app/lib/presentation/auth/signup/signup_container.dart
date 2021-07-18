@@ -1,12 +1,13 @@
 import 'package:app/application/auth/auth_bloc.dart';
 import 'package:app/application/auth/auth_event.dart';
 import 'package:app/application/auth/signup_request.dart';
+import 'package:app/domain/user/user.dart';
 import '../../widgets/form_bottom_sheet.dart';
 import 'package:app/presentation/widgets/text_input_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-/// Author: Ibekason Alexander
 
+/// Author: Ibekason Alexander
 
 class SignUpScreen extends StatefulWidget {
   @override
@@ -14,19 +15,6 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
-  final _schools = <String, String>{
-    "futo": "Federal University of Technology, Owerri",
-    "imsu": "Imo State University",
-    "palm": "Eastern Palm University",
-  };
-
-  final _levels = [
-    "Jupeg",
-    "Predegree",
-    "Post graduate",
-    ...List.generate(7, (index) => "${index + 1}00L")
-  ];
-
   var _selectedUniversity = "Select university";
   var _selectedLevel = "Select your level";
 
@@ -59,8 +47,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
     super.initState();
   }
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -100,14 +86,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
               onChanged: (s) {
                 setState(() {
                   _universityController = s.toString();
-                  _selectedUniversity = _schools["$s"];
+                  _selectedUniversity = userSchools["$s"];
                 });
               },
-              items: _schools.keys
+              items: userSchools.keys
                   .map(
                     (e) => DropdownMenuItem(
                       value: e,
-                      child: Text(_schools["$e"]),
+                      child: Text(userSchools["$e"]),
                     ),
                   )
                   .toList(),
@@ -132,7 +118,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   _selectedLevel = s.toString();
                 });
               },
-              items: _levels
+              items: userLevels
                   .map(
                     (e) => DropdownMenuItem(
                       value: e,

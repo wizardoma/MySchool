@@ -1,6 +1,7 @@
 import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
 import 'package:app/domain/posts/post.dart';
+import 'package:app/presentation/profile/profile_screen.dart';
 import 'package:app/presentation/widgets/post_view_screen.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
@@ -45,70 +46,73 @@ class _PostContainerState extends State<PostContainer> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              child: Row(
-                                children: [
-                                  Container(
-                                    height: 50,
-                                    width: 50,
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      image: DecorationImage(
-                                        image: AssetImage(
-                                            "assets/icons/student.png"),
-                                      ),
-                                    ),
-                                  ),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Row(
-                                        children: [
-                                          Text(
-                                            widget.post.user.name,
-                                            style: kAuthorNameStyle,
-                                          ),
-                                          kHorizontalSpaceSmall,
-                                          if (!widget.post.isFollowing)
-                                            Text(
-                                              "Follow",
-                                              style:
-                                                  TextStyle(color: Colors.blue),
-                                            )
-                                        ],
-                                      ),
-                                      Container(
-//                                         width: constraint.maxWidth,
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              widget.post.user.university,
-                                              style: kSubtitleTextStyle,
-                                            ),
-                                            Text(
-                                              DateFormat('MMM d, y')
-                                                  .format(widget.post.date),
-                                              style: kSubtitleTextStyle,
-                                            ),
-                                          ],
+                        child: GestureDetector(
+                          onTap: () => Navigator.pushNamed(context, ProfileScreen.routeName, arguments: {"user": widget.post.user}),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      height: 50,
+                                      width: 50,
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        image: DecorationImage(
+                                          image: AssetImage(
+                                              "assets/icons/student.png"),
                                         ),
                                       ),
-                                    ],
-                                  )
-                                ],
+                                    ),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            Text(
+                                              widget.post.user.name,
+                                              style: kAuthorNameStyle,
+                                            ),
+                                            kHorizontalSpaceSmall,
+                                            if (!widget.post.isFollowing)
+                                              Text(
+                                                "Follow",
+                                                style:
+                                                    TextStyle(color: Colors.blue),
+                                              )
+                                          ],
+                                        ),
+                                        Container(
+//                                         width: constraint.maxWidth,
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                widget.post.user.university,
+                                                style: kSubtitleTextStyle,
+                                              ),
+                                              Text(
+                                                DateFormat('MMM d, y')
+                                                    .format(widget.post.date),
+                                                style: kSubtitleTextStyle,
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    )
+                                  ],
+                                ),
                               ),
-                            ),
-                            CloseButton(
-                              onPressed: _onPostDismiss,
-                            ),
-                          ],
+                              CloseButton(
+                                onPressed: _onPostDismiss,
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                       kVerticalSpaceTiny,

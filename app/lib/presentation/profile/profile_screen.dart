@@ -17,7 +17,7 @@ class ProfileScreen extends StatefulWidget {
 
 class _ProfileScreenState extends State<ProfileScreen> {
   var _currIndex = 0;
-  User _user = User.Random();
+  User _user;
 
   static List<Widget> _tabChildren = List.generate(
       5,
@@ -47,6 +47,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
     "3 Shares",
     "O Posts"
   ];
+
+  var hasRun = false;
+
+  @override
+  void didChangeDependencies() {
+    if (!hasRun) {
+      dynamic arguments = ModalRoute.of(context).settings.arguments;
+      print("Args $arguments");
+      _user = arguments["user"];
+      super.didChangeDependencies();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -198,9 +210,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             Container(
               constraints: BoxConstraints.expand(
-                height: 400,
-                width: MediaQuery.of(context).size.width
-              ),
+                  height: 400, width: MediaQuery.of(context).size.width),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -209,28 +219,35 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     child: Builder(
                       builder: (context) {
                         return Expanded(
-                        child: Column(
-                          children: [
-                            TabBar(
-                                onTap: (index) => setState(() {
-                                      _currIndex = index;
-                                    }),
-                                tabs: _tabs
-                                    .map(
-                                      (e) => Tab(
-
-                                        child: FittedBox(child: Text(e, style: TextStyle(color: Colors.blue, fontSize: 12,),maxLines: 1,)),
-                                      ),
-                                    )
-                                    .toList()),
-                            Expanded(
-                              child: TabBarView(
-                                children: _tabChildren,
-                              ),
-                            )
-                          ],
-                        ),
-                      );
+                          child: Column(
+                            children: [
+                              TabBar(
+                                  onTap: (index) => setState(() {
+                                        _currIndex = index;
+                                      }),
+                                  tabs: _tabs
+                                      .map(
+                                        (e) => Tab(
+                                          child: FittedBox(
+                                              child: Text(
+                                            e,
+                                            style: TextStyle(
+                                              color: Colors.blue,
+                                              fontSize: 12,
+                                            ),
+                                            maxLines: 1,
+                                          )),
+                                        ),
+                                      )
+                                      .toList()),
+                              Expanded(
+                                child: TabBarView(
+                                  children: _tabChildren,
+                                ),
+                              )
+                            ],
+                          ),
+                        );
                       },
                     ),
                   )

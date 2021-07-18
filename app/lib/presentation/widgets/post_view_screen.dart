@@ -1,6 +1,7 @@
 import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
 import 'package:app/domain/posts/post.dart';
+import 'package:app/presentation/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -42,7 +43,8 @@ class _PostViewScreenState extends State<PostViewScreen> {
           color: Colors.black54,
         ),
         backgroundColor: Colors.white,
-        title: Container(
+        title: Container(child: GestureDetector(
+          onTap: () => Navigator.pushNamed(context, ProfileScreen.routeName, arguments: {"user": _post.user}),
           child: Row(
             children: [
               Container(
@@ -89,7 +91,7 @@ class _PostViewScreenState extends State<PostViewScreen> {
             ],
           ),
         ),
-      ),
+      ), ),
       body: ListView(
 //        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
