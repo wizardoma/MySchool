@@ -6,11 +6,6 @@ import 'package:app/domain/user/user_service.dart';
 /// Author: Ibekason Alexander
 
 class UserServiceImpl extends UserService {
-  final UserClient userClient;
-
-  UserServiceImpl(this.userClient);
-
-
 
   @override
   Future<ResponseEntity> editName(String name) {
@@ -19,7 +14,8 @@ class UserServiceImpl extends UserService {
 
   @override
   Future<ResponseEntity> getUserById(String id) {
-
+    return Future.delayed(Duration(seconds: 5), () {
+      return ResponseEntity.Data(User.Random());
+    });
   }
-
 }

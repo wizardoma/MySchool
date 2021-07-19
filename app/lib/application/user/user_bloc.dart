@@ -16,6 +16,7 @@ class UserBloc extends Bloc<UserEvent, UserState> {
       : super(UserNotInitializedState()) {
     _streamSubscription = authenticationBloc.stream.listen((state) {
       if (state is AuthenticatedState) {
+        print("state is authenticated");
         add(FetchUserEvent());
       }
     });
@@ -28,6 +29,8 @@ class UserBloc extends Bloc<UserEvent, UserState> {
       var authenticationState = authenticationBloc.state;
       if (authenticationState is AuthenticatedState) {
         yield await fetchUser(authenticationState.authUser.id);
+      } else {
+        yield FetchUserErrorState("You are not authenticated");
       }
     }
   }
