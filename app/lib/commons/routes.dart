@@ -5,6 +5,7 @@ import 'package:app/presentation/draft/draft_screen.dart';
 import 'package:app/presentation/home/home_screen.dart';
 import 'package:app/presentation/messages/message_screen.dart';
 import 'package:app/presentation/profile/profile_screen.dart';
+import 'package:app/presentation/questions/question_answer_screen.dart';
 import 'package:app/presentation/spaces/space_page_screen.dart';
 import 'package:app/presentation/widgets/post_view_screen.dart';
 import 'package:flutter/material.dart';
@@ -22,4 +23,5 @@ Map<String, WidgetBuilder> appRoutes = {
   MessagesScreen.routeName: (_) => MessagesScreen(),
   ProfileScreen.routeName: (_) => ProfileScreen(),
   SpacePageScreen.routeName: (_) => SpacePageScreen(),
+  QuestionAnswerScreen.routeName: (_) => QuestionAnswerScreen(),
 };
