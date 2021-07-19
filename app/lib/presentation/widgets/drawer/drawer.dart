@@ -79,8 +79,6 @@ class HomeDrawer extends StatelessWidget {
                                 width: double.infinity,
                                 child: LayoutBuilder(
                                   builder: (c, cn) => Row(
-//                                    mainAxisAlignment:
-//                                        MainAxisAlignment.spaceBetween,
                                     children: [
                                       Container(
                                         height: 30,
@@ -91,7 +89,6 @@ class HomeDrawer extends StatelessWidget {
                                       Container(
                                         height: 30,
                                         width: cn.maxWidth * 0.55,
-
                                         color: Colors.grey,
                                       ),
                                     ],
@@ -115,9 +112,12 @@ class HomeDrawer extends StatelessWidget {
                           ),
                           ListTile(
                             onTap: () => Navigator.popAndPushNamed(
-                                context, ProfileScreen.routeName),
+                                context, ProfileScreen.routeName,
+                                arguments: {
+                                  "user": state.user,
+                                }),
                             title: Text(
-                              "Alexander Ibekason",
+                              state.user.name,
                               style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,

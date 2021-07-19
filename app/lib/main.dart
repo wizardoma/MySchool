@@ -1,4 +1,5 @@
 import 'package:app/application/auth/auth_bloc.dart';
+import 'package:app/application/auth/auth_event.dart';
 import 'package:app/application/auth/auth_state.dart';
 import 'package:app/application/following/following_posts_bloc.dart';
 import 'package:app/application/homefeeds/home_feeds_bloc.dart';
@@ -42,7 +43,7 @@ class MyApp extends StatelessWidget {
           create: (_) => ThemeCubit(),
         ),
         BlocProvider.value(
-          value: (ioC.getBloc("auth") as AuthenticationBloc),
+          value: (ioC.getBloc("auth") as AuthenticationBloc)..add(AppStartedEvent()),
         ),
         BlocProvider.value(
           value: (ioC.getBloc("user") as UserBloc),
@@ -59,17 +60,17 @@ class MyApp extends StatelessWidget {
       child: Builder(
         builder: (context) {
           return MaterialApp(
-            home: FutureBuilder(
-                future:
-                    BlocProvider.of<AuthenticationBloc>(context).checkAuth(),
+            home: StreamBuilder(
+                stream:
+                    BlocProvider.of<AuthenticationBloc>(context).stream,
                 // ignore: missing_return
                 builder: (context, snapshot) {
-                  if (snapshot.connectionState == ConnectionState.waiting) {
+                  if (!snapshot.hasData) {
                     return Scaffold(
                       body: CircularProgressIndicator(),
                     );
                   } else {
-                    if (snapshot.hasData) {
+
                       var state = snapshot.data as AuthenticationState;
                       if (state is AuthenticatedState) {
                         return HomeScreen();
@@ -78,7 +79,6 @@ class MyApp extends StatelessWidget {
                         return AuthScreen();
                       }
 
-                    }
                   }
                 }),
             routes: appRoutes,

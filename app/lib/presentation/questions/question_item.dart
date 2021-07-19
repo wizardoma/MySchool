@@ -15,8 +15,7 @@ class QuestionItem extends StatelessWidget {
         children: [
           Container(
             child: Row(
-              mainAxisAlignment:
-              MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text("Asked in Computer Science"),
                 CloseButton(),
@@ -41,19 +40,16 @@ class QuestionItem extends StatelessWidget {
           kVerticalSpaceSmall,
           Container(
             child: Row(
-              mainAxisAlignment:
-              MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
                   child: Row(
-                    crossAxisAlignment:
-                    CrossAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
                         child: Row(
-                          crossAxisAlignment:
-                          CrossAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Icon(
                               Icons.post_add,
@@ -65,8 +61,7 @@ class QuestionItem extends StatelessWidget {
                       ),
                       kHorizontalSpaceSmall,
                       Row(
-                        crossAxisAlignment:
-                        CrossAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Icon(
                             Icons.waves,
@@ -82,8 +77,7 @@ class QuestionItem extends StatelessWidget {
                 ),
                 Container(
                   child: Row(
-                    crossAxisAlignment:
-                    CrossAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       IconButton(
                           onPressed: null,

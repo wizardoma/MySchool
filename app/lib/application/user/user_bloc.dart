@@ -14,9 +14,10 @@ class UserBloc extends Bloc<UserEvent, UserState> {
 
   UserBloc(this.userService, this.authenticationBloc)
       : super(UserNotInitializedState()) {
+    print("user bloc");
     _streamSubscription = authenticationBloc.stream.listen((state) {
+      print("listening");
       if (state is AuthenticatedState) {
-        print("state is authenticated");
         add(FetchUserEvent());
       }
     });
@@ -25,6 +26,8 @@ class UserBloc extends Bloc<UserEvent, UserState> {
   @override
   Stream<UserState> mapEventToState(UserEvent event) async* {
     if (event is FetchUserEvent) {
+      print("event is fetchuser");
+
       yield FetchingUserState();
       var authenticationState = authenticationBloc.state;
       if (authenticationState is AuthenticatedState) {

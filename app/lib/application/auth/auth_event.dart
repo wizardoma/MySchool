@@ -4,6 +4,8 @@ import 'package:flutter/cupertino.dart';
 
 abstract class AuthenticationEvent {}
 
+class AppStartedEvent extends AuthenticationEvent {}
+
 class LoginEvent extends AuthenticationEvent {
   final LoginRequest loginRequest;
 

@@ -189,15 +189,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         leading: Icon(Icons.people_outline),
                         title: Text(
                           _user.department,
+                          style: TextStyle(fontSize: 14),
                         ),
                       ),
                       ListTile(
-                        leading: Icon(Icons.room_outlined),
-                        title: FittedBox(child: Text(_user.university)),
+                        leading: Icon(Icons.room_outlined, ),
+                        title: Text(_user.university, style: TextStyle(fontSize: 14),),
                       ),
                       ListTile(
                         leading: Icon(Icons.confirmation_num),
-                        title: Text(getLevel()),
+                        title: Text(getLevel(), style: TextStyle(fontSize: 14),),
                       ),
                     ],
                   ),

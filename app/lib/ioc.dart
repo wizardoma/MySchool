@@ -60,7 +60,6 @@ class IoC {
       "user": _userBloc,
       "notification": _notificationBloc,
     };
-
   }
 
   Bloc getBloc(String blocName) {

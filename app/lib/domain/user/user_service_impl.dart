@@ -14,7 +14,7 @@ class UserServiceImpl extends UserService {
 
   @override
   Future<ResponseEntity> getUserById(String id) {
-    return Future.delayed(Duration(seconds: 5), () {
+    return Future.delayed(Duration(seconds: 1), () {
       return ResponseEntity.Data(User.Random());
     });
   }
