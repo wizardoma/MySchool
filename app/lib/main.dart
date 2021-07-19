@@ -4,6 +4,7 @@ import 'package:app/application/following/following_posts_bloc.dart';
 import 'package:app/application/homefeeds/home_feeds_bloc.dart';
 import 'package:app/application/notification/notification_bloc.dart';
 import 'package:app/application/theme/theme_cubit.dart';
+import 'package:app/application/user/user_bloc.dart';
 import 'package:app/commons/routes.dart';
 import 'package:app/domain/auth/firebase_initializer.dart';
 import 'package:app/ioc.dart';
@@ -44,6 +45,9 @@ class MyApp extends StatelessWidget {
           value: (ioC.getBloc("auth") as AuthenticationBloc),
         ),
         BlocProvider.value(
+          value: (ioC.getBloc("user") as UserBloc),
+        ),
+        BlocProvider.value(
           value: (ioC.getBloc("home_feeds") as HomeFeedsBloc),
         ),
         BlocProvider.value(
@@ -54,7 +58,6 @@ class MyApp extends StatelessWidget {
       ],
       child: Builder(
         builder: (context) {
-          print("built main");
           return MaterialApp(
             home: FutureBuilder(
                 future:
