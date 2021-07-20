@@ -28,9 +28,8 @@ class _AuthScreenState extends State<AuthScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      body:
-      BlocListener<AuthenticationBloc, AuthenticationState>(
+      resizeToAvoidBottomInset: false,
+      body: BlocListener<AuthenticationBloc, AuthenticationState>(
         listener: (ctx, state) {
           if (state is AuthenticatedState) {
             Navigator.pushNamedAndRemoveUntil(
@@ -194,7 +193,6 @@ class _AuthScreenState extends State<AuthScreen> {
 
   void _onSignUp() {
     showModalBottomSheet(
-
         isScrollControlled: true,
         enableDrag: false,
         context: context,
