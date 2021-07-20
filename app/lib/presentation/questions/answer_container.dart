@@ -59,7 +59,6 @@ class AnswerContainer extends StatelessWidget {
                                         ],
                                       ),
                                       Container(
-//                                         width: constraint.maxWidth,
                                         child: Column(
                                           crossAxisAlignment:
                                           CrossAxisAlignment.start,

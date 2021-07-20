@@ -60,17 +60,16 @@ class MyApp extends StatelessWidget {
       child: Builder(
         builder: (context) {
           return MaterialApp(
-            home: StreamBuilder(
-                stream:
-                    BlocProvider.of<AuthenticationBloc>(context).stream,
+            home: FutureBuilder(
+                future:
+                    BlocProvider.of<AuthenticationBloc>(context).checkAuth(),
                 // ignore: missing_return
                 builder: (context, snapshot) {
-                  if (!snapshot.hasData) {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
                     return Scaffold(
                       body: CircularProgressIndicator(),
                     );
                   } else {
-
                       var state = snapshot.data as AuthenticationState;
                       if (state is AuthenticatedState) {
                         return HomeScreen();
