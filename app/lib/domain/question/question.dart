@@ -42,13 +42,25 @@ class Question {
     var question = answersList.keys.toList()[answer];
     var answerLength = answersList["$question"].length;
     return Question(
-        spaceName: "Computer Science",
-        question: question,
-        user: User.Random(),
-        answers: List.generate(
-            answerLength,
-            (index) => Answer(
-                user: User.Random(),
-                answer: answersList["$question"][--answerLength])));
+      spaceName: "Computer Science",
+      question: question,
+      user: User.Random(),
+      answers: List.generate(
+        answerLength,
+        (index) => Answer(
+          noOfLikes: Random().nextInt(50),
+          noOfViews: Random().nextInt(500),
+          noOfShares: Random().nextInt(20),
+          noOfComments: Random().nextInt(20),
+          user: User.Random(),
+          answer: answersList["$question"][--answerLength],
+          date: DateTime.now().subtract(
+            Duration(
+              hours: Random().nextInt(pow(2, 3)),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }

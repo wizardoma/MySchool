@@ -2,6 +2,7 @@ import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
 import 'package:app/domain/posts/post.dart';
 import 'package:app/domain/question/question.dart';
+import 'package:app/presentation/questions/answer_container.dart';
 import 'package:app/presentation/widgets/post_container.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -77,8 +78,8 @@ class _QuestionAnswerScreenState extends State<QuestionAnswerScreen> {
                   ),
                   itemCount: _question.answers.length,
                   itemBuilder: (context, index) {
-                    return PostContainer(
-                      post: Post.Random(),
+                    return AnswerContainer(
+                      answer: _question.answers[index],
                     );
                   },
                 ),
