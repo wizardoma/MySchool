@@ -1,6 +1,7 @@
 import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
 import 'package:app/domain/posts/post.dart';
+import 'package:app/domain/question/question.dart';
 import 'package:app/presentation/widgets/post_container.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -13,6 +14,19 @@ class QuestionAnswerScreen extends StatefulWidget {
 }
 
 class _QuestionAnswerScreenState extends State<QuestionAnswerScreen> {
+  var hasRun = false;
+  Question _question;
+
+  @override
+  void didChangeDependencies() {
+    if (!hasRun) {
+      dynamic arguments = ModalRoute.of(context).settings.arguments;
+      print("Args $arguments");
+      _question = arguments["question"];
+      super.didChangeDependencies();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,9 +43,8 @@ class _QuestionAnswerScreenState extends State<QuestionAnswerScreen> {
           Container(
             padding: EdgeInsets.all(15),
             child: Text(
-              "What is the next skill you want to develop and why ?",
+              _question.question,
               style: kPostTitleTextStyle.copyWith(fontSize: 25),
-
             ),
           ),
           kVerticalSpaceSmall,
@@ -44,9 +57,13 @@ class _QuestionAnswerScreenState extends State<QuestionAnswerScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("61 Answers", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
                     Text(
-                      "Asked in Computer Science",
+                      "${_question.answers.length} Answer(s)",
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      "Asked in ${_question.spaceName}",
                       style: TextStyle(color: Colors.black54),
                     ),
                   ],
@@ -58,7 +75,7 @@ class _QuestionAnswerScreenState extends State<QuestionAnswerScreen> {
                     color: Colors.grey.shade200,
                     thickness: 4,
                   ),
-                  itemCount: 20,
+                  itemCount: _question.answers.length,
                   itemBuilder: (context, index) {
                     return PostContainer(
                       post: Post.Random(),

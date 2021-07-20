@@ -1,6 +1,7 @@
 import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
 import 'package:app/domain/posts/post.dart';
+import 'package:app/domain/question/question.dart';
 import 'package:app/presentation/questions/question_item.dart';
 import 'package:flutter/material.dart';
 
@@ -83,9 +84,9 @@ class _QuestionScreenState extends State<QuestionScreen> {
                               ),
                           shrinkWrap: true,
                           physics: ScrollPhysics(),
-                          itemCount: 5,
+                          itemCount: answersList.length,
 //                            crossAxisAlignment: CrossAxisAlignment.start,
-                          itemBuilder: (ctx, index) => QuestionItem())
+                          itemBuilder: (ctx, index) => QuestionItem(question: Question.Random()))
                     ],
                   ),
                 ]),

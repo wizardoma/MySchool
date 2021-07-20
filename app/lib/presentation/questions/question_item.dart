@@ -1,18 +1,22 @@
-import 'dart:math';
 
 import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
-import 'package:app/domain/posts/post.dart';
+import 'package:app/domain/question/question.dart';
 import 'package:app/presentation/questions/question_answer_screen.dart';
 import 'package:flutter/material.dart';
 
 class QuestionItem extends StatelessWidget {
+  final Question question;
+
+  const QuestionItem({Key key, this.question}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => Navigator.pushNamed(
         context,
         QuestionAnswerScreen.routeName,
+        arguments: {"question": question}
       ),
       child: Padding(
         padding: const EdgeInsets.all(10),
@@ -23,7 +27,7 @@ class QuestionItem extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Asked in Computer Science"),
+                  Text("Asked in ${question.spaceName}"),
                   CloseButton(),
                 ],
               ),
@@ -31,13 +35,13 @@ class QuestionItem extends StatelessWidget {
             kVerticalSpaceSmall,
             Container(
               child: Text(
-                mathPostTitles[Random().nextInt(mathPostTitles.length)],
+                question.question,
                 style: kPostTitleTextStyle,
               ),
             ),
             kVerticalSpaceSmall,
             Text(
-              "1 answer",
+              "${question.answers.length} answer(s)",
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 14,
