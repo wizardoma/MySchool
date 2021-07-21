@@ -4,6 +4,7 @@ import 'package:app/application/auth/auth_state.dart';
 import 'package:app/application/following/following_posts_bloc.dart';
 import 'package:app/application/homefeeds/home_feeds_bloc.dart';
 import 'package:app/application/notification/notification_bloc.dart';
+import 'package:app/application/space/spaces_bloc.dart';
 import 'package:app/application/theme/theme_cubit.dart';
 import 'package:app/application/user/user_bloc.dart';
 import 'package:app/commons/routes.dart';
@@ -43,7 +44,8 @@ class MyApp extends StatelessWidget {
           create: (_) => ThemeCubit(),
         ),
         BlocProvider.value(
-          value: (ioC.getBloc("auth") as AuthenticationBloc)..add(AppStartedEvent()),
+          value: (ioC.getBloc("auth") as AuthenticationBloc)
+            ..add(AppStartedEvent()),
         ),
         BlocProvider.value(
           value: (ioC.getBloc("user") as UserBloc),
@@ -53,6 +55,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider.value(
           value: (ioC.getBloc("following") as FollowingPostBloc),
+        ),
+        BlocProvider.value(
+          value: (ioC.getBloc("space") as SpaceBloc),
         ),
         BlocProvider.value(
             value: (ioC.getBloc("notification") as NotificationBloc))
@@ -70,14 +75,13 @@ class MyApp extends StatelessWidget {
                       body: CircularProgressIndicator(),
                     );
                   } else {
-                      var state = snapshot.data as AuthenticationState;
-                      if (state is AuthenticatedState) {
-                        return HomeScreen();
-                      }
-                      if (state is NotAuthenticatedState) {
-                        return AuthScreen();
-                      }
-
+                    var state = snapshot.data as AuthenticationState;
+                    if (state is AuthenticatedState) {
+                      return HomeScreen();
+                    }
+                    if (state is NotAuthenticatedState) {
+                      return AuthScreen();
+                    }
                   }
                 }),
             routes: appRoutes,

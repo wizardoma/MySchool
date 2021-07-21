@@ -2,6 +2,7 @@ import 'package:app/application/auth/auth_bloc.dart';
 import 'package:app/application/following/following_posts_bloc.dart';
 import 'package:app/application/homefeeds/home_feeds_bloc.dart';
 import 'package:app/application/notification/notification_bloc.dart';
+import 'package:app/application/space/spaces_bloc.dart';
 import 'package:app/application/user/user_bloc.dart';
 import 'package:app/domain/auth/authentication_client.dart';
 import 'package:app/domain/auth/authentication_service.dart';
@@ -12,6 +13,8 @@ import 'package:app/domain/feeds/posts_service.dart';
 import 'package:app/domain/notification/notification_client.dart';
 import 'package:app/domain/notification/notification_service.dart';
 import 'package:app/domain/service.dart';
+import 'package:app/domain/space/space_client.dart';
+import 'package:app/domain/space/space_service.dart';
 import 'package:app/domain/user/user_service.dart';
 import 'package:app/domain/user/user_service_impl.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -24,6 +27,9 @@ class IoC {
   NotificationClient _notificationClient;
   NotificationService _notificationService;
   NotificationBloc _notificationBloc;
+  SpaceClient _spaceClient;
+  SpaceService _spaceService;
+  SpaceBloc _spaceBloc;
   UserBloc _userBloc;
   UserService _userService;
   AuthenticationService _authenticationService;
@@ -37,10 +43,13 @@ class IoC {
     _authenticationClient = FirebaseAuthService();
     _userService = UserServiceImpl();
     _notificationClient = NotificationClient();
+    _spaceClient = SpaceClient();
+    _spaceService = SpaceService(_spaceClient);
     _notificationService = NotificationService(_notificationClient);
     _authenticationService = AuthenticationServiceImpl(_authenticationClient);
     _authenticationBloc =
         AuthenticationBloc(authenticationService: _authenticationService);
+    _spaceBloc = SpaceBloc(_spaceService);
     _userBloc = UserBloc(_userService, _authenticationBloc);
 
     _postClient = PostClient();
@@ -58,6 +67,7 @@ class IoC {
       "home_feeds": _homeFeedsBloc,
       "following": _followingPostBloc,
       "user": _userBloc,
+      "space": _spaceBloc,
       "notification": _notificationBloc,
     };
   }
