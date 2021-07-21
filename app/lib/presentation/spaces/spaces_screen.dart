@@ -17,15 +17,13 @@ class SpacesScreen extends StatefulWidget {
   _SpacesScreenState createState() => _SpacesScreenState();
 }
 
-
-
-
 class _SpacesScreenState extends State<SpacesScreen> {
   @override
   void initState() {
     BlocProvider.of<SpaceBloc>(context).add(FetchSpaceEvent());
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -126,14 +124,21 @@ class _SpacesScreenState extends State<SpacesScreen> {
               color: Colors.grey.shade200,
               thickness: 0.5,
             ),
-            itemBuilder: (context, index) => CustomListTile(
-              leading: Image.asset("assets/images/group_task.png",
-                  width: 20, height: 20),
-              title: Text(
-                state.spaces[index].spaceName,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+            itemBuilder: (context, index) => GestureDetector(
+              onTap: () => Navigator.pushNamed(
+                  context, SpacePageScreen.routeName,
+                  arguments: {
+                    "space": state.spaces[index],
+                  }),
+              child: CustomListTile(
+                leading: Image.asset("assets/images/group_task.png",
+                    width: 20, height: 20),
+                title: Text(
+                  state.spaces[index].spaceName,
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                ),
+                trailing: Icon(Icons.arrow_forward_ios),
               ),
-              trailing: Icon(Icons.arrow_forward_ios),
             ),
             itemCount: state.spaces.length,
           ));
@@ -153,37 +158,28 @@ class CustomListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        print("Hi");
-        return Navigator.pushNamed(
-          context,
-          SpacePageScreen.routeName,
-        );
-      },
-      child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Container(
-              child: Row(
-                children: [
-                  leading,
-                  kHorizontalSpaceSmall,
-                  title,
-                ],
-              ),
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Container(
+            child: Row(
+              children: [
+                leading,
+                kHorizontalSpaceSmall,
+                title,
+              ],
             ),
-            Container(
-              child: Icon(
-                Icons.arrow_forward_ios,
-                size: 15,
-                color: Colors.grey,
-              ),
+          ),
+          Container(
+            child: Icon(
+              Icons.arrow_forward_ios,
+              size: 15,
+              color: Colors.grey,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

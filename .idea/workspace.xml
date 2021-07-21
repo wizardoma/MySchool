@@ -19,8 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="refractor login signup containers to use scaffold">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="update new space impl to dependencies">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/space/space.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/space/space.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/space/spaces_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/space/spaces_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +66,7 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/lib/application/notification" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/lib/domain/space" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -78,19 +82,19 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain\space" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\notification" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\android\app\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\presentation\widgets" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain\notification" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\following" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\android\app" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\notification" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\android\app\src" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\android\app" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\assets\images" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\assets\icons" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -180,34 +184,8 @@
       <workItem from="1626759718074" duration="2408000" />
       <workItem from="1626803435856" duration="2877000" />
       <workItem from="1626808110482" duration="9087000" />
-    </task>
-    <task id="LOCAL-00057" summary="refractor">
-      <created>1626251659852</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1626251659852</updated>
-    </task>
-    <task id="LOCAL-00058" summary="Add ui_helper widgets">
-      <created>1626288690438</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1626288690439</updated>
-    </task>
-    <task id="LOCAL-00059" summary="Add central styles">
-      <created>1626288717440</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1626288717440</updated>
-    </task>
-    <task id="LOCAL-00060" summary="Add post view ui display">
-      <created>1626288757374</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1626288757374</updated>
+      <workItem from="1626852534112" duration="2751000" />
+      <workItem from="1626858945953" duration="11675000" />
     </task>
     <task id="LOCAL-00061" summary="Add read more button to post">
       <created>1626330176642</created>
@@ -524,7 +502,35 @@
       <option name="project" value="LOCAL" />
       <updated>1626816286503</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="Add space domain layer">
+      <created>1626855200718</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1626855200720</updated>
+    </task>
+    <task id="LOCAL-00107" summary="Add space state management">
+      <created>1626855233774</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1626855233774</updated>
+    </task>
+    <task id="LOCAL-00108" summary="update space to iOC">
+      <created>1626855264079</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1626855264080</updated>
+    </task>
+    <task id="LOCAL-00109" summary="update new space impl to dependencies">
+      <created>1626855327187</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1626855327188</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -543,10 +549,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add notification state management layer" />
-    <MESSAGE value="update inversion of Control with notification domain" />
-    <MESSAGE value="refractor: update" />
-    <MESSAGE value="add notification screen design" />
     <MESSAGE value="add draft screen" />
     <MESSAGE value="add bookmarks screen" />
     <MESSAGE value="add autosize text package" />
@@ -568,7 +570,11 @@
     <MESSAGE value="add question screen designs" />
     <MESSAGE value="add answer container for answers" />
     <MESSAGE value="refractor login signup containers to use scaffold" />
-    <option name="LAST_COMMIT_MESSAGE" value="refractor login signup containers to use scaffold" />
+    <MESSAGE value="Add space domain layer" />
+    <MESSAGE value="Add space state management" />
+    <MESSAGE value="update space to iOC" />
+    <MESSAGE value="update new space impl to dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="update new space impl to dependencies" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
@@ -587,10 +593,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="541" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1624251443504" />
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1626807614390">
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1626855382295">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1626807614390" />
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1626855382295" />
     <state x="580" y="127" key="FileChooserDialogImpl" timestamp="1624254206192">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -603,22 +609,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="589" y="135" key="Github.UntrackedFilesDialog/0.0.1600.860@0.0.1600.860" timestamp="1619292079863" />
-    <state width="1540" height="217" key="GridCell.Tab.0.bottom" timestamp="1626818220592">
+    <state width="1540" height="217" key="GridCell.Tab.0.bottom" timestamp="1626860178108">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1540" height="217" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1626818220592" />
-    <state width="1540" height="217" key="GridCell.Tab.0.center" timestamp="1626818220592">
+    <state width="1540" height="217" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1626860178108" />
+    <state width="1540" height="217" key="GridCell.Tab.0.center" timestamp="1626860178108">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1540" height="217" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1626818220592" />
-    <state width="1540" height="217" key="GridCell.Tab.0.left" timestamp="1626818220591">
+    <state width="1540" height="217" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1626860178108" />
+    <state width="1540" height="217" key="GridCell.Tab.0.left" timestamp="1626860178107">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1540" height="217" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1626818220591" />
-    <state width="1540" height="217" key="GridCell.Tab.0.right" timestamp="1626818220592">
+    <state width="1540" height="217" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1626860178107" />
+    <state width="1540" height="217" key="GridCell.Tab.0.right" timestamp="1626860178108">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1540" height="217" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1626818220592" />
+    <state width="1540" height="217" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1626860178108" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -631,10 +637,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626816288590">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626855330276">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626816288590" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626855330276" />
     <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1626634968432">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -643,10 +649,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="182" y="51" width="1235" height="649" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1626678216994" />
-    <state x="456" y="195" key="run.anything.popup" timestamp="1626815110678">
+    <state x="456" y="195" key="run.anything.popup" timestamp="1626867112267">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1626815110678" />
+    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1626867112267" />
     <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1626359211857">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

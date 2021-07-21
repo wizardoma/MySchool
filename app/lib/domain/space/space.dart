@@ -6,6 +6,7 @@ import 'package:app/domain/user/user.dart';
 
 class Space {
   final String spaceName;
+  final String imageUrl;
   final List<Post> posts;
   final String about;
   final List<Question> questions;
@@ -13,11 +14,16 @@ class Space {
   final int noOfFollowers;
   final int noOfPostsInAWeek;
 
-  Space({this.spaceName, this.posts, this.about, this.questions, this.users, this.noOfFollowers, this.noOfPostsInAWeek});
+  Space(
+      {this.imageUrl,
+      this.spaceName,
+      this.posts,
+      this.about,
+      this.questions,
+      this.users,
+      this.noOfFollowers,
+      this.noOfPostsInAWeek});
 
 //  factory Space.
 
 }
-
-
-
