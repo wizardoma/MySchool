@@ -1,4 +1,4 @@
-List<String> palmUniversities = [
+List<String> palmDepartments = [
   "Accountancy / Accounting",
   "Animal and Environmental Biology",
   "Banking and Finance",

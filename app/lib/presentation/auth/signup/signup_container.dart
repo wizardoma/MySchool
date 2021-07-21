@@ -1,6 +1,10 @@
 import 'package:app/application/auth/auth_bloc.dart';
 import 'package:app/application/auth/auth_event.dart';
 import 'package:app/application/auth/signup_request.dart';
+import 'package:app/commons/ui_helpers.dart';
+import 'package:app/domain/department/futo_departments.dart';
+import 'package:app/domain/department/imsu_departments.dart';
+import 'package:app/domain/department/palm_departments.dart';
 import 'package:app/domain/user/user.dart';
 import '../../widgets/form_bottom_sheet.dart';
 import 'package:app/presentation/widgets/text_input_field.dart';
@@ -17,12 +21,13 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpScreenState extends State<SignUpScreen> {
   var _selectedUniversity = "Select university";
   var _selectedLevel = "Select your level";
+  var _selectedDepartment = "Select your department";
 
   void _signUp() {
     var signUpRequest = SignUpRequest(
       email: _emailController.text.trim(),
       password: _passwordController.text,
-      department: _departmentController.text.trim(),
+      department: _departmentController.trim(),
       university: _universityController,
       name: _nameController.text.trim(),
       level: _levelController,
@@ -32,7 +37,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   }
 
   TextEditingController _nameController;
-  TextEditingController _departmentController;
+  var _departmentController = "";
   TextEditingController _emailController;
   TextEditingController _passwordController;
   var _levelController = "";
@@ -41,7 +46,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
   @override
   void initState() {
     _nameController = TextEditingController();
-    _departmentController = TextEditingController();
     _emailController = TextEditingController();
     _passwordController = TextEditingController();
 
@@ -86,6 +90,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               onChanged: (s) {
                 setState(() {
                   _universityController = s.toString();
+
                   _selectedUniversity = userSchools["$s"];
                 });
               },
@@ -131,12 +136,33 @@ class _SignUpScreenState extends State<SignUpScreen> {
           SizedBox(
             height: 20,
           ),
-          TextInputField(
-            textEditingController: _departmentController,
-            title: "Department",
-            isPassword: false,
-            placeholder: "Your department",
+          Container(
+            padding: EdgeInsets.all(5),
+            decoration: BoxDecoration(
+                border: Border.all(color: Colors.grey.shade300, width: 0.5)),
+            child: DropdownButton(
+              isExpanded: true,
+              iconSize: 30,
+              underline: SizedBox(),
+              iconEnabledColor: Theme.of(context).primaryColor,
+              hint: Text(_selectedDepartment),
+              onChanged: (s) {
+                setState(() {
+                  _departmentController = s.toString();
+                  _selectedDepartment = s.toString();
+                });
+              },
+              items: _getDepartmentList()
+                  .map(
+                    (e) => DropdownMenuItem(
+                      value: e,
+                      child: Text(e),
+                    ),
+                  )
+                  .toList(),
+            ),
           ),
+          kVerticalSpaceMedium,
           Text(
             "By continuing, you indicate that you agree to MySchool's Terms of Services and Privacy Policy?",
             style: TextStyle(color: Colors.grey),
@@ -151,7 +177,23 @@ class _SignUpScreenState extends State<SignUpScreen> {
     _emailController.dispose();
     _passwordController.dispose();
     _nameController.dispose();
-    _departmentController.dispose();
     super.dispose();
+  }
+
+  List<String> _getDepartmentList() {
+    setState(() {
+      _selectedDepartment = "Select your department";
+    });
+    if (_universityController == "futo") {
+
+      return futoDepartments;
+    } else if (_universityController == "palm") {
+      return palmDepartments;
+    } else if (_universityController == "imsu") {
+      return imsuDepartments;
+    } else {
+      return [_selectedDepartment];
+    }
+
   }
 }

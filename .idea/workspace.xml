@@ -19,11 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="Add shimmer for loading posts">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add departments for each imo state university school">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/user/user.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/user/user.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/follows/following_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/follows/following_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/profile/profile_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/profile/profile_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/department/palm_departments.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/department/palm_departments.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/auth/signup/signup_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/auth/signup/signup_container.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +32,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Huawei_Android_10_API_29_" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="DEFNW18C21001964" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -184,14 +183,7 @@
       <workItem from="1626803435856" duration="2877000" />
       <workItem from="1626808110482" duration="9087000" />
       <workItem from="1626852534112" duration="2751000" />
-      <workItem from="1626858945953" duration="20086000" />
-    </task>
-    <task id="LOCAL-00065" summary="Add post view screen">
-      <created>1626344211638</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1626344211640</updated>
+      <workItem from="1626858945953" duration="21515000" />
     </task>
     <task id="LOCAL-00066" summary="refractor: Adjust post author section design">
       <created>1626345243832</created>
@@ -529,7 +521,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626879095674</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="add departments for each imo state university school">
+      <created>1626882087079</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1626882087079</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,7 +547,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add messages screen" />
     <MESSAGE value="Add create post widget and page" />
     <MESSAGE value="Add profile page" />
     <MESSAGE value="add profile screen" />
@@ -573,7 +571,8 @@
     <MESSAGE value="add medical and pharmacist spaces" />
     <MESSAGE value="fix:" />
     <MESSAGE value="Add shimmer for loading posts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add shimmer for loading posts" />
+    <MESSAGE value="add departments for each imo state university school" />
+    <option name="LAST_COMMIT_MESSAGE" value="add departments for each imo state university school" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
@@ -608,22 +607,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="589" y="135" key="Github.UntrackedFilesDialog/0.0.1600.860@0.0.1600.860" timestamp="1619292079863" />
-    <state width="1540" height="217" key="GridCell.Tab.0.bottom" timestamp="1626879114550">
+    <state width="1540" height="217" key="GridCell.Tab.0.bottom" timestamp="1626883152285">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1540" height="217" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1626879114550" />
-    <state width="1540" height="217" key="GridCell.Tab.0.center" timestamp="1626879114550">
+    <state width="1540" height="217" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1626883152285" />
+    <state width="1540" height="217" key="GridCell.Tab.0.center" timestamp="1626883152285">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1540" height="217" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1626879114550" />
-    <state width="1540" height="217" key="GridCell.Tab.0.left" timestamp="1626879114549">
+    <state width="1540" height="217" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1626883152285" />
+    <state width="1540" height="217" key="GridCell.Tab.0.left" timestamp="1626883152284">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1540" height="217" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1626879114549" />
-    <state width="1540" height="217" key="GridCell.Tab.0.right" timestamp="1626879114550">
+    <state width="1540" height="217" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1626883152284" />
+    <state width="1540" height="217" key="GridCell.Tab.0.right" timestamp="1626883152285">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1540" height="217" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1626879114550" />
+    <state width="1540" height="217" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1626883152285" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -636,10 +635,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626879097069">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626882088816">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626879097069" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626882088816" />
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626876457269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
