@@ -20,6 +20,7 @@ class User {
   final String id;
   final String name;
   final String department;
+  final String description;
   final String university;
   final String email;
   final String level;
@@ -28,6 +29,7 @@ class User {
     this.id,
     this.name,
     this.department,
+    this.description,
     this.university,
     this.email,
     this.level,

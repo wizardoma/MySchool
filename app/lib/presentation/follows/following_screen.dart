@@ -15,42 +15,46 @@ class FollowingScreen extends StatefulWidget {
 
 class _FollowingScreenState extends State<FollowingScreen> {
   FollowingPostBloc _followingPostBloc;
+
   @override
   void initState() {
-    _followingPostBloc = context.read<FollowingPostBloc>()..add(FetchFollowingPostEvent());
+    _followingPostBloc = context.read<FollowingPostBloc>()
+      ..add(FetchFollowingPostEvent());
 
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<FollowingPostBloc, FollowingPostState>(
-      // ignore: missing_return
+        // ignore: missing_return
         builder: (context, state) {
-          if (state is FetchingFollowingPostState ||
-              state is FollowingPostStateUnInitialized) {
-            return ListView.separated(
-                separatorBuilder: (context, index) => Divider(
+      if (state is FetchingFollowingPostState ||
+          state is FollowingPostStateUnInitialized) {
+        return ListView.separated(
+            separatorBuilder: (context, index) => Divider(
                   height: 5,
                   thickness: 5,
                 ),
-                itemCount: 5,
-                itemBuilder: (context, index) {
-                  return PostShimmer();
-                });
-          }
-          if (state is FetchFollowingPostStateSuccess) {
-            var feeds = state.posts;
-            return ListView.separated(
-                separatorBuilder: (context, index) => Divider(height: 5, thickness: 5,),
-                itemCount: feeds.length,
-                itemBuilder: (context, index) {
-                  return PostContainer( post: feeds[index],
-
-                  );
-                }
-            );
-
-          }
-        });
+            itemCount: 5,
+            itemBuilder: (context, index) {
+              return PostShimmer();
+            });
+      }
+      if (state is FetchFollowingPostStateSuccess) {
+        var feeds = state.posts;
+        return ListView.separated(
+            separatorBuilder: (context, index) => Divider(
+                  height: 5,
+                  thickness: 5,
+                ),
+            itemCount: feeds.length,
+            itemBuilder: (context, index) {
+              return PostContainer(
+                post: feeds[index],
+              );
+            });
+      }
+    });
   }
 }

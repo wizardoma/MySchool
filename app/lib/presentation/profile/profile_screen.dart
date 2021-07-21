@@ -223,24 +223,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           child: Column(
                             children: [
                               TabBar(
+
                                   onTap: (index) => setState(() {
                                         _currIndex = index;
                                       }),
+
                                   tabs: _tabs
                                       .map(
                                         (e) => Tab(
-                                          child: FittedBox(
-                                              child: Text(
+                                          child: Text(
                                             e,
                                             style: TextStyle(
-                                              color: Colors.blue,
-                                              fontSize: 12,
+                                          color: Colors.blue,
+                                          fontSize: 12,
                                             ),
                                             maxLines: 1,
-                                          )),
+                                          ),
                                         ),
                                       )
-                                      .toList()),
+                                      .toList(),
+                              isScrollable: true,
+                              ),
                               Expanded(
                                 child: TabBarView(
                                   children: _tabChildren,
@@ -267,12 +270,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
         children: [
           Icon(
             icon,
-            color: Colors.black54,
+            color: Colors.black87,
           ),
           Text(
             title,
             style: TextStyle(
-              color: Colors.black54,
+              color: Colors.black87,
             ),
           )
         ],
