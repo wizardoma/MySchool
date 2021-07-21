@@ -2,6 +2,7 @@ import 'package:app/application/following/following_posts_bloc.dart';
 import 'package:app/application/following/following_posts_event.dart';
 import 'package:app/application/following/following_posts_state.dart';
 import 'package:app/presentation/widgets/post_container.dart';
+import 'package:app/presentation/widgets/post_shimmer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -27,7 +28,15 @@ class _FollowingScreenState extends State<FollowingScreen> {
         builder: (context, state) {
           if (state is FetchingFollowingPostState ||
               state is FollowingPostStateUnInitialized) {
-            return Center(child: CircularProgressIndicator());
+            return ListView.separated(
+                separatorBuilder: (context, index) => Divider(
+                  height: 5,
+                  thickness: 5,
+                ),
+                itemCount: 5,
+                itemBuilder: (context, index) {
+                  return PostShimmer();
+                });
           }
           if (state is FetchFollowingPostStateSuccess) {
             var feeds = state.posts;

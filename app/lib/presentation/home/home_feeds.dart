@@ -2,6 +2,7 @@ import 'package:app/application/homefeeds/home_feeds_bloc.dart';
 import 'package:app/application/homefeeds/homefeeds_event.dart';
 import 'package:app/application/homefeeds/homefeeds_state.dart';
 import 'package:app/presentation/widgets/post_container.dart';
+import 'package:app/presentation/widgets/post_shimmer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -29,23 +30,30 @@ class _HomeFeedsState extends State<HomeFeeds> {
         builder: (context, state) {
       if (state is FetchingHomeFeedsState ||
           state is HomeFeedsUnInitializedState) {
-        return Center(child: CircularProgressIndicator());
+        return ListView.separated(
+            separatorBuilder: (context, index) => Divider(
+                  height: 5,
+                  thickness: 5,
+                ),
+            itemCount: 5,
+            itemBuilder: (context, index) {
+              return PostShimmer();
+            });
       }
       if (state is FetchHomeFeedsSuccessState) {
         var feeds = state.feeds;
         return ListView.separated(
-          separatorBuilder: (context, index) => Divider(height: 5, thickness: 5,),
-          itemCount: feeds.length,
+            separatorBuilder: (context, index) => Divider(
+                  height: 5,
+                  thickness: 5,
+                ),
+            itemCount: feeds.length,
             itemBuilder: (context, index) {
-            return PostContainer( post: feeds[index],
-
-            );
-        }
-        );
-
+              return PostContainer(
+                post: feeds[index],
+              );
+            });
       }
     });
   }
-
-
 }
