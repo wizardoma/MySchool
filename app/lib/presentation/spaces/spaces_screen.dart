@@ -1,8 +1,12 @@
+import 'package:app/application/space/spaces_bloc.dart';
+import 'package:app/application/space/spaces_event.dart';
+import 'package:app/application/space/spaces_state.dart';
 import 'package:app/commons/ui_helpers.dart';
 import 'package:app/domain/space/spaces_list.dart';
 import 'package:app/presentation/spaces/space_page_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SpacesScreen extends StatefulWidget {
   static const title = "Spaces";
@@ -13,7 +17,15 @@ class SpacesScreen extends StatefulWidget {
   _SpacesScreenState createState() => _SpacesScreenState();
 }
 
+
+
+
 class _SpacesScreenState extends State<SpacesScreen> {
+  @override
+  void initState() {
+    BlocProvider.of<SpaceBloc>(context).add(FetchSpaceEvent());
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -97,26 +109,36 @@ class _SpacesScreenState extends State<SpacesScreen> {
         ),
       ),
       kVerticalSpaceSmall,
-      Expanded(
-        child: ListView.separated(
-          physics: ScrollPhysics(),
-          shrinkWrap: true,
-          separatorBuilder: (context, index) => Divider(
-            color: Colors.grey.shade200,
-            thickness: 0.5,
-          ),
-          itemBuilder: (context, index) => CustomListTile(
-            leading: Image.asset("assets/images/group_task.png",
-                width: 20, height: 20),
-            title: Text(
-              spacesList[index],
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+      BlocBuilder<SpaceBloc, SpaceState>(
+          // ignore: missing_return
+          builder: (ctx, state) {
+        if (state is SpaceStateUnInitialized || state is FetchingSpaceState) {
+          return Center(
+            child: CircularProgressIndicator(),
+          );
+        }
+        if (state is FetchSpaceStateSuccess) {
+          return Expanded(
+              child: ListView.separated(
+            physics: ScrollPhysics(),
+            shrinkWrap: true,
+            separatorBuilder: (context, index) => Divider(
+              color: Colors.grey.shade200,
+              thickness: 0.5,
             ),
-            trailing: Icon(Icons.arrow_forward_ios),
-          ),
-          itemCount: spacesList.length,
-        ),
-      ),
+            itemBuilder: (context, index) => CustomListTile(
+              leading: Image.asset("assets/images/group_task.png",
+                  width: 20, height: 20),
+              title: Text(
+                state.spaces[index].spaceName,
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+              ),
+              trailing: Icon(Icons.arrow_forward_ios),
+            ),
+            itemCount: state.spaces.length,
+          ));
+        }
+      }),
     ]));
   }
 }
@@ -135,9 +157,9 @@ class CustomListTile extends StatelessWidget {
       onTap: () {
         print("Hi");
         return Navigator.pushNamed(
-        context,
-        SpacePageScreen.routeName,
-      );
+          context,
+          SpacePageScreen.routeName,
+        );
       },
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),

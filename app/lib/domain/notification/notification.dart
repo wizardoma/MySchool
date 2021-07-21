@@ -22,7 +22,7 @@ class Notification {
 
   factory Notification.Random() {
 
-    String spaceName = spacesList[Random().nextInt(spacesList.length)];
+    String spaceName = spacesList[Random().nextInt(spacesList.length)].spaceName;
     String userName = usersList[Random().nextInt(usersList.length)];
     bool isRead = Random().nextInt(3) != 1;
     bool isPost = Random().nextInt(3) != 1;
