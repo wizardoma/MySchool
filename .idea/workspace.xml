@@ -19,10 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="refractor spaces design">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add medical and pharmacist spaces">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/domain/space/spaces_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/space/spaces_list.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,14 +183,7 @@
       <workItem from="1626803435856" duration="2877000" />
       <workItem from="1626808110482" duration="9087000" />
       <workItem from="1626852534112" duration="2751000" />
-      <workItem from="1626858945953" duration="14876000" />
-    </task>
-    <task id="LOCAL-00062" summary="refractor: add color to circularprogress and make social media button white">
-      <created>1626330251361</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1626330251361</updated>
+      <workItem from="1626858945953" duration="15339000" />
     </task>
     <task id="LOCAL-00063" summary="add bottomsheet for posts">
       <created>1626331499667</created>
@@ -528,7 +521,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626870848050</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="add medical and pharmacist spaces">
+      <created>1626876889749</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1626876889750</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -547,7 +547,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add bookmarks screen" />
     <MESSAGE value="add autosize text package" />
     <MESSAGE value="refractor post container using AutoSizeText" />
     <MESSAGE value="add messages screen" />
@@ -572,7 +571,8 @@
     <MESSAGE value="update space to iOC" />
     <MESSAGE value="update new space impl to dependencies" />
     <MESSAGE value="refractor spaces design" />
-    <option name="LAST_COMMIT_MESSAGE" value="refractor spaces design" />
+    <MESSAGE value="add medical and pharmacist spaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="add medical and pharmacist spaces" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
@@ -635,10 +635,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626870850406">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626876891462">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626870850406" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626876891462" />
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626876457269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
