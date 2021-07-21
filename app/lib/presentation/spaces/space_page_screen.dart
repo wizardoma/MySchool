@@ -41,12 +41,13 @@ class _SpacePageScreenState extends State<SpacePageScreen>
 
   @override
   void initState() {
-    _tabbarController = TabController(length: 3, vsync: this,initialIndex: _currIndex)
-      ..addListener(() {
-        setState(() {
-          _currIndex = _tabbarController.index;
-        });
-      });
+    _tabbarController =
+        TabController(length: 3, vsync: this, initialIndex: _currIndex)
+          ..addListener(() {
+            setState(() {
+              _currIndex = _tabbarController.index;
+            });
+          });
     super.initState();
   }
 

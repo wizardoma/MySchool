@@ -5,7 +5,7 @@ import 'package:app/domain/question/question.dart';
 import 'package:app/domain/space/space.dart';
 import 'package:app/domain/user/user.dart';
 
-final List<Space> spacesList = [cscSpace, eeSpace];
+final List<Space> spacesList = [cscSpace, eeSpace, pharmacySpace,medicineSpace];
 
 final Space cscSpace = Space(
   imageUrl:
@@ -33,6 +33,30 @@ final Space eeSpace = Space(
   questions: List.generate(Random().nextInt(20), (index) => Question.Random()),
 );
 
+final Space pharmacySpace = Space(
+  imageUrl:
+      "https://images.unsplash.com/photo-1584362917165-526a968579e8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGhhcm1hY3l8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+  spaceName: "Pharmacy",
+  about:
+      "Official Space for pharmacists. Post and ask questions related to Pharmacy",
+  noOfFollowers: Random().nextInt(2000),
+  noOfPostsInAWeek: 6,
+  posts: List.generate(Random().nextInt(20), (index) => Post.Random()),
+  users: List.generate(Random().nextInt(200), (index) => User.Random()),
+  questions: List.generate(Random().nextInt(20), (index) => Question.Random()),
+);
+
+final Space medicineSpace = Space(
+  imageUrl:
+      "https://images.unsplash.com/photo-1585435557343-3b092031a831?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cGhhcm1hY3l8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+  spaceName: "Medical Science",
+  about: "Official Space for Medical Students. Post and ask questions related to Medicine",
+  noOfFollowers: Random().nextInt(2000),
+  noOfPostsInAWeek: 6,
+  posts: List.generate(Random().nextInt(20), (index) => Post.Random()),
+  users: List.generate(Random().nextInt(200), (index) => User.Random()),
+  questions: List.generate(Random().nextInt(20), (index) => Question.Random()),
+);
 //final List<String> spacesList = [
 //  "Computer Science",
 //  "Electrical and Electronics Engineering",
