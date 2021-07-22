@@ -7,11 +7,11 @@ class ResponseEntity {
 
   const ResponseEntity(this.isError, this.data, this.errors);
 
-  factory ResponseEntity.Error(dynamic errors){
+  factory ResponseEntity.Error(dynamic errors) {
     return ResponseEntity(true, null, ErrorResponse(message: errors));
   }
 
-  factory ResponseEntity.Data(dynamic data){
+  factory ResponseEntity.Data(dynamic data) {
     return ResponseEntity(false, data, null);
   }
 

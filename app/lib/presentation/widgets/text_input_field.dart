@@ -6,11 +6,13 @@ class TextInputField extends StatelessWidget {
   final String title;
   final String placeholder;
   final bool isPassword;
+  final FocusNode focusNode;
 
   const TextInputField(
       {Key key,
       this.textEditingController,
       this.title,
+        this.focusNode,
       this.placeholder,
       this.isPassword = false})
       : super(key: key);
@@ -29,6 +31,7 @@ class TextInputField extends StatelessWidget {
             height: 10,
           ),
           TextField(
+            focusNode: focusNode,
             controller: textEditingController,
             obscureText: isPassword,
             decoration: InputDecoration(

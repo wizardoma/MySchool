@@ -19,10 +19,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add departments for each imo state university school">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="update departments to signup screens">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/department/palm_departments.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/department/palm_departments.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/android/app/src/main/res/drawable-v21/launch_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/android/app/src/main/res/drawable-v21/launch_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/android/app/src/main/res/drawable/launch_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/android/app/src/main/res/drawable/launch_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/android/app/src/main/res/values-night/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/android/app/src/main/res/values-night/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/android/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/android/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/flutter_native_splash.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/flutter_native_splash.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ios/Runner/Base.lproj/LaunchScreen.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/Runner/Base.lproj/LaunchScreen.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/Runner/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/response.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/presentation/auth/signup/signup_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/auth/signup/signup_container.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/text_input_field.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/text_input_field.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/web/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +45,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="DEFNW18C21001964" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Huawei_Android_10_API_29_" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -183,14 +196,9 @@
       <workItem from="1626803435856" duration="2877000" />
       <workItem from="1626808110482" duration="9087000" />
       <workItem from="1626852534112" duration="2751000" />
-      <workItem from="1626858945953" duration="21515000" />
-    </task>
-    <task id="LOCAL-00066" summary="refractor: Adjust post author section design">
-      <created>1626345243832</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1626345243832</updated>
+      <workItem from="1626858945953" duration="21607000" />
+      <workItem from="1626883974149" duration="916000" />
+      <workItem from="1626895831859" duration="3915000" />
     </task>
     <task id="LOCAL-00067" summary="add floatingActionBar for specific tabs">
       <created>1626352911942</created>
@@ -528,7 +536,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626882087079</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="update departments to signup screens">
+      <created>1626883571540</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1626883571542</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -547,7 +562,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add create post widget and page" />
     <MESSAGE value="Add profile page" />
     <MESSAGE value="add profile screen" />
     <MESSAGE value="add spaces screen" />
@@ -572,7 +586,8 @@
     <MESSAGE value="fix:" />
     <MESSAGE value="Add shimmer for loading posts" />
     <MESSAGE value="add departments for each imo state university school" />
-    <option name="LAST_COMMIT_MESSAGE" value="add departments for each imo state university school" />
+    <MESSAGE value="update departments to signup screens" />
+    <option name="LAST_COMMIT_MESSAGE" value="update departments to signup screens" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
@@ -607,22 +622,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="589" y="135" key="Github.UntrackedFilesDialog/0.0.1600.860@0.0.1600.860" timestamp="1619292079863" />
-    <state width="1540" height="217" key="GridCell.Tab.0.bottom" timestamp="1626883152285">
+    <state width="1540" height="217" key="GridCell.Tab.0.bottom" timestamp="1626901427322">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1540" height="217" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1626883152285" />
-    <state width="1540" height="217" key="GridCell.Tab.0.center" timestamp="1626883152285">
+    <state width="1540" height="217" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1626901427322" />
+    <state width="1540" height="217" key="GridCell.Tab.0.center" timestamp="1626901427321">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1540" height="217" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1626883152285" />
-    <state width="1540" height="217" key="GridCell.Tab.0.left" timestamp="1626883152284">
+    <state width="1540" height="217" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1626901427321" />
+    <state width="1540" height="217" key="GridCell.Tab.0.left" timestamp="1626901427320">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1540" height="217" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1626883152284" />
-    <state width="1540" height="217" key="GridCell.Tab.0.right" timestamp="1626883152285">
+    <state width="1540" height="217" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1626901427320" />
+    <state width="1540" height="217" key="GridCell.Tab.0.right" timestamp="1626901427322">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1540" height="217" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1626883152285" />
+    <state width="1540" height="217" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1626901427322" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -635,10 +650,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626882088816">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626883573114">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626882088816" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626883573114" />
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626876457269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -651,10 +666,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="182" y="51" width="1235" height="649" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1626678216994" />
-    <state x="456" y="195" key="run.anything.popup" timestamp="1626867112267">
+    <state x="456" y="195" key="run.anything.popup" timestamp="1626900526688">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1626867112267" />
+    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1626900526688" />
     <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1626359211857">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

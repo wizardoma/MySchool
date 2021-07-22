@@ -12,7 +12,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 /// Author: Ibekason Alexander
-
 class SignUpScreen extends StatefulWidget {
   @override
   _SignUpScreenState createState() => _SignUpScreenState();
@@ -23,32 +22,24 @@ class _SignUpScreenState extends State<SignUpScreen> {
   var _selectedLevel = "Select your level";
   var _selectedDepartment = "Select your department";
 
-  void _signUp() {
-    var signUpRequest = SignUpRequest(
-      email: _emailController.text.trim(),
-      password: _passwordController.text,
-      department: _departmentController.trim(),
-      university: _universityController,
-      name: _nameController.text.trim(),
-      level: _levelController,
-    );
-    var authenticationBloc = context.read<AuthenticationBloc>();
-    authenticationBloc.add(SignUpEvent(signUpRequest));
-  }
-
   TextEditingController _nameController;
   var _departmentController = "";
   TextEditingController _emailController;
   TextEditingController _passwordController;
   var _levelController = "";
   var _universityController = "";
+  FocusNode _passwordFocusNode;
+  FocusNode _emailFocusNode;
+  FocusNode _nameFocusNode;
 
   @override
   void initState() {
     _nameController = TextEditingController();
     _emailController = TextEditingController();
+    _passwordFocusNode = FocusNode();
     _passwordController = TextEditingController();
-
+    _emailFocusNode = FocusNode();
+    _nameFocusNode = FocusNode();
     super.initState();
   }
 
@@ -62,17 +53,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
         physics: ScrollPhysics(),
         children: [
           TextInputField(
+            focusNode: _nameFocusNode,
             textEditingController: _nameController,
             title: "Name",
             placeholder: "What would you like to be called?",
           ),
           TextInputField(
+            focusNode: _emailFocusNode,
             textEditingController: _emailController,
             title: "Email",
             placeholder: "Your email",
           ),
           TextInputField(
             textEditingController: _passwordController,
+            focusNode: _passwordFocusNode,
             title: "Password",
             isPassword: true,
             placeholder: "Your password",
@@ -88,6 +82,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
               iconEnabledColor: Theme.of(context).primaryColor,
               hint: Text(_selectedUniversity),
               onChanged: (s) {
+                unfocusNodes();
+
                 setState(() {
                   _universityController = s.toString();
 
@@ -118,6 +114,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
               iconEnabledColor: Theme.of(context).primaryColor,
               hint: Text(_selectedLevel),
               onChanged: (s) {
+                unfocusNodes();
+
                 setState(() {
                   _levelController = s.toString();
                   _selectedLevel = s.toString();
@@ -147,10 +145,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
               iconEnabledColor: Theme.of(context).primaryColor,
               hint: Text(_selectedDepartment),
               onChanged: (s) {
+                unfocusNodes();
                 setState(() {
                   _departmentController = s.toString();
                   _selectedDepartment = s.toString();
                 });
+
               },
               items: _getDepartmentList()
                   .map(
@@ -177,6 +177,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
     _emailController.dispose();
     _passwordController.dispose();
     _nameController.dispose();
+    _passwordFocusNode.dispose();
+    _emailFocusNode.dispose();
+    _nameFocusNode.dispose();
     super.dispose();
   }
 
@@ -185,7 +188,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
       _selectedDepartment = "Select your department";
     });
     if (_universityController == "futo") {
-
       return futoDepartments;
     } else if (_universityController == "palm") {
       return palmDepartments;
@@ -194,6 +196,25 @@ class _SignUpScreenState extends State<SignUpScreen> {
     } else {
       return [_selectedDepartment];
     }
+  }
 
+  void unfocusNodes() {
+    print("unfocus");
+    _passwordFocusNode.unfocus();
+    _emailFocusNode.unfocus();
+    _nameFocusNode.unfocus();
+  }
+
+  void _signUp() {
+    var signUpRequest = SignUpRequest(
+      email: _emailController.text.trim(),
+      password: _passwordController.text,
+      department: _departmentController.trim(),
+      university: _universityController,
+      name: _nameController.text.trim(),
+      level: _levelController,
+    );
+    var authenticationBloc = context.read<AuthenticationBloc>();
+    authenticationBloc.add(SignUpEvent(signUpRequest));
   }
 }
