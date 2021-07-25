@@ -65,7 +65,7 @@ class AuthenticationBloc
     if (responseEntity.isError) {
       return AuthenticationErrorState(responseEntity.errors.message);
     }
-    return AuthenticatedState(responseEntity.data);
+    return SignUpSuccessState(responseEntity.data);
   }
 
   Future<AuthenticationState> login(LoginRequest loginRequest) async {

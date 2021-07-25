@@ -1,4 +1,5 @@
 import 'package:app/domain/auth/model/authUser.dart';
+import 'package:app/domain/auth/model/signUpUser.dart';
 
 abstract class AuthenticationState {}
 
@@ -17,7 +18,8 @@ class LoggedInSuccessState extends AuthenticatedState {
 }
 
 class SignUpSuccessState extends AuthenticatedState {
-  SignUpSuccessState(AuthUser user) : super(user);
+  final SignUpUser user;
+  SignUpSuccessState(this.user) : super(AuthUser.fromSignUp(user));
 }
 
 class AuthenticationErrorState extends AuthenticationState {

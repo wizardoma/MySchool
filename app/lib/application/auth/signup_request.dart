@@ -2,7 +2,6 @@ import 'package:flutter/foundation.dart';
 
 /// Author: Ibekason Alexander
 
-
 class SignUpRequest {
   final String name;
   final String password;
@@ -11,16 +10,16 @@ class SignUpRequest {
   final String level;
   final String university;
 
-  SignUpRequest({this.name,
-    @required this.password,
-    @required this.email,
-    this.department,
-    this.level,
-    this.university}) {
-    this.name.trim();
-    this.email.trim();
-    this.department.trim();
-  }
+  final String matricNo;
+
+  SignUpRequest(
+      {this.name,
+      @required this.password,
+      @required this.email,
+      @required this.matricNo,
+      @required this.department,
+      @required this.level,
+      @required this.university});
 
   factory SignUpRequest.fromMap(Map<String, dynamic> map) {
     return new SignUpRequest(
@@ -30,6 +29,7 @@ class SignUpRequest {
       department: map['department'] as String,
       level: map['level'] as String,
       university: map['university'] as String,
+      matricNo: map['matricNo'] as String,
     );
   }
 
@@ -47,6 +47,6 @@ class SignUpRequest {
 
   @override
   String toString() {
-    return 'SignUpRequest{name: $name, password: $password, email: $email, department: $department, level: $level, university: $university}';
+    return 'SignUpRequest{name: $name, password: $password, email: $email, department: $department, level: $level, university: $university, matricNo: $matricNo}';
   }
 }
