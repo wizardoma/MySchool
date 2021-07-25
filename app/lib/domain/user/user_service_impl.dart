@@ -7,10 +7,6 @@ import 'package:app/domain/user/user_service.dart';
 
 class UserServiceImpl extends UserService {
 
-  @override
-  Future<ResponseEntity> editName(String name) {
-
-  }
 
   @override
   Future<ResponseEntity> getUserById(String id) {
@@ -18,4 +14,12 @@ class UserServiceImpl extends UserService {
       return ResponseEntity.Data(User.Random());
     });
   }
+
+  @override
+  Future<ResponseEntity> storeUser(User user) {
+
+  }
+
+
+//  void _saveUser
 }

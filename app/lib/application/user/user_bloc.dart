@@ -4,10 +4,11 @@ import 'package:app/application/auth/auth_bloc.dart';
 import 'package:app/application/auth/auth_state.dart';
 import 'package:app/application/user/user_event.dart';
 import 'package:app/application/user/user_state.dart';
+import 'package:app/domain/user/user.dart';
 import 'package:app/domain/user/user_service.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hydrated_bloc/hydrated_bloc.dart';
 
-class UserBloc extends Bloc<UserEvent, UserState> {
+class UserBloc extends HydratedBloc<UserEvent, UserState> {
   final UserService userService;
   final AuthenticationBloc authenticationBloc;
   StreamSubscription _streamSubscription;
@@ -26,12 +27,12 @@ class UserBloc extends Bloc<UserEvent, UserState> {
   @override
   Stream<UserState> mapEventToState(UserEvent event) async* {
     if (event is FetchUserEvent) {
-      print("event is fetchuser");
-
       yield FetchingUserState();
       var authenticationState = authenticationBloc.state;
-      if (authenticationState is AuthenticatedState) {
+      if (authenticationState is LoggedInSuccessState) {
         yield await fetchUser(authenticationState.authUser.id);
+      } else if (authenticationState is SignUpSuccessState) {
+        yield await fetchUser(authenticationState.user.id);
       } else {
         yield FetchUserErrorState("You are not authenticated");
       }
@@ -50,5 +51,22 @@ class UserBloc extends Bloc<UserEvent, UserState> {
   Future<void> close() {
     _streamSubscription.cancel();
     return super.close();
+  }
+
+  @override
+  UserState fromJson(Map<String, dynamic> json) {
+    if (json == null) {
+      return FetchUserErrorState("No user found");
+    }
+    return FetchedUserState(User.fromMap(json));
+  }
+
+  @override
+  Map<String, dynamic> toJson(UserState state) {
+    if (state is FetchedUserState) {
+      return state.user.toMap();
+    } else {
+      return null;
+    }
   }
 }
