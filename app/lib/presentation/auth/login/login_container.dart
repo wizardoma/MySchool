@@ -1,6 +1,7 @@
 import 'package:app/application/auth/auth_bloc.dart';
 import 'package:app/application/auth/auth_event.dart';
 import 'package:app/application/auth/login_request.dart';
+import 'package:app/commons/ui_helpers.dart';
 import '../../widgets/form_bottom_sheet.dart';
 import 'package:app/presentation/widgets/text_input_field.dart';
 import 'package:flutter/material.dart';
@@ -44,15 +45,14 @@ class _LoginScreenState extends State<LoginScreen> {
               title: "Email",
               placeholder: "Your email",
             ),
-            SizedBox(
-              height: 10,
-            ),
+            kVerticalSpaceSmall,
             TextInputField(
               textEditingController: _passwordController,
               title: "Password",
               placeholder: "Your password",
               isPassword: true,
             ),
+            kVerticalSpaceSmall,
             Text(
               "Forgot password?",
               style: TextStyle(color: Colors.grey),

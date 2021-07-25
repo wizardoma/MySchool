@@ -19,14 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add native splash screen">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="optimize auth screen with defaultPadding">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/commons/ui_helpers.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/commons/ui_helpers.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/auth/authentication_service_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/auth/authentication_service_impl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/auth/auth_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/auth/auth_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/auth/signup/signup_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/auth/signup/signup_container.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/local_auth_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/local_auth_container.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/social_media_login_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/social_media_login_container.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/auth/login/login_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/auth/login/login_container.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/form_bottom_sheet.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/form_bottom_sheet.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/text_input_field.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/text_input_field.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,14 +192,8 @@
       <workItem from="1627010544904" duration="484000" />
       <workItem from="1627014700846" duration="685000" />
       <workItem from="1627026489977" duration="13000" />
-      <workItem from="1627194112920" duration="1489000" />
-    </task>
-    <task id="LOCAL-00068" summary="refractor: make post container stateful">
-      <created>1626353189880</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1626353189880</updated>
+      <workItem from="1627194112920" duration="2565000" />
+      <workItem from="1627236607865" duration="4000" />
     </task>
     <task id="LOCAL-00069" summary="Add following posts state management">
       <created>1626357133278</created>
@@ -539,7 +531,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626933161433</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="optimize auth screen with defaultPadding">
+      <created>1627195788071</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1627195788073</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,7 +557,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add profile screen" />
     <MESSAGE value="add spaces screen" />
     <MESSAGE value="refractor: abstract user details" />
     <MESSAGE value="refractor" />
@@ -583,7 +581,8 @@
     <MESSAGE value="add departments for each imo state university school" />
     <MESSAGE value="update departments to signup screens" />
     <MESSAGE value="add native splash screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="add native splash screen" />
+    <MESSAGE value="optimize auth screen with defaultPadding" />
+    <option name="LAST_COMMIT_MESSAGE" value="optimize auth screen with defaultPadding" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
@@ -646,10 +645,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1626933165479">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1627195791924">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1626933165479" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1627195791924" />
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626876457269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

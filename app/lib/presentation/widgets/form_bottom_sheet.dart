@@ -58,7 +58,7 @@ class FormBottomSheet extends StatelessWidget {
                                   onTap: onButtonPressed,
                                   child: Container(
                                     padding: EdgeInsets.symmetric(
-                                        vertical: 8, horizontal: 20),
+                                        vertical: defaultPadding * 0.5, horizontal: defaultPadding),
                                     decoration: BoxDecoration(
                                       color: Colors.blue,
                                       borderRadius: BorderRadius.circular(30),

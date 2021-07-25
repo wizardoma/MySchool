@@ -44,9 +44,6 @@ class TextInputField extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
-            height: 20,
-          ),
         ],
       ),
     );
