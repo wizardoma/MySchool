@@ -11,7 +11,6 @@ class SocialMediaLoginContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      margin: EdgeInsets.symmetric(vertical: 5),
       child: ListTile(
         onTap: onTap,
 //        contentPadding: EdgeInsets.all(8),

@@ -83,7 +83,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
               hint: Text(_selectedUniversity),
               onChanged: (s) {
                 unfocusNodes();
-
                 setState(() {
                   _universityController = s.toString();
 

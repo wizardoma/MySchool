@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 
+const defaultPadding = 16.0;
+
 // horizontal spacing
 const Widget kHorizontalSpaceTiny = SizedBox(width: 5.0);
 const Widget kHorizontalSpaceSmall = SizedBox(width: 10.0);

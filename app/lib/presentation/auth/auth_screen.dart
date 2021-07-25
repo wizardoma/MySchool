@@ -1,6 +1,7 @@
 import 'package:app/application/auth/auth_bloc.dart';
 import 'package:app/application/auth/auth_event.dart';
 import 'package:app/application/auth/auth_state.dart';
+import 'package:app/commons/ui_helpers.dart';
 import 'package:app/presentation/auth/login/login_container.dart';
 import 'package:app/presentation/auth/signup/signup_container.dart';
 import 'package:app/presentation/home/home_screen.dart';
@@ -40,7 +41,7 @@ class _AuthScreenState extends State<AuthScreen> {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
                 content: Container(
-                  padding: EdgeInsets.all(10),
+                  padding: EdgeInsets.all(defaultPadding),
                   child: Text(state.errors),
                 ),
               ),
@@ -63,14 +64,14 @@ class _AuthScreenState extends State<AuthScreen> {
               )
 //          color: Colors.grey
               ),
-          padding: EdgeInsets.all(30),
+          padding: EdgeInsets.all(defaultPadding * 2),
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  padding: EdgeInsets.all(15),
+                  padding: EdgeInsets.all(defaultPadding),
                   child: Column(
                     children: [
                       Container(
@@ -82,9 +83,7 @@ class _AuthScreenState extends State<AuthScreen> {
                               color: Colors.white),
                         ),
                       ),
-                      SizedBox(
-                        height: 5,
-                      ),
+                      kVerticalSpaceSmall,
                       Container(
                         child: Text(
                           "A place to share knowledge and connect with fellow students",
@@ -99,16 +98,16 @@ class _AuthScreenState extends State<AuthScreen> {
                     ],
                   ),
                 ),
+                kVerticalSpaceSmall,
                 SocialMediaLoginContainer(
                     image: "assets/icons/google.png",
                     title: "Continue with Google",
                     onTap: _googleSignIn),
+                kVerticalSpaceSmall,
                 SocialMediaLoginContainer(
                     image: "assets/icons/facebook.png",
                     title: "Continue with Facebook"),
-                SizedBox(
-                  height: 15,
-                ),
+                kVerticalSpaceSmall,
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -118,16 +117,20 @@ class _AuthScreenState extends State<AuthScreen> {
                         onTap: _onLogin,
                         title: "Login",
                       )),
+                      kHorizontalSpaceSmall,
                       Expanded(
                         child: LocalAuthContainer(
                             onTap: _onSignUp, title: "Sign up with email"),
                       ),
                     ]),
+                kVerticalSpaceSmall,
                 Divider(
                   color: Colors.white,
                 ),
                 Container(
-                  padding: EdgeInsets.symmetric(vertical: 8),
+                  padding: EdgeInsets.symmetric(
+                    vertical: defaultPadding * 0.5,
+                  ),
                   child: Text(
                     "By continuing you indicate that you agree to MySchools's Terms of Service and Privacy Policy",
                     style: TextStyle(color: Colors.white),
@@ -141,7 +144,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     child: Row(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(defaultPadding * 0.5),
                           child: Text(
                             "Languages",
                             style: TextStyle(
@@ -150,7 +153,7 @@ class _AuthScreenState extends State<AuthScreen> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(defaultPadding * 0.5,),
                           child: Text(
                             "Learn More",
                             style: TextStyle(
@@ -159,7 +162,7 @@ class _AuthScreenState extends State<AuthScreen> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(defaultPadding * 0.5,),
                           child: Text(
                             "MySchool, Inc. 2021",
                             style: TextStyle(color: Colors.white),
