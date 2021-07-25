@@ -89,12 +89,17 @@ class FirebaseAuthService extends AuthenticationClient {
           email: signUpRequest.email, password: signUpRequest.password);
       if (userCredential.user == null) {
         return ResponseEntity.Error("An error occurred while registering");
+      } else {
+        return ResponseEntity.Data(
+            AuthUser.fromFirebaseUser(userCredential.user));
       }
     } on FirebaseAuthException catch (e) {
       return ResponseEntity.Error(e.message);
+    } catch (e) {
+      return ResponseEntity.Error(
+        "There was an error signing you up",
+      );
     }
-
-    return ResponseEntity.Data(AuthUser.fromFirebaseUser(userCredential.user));
   }
 
   @override
