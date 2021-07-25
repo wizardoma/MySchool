@@ -6,10 +6,11 @@ import 'package:app/domain/department/futo_departments.dart';
 import 'package:app/domain/department/imsu_departments.dart';
 import 'package:app/domain/department/palm_departments.dart';
 import 'package:app/domain/user/user.dart';
-import '../../widgets/form_bottom_sheet.dart';
 import 'package:app/presentation/widgets/text_input_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../widgets/form_bottom_sheet.dart';
 
 /// Author: Ibekason Alexander
 class SignUpScreen extends StatefulWidget {
@@ -26,6 +27,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   var _departmentController = "";
   TextEditingController _emailController;
   TextEditingController _passwordController;
+  TextEditingController _matricNoController;
   var _levelController = "";
   var _universityController = "";
   FocusNode _passwordFocusNode;
@@ -34,6 +36,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   @override
   void initState() {
+    _matricNoController = TextEditingController();
     _nameController = TextEditingController();
     _emailController = TextEditingController();
     _passwordFocusNode = FocusNode();
@@ -58,12 +61,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
             title: "Name",
             placeholder: "What would you like to be called?",
           ),
+          kVerticalSpaceRegular,
           TextInputField(
             focusNode: _emailFocusNode,
             textEditingController: _emailController,
             title: "Email",
             placeholder: "Your email",
           ),
+          kVerticalSpaceRegular,
           TextInputField(
             textEditingController: _passwordController,
             focusNode: _passwordFocusNode,
@@ -71,8 +76,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
             isPassword: true,
             placeholder: "Your password",
           ),
+          kVerticalSpaceRegular,
+          TextInputField(
+            textEditingController: _matricNoController,
+            title: "Matriculation Number",
+            isPassword: false,
+            placeholder: "Your Matric Number",
+          ),
+          kVerticalSpaceRegular,
           Container(
-            padding: EdgeInsets.all(5),
+            padding: EdgeInsets.all(defaultPadding * 0.5),
             decoration: BoxDecoration(
                 border: Border.all(color: Colors.grey.shade300, width: 0.5)),
             child: DropdownButton(
@@ -87,6 +100,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   _universityController = s.toString();
 
                   _selectedUniversity = userSchools["$s"];
+
+                  _selectedDepartment = "Select your department";
                 });
               },
               items: userSchools.keys
@@ -99,11 +114,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   .toList(),
             ),
           ),
-          SizedBox(
-            height: 20,
-          ),
+          kVerticalSpaceRegular,
           Container(
-            padding: EdgeInsets.all(5),
+            padding: EdgeInsets.all(defaultPadding * 0.5),
             decoration: BoxDecoration(
                 border: Border.all(color: Colors.grey.shade300, width: 0.5)),
             child: DropdownButton(
@@ -130,11 +143,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   .toList(),
             ),
           ),
-          SizedBox(
-            height: 20,
-          ),
+          kVerticalSpaceRegular,
           Container(
-            padding: EdgeInsets.all(5),
+            padding: EdgeInsets.all(defaultPadding * 0.5),
             decoration: BoxDecoration(
                 border: Border.all(color: Colors.grey.shade300, width: 0.5)),
             child: DropdownButton(
@@ -148,8 +159,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 setState(() {
                   _departmentController = s.toString();
                   _selectedDepartment = s.toString();
+                  print("set state after dep selection");
                 });
-
               },
               items: _getDepartmentList()
                   .map(
@@ -161,7 +172,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   .toList(),
             ),
           ),
-          kVerticalSpaceMedium,
+          kVerticalSpaceRegular,
           Text(
             "By continuing, you indicate that you agree to MySchool's Terms of Services and Privacy Policy?",
             style: TextStyle(color: Colors.grey),
@@ -183,9 +194,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
   }
 
   List<String> _getDepartmentList() {
-    setState(() {
-      _selectedDepartment = "Select your department";
-    });
     if (_universityController == "futo") {
       return futoDepartments;
     } else if (_universityController == "palm") {
@@ -198,7 +206,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
   }
 
   void unfocusNodes() {
-    print("unfocus");
     _passwordFocusNode.unfocus();
     _emailFocusNode.unfocus();
     _nameFocusNode.unfocus();
@@ -206,6 +213,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   void _signUp() {
     var signUpRequest = SignUpRequest(
+      matricNo: _matricNoController.text.trim(),
       email: _emailController.text.trim(),
       password: _passwordController.text,
       department: _departmentController.trim(),
@@ -213,6 +221,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
       name: _nameController.text.trim(),
       level: _levelController,
     );
+//    print(signUpRequest);
     var authenticationBloc = context.read<AuthenticationBloc>();
     authenticationBloc.add(SignUpEvent(signUpRequest));
   }

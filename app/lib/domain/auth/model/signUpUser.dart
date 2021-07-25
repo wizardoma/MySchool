@@ -6,12 +6,14 @@ class SignUpUser {
   final String id;
   final String name;
   final String email;
+  final String matricNo;
   final String department;
   final String level;
   final String university;
 
   const SignUpUser(
-      {@required this.id,
+      {this.matricNo,
+      @required this.id,
       this.name,
       @required this.email,
       this.department,
@@ -22,6 +24,7 @@ class SignUpUser {
     return new SignUpUser(
       id: map['id'] as String,
       name: map['name'] as String,
+      matricNo: map['matricNo'] as String,
       email: map['email'] as String,
       department: map['department'] as String,
       level: map['level'] as String,
@@ -33,6 +36,7 @@ class SignUpUser {
     // ignore: unnecessary_cast
     return {
       'id': this.id,
+      'matricNo': this.matricNo,
       'name': this.name,
       'email': this.email,
       'department': this.department,

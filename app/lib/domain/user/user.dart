@@ -46,6 +46,31 @@ class User {
     );
   }
 
+  factory User.fromMap(Map<String, dynamic> map) {
+    return new User(
+      id: map['id'] as String,
+      name: map['name'] as String,
+      department: map['department'] as String,
+      description: map['description'] as String,
+      university: map['university'] as String,
+      email: map['email'] as String,
+      level: map['level'] as String,
+    );
+  }
+
+  Map<String, dynamic> toMap() {
+    // ignore: unnecessary_cast
+    return {
+      'id': this.id,
+      'name': this.name,
+      'department': this.department,
+      'description': this.description,
+      'university': this.university,
+      'email': this.email,
+      'level': this.level,
+    } as Map<String, dynamic>;
+  }
+
   factory User.Random() {
     return User(
         id: DateTime.now()
