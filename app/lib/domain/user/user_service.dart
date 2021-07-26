@@ -1,10 +1,11 @@
+import 'package:app/domain/auth/model/signUpUser.dart';
 import 'package:app/domain/response.dart';
 import 'package:app/domain/service.dart';
 import 'package:app/domain/user/user.dart';
 
 abstract class UserService extends Service{
 
-  Future<ResponseEntity> storeUser(User user);
   Future<ResponseEntity> getUserById(String id);
+  Future<ResponseEntity> fetchUserFromSignup(SignUpUser user);
 
 }
