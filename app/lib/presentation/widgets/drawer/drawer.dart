@@ -69,7 +69,10 @@ class HomeDrawer extends StatelessWidget {
                                 radius: 40,
                               ),
                               gradient: LinearGradient(
-                                colors: [Colors.grey, Colors.grey.shade300],
+                                colors: [
+                                  Colors.grey,
+                                  Colors.grey.shade300,
+                                ],
                               ),
                             ),
                             kVerticalSpaceSmall,
@@ -96,8 +99,10 @@ class HomeDrawer extends StatelessWidget {
                                 ),
 //                              color: Colors.grey,
                               ),
-                              gradient: LinearGradient(
-                                  colors: [Colors.grey, Colors.grey.shade300]),
+                              gradient: LinearGradient(colors: [
+                                Colors.grey,
+                                Colors.grey.shade300,
+                              ]),
                             )
                           ]);
                     }
@@ -107,15 +112,18 @@ class HomeDrawer extends StatelessWidget {
                         children: [
                           CircleAvatar(
                             radius: 40,
-                            backgroundImage:
-                                AssetImage("assets/icons/student.png"),
+                            backgroundImage: AssetImage(
+                              "assets/icons/student.png",
+                            ),
                           ),
                           ListTile(
                             onTap: () => Navigator.popAndPushNamed(
-                                context, ProfileScreen.routeName,
-                                arguments: {
-                                  "user": state.user,
-                                }),
+                              context,
+                              ProfileScreen.routeName,
+                              arguments: {
+                                "user": state.user,
+                              },
+                            ),
                             title: Text(
                               state.user.name,
                               style: TextStyle(
@@ -141,8 +149,12 @@ class HomeDrawer extends StatelessWidget {
                           onTap: () {
                             Navigator.popAndPushNamed(context, e["routeName"]);
                           },
-                          leading: Icon(e["icon"]),
-                          title: Text(e["title"]),
+                          leading: Icon(
+                            e["icon"],
+                          ),
+                          title: Text(
+                            e["title"],
+                          ),
                         );
                       }).toList(),
                     ),
@@ -150,7 +162,9 @@ class HomeDrawer extends StatelessWidget {
                 ],
               ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: defaultSpacing * 0.5, vertical: defaultSpacing * 0.3),
+                padding: EdgeInsets.symmetric(
+                    horizontal: defaultSpacing * 0.5,
+                    vertical: defaultSpacing * 0.3),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

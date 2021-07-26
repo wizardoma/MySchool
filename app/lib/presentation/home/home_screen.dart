@@ -100,8 +100,8 @@ class _HomeScreenState extends State<HomeScreen> {
           });
         },
         type: BottomNavigationBarType.fixed,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
         selectedFontSize: 11,
         unselectedFontSize: 11,
         items: [
@@ -115,7 +115,7 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(
             activeIcon: getIcon(Icons.insert_chart),
             icon: getIcon(Icons.insert_chart_outlined),
-            label: "Following",
+            label: "Followings",
           ),
           BottomNavigationBarItem(
             activeIcon: getIcon(Icons.post_add),
