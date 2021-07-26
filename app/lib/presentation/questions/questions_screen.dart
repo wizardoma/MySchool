@@ -22,7 +22,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
             TabBar(
               tabs: [
                 Container(
-                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                  padding: EdgeInsets.symmetric(vertical: defaultSpacing * 0.5, horizontal: defaultSpacing * 0.3),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -63,7 +63,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                     children: [
                       kVerticalSpaceSmall,
                       Container(
-                        padding: EdgeInsets.all(5),
+                        padding: EdgeInsets.all(defaultSpacing * 0.3),
                         child: Row(
                           children: [
                             Image.asset(
@@ -118,7 +118,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                       ),
                       kVerticalSpaceMedium,
                       Container(
-                        padding: EdgeInsets.all(15),
+                        padding: EdgeInsets.all(defaultSpacing),
                         decoration: BoxDecoration(
                             color: Colors.blue,
                             borderRadius: BorderRadius.circular(30)),

@@ -8,7 +8,7 @@ class PostShimmer extends StatelessWidget {
   Widget build(BuildContext context) {
     var mqHeight = MediaQuery.of(context).size.height;
     return Container(
-        padding: EdgeInsets.all(15),
+        padding: EdgeInsets.all(defaultSpacing),
         height: mqHeight * 0.3,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

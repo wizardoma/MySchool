@@ -79,9 +79,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
             Container(
               width: MediaQuery.of(context).size.width,
               padding: EdgeInsets.only(
-                top: 10,
-                left: 15,
-                right: 15,
+                top: defaultSpacing * 0.5,
+                left: defaultSpacing ,
+                right: defaultSpacing,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -138,7 +138,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   kVerticalSpaceTiny,
                   Container(
                     padding: EdgeInsets.symmetric(
-                      horizontal: 20,
+                      horizontal: defaultSpacing * 0.3,
                     ),
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -161,7 +161,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                    padding: EdgeInsets.symmetric(vertical: defaultSpacing * 0.5, horizontal: defaultSpacing * 0.5),
                     decoration: BoxDecoration(
                       border: Border(
                         bottom: BorderSide(color: Colors.grey.shade200),

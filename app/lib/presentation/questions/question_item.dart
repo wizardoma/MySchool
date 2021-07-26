@@ -19,7 +19,7 @@ class QuestionItem extends StatelessWidget {
         arguments: {"question": question}
       ),
       child: Padding(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(defaultSpacing * 0.5),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

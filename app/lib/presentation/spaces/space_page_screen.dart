@@ -147,7 +147,7 @@ class _SpacePageScreenState extends State<SpacePageScreen>
                                 top: kToolbarHeight * 2,
                               ),
                               padding: EdgeInsets.only(
-                                  left: 10, right: 10, bottom: 0),
+                                  left: defaultSpacing * 0.5, right: defaultSpacing * 0.5, bottom: defaultSpacing * 0.5),
                               child: Column(
                                 children: [
                                   Container(
@@ -193,7 +193,7 @@ class _SpacePageScreenState extends State<SpacePageScreen>
                                                     Container(
                                                       height: 40,
                                                       padding:
-                                                          EdgeInsets.all(10),
+                                                          EdgeInsets.all(defaultSpacing * 0.5),
                                                       decoration: BoxDecoration(
                                                         border: Border.all(
                                                             color:
@@ -242,7 +242,7 @@ class _SpacePageScreenState extends State<SpacePageScreen>
                                   ),
                                   Container(
                                     padding: EdgeInsets.symmetric(
-                                      vertical: 10,
+                                      vertical: defaultSpacing * 0.5,
                                     ),
                                     child: Column(
                                       crossAxisAlignment:
@@ -268,7 +268,7 @@ class _SpacePageScreenState extends State<SpacePageScreen>
                                         TextStyle(color: Colors.grey.shade400),
                                     child: Container(
                                       padding:
-                                          EdgeInsets.symmetric(vertical: 10),
+                                          EdgeInsets.symmetric(vertical: defaultSpacing * 0.5),
                                       child: Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceBetween,
@@ -308,7 +308,7 @@ class _SpacePageScreenState extends State<SpacePageScreen>
                   [
                     if (_currIndex == 0)
                       Container(
-                        padding: EdgeInsets.all(15),
+                        padding: EdgeInsets.all(defaultSpacing),
                         child: Text(
                           _space.about,
                         ),

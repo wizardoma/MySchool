@@ -20,7 +20,7 @@ class AnswerContainer extends StatelessWidget {
           Column(
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12),
+                padding: const EdgeInsets.symmetric(horizontal: defaultSpacing * 0.6),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -87,7 +87,7 @@ class AnswerContainer extends StatelessWidget {
                     ),
                     kVerticalSpaceTiny,
                     Container(
-                      padding: EdgeInsets.all(15),
+                      padding: EdgeInsets.all(defaultSpacing),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -108,7 +108,7 @@ class AnswerContainer extends StatelessWidget {
             ],
           ),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 10),
+            padding: EdgeInsets.symmetric(horizontal: defaultSpacing * 0.5),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -119,7 +119,7 @@ class AnswerContainer extends StatelessWidget {
                     children: [
                       Container(
                         padding:
-                        EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                        EdgeInsets.symmetric(horizontal: defaultSpacing * 0.5, vertical: defaultSpacing * 0.2),
                         decoration: BoxDecoration(
                             color: Colors.grey.shade200,
                             borderRadius: BorderRadius.circular(10)),

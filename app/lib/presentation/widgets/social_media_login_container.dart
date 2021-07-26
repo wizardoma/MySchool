@@ -13,7 +13,6 @@ class SocialMediaLoginContainer extends StatelessWidget {
       color: Colors.white,
       child: ListTile(
         onTap: onTap,
-//        contentPadding: EdgeInsets.all(8),
         leading: Image.asset(
           image,
           width: 30,

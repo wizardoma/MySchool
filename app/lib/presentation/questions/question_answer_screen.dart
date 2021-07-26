@@ -42,7 +42,7 @@ class _QuestionAnswerScreenState extends State<QuestionAnswerScreen> {
       body: Column(
         children: [
           Container(
-            padding: EdgeInsets.all(15),
+            padding: EdgeInsets.all(defaultSpacing),
             child: Text(
               _question.question,
               style: kPostTitleTextStyle.copyWith(fontSize: 25),
@@ -53,7 +53,7 @@ class _QuestionAnswerScreenState extends State<QuestionAnswerScreen> {
               child: Column(
             children: [
               Container(
-                padding: EdgeInsets.symmetric(vertical: 12, horizontal: 10),
+                padding: EdgeInsets.symmetric(vertical: defaultSpacing * 0.5, horizontal: defaultSpacing * 0.5),
                 color: Colors.grey.shade200,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

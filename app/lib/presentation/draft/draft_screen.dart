@@ -42,7 +42,7 @@ class DraftScreen extends StatelessWidget {
             ),
             kVerticalSpaceMedium,
             Container(
-              padding: EdgeInsets.all(15),
+              padding: EdgeInsets.all(defaultSpacing),
               decoration: BoxDecoration(
                   color: Colors.blue, borderRadius: BorderRadius.circular(30)),
               child: Text(

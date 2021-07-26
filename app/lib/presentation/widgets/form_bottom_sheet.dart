@@ -38,7 +38,7 @@ class FormBottomSheet extends StatelessWidget {
             Expanded(
               child: SingleChildScrollView(
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 12, right: 12, bottom: 12, top: 6),
+                  padding: const EdgeInsets.only(left: defaultSpacing * 0.5,right: defaultSpacing * 0.5, bottom: defaultSpacing * 0.5, top: defaultSpacing * 0.3),
                   child: ListView(
                         physics: ScrollPhysics(),
                         padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
@@ -92,7 +92,7 @@ class FormBottomSheet extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            padding: EdgeInsets.symmetric(vertical: 10),
+                            padding: EdgeInsets.symmetric(vertical: defaultSpacing * 0.5),
                             height: kToolbarHeight,
                             child: Text(
                               "$title for MySchool",

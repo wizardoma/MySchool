@@ -15,7 +15,7 @@ class NotificationItem extends StatelessWidget {
       
       tileColor: Colors.transparent,
       minVerticalPadding: 0,
-      contentPadding: EdgeInsets.all(10),
+      contentPadding: EdgeInsets.all(defaultSpacing * 0.5),
       leading: Image.asset(
         "assets/images/question_mark.png",
         width: 20,
@@ -33,7 +33,7 @@ class NotificationItem extends StatelessWidget {
         children: [
           kVerticalSpaceSmall,
           Container(
-            padding: EdgeInsets.symmetric(vertical: 5, horizontal: 5),
+            padding: EdgeInsets.symmetric(vertical: defaultSpacing * 0.3, horizontal: defaultSpacing * 0.3),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(color: Colors.grey),

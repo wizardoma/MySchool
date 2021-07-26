@@ -1,4 +1,5 @@
 import 'package:app/commons/styles.dart';
+import 'package:app/commons/ui_helpers.dart';
 import 'package:flutter/material.dart';
 
 class MessagesScreen extends StatefulWidget {
@@ -42,7 +43,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
         backgroundColor: Colors.white,
       ),
       body: ListView.separated(
-        padding: EdgeInsets.symmetric(vertical: 10),
+        padding: EdgeInsets.symmetric(vertical: defaultSpacing * 0.5),
         shrinkWrap: true,
         separatorBuilder: (c, i) => Divider(
           color: Colors.grey.shade200,

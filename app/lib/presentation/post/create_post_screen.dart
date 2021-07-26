@@ -43,7 +43,7 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
           ),
           title: "Add",
           body: Container(
-            padding: EdgeInsets.all(15),
+            padding: EdgeInsets.all(defaultSpacing),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

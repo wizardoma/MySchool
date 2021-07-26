@@ -22,7 +22,7 @@ class _PostBottomSheetState extends State<PostBottomSheet> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            padding: EdgeInsets.all(5),
+            padding: EdgeInsets.all(defaultSpacing * 0.3),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -35,7 +35,7 @@ class _PostBottomSheetState extends State<PostBottomSheet> {
                   ],
                 ),
                 Container(
-                  padding: EdgeInsets.symmetric(vertical: 8, horizontal: 20),
+                  padding: EdgeInsets.symmetric(vertical: defaultSpacing * 0.5, horizontal: defaultSpacing),
                   decoration: BoxDecoration(
                     color: Colors.blue,
                     borderRadius: BorderRadius.circular(30),

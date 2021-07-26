@@ -1,3 +1,4 @@
+import 'package:app/commons/ui_helpers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,7 @@ class LocalAuthContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.all(defaultSpacing * 0.5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
         color: Colors.grey.shade600,

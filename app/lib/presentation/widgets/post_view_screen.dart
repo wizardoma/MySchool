@@ -97,7 +97,7 @@ class _PostViewScreenState extends State<PostViewScreen> {
         children: [
           kVerticalSpaceSmall,
           Container(
-            padding: EdgeInsets.all(15),
+            padding: EdgeInsets.all(defaultSpacing ),
             child: Text(
               _post.title,
               style: kPostTitleTextStyle,
@@ -112,7 +112,7 @@ class _PostViewScreenState extends State<PostViewScreen> {
           ),
           kVerticalSpaceSmall,
           Container(
-            padding: EdgeInsets.all(15),
+            padding: EdgeInsets.all(defaultSpacing ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -130,7 +130,7 @@ class _PostViewScreenState extends State<PostViewScreen> {
         ],
       ),
       bottomNavigationBar: Container(
-        padding: EdgeInsets.symmetric(horizontal: 10),
+        padding: EdgeInsets.symmetric(horizontal: defaultSpacing * 0.5),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -140,7 +140,7 @@ class _PostViewScreenState extends State<PostViewScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                    padding: EdgeInsets.symmetric(horizontal: defaultSpacing * 0.5, vertical: defaultSpacing * 0.2),
                     decoration: BoxDecoration(
                         color: Colors.grey.shade200,
                         borderRadius: BorderRadius.circular(10)),

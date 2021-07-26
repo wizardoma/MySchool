@@ -40,11 +40,11 @@ class _ContentsScreenState extends State<ContentsScreen> {
       ),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(bottom: 10),
+          padding: EdgeInsets.only(bottom: defaultSpacing * 0.5),
           child: Column(
             children: [
               Container(
-                padding: EdgeInsets.all(10),
+                padding: EdgeInsets.all(defaultSpacing * 0.5),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -91,7 +91,7 @@ class _ContentsScreenState extends State<ContentsScreen> {
                           var notification = state.notifications[index];
                           return ListTile(
                             title: Container(
-                              padding: EdgeInsets.symmetric(vertical: 10),
+                              padding: EdgeInsets.symmetric(vertical: defaultSpacing * 0.5),
                               child: Text(
                                 notification.postTitle,
                                 style: TextStyle(
