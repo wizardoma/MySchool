@@ -4,6 +4,8 @@ import 'package:app/application/auth/auth_bloc.dart';
 import 'package:app/application/auth/auth_state.dart';
 import 'package:app/application/user/user_event.dart';
 import 'package:app/application/user/user_state.dart';
+import 'package:app/domain/auth/model/authUser.dart';
+import 'package:app/domain/auth/model/signUpUser.dart';
 import 'package:app/domain/user/user.dart';
 import 'package:app/domain/user/user_service.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
@@ -30,21 +32,31 @@ class UserBloc extends HydratedBloc<UserEvent, UserState> {
       yield FetchingUserState();
       var authenticationState = authenticationBloc.state;
       if (authenticationState is LoggedInSuccessState) {
-        yield await fetchUser(authenticationState.authUser.id);
+        yield await fetchUser(authenticationState.authUser);
       } else if (authenticationState is SignUpSuccessState) {
-        yield await fetchUser(authenticationState.user.id);
+        yield await fetchUserFromSignUp(authenticationState.user);
       } else {
         yield FetchUserErrorState("You are not authenticated");
       }
     }
   }
 
-  Future<UserState> fetchUser(String id) async {
+  Future<UserState> fetchUser(AuthUser authUser) async {
     var response = await userService.getUserById(id);
     if (response.isError) {
       return FetchUserErrorState(response.errors.message);
-    } else
-      return FetchedUserState(response.data);
+    }
+
+    return FetchedUserState(response.data);
+  }
+
+  Future<UserState> fetchUserFromSignUp(SignUpUser user) async {
+    var response = await userService.fetchUserFromSignup(user);
+    if (response.isError) {
+      return FetchUserErrorState(response.errors.message);
+    }
+
+    return FetchedUserState(response.data);
   }
 
   @override

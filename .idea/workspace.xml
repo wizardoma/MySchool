@@ -19,12 +19,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="optimize auth screen with defaultPadding">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="Add matriculation ID to backend">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/application/user/user_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/user/user_bloc.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/commons/ui_helpers.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/commons/ui_helpers.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/auth/login/login_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/auth/login/login_container.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/user/user_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/user/user_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/user/user_service_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/user/user_service_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/auth/auth_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/auth/auth_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/auth/signup/signup_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/auth/signup/signup_container.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/form_bottom_sheet.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/form_bottom_sheet.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/text_input_field.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/text_input_field.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/service/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/service/StudentServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +54,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="ProjectId" id="1rd2asS3JvBByg79NAVInNTU5oD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -193,49 +199,8 @@
       <workItem from="1627014700846" duration="685000" />
       <workItem from="1627026489977" duration="13000" />
       <workItem from="1627194112920" duration="2565000" />
-      <workItem from="1627236607865" duration="4000" />
-    </task>
-    <task id="LOCAL-00069" summary="Add following posts state management">
-      <created>1626357133278</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1626357133278</updated>
-    </task>
-    <task id="LOCAL-00070" summary="Add following bloc to IoC">
-      <created>1626357161423</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1626357161423</updated>
-    </task>
-    <task id="LOCAL-00071" summary="Implement following screen">
-      <created>1626357234381</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1626357234382</updated>
-    </task>
-    <task id="LOCAL-00072" summary="refractor: update ui to accommodate recent changes">
-      <created>1626357314302</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1626357314302</updated>
-    </task>
-    <task id="LOCAL-00073" summary="Add question screen">
-      <created>1626366332500</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1626366332500</updated>
-    </task>
-    <task id="LOCAL-00074" summary="refractor">
-      <created>1626366364451</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1626366364451</updated>
+      <workItem from="1627236607865" duration="11217000" />
+      <workItem from="1627280819609" duration="1036000" />
     </task>
     <task id="LOCAL-00075" summary="Add spaces screen+">
       <created>1626374397194</created>
@@ -538,7 +503,49 @@
       <option name="project" value="LOCAL" />
       <updated>1627195788073</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="make ui helpers use defaultPadding">
+      <created>1627236651549</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1627236651550</updated>
+    </task>
+    <task id="LOCAL-00119" summary="refractor code">
+      <created>1627242793033</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1627242793033</updated>
+    </task>
+    <task id="LOCAL-00120" summary="fix no error response on exception">
+      <created>1627242823046</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1627242823046</updated>
+    </task>
+    <task id="LOCAL-00121" summary="add matriculation no">
+      <created>1627242847800</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1627242847800</updated>
+    </task>
+    <task id="LOCAL-00122" summary="add hydrated bloc for user persistence">
+      <created>1627243305114</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1627243305114</updated>
+    </task>
+    <task id="LOCAL-00123" summary="Add matriculation ID to backend">
+      <created>1627245709142</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1627245709142</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -557,12 +564,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add spaces screen" />
-    <MESSAGE value="refractor: abstract user details" />
-    <MESSAGE value="refractor" />
-    <MESSAGE value="refractor User bloc to fetch users" />
-    <MESSAGE value="add user bloc to IoC" />
-    <MESSAGE value="add shimmer loader to user view in drawer" />
     <MESSAGE value="fix: authentication bloc do not emit state" />
     <MESSAGE value="Add question answer screen" />
     <MESSAGE value="fix: login and signup form not scrolling elements" />
@@ -582,17 +583,23 @@
     <MESSAGE value="update departments to signup screens" />
     <MESSAGE value="add native splash screen" />
     <MESSAGE value="optimize auth screen with defaultPadding" />
-    <option name="LAST_COMMIT_MESSAGE" value="optimize auth screen with defaultPadding" />
+    <MESSAGE value="make ui helpers use defaultPadding" />
+    <MESSAGE value="refractor code" />
+    <MESSAGE value="fix no error response on exception" />
+    <MESSAGE value="add matriculation no" />
+    <MESSAGE value="add hydrated bloc for user persistence" />
+    <MESSAGE value="Add matriculation ID to backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add matriculation ID to backend" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="#Project_Structure/0.0.1600.860@0.0.1600.860" timestamp="1619291730634" />
-    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1626248352629">
+    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1627240058074">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1626248352629" />
+    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1627240058074" />
     <state x="626" y="356" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1624212009488">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -601,10 +608,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="541" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1624251443504" />
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1626933366358">
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1627245805474">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1626933366358" />
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1627245805474" />
     <state x="580" y="127" key="FileChooserDialogImpl" timestamp="1626933225318">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -645,18 +652,18 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1627195791924">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1627245710414">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1627195791924" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1627245710414" />
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626876457269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1600.860@0.0.1600.860" timestamp="1626876457269" />
-    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1626634968432">
+    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1627281765380">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1626634968432" />
+    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1627281765380" />
     <state x="182" y="51" width="1235" height="649" key="new project wizard" timestamp="1626933257976">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

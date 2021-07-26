@@ -1,18 +1,18 @@
 
 import 'package:flutter/material.dart';
 
-const defaultPadding = 16.0;
+const defaultSpacing = 16.0;
 
 // horizontal spacing
-const Widget kHorizontalSpaceTiny = SizedBox(width: defaultPadding * 0.333);
-const Widget kHorizontalSpaceSmall = SizedBox(width: defaultPadding * 0.5);
-const Widget kHorizontalSpaceRegular = SizedBox(width: defaultPadding);
-const Widget kHorizontalSpaceMedium = SizedBox(width: defaultPadding * 1.5);
-const Widget kHorizontalSpaceLarge = SizedBox(width: defaultPadding * 2.0);
+const Widget kHorizontalSpaceTiny = SizedBox(width: defaultSpacing * 0.333);
+const Widget kHorizontalSpaceSmall = SizedBox(width: defaultSpacing * 0.5);
+const Widget kHorizontalSpaceRegular = SizedBox(width: defaultSpacing);
+const Widget kHorizontalSpaceMedium = SizedBox(width: defaultSpacing * 1.5);
+const Widget kHorizontalSpaceLarge = SizedBox(width: defaultSpacing * 2.0);
 
 // vertical spacing
-const Widget kVerticalSpaceTiny = SizedBox(height: defaultPadding * 0.333);
-const Widget kVerticalSpaceSmall = SizedBox(height: defaultPadding * 0.5);
-const Widget kVerticalSpaceRegular = SizedBox(height: defaultPadding);
-const Widget kVerticalSpaceMedium = SizedBox(height: defaultPadding * 1.5);
-const Widget kVerticalSpaceLarge = SizedBox(height: defaultPadding * 2.0);
+const Widget kVerticalSpaceTiny = SizedBox(height: defaultSpacing * 0.333);
+const Widget kVerticalSpaceSmall = SizedBox(height: defaultSpacing * 0.5);
+const Widget kVerticalSpaceRegular = SizedBox(height: defaultSpacing);
+const Widget kVerticalSpaceMedium = SizedBox(height: defaultSpacing * 1.5);
+const Widget kVerticalSpaceLarge = SizedBox(height: defaultSpacing * 2.0);

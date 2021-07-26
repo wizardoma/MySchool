@@ -40,7 +40,7 @@ class _AuthScreenState extends State<AuthScreen> {
             ScaffoldMessenger.of(context)..clearSnackBars()..showSnackBar(
               SnackBar(
                 content: Container(
-                  padding: EdgeInsets.all(defaultPadding),
+                  padding: EdgeInsets.all(defaultSpacing),
                   child: Text(state.errors),
                 ),
               ),
@@ -63,14 +63,14 @@ class _AuthScreenState extends State<AuthScreen> {
               )
 //          color: Colors.grey
               ),
-          padding: EdgeInsets.all(defaultPadding * 2),
+          padding: EdgeInsets.all(defaultSpacing * 2),
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  padding: EdgeInsets.all(defaultPadding),
+                  padding: EdgeInsets.all(defaultSpacing),
                   child: Column(
                     children: [
                       Container(
@@ -128,7 +128,7 @@ class _AuthScreenState extends State<AuthScreen> {
                 ),
                 Container(
                   padding: EdgeInsets.symmetric(
-                    vertical: defaultPadding * 0.5,
+                    vertical: defaultSpacing * 0.5,
                   ),
                   child: Text(
                     "By continuing you indicate that you agree to MySchools's Terms of Service and Privacy Policy",
@@ -143,7 +143,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     child: Row(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(defaultPadding * 0.5),
+                          padding: const EdgeInsets.all(defaultSpacing * 0.5),
                           child: Text(
                             "Languages",
                             style: TextStyle(
@@ -152,7 +152,7 @@ class _AuthScreenState extends State<AuthScreen> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.all(defaultPadding * 0.5,),
+                          padding: const EdgeInsets.all(defaultSpacing * 0.5,),
                           child: Text(
                             "Learn More",
                             style: TextStyle(
@@ -161,7 +161,7 @@ class _AuthScreenState extends State<AuthScreen> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.all(defaultPadding * 0.5,),
+                          padding: const EdgeInsets.all(defaultSpacing * 0.5,),
                           child: Text(
                             "MySchool, Inc. 2021",
                             style: TextStyle(color: Colors.white),

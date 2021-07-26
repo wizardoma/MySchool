@@ -41,7 +41,7 @@ class _PostContainerState extends State<PostContainer> {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 12),
+                  padding: const EdgeInsets.symmetric(horizontal: defaultSpacing),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -160,7 +160,7 @@ class _PostContainerState extends State<PostContainer> {
             ),
           ),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 10),
+            padding: EdgeInsets.symmetric(horizontal: defaultSpacing * 0.5),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -171,7 +171,7 @@ class _PostContainerState extends State<PostContainer> {
                     children: [
                       Container(
                         padding:
-                            EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                            EdgeInsets.symmetric(horizontal: defaultSpacing * 0.5, vertical: defaultSpacing * 0.2),
                         decoration: BoxDecoration(
                             color: Colors.grey.shade200,
                             borderRadius: BorderRadius.circular(10)),
@@ -253,7 +253,7 @@ class _PostContainerState extends State<PostContainer> {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Container(
-                        padding: EdgeInsets.symmetric(vertical: 15),
+                        padding: EdgeInsets.symmetric(vertical: defaultSpacing),
                         child: Center(
                           child: Text(
                             "Answer",
@@ -287,7 +287,7 @@ class _PostContainerState extends State<PostContainer> {
   }
 
   Widget bottomSheetItem(String title) => Container(
-        padding: EdgeInsets.symmetric(vertical: 15),
+        padding: EdgeInsets.symmetric(vertical: defaultSpacing),
         child: Center(
           child: Text(title),
         ),

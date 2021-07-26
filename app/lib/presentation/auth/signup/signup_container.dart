@@ -85,7 +85,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           ),
           kVerticalSpaceRegular,
           Container(
-            padding: EdgeInsets.all(defaultPadding * 0.5),
+            padding: EdgeInsets.all(defaultSpacing * 0.5),
             decoration: BoxDecoration(
                 border: Border.all(color: Colors.grey.shade300, width: 0.5)),
             child: DropdownButton(
@@ -116,7 +116,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           ),
           kVerticalSpaceRegular,
           Container(
-            padding: EdgeInsets.all(defaultPadding * 0.5),
+            padding: EdgeInsets.all(defaultSpacing * 0.5),
             decoration: BoxDecoration(
                 border: Border.all(color: Colors.grey.shade300, width: 0.5)),
             child: DropdownButton(
@@ -145,7 +145,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           ),
           kVerticalSpaceRegular,
           Container(
-            padding: EdgeInsets.all(defaultPadding * 0.5),
+            padding: EdgeInsets.all(defaultSpacing * 0.5),
             decoration: BoxDecoration(
                 border: Border.all(color: Colors.grey.shade300, width: 0.5)),
             child: DropdownButton(
