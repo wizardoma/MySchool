@@ -19,28 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment=" refractor post container to use defaulPadding">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="use font awesome package for icons instead">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/content/content_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/content/content_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/draft/draft_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/draft/draft_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/messages/message_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/messages/message_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/presentation/notifications/notification_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/notifications/notification_item.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/presentation/notifications/notifications_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/notifications/notifications_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/post/create_post_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/post/create_post_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/profile/profile_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/profile/profile_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/answer_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/answer_container.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/question_answer_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/question_answer_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/question_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/question_item.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/questions_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/questions_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/drawer/drawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/drawer/drawer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/form_bottom_sheet.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/form_bottom_sheet.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/local_auth_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/local_auth_container.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_bottom_sheet.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_bottom_sheet.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_shimmer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_shimmer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_view_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_view_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/social_media_login_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/social_media_login_container.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,28 +197,8 @@
       <workItem from="1627026489977" duration="13000" />
       <workItem from="1627194112920" duration="2565000" />
       <workItem from="1627236607865" duration="11217000" />
-      <workItem from="1627280819609" duration="1836000" />
-    </task>
-    <task id="LOCAL-00077" summary="add random list of users">
-      <created>1626425083057</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1626425083059</updated>
-    </task>
-    <task id="LOCAL-00078" summary="add random list of spaces">
-      <created>1626425100889</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1626425100889</updated>
-    </task>
-    <task id="LOCAL-00079" summary="add notification domain layer">
-      <created>1626425128091</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1626425128091</updated>
+      <workItem from="1627280819609" duration="12890000" />
+      <workItem from="1627373943287" duration="935000" />
     </task>
     <task id="LOCAL-00080" summary="add notification state management layer">
       <created>1626425152085</created>
@@ -556,7 +522,28 @@
       <option name="project" value="LOCAL" />
       <updated>1627282025197</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="refractor: change all app screens to use defaultSpacing">
+      <created>1627282761836</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1627282761836</updated>
+    </task>
+    <task id="LOCAL-00127" summary="add line icons package">
+      <created>1627283054841</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1627283054841</updated>
+    </task>
+    <task id="LOCAL-00128" summary="use font awesome package for icons instead">
+      <created>1627286782369</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1627286782370</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -575,9 +562,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix: login and signup form not scrolling elements" />
-    <MESSAGE value="create post and answer models" />
-    <MESSAGE value="add question screen designs" />
     <MESSAGE value="add answer container for answers" />
     <MESSAGE value="refractor login signup containers to use scaffold" />
     <MESSAGE value="Add space domain layer" />
@@ -600,7 +584,10 @@
     <MESSAGE value="Add matriculation ID to backend" />
     <MESSAGE value="allow fetch user on signup" />
     <MESSAGE value=" refractor post container to use defaulPadding" />
-    <option name="LAST_COMMIT_MESSAGE" value=" refractor post container to use defaulPadding" />
+    <MESSAGE value="refractor: change all app screens to use defaultSpacing" />
+    <MESSAGE value="add line icons package" />
+    <MESSAGE value="use font awesome package for icons instead" />
+    <option name="LAST_COMMIT_MESSAGE" value="use font awesome package for icons instead" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
@@ -635,22 +622,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="589" y="135" key="Github.UntrackedFilesDialog/0.0.1600.860@0.0.1600.860" timestamp="1619292079863" />
-    <state width="1540" height="217" key="GridCell.Tab.0.bottom" timestamp="1626901427322">
+    <state width="1557" height="197" key="GridCell.Tab.0.bottom" timestamp="1627286553366">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1540" height="217" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1626901427322" />
-    <state width="1540" height="217" key="GridCell.Tab.0.center" timestamp="1626901427321">
+    <state width="1557" height="197" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1627286553366" />
+    <state width="1557" height="197" key="GridCell.Tab.0.center" timestamp="1627286553365">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1540" height="217" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1626901427321" />
-    <state width="1540" height="217" key="GridCell.Tab.0.left" timestamp="1626901427320">
+    <state width="1557" height="197" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1627286553365" />
+    <state width="1557" height="197" key="GridCell.Tab.0.left" timestamp="1627286553365">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1540" height="217" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1626901427320" />
-    <state width="1540" height="217" key="GridCell.Tab.0.right" timestamp="1626901427322">
+    <state width="1557" height="197" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1627286553365" />
+    <state width="1557" height="197" key="GridCell.Tab.0.right" timestamp="1627286553365">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1540" height="217" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1626901427322" />
+    <state width="1557" height="197" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1627286553365" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -663,10 +650,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1627282032039">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1627286784604">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1627282032039" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1627286784604" />
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626876457269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

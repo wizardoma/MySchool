@@ -1,6 +1,5 @@
 import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
-import 'package:app/domain/posts/post.dart';
 import 'package:app/domain/question/question.dart';
 import 'package:app/presentation/questions/question_item.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +21,9 @@ class _QuestionScreenState extends State<QuestionScreen> {
             TabBar(
               tabs: [
                 Container(
-                  padding: EdgeInsets.symmetric(vertical: defaultSpacing * 0.5, horizontal: defaultSpacing * 0.3),
+                  padding: EdgeInsets.symmetric(
+                      vertical: defaultSpacing * 0.5,
+                      horizontal: defaultSpacing * 0.3),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -63,7 +64,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                     children: [
                       kVerticalSpaceSmall,
                       Container(
-                        padding: EdgeInsets.all(defaultSpacing * 0.3),
+                        padding: EdgeInsets.all(defaultSpacing),
                         child: Row(
                           children: [
                             Image.asset(
@@ -86,7 +87,8 @@ class _QuestionScreenState extends State<QuestionScreen> {
                           physics: ScrollPhysics(),
                           itemCount: answersList.length,
 //                            crossAxisAlignment: CrossAxisAlignment.start,
-                          itemBuilder: (ctx, index) => QuestionItem(question: Question.Random()))
+                          itemBuilder: (ctx, index) =>
+                              QuestionItem(question: Question.Random()))
                     ],
                   ),
                 ]),

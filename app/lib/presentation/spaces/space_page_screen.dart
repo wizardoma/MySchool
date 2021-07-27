@@ -1,6 +1,5 @@
 import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
-import 'package:app/domain/posts/post.dart';
 import 'package:app/domain/space/space.dart';
 import 'package:app/presentation/questions/question_item.dart';
 import 'package:app/presentation/widgets/post_container.dart';
@@ -147,7 +146,7 @@ class _SpacePageScreenState extends State<SpacePageScreen>
                                 top: kToolbarHeight * 2,
                               ),
                               padding: EdgeInsets.only(
-                                  left: defaultSpacing * 0.5, right: defaultSpacing * 0.5, bottom: defaultSpacing * 0.5),
+                                  left: defaultSpacing , right: defaultSpacing , bottom: defaultSpacing ),
                               child: Column(
                                 children: [
                                   Container(

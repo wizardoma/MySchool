@@ -160,7 +160,7 @@ class CustomListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(border: Border.all(color: Colors.transparent)),
-      padding: EdgeInsets.symmetric(horizontal: defaultSpacing * 0.5, vertical: defaultSpacing * 0.5),
+      padding: EdgeInsets.symmetric(horizontal: defaultSpacing, vertical: defaultSpacing ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

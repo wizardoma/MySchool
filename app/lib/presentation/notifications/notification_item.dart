@@ -15,7 +15,7 @@ class NotificationItem extends StatelessWidget {
       
       tileColor: Colors.transparent,
       minVerticalPadding: 0,
-      contentPadding: EdgeInsets.all(defaultSpacing * 0.5),
+      contentPadding: EdgeInsets.all(defaultSpacing),
       leading: Image.asset(
         "assets/images/question_mark.png",
         width: 20,

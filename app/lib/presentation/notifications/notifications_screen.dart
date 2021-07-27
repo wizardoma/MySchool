@@ -36,12 +36,11 @@ class _NotificationScreenState extends State<NotificationScreen> {
         }
         if (state is FetchNotificationStateSuccess) {
           return Container(
-
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  padding: EdgeInsets.all(defaultSpacing * 0.5),
+                  padding: EdgeInsets.all(defaultSpacing ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
