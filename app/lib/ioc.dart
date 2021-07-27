@@ -3,6 +3,7 @@ import 'package:app/application/following/following_posts_bloc.dart';
 import 'package:app/application/homefeeds/home_feeds_bloc.dart';
 import 'package:app/application/notification/notification_bloc.dart';
 import 'package:app/application/space/spaces_bloc.dart';
+import 'package:app/application/trends/trends_bloc.dart';
 import 'package:app/application/user/user_bloc.dart';
 import 'package:app/domain/auth/authentication_client.dart';
 import 'package:app/domain/auth/authentication_service.dart';
@@ -15,6 +16,7 @@ import 'package:app/domain/notification/notification_service.dart';
 import 'package:app/domain/service.dart';
 import 'package:app/domain/space/space_client.dart';
 import 'package:app/domain/space/space_service.dart';
+import 'package:app/domain/trends/trends_service.dart';
 import 'package:app/domain/user/user_service.dart';
 import 'package:app/domain/user/user_service_impl.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -28,6 +30,8 @@ class IoC {
   NotificationService _notificationService;
   NotificationBloc _notificationBloc;
   SpaceClient _spaceClient;
+  TrendService _trendService;
+  TrendsBloc _trendsBloc;
   SpaceService _spaceService;
   SpaceBloc _spaceBloc;
   UserBloc _userBloc;
@@ -43,6 +47,8 @@ class IoC {
     _authenticationClient = FirebaseAuthService();
     _userService = UserServiceImpl();
     _notificationClient = NotificationClient();
+    _trendService = TrendService();
+    _trendsBloc = TrendsBloc(_trendService);
     _spaceClient = SpaceClient();
     _spaceService = SpaceService(_spaceClient);
     _notificationService = NotificationService(_notificationClient);
@@ -63,6 +69,7 @@ class IoC {
     };
 
     _blocs = {
+      "trend": _trendsBloc,
       "auth": _authenticationBloc,
       "home_feeds": _homeFeedsBloc,
       "following": _followingPostBloc,

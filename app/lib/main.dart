@@ -6,6 +6,7 @@ import 'package:app/application/homefeeds/home_feeds_bloc.dart';
 import 'package:app/application/notification/notification_bloc.dart';
 import 'package:app/application/space/spaces_bloc.dart';
 import 'package:app/application/theme/theme_cubit.dart';
+import 'package:app/application/trends/trends_bloc.dart';
 import 'package:app/application/user/user_bloc.dart';
 import 'package:app/commons/routes.dart';
 import 'package:app/domain/auth/firebase_initializer.dart';
@@ -52,6 +53,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider.value(
           value: (ioC.getBloc("home_feeds") as HomeFeedsBloc),
+        ),
+        BlocProvider.value(
+          value: (ioC.getBloc("trend") as TrendsBloc),
         ),
         BlocProvider.value(
           value: (ioC.getBloc("following") as FollowingPostBloc),
