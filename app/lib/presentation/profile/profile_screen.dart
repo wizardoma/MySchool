@@ -15,7 +15,7 @@ class ProfileScreen extends StatefulWidget {
   _ProfileScreenState createState() => _ProfileScreenState();
 }
 
-class _ProfileScreenState extends State<ProfileScreen> {
+class _ProfileScreenState extends State<ProfileScreen> with SingleTickerProviderStateMixin{
   var _currIndex = 0;
   User _user;
 
@@ -49,6 +49,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
   ];
 
   var hasRun = false;
+  TabController _tabController;
+
+  @override
+  void initState() {
+    _tabController = TabController(length: 5, vsync: this);
+    super.initState();
+  }
 
   @override
   void didChangeDependencies() {
@@ -78,8 +85,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
             Container(
               width: MediaQuery.of(context).size.width,
               padding: EdgeInsets.only(
-                top: defaultSpacing * 0.5,
-                left: defaultSpacing ,
+                top: defaultSpacing,
+                left: defaultSpacing,
                 right: defaultSpacing,
               ),
               child: Column(
@@ -137,8 +144,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   kVerticalSpaceTiny,
                   Container(
                     padding: EdgeInsets.symmetric(
-                      horizontal: defaultSpacing * 0.3,
-                    ),
+                        horizontal: defaultSpacing, vertical: defaultSpacing),
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: _profileButtons.map((p) {
@@ -160,7 +166,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: defaultSpacing * 0.5, horizontal: defaultSpacing * 0.5),
+                    padding: EdgeInsets.symmetric(
+                        vertical: defaultSpacing * 0.5,
+                        horizontal: defaultSpacing),
                     decoration: BoxDecoration(
                       border: Border(
                         bottom: BorderSide(color: Colors.grey.shade200),
@@ -192,12 +200,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ),
                       ),
                       ListTile(
-                        leading: Icon(Icons.room_outlined, ),
-                        title: Text(_user.university, style: TextStyle(fontSize: 14),),
+                        leading: Icon(
+                          Icons.room_outlined,
+                        ),
+                        title: Text(
+                          _user.university,
+                          style: TextStyle(fontSize: 14),
+                        ),
                       ),
                       ListTile(
                         leading: Icon(Icons.confirmation_num),
-                        title: Text(getLevel(), style: TextStyle(fontSize: 14),),
+                        title: Text(
+                          getLevel(),
+                          style: TextStyle(fontSize: 14),
+                        ),
                       ),
                     ],
                   ),
@@ -208,54 +224,46 @@ class _ProfileScreenState extends State<ProfileScreen> {
               thickness: 4,
               color: Colors.grey.shade300,
             ),
-            Container(
-              constraints: BoxConstraints.expand(
-                  height: 400, width: MediaQuery.of(context).size.width),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  DefaultTabController(
-                    length: 5,
-                    child: Builder(
-                      builder: (context) {
-                        return Expanded(
-                          child: Column(
-                            children: [
-                              TabBar(
-
-                                  onTap: (index) => setState(() {
-                                        _currIndex = index;
-                                      }),
-
-                                  tabs: _tabs
-                                      .map(
-                                        (e) => Tab(
-                                          child: Text(
-                                            e,
-                                            style: TextStyle(
-                                          color: Colors.blue,
-                                          fontSize: 12,
-                                            ),
-                                            maxLines: 1,
-                                          ),
-                                        ),
-                                      )
-                                      .toList(),
-                              isScrollable: true,
-                              ),
-                              Expanded(
-                                child: TabBarView(
-                                  children: _tabChildren,
-                                ),
-                              )
-                            ],
+            ListView(
+              shrinkWrap: true,
+              physics: ScrollPhysics(),
+              children: [
+                TabBar(
+                  controller: _tabController,
+                  onTap: (index) => setState(() {
+                    _currIndex = index;
+                  }),
+                  tabs: _tabs
+                      .map(
+                        (e) => Tab(
+                          child: Text(
+                            e,
+                            style: TextStyle(
+                              color: Colors.blue,
+                              fontSize: 12,
+                            ),
+                            maxLines: 1,
                           ),
-                        );
-                      },
-                    ),
-                  )
-                ],
-              ),
+                        ),
+                      )
+                      .toList(),
+                  isScrollable: true,
+                ),
+                Container(
+                  constraints: BoxConstraints(
+                    minWidth: MediaQuery.of(context).size.width,
+                    maxWidth: MediaQuery.of(context).size.width,
+                    minHeight: MediaQuery.of(context).size.width,
+                    maxHeight: MediaQuery.of(context).size.width,
+
+                  ),
+                  width: MediaQuery.of(context).size.width,
+                  child: TabBarView(
+                    controller: _tabController,
+                    children: _tabChildren,
+                  ),
+                ),
+              ],
             ),
           ],
         ),
