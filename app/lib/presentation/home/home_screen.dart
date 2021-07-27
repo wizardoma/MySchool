@@ -4,6 +4,7 @@ import 'package:app/presentation/notifications/notifications_screen.dart';
 import 'package:app/presentation/post/create_post_screen.dart';
 import 'package:app/presentation/questions/questions_screen.dart';
 import 'package:app/presentation/spaces/spaces_screen.dart';
+import 'package:app/presentation/trends/trends_screen.dart';
 import 'package:app/presentation/widgets/drawer/drawer.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final _pageTitle = [
     HomeFeeds.title,
-    FollowingScreen.title,
+    TrendingScreen.title,
     QuestionScreen.title,
     SpacesScreen.title,
     NotificationScreen.title
@@ -34,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     _children = [
       HomeFeeds(),
-      FollowingScreen(),
+      TrendingScreen(),
       QuestionScreen(),
       SpacesScreen(),
       NotificationScreen(),
@@ -115,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(
             activeIcon: getIcon(Icons.insert_chart),
             icon: getIcon(Icons.insert_chart_outlined),
-            label: "Followings",
+            label: "Trending",
           ),
           BottomNavigationBarItem(
             activeIcon: getIcon(Icons.post_add),

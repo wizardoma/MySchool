@@ -10,7 +10,7 @@ class TrendsBloc extends Bloc<TrendsEvent, TrendsState> {
 
   @override
   Stream<TrendsState> mapEventToState(TrendsEvent event) async* {
-    if (state is FetchTrendsEvent) {
+    if (event is FetchTrendsEvent) {
       yield FetchingTrendsState();
       yield await fetchTrends();
     }
@@ -18,6 +18,7 @@ class TrendsBloc extends Bloc<TrendsEvent, TrendsState> {
 
   Future<TrendsState> fetchTrends() async {
     var responseEntity = await _trendService.fetchTrends();
+    print(responseEntity);
     return responseEntity.isError
         ? FetchTrendsErrorState(responseEntity.errors.message)
         : FetchedTrendsSuccessState(responseEntity.data);

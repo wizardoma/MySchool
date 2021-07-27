@@ -146,7 +146,9 @@ class _SpacePageScreenState extends State<SpacePageScreen>
                                 top: kToolbarHeight * 2,
                               ),
                               padding: EdgeInsets.only(
-                                  left: defaultSpacing , right: defaultSpacing , bottom: defaultSpacing ),
+                                  left: defaultSpacing,
+                                  right: defaultSpacing,
+                                  bottom: defaultSpacing),
                               child: Column(
                                 children: [
                                   Container(
@@ -191,8 +193,8 @@ class _SpacePageScreenState extends State<SpacePageScreen>
                                                     kHorizontalSpaceSmall,
                                                     Container(
                                                       height: 40,
-                                                      padding:
-                                                          EdgeInsets.all(defaultSpacing * 0.5),
+                                                      padding: EdgeInsets.all(
+                                                          defaultSpacing * 0.5),
                                                       decoration: BoxDecoration(
                                                         border: Border.all(
                                                             color:
@@ -266,8 +268,8 @@ class _SpacePageScreenState extends State<SpacePageScreen>
                                     style:
                                         TextStyle(color: Colors.grey.shade400),
                                     child: Container(
-                                      padding:
-                                          EdgeInsets.symmetric(vertical: defaultSpacing * 0.5),
+                                      padding: EdgeInsets.symmetric(
+                                          vertical: defaultSpacing * 0.5),
                                       child: Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceBetween,
