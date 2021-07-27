@@ -3,6 +3,7 @@ import 'package:app/presentation/bookmarks/bookmark_screen.dart';
 import 'package:app/presentation/content/content_screen.dart';
 import 'package:app/presentation/draft/draft_screen.dart';
 import 'package:app/presentation/home/home_screen.dart';
+import 'package:app/presentation/messages/direct_message_screen.dart';
 import 'package:app/presentation/messages/message_screen.dart';
 import 'package:app/presentation/profile/profile_screen.dart';
 import 'package:app/presentation/questions/question_answer_screen.dart';
@@ -24,4 +25,5 @@ Map<String, WidgetBuilder> appRoutes = {
   ProfileScreen.routeName: (_) => ProfileScreen(),
   SpacePageScreen.routeName: (_) => SpacePageScreen(),
   QuestionAnswerScreen.routeName: (_) => QuestionAnswerScreen(),
+  DirectMessageScreen.routeName: (_) => DirectMessageScreen(),
 };

@@ -1,5 +1,6 @@
 import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
+import 'package:app/presentation/messages/direct_message_screen.dart';
 import 'package:flutter/material.dart';
 
 class MessagesScreen extends StatefulWidget {
@@ -51,6 +52,10 @@ class _MessagesScreenState extends State<MessagesScreen> {
         ),
         itemBuilder: (BuildContext context, int index) {
           return ListTile(
+            onTap: () => Navigator.pushNamed(
+              context,
+              DirectMessageScreen.routeName,
+            ),
             title: Text(
               _messages[index]["name"],
               style: kPostTitleTextStyle.copyWith(fontSize: 14),
