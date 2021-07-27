@@ -24,7 +24,6 @@ class _PostViewScreenState extends State<PostViewScreen> {
   void didChangeDependencies() {
     if (!hasRun) {
       dynamic arguments = ModalRoute.of(context).settings.arguments;
-      print("Args $arguments");
       _post = arguments["post"];
       _onPostShare = arguments["onPostShare"] ?? null;
       _onPostOptionsTap = arguments["onPostOptionsTap"] ?? null;

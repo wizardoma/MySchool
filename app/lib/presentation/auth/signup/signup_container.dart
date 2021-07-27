@@ -159,7 +159,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 setState(() {
                   _departmentController = s.toString();
                   _selectedDepartment = s.toString();
-                  print("set state after dep selection");
                 });
               },
               items: _getDepartmentList()

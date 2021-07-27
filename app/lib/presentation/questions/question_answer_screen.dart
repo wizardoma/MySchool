@@ -22,7 +22,6 @@ class _QuestionAnswerScreenState extends State<QuestionAnswerScreen> {
   void didChangeDependencies() {
     if (!hasRun) {
       dynamic arguments = ModalRoute.of(context).settings.arguments;
-      print("Args $arguments");
       _question = arguments["question"];
       super.didChangeDependencies();
     }

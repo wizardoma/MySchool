@@ -17,9 +17,7 @@ class UserBloc extends HydratedBloc<UserEvent, UserState> {
 
   UserBloc(this.userService, this.authenticationBloc)
       : super(UserNotInitializedState()) {
-    print("user bloc");
     _streamSubscription = authenticationBloc.stream.listen((state) {
-      print("listening");
       if (state is AuthenticatedState) {
         add(FetchUserEvent());
       }
@@ -31,11 +29,20 @@ class UserBloc extends HydratedBloc<UserEvent, UserState> {
     if (event is FetchUserEvent) {
       yield FetchingUserState();
       var authenticationState = authenticationBloc.state;
+      print(authenticationState);
       if (authenticationState is LoggedInSuccessState) {
+
         yield await fetchUser(authenticationState.authUser);
       } else if (authenticationState is SignUpSuccessState) {
+
         yield await fetchUserFromSignUp(authenticationState.user);
-      } else {
+      }
+      else if (authenticationState is AuthenticatedState) {
+        var response = await userService.getUserById(authenticationState.authUser.id);
+        yield  FetchedUserState(response.data);
+      }
+        else {
+
         yield FetchUserErrorState("You are not authenticated");
       }
     }

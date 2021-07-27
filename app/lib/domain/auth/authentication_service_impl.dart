@@ -40,7 +40,6 @@ class AuthenticationServiceImpl extends AuthenticationService
   @override
   Future<ResponseEntity> signUp(SignUpRequest signUpRequest) async {
     var response = await authenticationClient.signUp(signUpRequest);
-    print("response from firebase + $response");
     if (response.isError) return response;
     var userData = SignUpUser(
         id: (response.data as AuthUser).id,
@@ -50,7 +49,6 @@ class AuthenticationServiceImpl extends AuthenticationService
         level: signUpRequest.level,
         university: signUpRequest.university,
         name: signUpRequest.name);
-    print("userData from signup $userData");
     return ResponseEntity.Data(userData);
 
 //    if (authenticationClient is FirebaseAuthService){

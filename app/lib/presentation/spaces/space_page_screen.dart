@@ -344,14 +344,12 @@ class _SpacePageScreenState extends State<SpacePageScreen>
 
   void _detectUserSwipe(DragEndDetails details) {
     if (details.primaryVelocity > 0) {
-      print("current index on left swipe $_currIndex");
       if (_currIndex >= 1) {
         setState(() {
           _tabbarController.index = --_currIndex;
         });
       }
     } else if (details.primaryVelocity < 0) {
-      print("current index on right swipe $_currIndex");
 
       if (_currIndex <= 1) {
         _tabbarController.index = ++_currIndex;

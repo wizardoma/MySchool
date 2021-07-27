@@ -54,7 +54,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
   void didChangeDependencies() {
     if (!hasRun) {
       dynamic arguments = ModalRoute.of(context).settings.arguments;
-      print("Args $arguments");
       _user = arguments["user"];
       super.didChangeDependencies();
     }

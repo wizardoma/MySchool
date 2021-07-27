@@ -4,10 +4,8 @@ class ThemeCubit extends HydratedCubit<bool> {
   ThemeCubit() : super(false);
 
   void setTheme() {
-    print("emiting new state from $state");
 
     emit(!state);
-    print("to $state");
   }
 
   @override

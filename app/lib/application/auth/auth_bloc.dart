@@ -13,9 +13,7 @@ class AuthenticationBloc
   final AuthenticationService authenticationService;
 
   AuthenticationBloc({this.authenticationService})
-      : super(AuthenticationUnInitializedState()){
-    print("auth bloc");
-  }
+      : super(AuthenticationUnInitializedState());
 
   @override
   Stream<AuthenticationState> mapEventToState(
@@ -45,12 +43,10 @@ class AuthenticationBloc
   }
 
   Future<AuthenticationState> checkAuth() async {
-    print("checking auth");
     var response = await authenticationService.checkAuthentication();
     if (response.isError) {
       return NotAuthenticatedState();
     } else {
-      print("authenticated");
       return AuthenticatedState(response.data);
     }
   }

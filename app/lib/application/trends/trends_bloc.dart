@@ -18,7 +18,6 @@ class TrendsBloc extends Bloc<TrendsEvent, TrendsState> {
 
   Future<TrendsState> fetchTrends() async {
     var responseEntity = await _trendService.fetchTrends();
-    print(responseEntity);
     return responseEntity.isError
         ? FetchTrendsErrorState(responseEntity.errors.message)
         : FetchedTrendsSuccessState(responseEntity.data);
