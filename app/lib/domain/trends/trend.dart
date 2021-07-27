@@ -1,15 +1,17 @@
 import 'dart:math';
 
+import 'package:app/domain/space/space.dart';
+import 'package:app/domain/space/spaces_list.dart';
 import 'package:flutter/foundation.dart';
 
 class Trend {
   final String trendName;
-  final String spaceName;
+  final Space space;
   final int noOfTopics;
 
   Trend({
     @required this.trendName,
-    @required this.spaceName,
+    @required this.space,
     @required this.noOfTopics,
   });
 }
@@ -17,32 +19,32 @@ class Trend {
 List<Trend> trendsList = [
   Trend(
     trendName: "Data Structures and Algorithms",
-    spaceName: "Computer Science",
+    space: spacesList[0],
     noOfTopics: Random().nextInt(2000),
   ),
   Trend(
-    trendName: "Solar Activities",
-    spaceName: "Physics",
+    trendName: "Smart Grids",
+    space: spacesList[1],
     noOfTopics: Random().nextInt(2000),
   ),
   Trend(
-    trendName: "Ionization Energy",
-    spaceName: "Chemistry",
+    trendName: "Covid 19",
+    space: spacesList[2],
     noOfTopics: Random().nextInt(2000),
   ),
   Trend(
     trendName: "sql",
-    spaceName: "Statistics",
+    space: spacesList[0],
     noOfTopics: Random().nextInt(2000),
   ),
   Trend(
     trendName: "Internet of Things",
-    spaceName: "Agriculture",
+    space: spacesList[0],
     noOfTopics: Random().nextInt(2000),
   ),
   Trend(
-    trendName: "Blockchain",
-    spaceName: "Security",
+    trendName: "Blockchain Opportunities in HealthCare",
+    space: spacesList[3],
     noOfTopics: Random().nextInt(2000),
   ),
 ];

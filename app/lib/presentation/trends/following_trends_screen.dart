@@ -3,6 +3,7 @@ import 'package:app/application/trends/trends_event.dart';
 import 'package:app/application/trends/trends_state.dart';
 import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
+import 'package:app/presentation/spaces/space_page_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -37,8 +38,9 @@ class _FollowingTrendsScreenState extends State<FollowingTrendsScreen> {
             itemBuilder: (context, index) {
               var trend = state.trends[index];
               return ListTile(
+                onTap: () => Navigator.pushNamed(context, SpacePageScreen.routeName, arguments: {"space": trend.space}),
                 title: Text(
-                  "Trending in ${trend.spaceName}",
+                  "Trending in ${trend.space.spaceName}",
                   style: kSubtitleTextStyle,
                 ),
                 subtitle: Column(
