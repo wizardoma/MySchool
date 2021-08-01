@@ -12,7 +12,6 @@ class NotificationItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      
       tileColor: Colors.transparent,
       minVerticalPadding: 0,
       contentPadding: EdgeInsets.all(defaultSpacing),
@@ -30,10 +29,13 @@ class NotificationItem extends StatelessWidget {
         style: TextStyle(color: Colors.black54, fontSize: 12),
       ),
       subtitle: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           kVerticalSpaceSmall,
           Container(
-            padding: EdgeInsets.symmetric(vertical: defaultSpacing * 0.3, horizontal: defaultSpacing * 0.3),
+            padding: EdgeInsets.symmetric(
+                vertical: defaultSpacing * 0.3,
+                horizontal: defaultSpacing * 0.3),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(color: Colors.grey),

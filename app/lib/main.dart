@@ -9,6 +9,7 @@ import 'package:app/application/theme/theme_cubit.dart';
 import 'package:app/application/trends/trends_bloc.dart';
 import 'package:app/application/user/user_bloc.dart';
 import 'package:app/commons/routes.dart';
+import 'package:app/commons/styles.dart';
 import 'package:app/domain/auth/firebase_initializer.dart';
 import 'package:app/ioc.dart';
 import 'package:app/presentation/auth/auth_screen.dart';
@@ -89,11 +90,7 @@ class MyApp extends StatelessWidget {
                   }
                 }),
             routes: appRoutes,
-            theme: !context.watch<ThemeCubit>().state
-                ? ThemeData.light().copyWith(
-                    scaffoldBackgroundColor: Colors.white,
-                  )
-                : ThemeData.dark(),
+            theme: customTheme(context.watch<ThemeCubit>().state),
           );
         },
       ),

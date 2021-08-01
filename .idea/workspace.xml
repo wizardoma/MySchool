@@ -19,14 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="use font awesome package for icons instead">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/commons/styles.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/commons/styles.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/presentation/notifications/notification_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/notifications/notification_item.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/notifications/notifications_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/notifications/notifications_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/question_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/question_item.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/questions_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/questions_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/trends/all_trending_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/trends/all_trending_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/trends/following_trends_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/trends/following_trends_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,70 +199,12 @@
       <workItem from="1627194112920" duration="2565000" />
       <workItem from="1627236607865" duration="11217000" />
       <workItem from="1627280819609" duration="12890000" />
-      <workItem from="1627373943287" duration="935000" />
-    </task>
-    <task id="LOCAL-00080" summary="add notification state management layer">
-      <created>1626425152085</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1626425152085</updated>
-    </task>
-    <task id="LOCAL-00081" summary="update inversion of Control with notification domain">
-      <created>1626425180450</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1626425180451</updated>
-    </task>
-    <task id="LOCAL-00082" summary="refractor: update">
-      <created>1626425210052</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1626425210052</updated>
-    </task>
-    <task id="LOCAL-00083" summary="add notification screen design">
-      <created>1626456391044</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1626456391046</updated>
-    </task>
-    <task id="LOCAL-00084" summary="add draft screen">
-      <created>1626457885343</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1626457885343</updated>
-    </task>
-    <task id="LOCAL-00085" summary="add bookmarks screen">
-      <created>1626459739499</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1626459739499</updated>
-    </task>
-    <task id="LOCAL-00086" summary="add autosize text package">
-      <created>1626508597205</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1626508597206</updated>
-    </task>
-    <task id="LOCAL-00087" summary="refractor post container using AutoSizeText">
-      <created>1626509329396</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1626509329396</updated>
-    </task>
-    <task id="LOCAL-00088" summary="add messages screen">
-      <created>1626516535012</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1626516535013</updated>
+      <workItem from="1627373943287" duration="21302000" />
+      <workItem from="1627463950298" duration="152000" />
+      <workItem from="1627468901198" duration="805000" />
+      <workItem from="1627497635785" duration="33000" />
+      <workItem from="1627638167744" duration="720000" />
+      <workItem from="1627815473165" duration="6065000" />
     </task>
     <task id="LOCAL-00089" summary="Add create post widget and page">
       <created>1626521250641</created>
@@ -543,7 +486,70 @@
       <option name="project" value="LOCAL" />
       <updated>1627286782370</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="refractor">
+      <created>1627375083813</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1627375083814</updated>
+    </task>
+    <task id="LOCAL-00130" summary="add trends business logic">
+      <created>1627377333301</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1627377333301</updated>
+    </task>
+    <task id="LOCAL-00131" summary="Add trends state management logic">
+      <created>1627377357281</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1627377357281</updated>
+    </task>
+    <task id="LOCAL-00132" summary="update trends to Inversion of control">
+      <created>1627377382137</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1627377382137</updated>
+    </task>
+    <task id="LOCAL-00133" summary="add trends screen">
+      <created>1627386193226</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1627386193226</updated>
+    </task>
+    <task id="LOCAL-00134" summary="fix: userbloc not emiting UserFetch state">
+      <created>1627387296491</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1627387296491</updated>
+    </task>
+    <task id="LOCAL-00135" summary="refractor">
+      <created>1627389348109</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1627389348109</updated>
+    </task>
+    <task id="LOCAL-00136" summary="Add chat messages screen">
+      <created>1627393648258</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1627393648258</updated>
+    </task>
+    <task id="LOCAL-00137" summary="Allow entering space on trend page">
+      <created>1627394587533</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1627394587533</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -562,14 +568,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add answer container for answers" />
-    <MESSAGE value="refractor login signup containers to use scaffold" />
-    <MESSAGE value="Add space domain layer" />
-    <MESSAGE value="Add space state management" />
-    <MESSAGE value="update space to iOC" />
-    <MESSAGE value="update new space impl to dependencies" />
-    <MESSAGE value="refractor spaces design" />
-    <MESSAGE value="add medical and pharmacist spaces" />
     <MESSAGE value="fix:" />
     <MESSAGE value="Add shimmer for loading posts" />
     <MESSAGE value="add departments for each imo state university school" />
@@ -587,7 +585,15 @@
     <MESSAGE value="refractor: change all app screens to use defaultSpacing" />
     <MESSAGE value="add line icons package" />
     <MESSAGE value="use font awesome package for icons instead" />
-    <option name="LAST_COMMIT_MESSAGE" value="use font awesome package for icons instead" />
+    <MESSAGE value="add trends business logic" />
+    <MESSAGE value="Add trends state management logic" />
+    <MESSAGE value="update trends to Inversion of control" />
+    <MESSAGE value="add trends screen" />
+    <MESSAGE value="fix: userbloc not emiting UserFetch state" />
+    <MESSAGE value="refractor" />
+    <MESSAGE value="Add chat messages screen" />
+    <MESSAGE value="Allow entering space on trend page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Allow entering space on trend page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
@@ -606,10 +612,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="541" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1624251443504" />
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1627282319359">
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1627377720160">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1627282319359" />
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1627377720159" />
     <state x="580" y="127" key="FileChooserDialogImpl" timestamp="1626933225318">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -622,22 +628,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="589" y="135" key="Github.UntrackedFilesDialog/0.0.1600.860@0.0.1600.860" timestamp="1619292079863" />
-    <state width="1557" height="197" key="GridCell.Tab.0.bottom" timestamp="1627286553366">
+    <state width="1557" height="197" key="GridCell.Tab.0.bottom" timestamp="1627424324498">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="197" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1627286553366" />
-    <state width="1557" height="197" key="GridCell.Tab.0.center" timestamp="1627286553365">
+    <state width="1557" height="197" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1627424324498" />
+    <state width="1557" height="197" key="GridCell.Tab.0.center" timestamp="1627424324497">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="197" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1627286553365" />
-    <state width="1557" height="197" key="GridCell.Tab.0.left" timestamp="1627286553365">
+    <state width="1557" height="197" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1627424324497" />
+    <state width="1557" height="197" key="GridCell.Tab.0.left" timestamp="1627424324497">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="197" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1627286553365" />
-    <state width="1557" height="197" key="GridCell.Tab.0.right" timestamp="1627286553365">
+    <state width="1557" height="197" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1627424324497" />
+    <state width="1557" height="197" key="GridCell.Tab.0.right" timestamp="1627424324498">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="197" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1627286553365" />
+    <state width="1557" height="197" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1627424324498" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -650,26 +656,26 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1627286784604">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1627394588731">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1627286784604" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1627394588731" />
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626876457269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1600.860@0.0.1600.860" timestamp="1626876457269" />
-    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1627282653218">
+    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1627386728970">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1627282653218" />
+    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1627386728970" />
     <state x="182" y="51" width="1235" height="649" key="new project wizard" timestamp="1626933257976">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="182" y="51" width="1235" height="649" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1626933257976" />
-    <state x="456" y="195" key="run.anything.popup" timestamp="1626900526688">
+    <state x="456" y="195" key="run.anything.popup" timestamp="1627390114871">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1626900526688" />
+    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1627390114871" />
     <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1626359211857">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

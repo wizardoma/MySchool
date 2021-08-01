@@ -108,8 +108,12 @@ class _PostContainerState extends State<PostContainer> {
                                   ],
                                 ),
                               ),
-                              CloseButton(
-                                onPressed: _onPostDismiss,
+                              SizedBox(
+                                width: 20,
+                                height: 20,
+                                child: CloseButton(
+                                  onPressed: _onPostDismiss,
+                                ),
                               ),
                             ],
                           ),

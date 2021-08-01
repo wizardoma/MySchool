@@ -350,7 +350,6 @@ class _SpacePageScreenState extends State<SpacePageScreen>
         });
       }
     } else if (details.primaryVelocity < 0) {
-
       if (_currIndex <= 1) {
         _tabbarController.index = ++_currIndex;
       }

@@ -41,7 +41,7 @@ class _AllTrendingScreenState extends State<AllTrendingScreen> {
                     context, SpacePageScreen.routeName,
                     arguments: {"space": trend.space}),
                 title: Text(
-                  "Trending in ${trend.space}",
+                  "Trending in ${trend.space.spaceName}",
                   style: kSubtitleTextStyle,
                 ),
                 subtitle: Column(

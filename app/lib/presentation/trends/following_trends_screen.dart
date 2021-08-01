@@ -38,7 +38,9 @@ class _FollowingTrendsScreenState extends State<FollowingTrendsScreen> {
             itemBuilder: (context, index) {
               var trend = state.trends[index];
               return ListTile(
-                onTap: () => Navigator.pushNamed(context, SpacePageScreen.routeName, arguments: {"space": trend.space}),
+                onTap: () => Navigator.pushNamed(
+                    context, SpacePageScreen.routeName,
+                    arguments: {"space": trend.space}),
                 title: Text(
                   "Trending in ${trend.space.spaceName}",
                   style: kSubtitleTextStyle,
@@ -53,7 +55,9 @@ class _FollowingTrendsScreenState extends State<FollowingTrendsScreen> {
                     kVerticalSpaceMedium,
                     Text(
                       "${trend.noOfTopics} engagements",
-                      style: TextStyle(color: Colors.black54,),
+                      style: TextStyle(
+                        color: Colors.black54,
+                      ),
                     )
                   ],
                 ),
