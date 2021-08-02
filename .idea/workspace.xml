@@ -19,17 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="update Inversion of Control with events">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add events screen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/application/event/events_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/event/events_state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/event/event.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/event/event.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/event/events_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/event/events_list.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/ioc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/ioc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/commons/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/commons/routes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/commons/styles.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/commons/styles.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/presentation/events/events_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/events/events_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/home/home_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/notifications/notifications_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/notifications/notifications_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/trends/trends_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/trends/trends_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,14 +202,7 @@
       <workItem from="1627638167744" duration="720000" />
       <workItem from="1627815473165" duration="7305000" />
       <workItem from="1627889235632" duration="5680000" />
-      <workItem from="1627912382411" duration="2507000" />
-    </task>
-    <task id="LOCAL-00094" summary="refractor: abstract user details">
-      <created>1626637990615</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1626637990615</updated>
+      <workItem from="1627912382411" duration="6962000" />
     </task>
     <task id="LOCAL-00095" summary="refractor">
       <created>1626646740075</created>
@@ -553,7 +540,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627893600260</updated>
     </task>
-    <option name="localTasksCounter" value="143" />
+    <task id="LOCAL-00143" summary="add events screen">
+      <created>1627915252144</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1627915252148</updated>
+    </task>
+    <option name="localTasksCounter" value="144" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -572,7 +566,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="optimize auth screen with defaultPadding" />
     <MESSAGE value="make ui helpers use defaultPadding" />
     <MESSAGE value="refractor code" />
     <MESSAGE value="fix no error response on exception" />
@@ -597,7 +590,8 @@
     <MESSAGE value="add events business domain" />
     <MESSAGE value="add events state management" />
     <MESSAGE value="update Inversion of Control with events" />
-    <option name="LAST_COMMIT_MESSAGE" value="update Inversion of Control with events" />
+    <MESSAGE value="add events screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="add events screen" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
@@ -660,10 +654,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1627893603615">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1627915265023">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1627893603615" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1627915265023" />
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626876457269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
