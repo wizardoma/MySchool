@@ -1,6 +1,7 @@
 import 'package:app/application/auth/auth_bloc.dart';
 import 'package:app/application/auth/auth_event.dart';
 import 'package:app/application/auth/auth_state.dart';
+import 'package:app/application/event/event_bloc.dart';
 import 'package:app/application/following/following_posts_bloc.dart';
 import 'package:app/application/homefeeds/home_feeds_bloc.dart';
 import 'package:app/application/notification/notification_bloc.dart';
@@ -63,6 +64,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider.value(
           value: (ioC.getBloc("space") as SpaceBloc),
+        ),
+        BlocProvider.value(
+          value: (ioC.getBloc("event") as EventBloc),
         ),
         BlocProvider.value(
             value: (ioC.getBloc("notification") as NotificationBloc))

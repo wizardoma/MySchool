@@ -24,6 +24,9 @@ import 'package:app/domain/user/user_service.dart';
 import 'package:app/domain/user/user_service_impl.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+// Ibekason Alexander Onyebuchi
+// Inversion of Control Container for dependency managements
+
 class IoC {
   Map<String, Service> _services;
   Map<String, Bloc> _blocs;

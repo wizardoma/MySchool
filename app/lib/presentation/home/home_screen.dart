@@ -146,7 +146,10 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Icon getIcon(IconData icon) {
-    return Icon(icon, size: 25,);
+    return Icon(
+      icon,
+      size: 25,
+    );
   }
 
   void onFabTapped() {
