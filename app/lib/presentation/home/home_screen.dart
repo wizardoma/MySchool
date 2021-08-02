@@ -138,8 +138,8 @@ class _HomeScreenState extends State<HomeScreen> {
             label: "Spaces",
           ),
           BottomNavigationBarItem(
-            activeIcon: getIcon(Icons.calendar_view_week),
-            icon: getIcon(Icons.calendar_view_week),
+            activeIcon: getIcon(Icons.calendar_today),
+            icon: getIcon(Icons.calendar_today_outlined),
             label: "Events",
           ),
         ]);

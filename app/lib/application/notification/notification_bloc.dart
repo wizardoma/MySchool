@@ -1,8 +1,5 @@
-import 'package:app/application/following/following_posts_event.dart';
-import 'package:app/application/following/following_posts_state.dart';
 import 'package:app/application/notification/notifications_event.dart';
 import 'package:app/application/notification/notifications_state.dart';
-import 'package:app/domain/feeds/posts_service.dart';
 import 'package:app/domain/notification/notification_service.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

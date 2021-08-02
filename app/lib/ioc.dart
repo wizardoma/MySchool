@@ -1,4 +1,5 @@
 import 'package:app/application/auth/auth_bloc.dart';
+import 'package:app/application/event/event_bloc.dart';
 import 'package:app/application/following/following_posts_bloc.dart';
 import 'package:app/application/homefeeds/home_feeds_bloc.dart';
 import 'package:app/application/notification/notification_bloc.dart';
@@ -9,6 +10,8 @@ import 'package:app/domain/auth/authentication_client.dart';
 import 'package:app/domain/auth/authentication_service.dart';
 import 'package:app/domain/auth/authentication_service_impl.dart';
 import 'package:app/domain/auth/firebase_auth_service.dart';
+import 'package:app/domain/event/event_client.dart';
+import 'package:app/domain/event/event_service.dart';
 import 'package:app/domain/feeds/posts_client.dart';
 import 'package:app/domain/feeds/posts_service.dart';
 import 'package:app/domain/notification/notification_client.dart';
@@ -33,11 +36,14 @@ class IoC {
   TrendService _trendService;
   TrendsBloc _trendsBloc;
   SpaceService _spaceService;
+  EventClient _eventClient;
   SpaceBloc _spaceBloc;
   UserBloc _userBloc;
+  EventService _eventService;
   UserService _userService;
   AuthenticationService _authenticationService;
   AuthenticationBloc _authenticationBloc;
+  EventBloc _eventBloc;
   HomeFeedsBloc _homeFeedsBloc;
   FollowingPostBloc _followingPostBloc;
   PostService _postService;
@@ -49,7 +55,9 @@ class IoC {
     _notificationClient = NotificationClient();
     _trendService = TrendService();
     _trendsBloc = TrendsBloc(_trendService);
+    _eventClient = EventClient();
     _spaceClient = SpaceClient();
+    _eventService = EventService(_eventClient);
     _spaceService = SpaceService(_spaceClient);
     _notificationService = NotificationService(_notificationClient);
     _authenticationService = AuthenticationServiceImpl(_authenticationClient);
@@ -57,7 +65,7 @@ class IoC {
         AuthenticationBloc(authenticationService: _authenticationService);
     _spaceBloc = SpaceBloc(_spaceService);
     _userBloc = UserBloc(_userService, _authenticationBloc);
-
+    _eventBloc = EventBloc(_eventService);
     _postClient = PostClient();
     _postService = PostService(_postClient);
     _notificationBloc = NotificationBloc(_notificationService);
@@ -75,6 +83,7 @@ class IoC {
       "following": _followingPostBloc,
       "user": _userBloc,
       "space": _spaceBloc,
+      "event": _eventBloc,
       "notification": _notificationBloc,
     };
   }
