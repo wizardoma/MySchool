@@ -9,6 +9,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class NotificationScreen extends StatefulWidget {
   static const title = "Notifications";
 
+  static const String routeName= "/notifications";
+
   @override
   _NotificationScreenState createState() => _NotificationScreenState();
 }

@@ -1,4 +1,5 @@
-import 'package:app/presentation/follows/following_screen.dart';
+import 'package:app/commons/ui_helpers.dart';
+import 'package:app/presentation/events/events_screen.dart';
 import 'package:app/presentation/home/home_feeds.dart';
 import 'package:app/presentation/notifications/notifications_screen.dart';
 import 'package:app/presentation/post/create_post_screen.dart';
@@ -21,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
     TrendingScreen.title,
     QuestionScreen.title,
     SpacesScreen.title,
-    NotificationScreen.title
+    EventsScreen.title
   ];
 
   int _currNavIndex = 0;
@@ -38,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
       TrendingScreen(),
       QuestionScreen(),
       SpacesScreen(),
-      NotificationScreen(),
+      EventsScreen(),
     ];
     super.initState();
   }
@@ -82,6 +83,14 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             onPressed: null,
           ),
+          kHorizontalSpaceTiny,
+          IconButton(
+            onPressed: _goToNotifications,
+            icon: Icon(
+              Icons.notifications_outlined,
+              color: Colors.black87,
+            ),
+          )
         ],
       ),
       bottomNavigationBar: getNavBar(),
@@ -129,15 +138,15 @@ class _HomeScreenState extends State<HomeScreen> {
             label: "Spaces",
           ),
           BottomNavigationBarItem(
-            activeIcon: getIcon(Icons.notifications),
-            icon: getIcon(Icons.notifications_outlined),
-            label: "Notifications",
+            activeIcon: getIcon(Icons.calendar_view_week),
+            icon: getIcon(Icons.calendar_view_week),
+            label: "Events",
           ),
         ]);
   }
 
   Icon getIcon(IconData icon) {
-    return Icon(icon, size: 25);
+    return Icon(icon, size: 25,);
   }
 
   void onFabTapped() {
@@ -147,5 +156,9 @@ class _HomeScreenState extends State<HomeScreen> {
       context: context,
       builder: (context) => CreatePostScreen(),
     );
+  }
+
+  void _goToNotifications() {
+    Navigator.pushNamed(context, NotificationScreen.routeName);
   }
 }

@@ -2,9 +2,11 @@ import 'package:app/presentation/auth/auth_screen.dart';
 import 'package:app/presentation/bookmarks/bookmark_screen.dart';
 import 'package:app/presentation/content/content_screen.dart';
 import 'package:app/presentation/draft/draft_screen.dart';
+import 'package:app/presentation/events/events_screen.dart';
 import 'package:app/presentation/home/home_screen.dart';
 import 'package:app/presentation/messages/direct_message_screen.dart';
 import 'package:app/presentation/messages/message_screen.dart';
+import 'package:app/presentation/notifications/notifications_screen.dart';
 import 'package:app/presentation/profile/profile_screen.dart';
 import 'package:app/presentation/questions/question_answer_screen.dart';
 import 'package:app/presentation/spaces/space_page_screen.dart';
@@ -26,4 +28,6 @@ Map<String, WidgetBuilder> appRoutes = {
   SpacePageScreen.routeName: (_) => SpacePageScreen(),
   QuestionAnswerScreen.routeName: (_) => QuestionAnswerScreen(),
   DirectMessageScreen.routeName: (_) => DirectMessageScreen(),
+  EventsScreen.routeName: (_) => EventsScreen(),
+  NotificationScreen.routeName: (_) => NotificationScreen(),
 };
