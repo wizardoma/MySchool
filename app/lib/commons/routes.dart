@@ -2,6 +2,7 @@ import 'package:app/presentation/auth/auth_screen.dart';
 import 'package:app/presentation/bookmarks/bookmark_screen.dart';
 import 'package:app/presentation/content/content_screen.dart';
 import 'package:app/presentation/draft/draft_screen.dart';
+import 'package:app/presentation/events/events_detail_screen.dart';
 import 'package:app/presentation/events/events_screen.dart';
 import 'package:app/presentation/home/home_screen.dart';
 import 'package:app/presentation/messages/direct_message_screen.dart';
@@ -30,4 +31,5 @@ Map<String, WidgetBuilder> appRoutes = {
   DirectMessageScreen.routeName: (_) => DirectMessageScreen(),
   EventsScreen.routeName: (_) => EventsScreen(),
   NotificationScreen.routeName: (_) => NotificationScreen(),
+  EventDetailScreen.routeName: (_) => EventDetailScreen(),
 };

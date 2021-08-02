@@ -2,6 +2,7 @@ import 'package:app/application/event/event_bloc.dart';
 import 'package:app/application/event/events_event.dart';
 import 'package:app/application/event/events_state.dart';
 import 'package:app/presentation/events/event_item_widget.dart';
+import 'package:app/presentation/events/events_detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -33,22 +34,21 @@ class _EventsScreenState extends State<EventsScreen> {
           );
         }
         if (state is FetchEventStateSuccess) {
-          return Container(
-            child: Expanded(
-              child: ListView.separated(
-                padding: EdgeInsets.zero,
-
-                itemBuilder: (context, index) => EventItemWidget(
-                  event: state.events[index],
-                ),
-                    separatorBuilder: (BuildContext context, int index) =>
-                        Divider(
-                      thickness: 2,
-                          color: Colors.grey.shade200,
-                    ),
-                itemCount: state.events.length,
+          return ListView.separated(
+            padding: EdgeInsets.zero,
+            itemBuilder: (context, index) => GestureDetector(
+              onTap: () => Navigator.of(context).pushNamed(
+                  EventDetailScreen.routeName,
+                  arguments: {"event": state.events[index]}),
+              child: EventItemWidget(
+                event: state.events[index],
               ),
             ),
+            separatorBuilder: (BuildContext context, int index) => Divider(
+              thickness: 2,
+              color: Colors.grey.shade200,
+            ),
+            itemCount: state.events.length,
           );
         }
       },
