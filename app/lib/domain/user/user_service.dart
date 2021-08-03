@@ -6,6 +6,5 @@ import 'package:app/domain/user/user.dart';
 abstract class UserService extends Service{
 
   Future<ResponseEntity> getUserById(String id);
-  Future<ResponseEntity> fetchUserFromSignup(SignUpUser user);
 
 }
