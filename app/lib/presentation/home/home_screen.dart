@@ -50,6 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
       floatingActionButton: Visibility(
         visible: _currNavIndex <= 2,
         child: FloatingActionButton(
+          backgroundColor: Theme.of(context).primaryColor,
           onPressed: onFabTapped,
           child: Icon(Icons.add, color: Colors.white),
         ),
@@ -119,6 +120,7 @@ class _HomeScreenState extends State<HomeScreen> {
         type: BottomNavigationBarType.fixed,
         showSelectedLabels: true,
         showUnselectedLabels: true,
+        selectedItemColor: Theme.of(context).primaryColor,
         selectedFontSize: 11,
         unselectedFontSize: 11,
         items: [

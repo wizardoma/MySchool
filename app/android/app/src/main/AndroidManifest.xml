@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.wizardom.app">
    <application
-        android:label="app"
+        android:label="MySchool"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

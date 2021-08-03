@@ -21,7 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="fix: User showing null middlename from server">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/model/Name.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/model/Name.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/home/home_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +206,7 @@
       <workItem from="1627937698682" duration="1080000" />
       <workItem from="1627977605962" duration="1778000" />
       <workItem from="1628002748798" duration="2608000" />
-      <workItem from="1628017530123" duration="10494000" />
+      <workItem from="1628017530123" duration="11360000" />
     </task>
     <task id="LOCAL-00104" summary="add answer container for answers">
       <created>1626815293027</created>
