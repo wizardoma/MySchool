@@ -81,7 +81,7 @@ class _PostContainerState extends State<PostContainer> {
                                               Text(
                                                 "Follow",
                                                 style:
-                                                    TextStyle(color: Colors.blue),
+                                                    TextStyle(color: Theme.of(context).primaryColor),
                                               )
                                           ],
                                         ),

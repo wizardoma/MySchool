@@ -122,7 +122,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                       Container(
                         padding: EdgeInsets.all(defaultSpacing),
                         decoration: BoxDecoration(
-                            color: Colors.blue,
+                            color: Theme.of(context).primaryColor,
                             borderRadius: BorderRadius.circular(30)),
                         child: Text(
                           "See Questions for you",

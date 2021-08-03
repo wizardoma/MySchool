@@ -19,14 +19,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="Add event details screen">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="fix: recursion on universities querying">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/home/home_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/trends/all_trending_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/trends/all_trending_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/drawer/drawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/drawer/drawer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/model/University.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/model/University.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/flutter_native_splash.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/flutter_native_splash.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/commons/styles.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/commons/styles.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/messages/direct_message_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/messages/direct_message_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/profile/profile_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/profile/profile_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/question_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/question_item.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/questions_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/questions_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/form_bottom_sheet.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/form_bottom_sheet.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_bottom_sheet.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_bottom_sheet.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_view_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_view_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +56,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/backend" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="ProjectId" id="1rd2asS3JvBByg79NAVInNTU5oD" />
@@ -107,7 +113,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BackendApplication">
+  <component name="RunManager" selected="Flutter.main.dart">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/app/lib/main.dart" />
       <method v="2" />
@@ -210,21 +216,7 @@
       <workItem from="1627937698682" duration="1080000" />
       <workItem from="1627977605962" duration="1778000" />
       <workItem from="1628002748798" duration="2608000" />
-      <workItem from="1628017530123" duration="1364000" />
-    </task>
-    <task id="LOCAL-00097" summary="add user bloc to IoC">
-      <created>1626708736890</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1626708736890</updated>
-    </task>
-    <task id="LOCAL-00098" summary="add shimmer loader to user view in drawer">
-      <created>1626708793677</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1626708793677</updated>
+      <workItem from="1628017530123" duration="2614000" />
     </task>
     <task id="LOCAL-00099" summary="fix: authentication bloc do not emit state">
       <created>1626710704267</created>
@@ -555,7 +547,21 @@
       <option name="project" value="LOCAL" />
       <updated>1627924356549</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary="Add dummy profile photo">
+      <created>1628019375825</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1628019375826</updated>
+    </task>
+    <task id="LOCAL-00147" summary="fix: recursion on universities querying">
+      <created>1628020104862</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1628020104862</updated>
+    </task>
+    <option name="localTasksCounter" value="148" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -574,8 +580,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix no error response on exception" />
-    <MESSAGE value="add matriculation no" />
     <MESSAGE value="add hydrated bloc for user persistence" />
     <MESSAGE value="Add matriculation ID to backend" />
     <MESSAGE value="allow fetch user on signup" />
@@ -599,7 +603,9 @@
     <MESSAGE value="add events screen" />
     <MESSAGE value="fix: copy existing style instead of overriding" />
     <MESSAGE value="Add event details screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add event details screen" />
+    <MESSAGE value="Add dummy profile photo" />
+    <MESSAGE value="fix: recursion on universities querying" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: recursion on universities querying" />
   </component>
   <component name="WindowStateProjectService">
     <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1627240058074">
@@ -622,22 +628,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="127" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1626933225318" />
-    <state width="1431" height="194" key="GridCell.Tab.0.bottom" timestamp="1628018299561">
+    <state width="1431" height="194" key="GridCell.Tab.0.bottom" timestamp="1628020297386">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1431" height="194" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628018299561" />
-    <state width="1431" height="194" key="GridCell.Tab.0.center" timestamp="1628018299561">
+    <state width="1431" height="194" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628020297386" />
+    <state width="1431" height="194" key="GridCell.Tab.0.center" timestamp="1628020297386">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1431" height="194" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628018299561" />
-    <state width="1431" height="194" key="GridCell.Tab.0.left" timestamp="1628018299560">
+    <state width="1431" height="194" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628020297386" />
+    <state width="1431" height="194" key="GridCell.Tab.0.left" timestamp="1628020297386">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1431" height="194" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628018299559" />
-    <state width="1431" height="194" key="GridCell.Tab.0.right" timestamp="1628018299561">
+    <state width="1431" height="194" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628020297386" />
+    <state width="1431" height="194" key="GridCell.Tab.0.right" timestamp="1628020297386">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1431" height="194" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628018299561" />
+    <state width="1431" height="194" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628020297386" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -650,18 +656,18 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1627924359031">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628020116619">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1627924359031" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628020116619" />
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626876457269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1600.860@0.0.1600.860" timestamp="1626876457269" />
-    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1628006911882">
+    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1628020610507">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1628006911882" />
+    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1628020610507" />
     <state x="182" y="51" width="1235" height="649" key="new project wizard" timestamp="1627927781240">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

@@ -167,7 +167,7 @@ class _SpacePageScreenState extends State<SpacePageScreen>
                                                     fit: BoxFit.cover,
                                                     image: NetworkImage(
                                                         _space.imageUrl)),
-                                                color: Colors.blue,
+                                                color: Theme.of(context).primaryColor,
                                                 borderRadius:
                                                     BorderRadius.circular(10),
                                               ),

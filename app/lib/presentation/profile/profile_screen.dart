@@ -239,7 +239,7 @@ class _ProfileScreenState extends State<ProfileScreen> with SingleTickerProvider
                           child: Text(
                             e,
                             style: TextStyle(
-                              color: Colors.blue,
+                              color: Theme.of(context).primaryColor,
                               fontSize: 12,
                             ),
                             maxLines: 1,

@@ -108,7 +108,7 @@ class _DirectMessageScreenState extends State<DirectMessageScreen> {
                       color: Colors.white,
                       size: 18,
                     ),
-                    backgroundColor: Colors.blue,
+                    backgroundColor: Theme.of(context).primaryColor,
                     elevation: 0,
                   ),
                 ],

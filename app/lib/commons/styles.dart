@@ -14,6 +14,8 @@ ThemeData customTheme(bool isDark) {
 
 ThemeData getTheme(ThemeData themeData) {
   return themeData.copyWith(
+    accentColor: Colors.blue,
+    primaryColor: Colors.red,
     scaffoldBackgroundColor: Colors.white,
     textTheme: themeData.textTheme
         .copyWith(

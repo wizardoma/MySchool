@@ -60,7 +60,7 @@ class FormBottomSheet extends StatelessWidget {
                                     padding: EdgeInsets.symmetric(
                                         vertical: defaultSpacing * 0.5, horizontal: defaultSpacing),
                                     decoration: BoxDecoration(
-                                      color: Colors.blue,
+                                      color: Theme.of(context).primaryColor,
                                       borderRadius: BorderRadius.circular(30),
                                     ),
                                     child: BlocBuilder<AuthenticationBloc,

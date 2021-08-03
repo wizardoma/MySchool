@@ -68,7 +68,7 @@ class _PostViewScreenState extends State<PostViewScreen> {
                       kHorizontalSpaceSmall,
                       Text(
                         "Follow",
-                        style: TextStyle(color: Colors.blue, fontSize: 14),
+                        style: TextStyle(color: Theme.of(context).primaryColor, fontSize: 14),
                       ),
                     ],
                   ),

@@ -63,7 +63,7 @@ class QuestionItem extends StatelessWidget {
                             children: [
                               Icon(
                                 Icons.post_add,
-                                color: Colors.blue,
+                                color: Theme.of(context).primaryColor,
                               ),
                               Text("Answer")
                             ],

@@ -49,7 +49,7 @@ class _SpacesScreenState extends State<SpacesScreen> {
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: defaultSpacing * 0.5, vertical: defaultSpacing * 0.3),
                   decoration: BoxDecoration(
-                    border: Border.all(color: Colors.blue),
+                    border: Border.all(color: Theme.of(context).primaryColor),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Row(
@@ -58,17 +58,17 @@ class _SpacesScreenState extends State<SpacesScreen> {
                         padding: EdgeInsets.all(0),
                         decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            border: Border.all(color: Colors.blue)),
+                            border: Border.all(color: Theme.of(context).primaryColor)),
                         child: Icon(
                           Icons.add,
                           size: 15,
-                          color: Colors.blue,
+                          color: Theme.of(context).primaryColor,
                         ),
                       ),
                       kHorizontalSpaceTiny,
                       Text(
                         "Create",
-                        style: TextStyle(color: Colors.blue),
+                        style: TextStyle(color: Theme.of(context).primaryColor),
                       ),
                     ],
                   ),
@@ -77,7 +77,7 @@ class _SpacesScreenState extends State<SpacesScreen> {
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: defaultSpacing * 0.5, vertical: defaultSpacing * 0.5),
                   decoration: BoxDecoration(
-                    border: Border.all(color: Colors.blue),
+                    border: Border.all(color: Theme.of(context).primaryColor),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Row(
@@ -86,17 +86,17 @@ class _SpacesScreenState extends State<SpacesScreen> {
                         padding: EdgeInsets.all(0),
                         decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            border: Border.all(color: Colors.blue)),
+                            border: Border.all(color: Theme.of(context).primaryColor)),
                         child: Icon(
                           Icons.search,
                           size: 15,
-                          color: Colors.blue,
+                          color: Theme.of(context).primaryColor,
                         ),
                       ),
                       kHorizontalSpaceTiny,
                       Text(
                         "Discover",
-                        style: TextStyle(color: Colors.blue),
+                        style: TextStyle(color: Theme.of(context).primaryColor),
                       )
                     ],
                   ),
