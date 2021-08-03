@@ -19,12 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="register student on server on signup">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="fix: User showing null middlename from server">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/application/user/user_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/user/user_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/user/user.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/user/user.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/user/user_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/user/user_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/user/user_service_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/user/user_service_impl.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/model/Name.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/model/Name.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -209,21 +205,7 @@
       <workItem from="1627937698682" duration="1080000" />
       <workItem from="1627977605962" duration="1778000" />
       <workItem from="1628002748798" duration="2608000" />
-      <workItem from="1628017530123" duration="9562000" />
-    </task>
-    <task id="LOCAL-00102" summary="create post and answer models">
-      <created>1626813313828</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1626813313830</updated>
-    </task>
-    <task id="LOCAL-00103" summary="add question screen designs">
-      <created>1626813699238</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1626813699238</updated>
+      <workItem from="1628017530123" duration="10494000" />
     </task>
     <task id="LOCAL-00104" summary="add answer container for answers">
       <created>1626815293027</created>
@@ -554,7 +536,21 @@
       <option name="project" value="LOCAL" />
       <updated>1628025666110</updated>
     </task>
-    <option name="localTasksCounter" value="151" />
+    <task id="LOCAL-00151" summary="fetch User from server on authenticated">
+      <created>1628028100844</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1628028100844</updated>
+    </task>
+    <task id="LOCAL-00152" summary="fix: User showing null middlename from server">
+      <created>1628028132325</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1628028132325</updated>
+    </task>
+    <option name="localTasksCounter" value="153" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -573,8 +569,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="allow fetch user on signup" />
-    <MESSAGE value=" refractor post container to use defaulPadding" />
     <MESSAGE value="refractor: change all app screens to use defaultSpacing" />
     <MESSAGE value="add line icons package" />
     <MESSAGE value="use font awesome package for icons instead" />
@@ -598,7 +592,9 @@
     <MESSAGE value="refractor: Change primary color to red" />
     <MESSAGE value="refractor" />
     <MESSAGE value="register student on server on signup" />
-    <option name="LAST_COMMIT_MESSAGE" value="register student on server on signup" />
+    <MESSAGE value="fetch User from server on authenticated" />
+    <MESSAGE value="fix: User showing null middlename from server" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: User showing null middlename from server" />
   </component>
   <component name="WindowStateProjectService">
     <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1627240058074">
@@ -621,22 +617,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="127" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1626933225318" />
-    <state width="1431" height="194" key="GridCell.Tab.0.bottom" timestamp="1628020297386">
+    <state width="1431" height="368" key="GridCell.Tab.0.bottom" timestamp="1628028143485">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1431" height="194" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628020297386" />
-    <state width="1431" height="194" key="GridCell.Tab.0.center" timestamp="1628020297386">
+    <state width="1431" height="368" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628028143485" />
+    <state width="1431" height="368" key="GridCell.Tab.0.center" timestamp="1628028143485">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1431" height="194" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628020297386" />
-    <state width="1431" height="194" key="GridCell.Tab.0.left" timestamp="1628020297386">
+    <state width="1431" height="368" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628028143485" />
+    <state width="1431" height="368" key="GridCell.Tab.0.left" timestamp="1628028143485">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1431" height="194" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628020297386" />
-    <state width="1431" height="194" key="GridCell.Tab.0.right" timestamp="1628020297386">
+    <state width="1431" height="368" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628028143485" />
+    <state width="1431" height="368" key="GridCell.Tab.0.right" timestamp="1628028143485">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1431" height="194" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628020297386" />
+    <state width="1431" height="368" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628028143485" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -649,10 +645,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628025668150">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628028142067">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628025668150" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628028142067" />
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626876457269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
