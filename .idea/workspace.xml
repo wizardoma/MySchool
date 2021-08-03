@@ -19,20 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="fix: recursion on universities querying">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="refractor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/flutter_native_splash.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/flutter_native_splash.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/commons/styles.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/commons/styles.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/messages/direct_message_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/messages/direct_message_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/profile/profile_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/profile/profile_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/question_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/question_item.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/questions_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/questions_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/form_bottom_sheet.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/form_bottom_sheet.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_bottom_sheet.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_bottom_sheet.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_view_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_view_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/auth/authentication_service_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/auth/authentication_service_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/service/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/service/StudentServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,21 +206,7 @@
       <workItem from="1627937698682" duration="1080000" />
       <workItem from="1627977605962" duration="1778000" />
       <workItem from="1628002748798" duration="2608000" />
-      <workItem from="1628017530123" duration="2614000" />
-    </task>
-    <task id="LOCAL-00099" summary="fix: authentication bloc do not emit state">
-      <created>1626710704267</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1626710704267</updated>
-    </task>
-    <task id="LOCAL-00100" summary="Add question answer screen">
-      <created>1626713247459</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1626713247459</updated>
+      <workItem from="1628017530123" duration="7141000" />
     </task>
     <task id="LOCAL-00101" summary="fix: login and signup form not scrolling elements">
       <created>1626807234676</created>
@@ -561,7 +537,21 @@
       <option name="project" value="LOCAL" />
       <updated>1628020104862</updated>
     </task>
-    <option name="localTasksCounter" value="148" />
+    <task id="LOCAL-00148" summary="refractor: Change primary color to red">
+      <created>1628020780724</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1628020780724</updated>
+    </task>
+    <task id="LOCAL-00149" summary="refractor">
+      <created>1628020915918</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1628020915919</updated>
+    </task>
+    <option name="localTasksCounter" value="150" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -580,7 +570,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add hydrated bloc for user persistence" />
     <MESSAGE value="Add matriculation ID to backend" />
     <MESSAGE value="allow fetch user on signup" />
     <MESSAGE value=" refractor post container to use defaulPadding" />
@@ -592,7 +581,6 @@
     <MESSAGE value="update trends to Inversion of control" />
     <MESSAGE value="add trends screen" />
     <MESSAGE value="fix: userbloc not emiting UserFetch state" />
-    <MESSAGE value="refractor" />
     <MESSAGE value="Add chat messages screen" />
     <MESSAGE value="Allow entering space on trend page" />
     <MESSAGE value="use custom themedata for app theme" />
@@ -605,7 +593,9 @@
     <MESSAGE value="Add event details screen" />
     <MESSAGE value="Add dummy profile photo" />
     <MESSAGE value="fix: recursion on universities querying" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: recursion on universities querying" />
+    <MESSAGE value="refractor: Change primary color to red" />
+    <MESSAGE value="refractor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refractor" />
   </component>
   <component name="WindowStateProjectService">
     <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1627240058074">
@@ -656,10 +646,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628020116619">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628020919556">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628020116619" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628020919556" />
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626876457269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -672,10 +662,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="182" y="51" width="1235" height="649" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1627927781240" />
-    <state x="456" y="195" key="run.anything.popup" timestamp="1627390114871">
+    <state x="456" y="195" key="run.anything.popup" timestamp="1628024823986">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1627390114871" />
+    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1628024823986" />
     <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1626359211857">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
