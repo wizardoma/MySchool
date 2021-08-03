@@ -46,6 +46,7 @@ dependencies:
   firebase_auth:
   google_sign_in:
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -71,6 +72,7 @@ flutter:
     - assets/images/mailbox_opened_flag_up.png
     - assets/images/question_mark.png
     - assets/images/group_task.png
+    - assets/icons/profile_photo.jpg
 
 
   # To add custom fonts to your application, add a fonts section here,

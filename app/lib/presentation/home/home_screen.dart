@@ -61,10 +61,17 @@ class _HomeScreenState extends State<HomeScreen> {
         leading: Builder(
           builder: (context) => GestureDetector(
             onTap: () => _openDrawer(context),
-            child: Image.asset(
-              "assets/icons/student.png",
-              width: 45,
-              height: 45,
+            child: Container(
+              clipBehavior: Clip.hardEdge,
+              height: 20,width: 20,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: AssetImage("assets/icons/profile_photo.jpg"),
+
+                )
+              ),
+
             ),
           ),
         ),

@@ -110,10 +110,12 @@ class HomeDrawer extends StatelessWidget {
                       return Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          CircleAvatar(
-                            radius: 40,
-                            backgroundImage: AssetImage(
-                              "assets/icons/student.png",
+                          ClipRRect(
+                            child: CircleAvatar(
+                              radius: 40,
+                              backgroundImage: AssetImage(
+                                "assets/icons/profile_photo.jpg",
+                              ),
                             ),
                           ),
                           ListTile(

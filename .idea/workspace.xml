@@ -19,11 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add events screen">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="Add event details screen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/commons/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/commons/routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/commons/styles.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/commons/styles.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/events/events_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/events/events_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/home/home_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/trends/all_trending_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/trends/all_trending_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/drawer/drawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/drawer/drawer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/model/University.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/model/University.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +36,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Huawei_Android_10_API_29_" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="DEFNW18C21001964" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -47,7 +50,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/backend" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="ProjectId" id="1rd2asS3JvBByg79NAVInNTU5oD" />
@@ -66,7 +69,7 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/lib/domain/space" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/assets/icons" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -82,19 +85,19 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain\space" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\notification" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\android\app\src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\presentation\widgets" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain\notification" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\following" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\android\app" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\assets\icons" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain\space" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\notification" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -104,7 +107,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Flutter.main.dart">
+  <component name="RunManager" selected="Spring Boot.BackendApplication">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/app/lib/main.dart" />
       <method v="2" />
@@ -202,21 +205,12 @@
       <workItem from="1627638167744" duration="720000" />
       <workItem from="1627815473165" duration="7305000" />
       <workItem from="1627889235632" duration="5680000" />
-      <workItem from="1627912382411" duration="6962000" />
-    </task>
-    <task id="LOCAL-00095" summary="refractor">
-      <created>1626646740075</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1626646740075</updated>
-    </task>
-    <task id="LOCAL-00096" summary="refractor User bloc to fetch users">
-      <created>1626708704356</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1626708704358</updated>
+      <workItem from="1627912382411" duration="9875000" />
+      <workItem from="1627927525890" duration="2503000" />
+      <workItem from="1627937698682" duration="1080000" />
+      <workItem from="1627977605962" duration="1778000" />
+      <workItem from="1628002748798" duration="2608000" />
+      <workItem from="1628017530123" duration="1364000" />
     </task>
     <task id="LOCAL-00097" summary="add user bloc to IoC">
       <created>1626708736890</created>
@@ -547,7 +541,21 @@
       <option name="project" value="LOCAL" />
       <updated>1627915252148</updated>
     </task>
-    <option name="localTasksCounter" value="144" />
+    <task id="LOCAL-00144" summary="fix: copy existing style instead of overriding">
+      <created>1627924318879</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1627924318879</updated>
+    </task>
+    <task id="LOCAL-00145" summary="Add event details screen">
+      <created>1627924356549</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1627924356549</updated>
+    </task>
+    <option name="localTasksCounter" value="146" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -566,8 +574,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="make ui helpers use defaultPadding" />
-    <MESSAGE value="refractor code" />
     <MESSAGE value="fix no error response on exception" />
     <MESSAGE value="add matriculation no" />
     <MESSAGE value="add hydrated bloc for user persistence" />
@@ -591,13 +597,11 @@
     <MESSAGE value="add events state management" />
     <MESSAGE value="update Inversion of Control with events" />
     <MESSAGE value="add events screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="add events screen" />
+    <MESSAGE value="fix: copy existing style instead of overriding" />
+    <MESSAGE value="Add event details screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add event details screen" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="280" y="4" key="#Project_Structure" timestamp="1619291730634">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="280" y="4" key="#Project_Structure/0.0.1600.860@0.0.1600.860" timestamp="1619291730634" />
     <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1627240058074">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -618,30 +622,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="127" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1626933225318" />
-    <state x="658" y="328" width="283" height="287" key="Github.ShareDialog" timestamp="1619292050525">
+    <state width="1431" height="194" key="GridCell.Tab.0.bottom" timestamp="1628018299561">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="658" y="328" width="283" height="287" key="Github.ShareDialog/0.0.1600.860@0.0.1600.860" timestamp="1619292050525" />
-    <state x="589" y="135" key="Github.UntrackedFilesDialog" timestamp="1619292079863">
+    <state width="1431" height="194" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628018299561" />
+    <state width="1431" height="194" key="GridCell.Tab.0.center" timestamp="1628018299561">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="589" y="135" key="Github.UntrackedFilesDialog/0.0.1600.860@0.0.1600.860" timestamp="1619292079863" />
-    <state width="1431" height="194" key="GridCell.Tab.0.bottom" timestamp="1627914039467">
+    <state width="1431" height="194" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628018299561" />
+    <state width="1431" height="194" key="GridCell.Tab.0.left" timestamp="1628018299560">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1431" height="194" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1627914039467" />
-    <state width="1431" height="194" key="GridCell.Tab.0.center" timestamp="1627914039466">
+    <state width="1431" height="194" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628018299559" />
+    <state width="1431" height="194" key="GridCell.Tab.0.right" timestamp="1628018299561">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1431" height="194" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1627914039466" />
-    <state width="1431" height="194" key="GridCell.Tab.0.left" timestamp="1627914039465">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state width="1431" height="194" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1627914039465" />
-    <state width="1431" height="194" key="GridCell.Tab.0.right" timestamp="1627914039466">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state width="1431" height="194" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1627914039466" />
+    <state width="1431" height="194" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628018299561" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -654,22 +650,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1627915265023">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1627924359031">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1627915265023" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1627924359031" />
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626876457269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1600.860@0.0.1600.860" timestamp="1626876457269" />
-    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1627386728970">
+    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1628006911882">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1627386728970" />
-    <state x="182" y="51" width="1235" height="649" key="new project wizard" timestamp="1626933257976">
+    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1628006911882" />
+    <state x="182" y="51" width="1235" height="649" key="new project wizard" timestamp="1627927781240">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="182" y="51" width="1235" height="649" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1626933257976" />
+    <state x="182" y="51" width="1235" height="649" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1627927781240" />
     <state x="456" y="195" key="run.anything.popup" timestamp="1627390114871">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

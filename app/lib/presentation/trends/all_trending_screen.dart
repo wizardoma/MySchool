@@ -40,9 +40,13 @@ class _AllTrendingScreenState extends State<AllTrendingScreen> {
                 onTap: () => Navigator.pushNamed(
                     context, SpacePageScreen.routeName,
                     arguments: {"space": trend.space}),
-                title: Text(
-                  "Trending in ${trend.space.spaceName}",
-                  style: kSubtitleTextStyle,
+                title: Padding(
+                  padding: const EdgeInsets.symmetric(
+                      vertical: defaultSpacing * 0.3),
+                  child: Text(
+                    "Trending in ${trend.space.spaceName}",
+                    style: kSubtitleTextStyle,
+                  ),
                 ),
                 subtitle: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
