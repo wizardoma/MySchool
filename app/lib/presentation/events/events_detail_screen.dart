@@ -144,10 +144,9 @@ class _EventDetailScreenState extends State<EventDetailScreen> {
                   _event.price,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black54
-                  ),
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black54),
                 ),
               ),
             ),

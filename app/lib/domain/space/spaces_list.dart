@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:app/domain/event/events_list.dart';
 import 'package:app/domain/posts/post.dart';
 import 'package:app/domain/question/question.dart';
 import 'package:app/domain/space/space.dart';
@@ -19,6 +20,7 @@ final Space cscSpace = Space(
   about:
       "Computer Science official space for students. Post and ask questions related to computer science",
   noOfFollowers: Random().nextInt(2000),
+  events: eventsList,
   noOfPostsInAWeek: 6,
   posts: List.generate(Random().nextInt(20), (index) => Post.Random()),
   users: List.generate(Random().nextInt(200), (index) => User.Random()),
@@ -29,6 +31,8 @@ final Space eeSpace = Space(
   imageUrl:
       "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZWxlY3Ryb25pY3N8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60",
   spaceName: "Electrical and Electronics Engineering",
+  events: eventsList,
+
   about:
       "Official Space for electrical and electronics engineers. Post and ask questions related to Electrical and Electronic Engineering",
   noOfFollowers: Random().nextInt(2000),
@@ -42,6 +46,8 @@ final Space pharmacySpace = Space(
   imageUrl:
       "https://images.unsplash.com/photo-1584362917165-526a968579e8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGhhcm1hY3l8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
   spaceName: "Pharmacy",
+  events: eventsList,
+
   about:
       "Official Space for pharmacists. Post and ask questions related to Pharmacy",
   noOfFollowers: Random().nextInt(2000),
@@ -55,6 +61,8 @@ final Space medicineSpace = Space(
   imageUrl:
       "https://images.unsplash.com/photo-1585435557343-3b092031a831?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cGhhcm1hY3l8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
   spaceName: "Medical Science",
+  events: eventsList,
+
   about:
       "Official Space for Medical Students. Post and ask questions related to Medicine",
   noOfFollowers: Random().nextInt(2000),

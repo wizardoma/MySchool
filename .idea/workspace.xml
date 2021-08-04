@@ -19,10 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add launcher icons">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add events to space">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/space/space.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/space/space.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/application/user/user_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/user/user_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/space/spaces_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/space/spaces_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/events/events_detail_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/events/events_detail_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/home/home_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/drawer/drawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/drawer/drawer.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,14 +214,7 @@
       <workItem from="1628031461981" duration="736000" />
       <workItem from="1628069514743" duration="701000" />
       <workItem from="1628076954259" duration="991000" />
-      <workItem from="1628090705250" duration="2799000" />
-    </task>
-    <task id="LOCAL-00106" summary="Add space domain layer">
-      <created>1626855200718</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1626855200720</updated>
+      <workItem from="1628090705250" duration="5705000" />
     </task>
     <task id="LOCAL-00107" summary="Add space state management">
       <created>1626855233774</created>
@@ -555,7 +552,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628090056341</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary="add events to space">
+      <created>1628098275755</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1628098275757</updated>
+    </task>
+    <option name="localTasksCounter" value="156" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -574,7 +578,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="use font awesome package for icons instead" />
     <MESSAGE value="add trends business logic" />
     <MESSAGE value="Add trends state management logic" />
     <MESSAGE value="update trends to Inversion of control" />
@@ -599,7 +602,8 @@
     <MESSAGE value="fix: User showing null middlename from server" />
     <MESSAGE value="change app name to Myschool" />
     <MESSAGE value="add launcher icons" />
-    <option name="LAST_COMMIT_MESSAGE" value="add launcher icons" />
+    <MESSAGE value="add events to space" />
+    <option name="LAST_COMMIT_MESSAGE" value="add events to space" />
   </component>
   <component name="WindowStateProjectService">
     <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1627240058074">
@@ -614,10 +618,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="541" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1624251443504" />
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1628026009506">
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1628100546824">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1628026009506" />
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1628100546824" />
     <state x="580" y="127" key="FileChooserDialogImpl" timestamp="1626933225318">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -646,18 +650,18 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" width="1161" height="709" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1628090490052" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628090085288">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628098278565">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628090085288" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628098278565" />
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626876457269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1600.860@0.0.1600.860" timestamp="1626876457269" />
-    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1628020610507">
+    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1628100882966">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1628020610507" />
+    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1628100882966" />
     <state x="182" y="51" width="1235" height="649" key="new project wizard" timestamp="1627927781240">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

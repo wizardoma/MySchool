@@ -19,12 +19,7 @@ class _SpacePageScreenState extends State<SpacePageScreen>
 
   var hasRun = false;
 
-  static List<String> _tabs = [
-    "About",
-    "Posts",
-    "Questions",
-    "Events"
-  ];
+  static List<String> _tabs = ["About", "Posts", "Questions", "Events"];
   var isExpanded = false;
 
   var _currIndex = 1;
@@ -169,7 +164,8 @@ class _SpacePageScreenState extends State<SpacePageScreen>
                                                     fit: BoxFit.cover,
                                                     image: NetworkImage(
                                                         _space.imageUrl)),
-                                                color: Theme.of(context).primaryColor,
+                                                color: Theme.of(context)
+                                                    .primaryColor,
                                                 borderRadius:
                                                     BorderRadius.circular(10),
                                               ),
@@ -339,10 +335,11 @@ class _SpacePageScreenState extends State<SpacePageScreen>
 
   List<Widget> _spaceEvents() {
     return List.generate(
-        _space.events.length,
-            (index) => EventItemWidget(
-          event: _space.events[index],
-        ),);
+      _space.events.length,
+      (index) => EventItemWidget(
+        event: _space.events[index],
+      ),
+    );
   }
 
   List<Widget> _spaceQuestions() {

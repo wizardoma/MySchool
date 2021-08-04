@@ -106,6 +106,11 @@ class HomeDrawer extends StatelessWidget {
                             )
                           ]);
                     }
+                    if (state is FetchUserErrorState){
+                      return Center(
+                        child: Text(state.errorMessage),
+                      );
+                    }
                     if (state is FetchedUserState) {
                       return Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -153,6 +158,7 @@ class HomeDrawer extends StatelessWidget {
                           },
                           leading: Icon(
                             e["icon"],
+                            color: Colors.black87,
                           ),
                           title: Text(
                             e["title"],
