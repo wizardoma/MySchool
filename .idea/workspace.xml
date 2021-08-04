@@ -19,14 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add events to space">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/application/user/user_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/user/user_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/space/spaces_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/space/spaces_list.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/events/events_detail_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/events/events_detail_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/home/home_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/drawer/drawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/drawer/drawer.dart" afterDir="false" />
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="refractor">
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/posts/model/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/posts/model/Post.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,14 +208,7 @@
       <workItem from="1628031461981" duration="736000" />
       <workItem from="1628069514743" duration="701000" />
       <workItem from="1628076954259" duration="991000" />
-      <workItem from="1628090705250" duration="5705000" />
-    </task>
-    <task id="LOCAL-00107" summary="Add space state management">
-      <created>1626855233774</created>
-      <option name="number" value="00107" />
-      <option name="presentableId" value="LOCAL-00107" />
-      <option name="project" value="LOCAL" />
-      <updated>1626855233774</updated>
+      <workItem from="1628090705250" duration="6329000" />
     </task>
     <task id="LOCAL-00108" summary="update space to iOC">
       <created>1626855264079</created>
@@ -559,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628098275757</updated>
     </task>
-    <option name="localTasksCounter" value="156" />
+    <task id="LOCAL-00156" summary="refractor">
+      <created>1628106801929</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1628106801929</updated>
+    </task>
+    <option name="localTasksCounter" value="157" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -596,14 +590,14 @@
     <MESSAGE value="Add dummy profile photo" />
     <MESSAGE value="fix: recursion on universities querying" />
     <MESSAGE value="refractor: Change primary color to red" />
-    <MESSAGE value="refractor" />
     <MESSAGE value="register student on server on signup" />
     <MESSAGE value="fetch User from server on authenticated" />
     <MESSAGE value="fix: User showing null middlename from server" />
     <MESSAGE value="change app name to Myschool" />
     <MESSAGE value="add launcher icons" />
     <MESSAGE value="add events to space" />
-    <option name="LAST_COMMIT_MESSAGE" value="add events to space" />
+    <MESSAGE value="refractor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refractor" />
   </component>
   <component name="WindowStateProjectService">
     <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1627240058074">
@@ -650,10 +644,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" width="1161" height="709" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1628090490052" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628098278565">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628106804407">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628098278565" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628106804406" />
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626876457269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
