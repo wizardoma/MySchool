@@ -19,27 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="change app name to Myschool">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add launcher icons">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/space/space.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/space/space.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +77,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Dart" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -226,14 +209,8 @@
       <workItem from="1628017530123" duration="12323000" />
       <workItem from="1628031461981" duration="736000" />
       <workItem from="1628069514743" duration="701000" />
-      <workItem from="1628076954259" duration="587000" />
-    </task>
-    <task id="LOCAL-00105" summary="refractor login signup containers to use scaffold">
-      <created>1626816286502</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1626816286503</updated>
+      <workItem from="1628076954259" duration="991000" />
+      <workItem from="1628090705250" duration="2799000" />
     </task>
     <task id="LOCAL-00106" summary="Add space domain layer">
       <created>1626855200718</created>
@@ -571,7 +548,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628030249824</updated>
     </task>
-    <option name="localTasksCounter" value="154" />
+    <task id="LOCAL-00154" summary="add launcher icons">
+      <created>1628090056337</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1628090056341</updated>
+    </task>
+    <option name="localTasksCounter" value="155" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -590,7 +574,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add line icons package" />
     <MESSAGE value="use font awesome package for icons instead" />
     <MESSAGE value="add trends business logic" />
     <MESSAGE value="Add trends state management logic" />
@@ -615,7 +598,8 @@
     <MESSAGE value="fetch User from server on authenticated" />
     <MESSAGE value="fix: User showing null middlename from server" />
     <MESSAGE value="change app name to Myschool" />
-    <option name="LAST_COMMIT_MESSAGE" value="change app name to Myschool" />
+    <MESSAGE value="add launcher icons" />
+    <option name="LAST_COMMIT_MESSAGE" value="add launcher icons" />
   </component>
   <component name="WindowStateProjectService">
     <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1627240058074">
@@ -638,38 +622,34 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="127" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1626933225318" />
-    <state width="1557" height="155" key="GridCell.Tab.0.bottom" timestamp="1628031355128">
+    <state width="1557" height="155" key="GridCell.Tab.0.bottom" timestamp="1628090497935">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="155" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628031355128" />
-    <state width="1557" height="155" key="GridCell.Tab.0.center" timestamp="1628031355127">
+    <state width="1557" height="155" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628090497935" />
+    <state width="1557" height="155" key="GridCell.Tab.0.center" timestamp="1628090497934">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="155" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628031355127" />
-    <state width="1557" height="155" key="GridCell.Tab.0.left" timestamp="1628031355127">
+    <state width="1557" height="155" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628090497934" />
+    <state width="1557" height="155" key="GridCell.Tab.0.left" timestamp="1628090497933">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="155" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628031355127" />
-    <state width="1557" height="155" key="GridCell.Tab.0.right" timestamp="1628031355127">
+    <state width="1557" height="155" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628090497933" />
+    <state width="1557" height="155" key="GridCell.Tab.0.right" timestamp="1628090497934">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="155" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628031355127" />
+    <state width="1557" height="155" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628090497934" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="330" y="85" key="Maven.ArtifactSearchDialog/0.0.1600.860@0.0.1600.860" timestamp="1624250579299" />
-    <state x="465" y="135" key="NewModule_or_Project.wizard" timestamp="1619413260096">
+    <state x="280" y="4" width="1161" height="709" key="SettingsEditor" timestamp="1628090490052">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="465" y="135" key="NewModule_or_Project.wizard/0.0.1600.860@0.0.1600.860" timestamp="1619413260096" />
-    <state x="280" y="4" key="SettingsEditor" timestamp="1624273821651">
+    <state x="280" y="4" width="1161" height="709" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1628090490052" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628090085288">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="280" y="4" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1624273821651" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628028142067">
-      <screen x="0" y="0" width="1600" height="860" />
-    </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628028142067" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628090085288" />
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626876457269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

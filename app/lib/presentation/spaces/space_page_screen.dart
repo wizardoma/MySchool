@@ -1,6 +1,7 @@
 import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
 import 'package:app/domain/space/space.dart';
+import 'package:app/presentation/events/event_item_widget.dart';
 import 'package:app/presentation/questions/question_item.dart';
 import 'package:app/presentation/widgets/post_container.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +23,7 @@ class _SpacePageScreenState extends State<SpacePageScreen>
     "About",
     "Posts",
     "Questions",
+    "Events"
   ];
   var isExpanded = false;
 
@@ -41,7 +43,7 @@ class _SpacePageScreenState extends State<SpacePageScreen>
   @override
   void initState() {
     _tabbarController =
-        TabController(length: 3, vsync: this, initialIndex: _currIndex)
+        TabController(length: 4, vsync: this, initialIndex: _currIndex)
           ..addListener(() {
             setState(() {
               _currIndex = _tabbarController.index;
@@ -316,6 +318,7 @@ class _SpacePageScreenState extends State<SpacePageScreen>
                       ),
                     if (_currIndex == 1) ..._spacePosts(),
                     if (_currIndex == 2) ..._spaceQuestions(),
+                    if (_currIndex == 3) ..._spaceEvents(),
                   ],
                 ),
               )
@@ -334,6 +337,14 @@ class _SpacePageScreenState extends State<SpacePageScreen>
             ));
   }
 
+  List<Widget> _spaceEvents() {
+    return List.generate(
+        _space.events.length,
+            (index) => EventItemWidget(
+          event: _space.events[index],
+        ),);
+  }
+
   List<Widget> _spaceQuestions() {
     return List.generate(
         _space.questions.length,
@@ -350,7 +361,7 @@ class _SpacePageScreenState extends State<SpacePageScreen>
         });
       }
     } else if (details.primaryVelocity < 0) {
-      if (_currIndex <= 1) {
+      if (_currIndex <= 2) {
         _tabbarController.index = ++_currIndex;
       }
     }
