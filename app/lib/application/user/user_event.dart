@@ -1,7 +1,3 @@
-abstract class UserEvent {
+abstract class UserEvent {}
 
-}
-
-class FetchUserEvent extends UserEvent {
-
-}
+class FetchUserEvent extends UserEvent {}

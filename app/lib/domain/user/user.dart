@@ -37,13 +37,11 @@ class User {
 
 
   factory User.fromServer(Map<String, dynamic> map) {
-    print("user from map ${map.toString()}");
     return new User(
       id: map['id'] as String,
       name:
-          "${map['fullName']}",
-      department: map['department'] as String,
-
+          "${map['name']['firstName']} ${map['name']['lastName']}",
+      department: map['department']['name'] as String,
       description: map['description'] as String,
       university: map['university']["fullName"] as String,
       email: map['email'] as String,

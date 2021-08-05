@@ -7,18 +7,18 @@ class SignUpUser {
   final String name;
   final String email;
   final String matricNo;
-  final int department;
+  final int departmentId;
   final String level;
-  final int university;
+  final int universityId;
 
   const SignUpUser(
       {this.matricNo,
       @required this.id,
       this.name,
       @required this.email,
-      this.department,
+      this.departmentId,
       this.level,
-      this.university});
+      this.universityId});
 
   factory SignUpUser.fromMap(Map<String, dynamic> map) {
     return new SignUpUser(
@@ -26,9 +26,9 @@ class SignUpUser {
       name: map['name'] as String,
       matricNo: map['matricNo'] as String,
       email: map['email'] as String,
-      department: map['department'] as int,
+      departmentId: map['department'] as int,
       level: map['level'] as String,
-      university: map['university'] as int,
+      universityId: map['university'] as int,
     );
   }
 
@@ -39,9 +39,14 @@ class SignUpUser {
       'matricNo': this.matricNo,
       'name': this.name,
       'email': this.email,
-      'department': this.department,
+      'departmentId': this.departmentId,
       'level': this.level,
-      'university': this.university,
+      'universityId': this.universityId,
     } as Map<String, dynamic>;
+  }
+
+  @override
+  String toString() {
+    return 'SignUpUser{id: $id, name: $name, email: $email, matricNo: $matricNo, department: $departmentId, level: $level, university: $universityId}';
   }
 }

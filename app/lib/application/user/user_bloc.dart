@@ -30,11 +30,7 @@ class UserBloc extends HydratedBloc<UserEvent, UserState> {
       var authenticationState = authenticationBloc.state;
 
       if (authenticationState is AuthenticatedState) {
-        var response =
-            await userService.getUserById(authenticationState.authUser.id);
-        yield response.isError
-            ? FetchUserErrorState(response.errors.message)
-            : FetchedUserState(response.data);
+        yield await fetchUser(authenticationState.authUser);
       } else {
         yield FetchUserErrorState("You are not authenticated");
       }
@@ -42,7 +38,9 @@ class UserBloc extends HydratedBloc<UserEvent, UserState> {
   }
 
   Future<UserState> fetchUser(AuthUser authUser) async {
-    var response = await userService.getUserById(id);
+    print("fetching user");
+    var response = await userService.getUserById(authUser.id);
+    print("fetch user ${response.data}");
     if (response.isError) {
       return FetchUserErrorState(response.errors.message);
     }

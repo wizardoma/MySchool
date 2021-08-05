@@ -21,11 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="use department and university id for user signup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/controller/request/CreateStudentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/controller/request/CreateStudentRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/service/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/service/StudentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/department/service/DepartmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/department/service/DepartmentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/department/service/DepartmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/department/service/DepartmentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/application/user/user_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/user/user_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/application/user/user_event.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/user/user_event.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/auth/authentication_service_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/auth/authentication_service_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/auth/model/signUpUser.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/auth/model/signUpUser.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/user/user.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/user/user.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/user/user_service_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/user/user_service_impl.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +217,7 @@
       <workItem from="1628090705250" duration="6329000" />
       <workItem from="1629673126651" duration="314000" />
       <workItem from="1628151131837" duration="864000" />
-      <workItem from="1628156000082" duration="15032000" />
+      <workItem from="1628156000082" duration="16721000" />
     </task>
     <task id="LOCAL-00114" summary="add departments for each imo state university school">
       <created>1626882087079</created>
@@ -608,10 +609,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="use department and university id for user signup" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1628178854826">
+    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1628182872102">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1628178854826" />
+    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1628182872102" />
     <state x="626" y="356" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1624212009488">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -660,10 +661,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1600.860@0.0.1600.860" timestamp="1626876457269" />
-    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1628100882966">
+    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1628183786334">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1628100882966" />
+    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1628183786334" />
     <state x="182" y="51" width="1235" height="649" key="new project wizard" timestamp="1627927781240">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

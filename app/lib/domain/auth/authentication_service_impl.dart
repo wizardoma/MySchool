@@ -46,10 +46,10 @@ class AuthenticationServiceImpl extends AuthenticationService
     var userData = SignUpUser(
         id: (response.data as AuthUser).id,
         email: signUpRequest.email,
-        department: int.parse(signUpRequest.departmentId),
+        departmentId: int.parse(signUpRequest.departmentId),
         matricNo: signUpRequest.matricNo,
         level: signUpRequest.level,
-        university: int.parse(signUpRequest.universityId),
+        universityId: int.parse(signUpRequest.universityId),
         name: signUpRequest.name);
 
     Response serverResponse;

@@ -12,7 +12,6 @@ class UserServiceImpl extends UserService {
   Future<ResponseEntity> getUserById(String id) async {
     Response response;
     try {
-      print(" user id $id");
       response =
           await dioClient
               .get(
