@@ -19,13 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add department entity domain logic">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="use department and university id for user signup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/controller/UniversityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/controller/UniversityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/department/repository/DepartmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/department/repository/DepartmentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/repository/UniversityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/repository/UniversityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/service/UniversityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/service/UniversityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/service/UniversityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/service/UniversityServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,19 +79,19 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\presentation\widgets" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain\notification" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\following" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\android\app" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\assets\icons" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain\space" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\notification" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\university" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\presentation\widgets" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain\notification" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\following" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\android\app" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -216,35 +211,7 @@
       <workItem from="1628090705250" duration="6329000" />
       <workItem from="1629673126651" duration="314000" />
       <workItem from="1628151131837" duration="864000" />
-      <workItem from="1628156000082" duration="5866000" />
-    </task>
-    <task id="LOCAL-00110" summary="refractor spaces design">
-      <created>1626870848048</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1626870848050</updated>
-    </task>
-    <task id="LOCAL-00111" summary="add medical and pharmacist spaces">
-      <created>1626876889749</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1626876889750</updated>
-    </task>
-    <task id="LOCAL-00112" summary="fix:">
-      <created>1626877286124</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1626877286124</updated>
-    </task>
-    <task id="LOCAL-00113" summary="Add shimmer for loading posts">
-      <created>1626879095674</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1626879095674</updated>
+      <workItem from="1628156000082" duration="14515000" />
     </task>
     <task id="LOCAL-00114" summary="add departments for each imo state university school">
       <created>1626882087079</created>
@@ -561,7 +528,35 @@
       <option name="project" value="LOCAL" />
       <updated>1628163379879</updated>
     </task>
-    <option name="localTasksCounter" value="159" />
+    <task id="LOCAL-00159" summary="add base api">
+      <created>1628180997333</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1628180997334</updated>
+    </task>
+    <task id="LOCAL-00160" summary="add university and department entity">
+      <created>1628181025579</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1628181025580</updated>
+    </task>
+    <task id="LOCAL-00161" summary="fill signup form with server universities">
+      <created>1628181080428</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1628181080428</updated>
+    </task>
+    <task id="LOCAL-00162" summary="use department and university id for user signup">
+      <created>1628181800544</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1628181800545</updated>
+    </task>
+    <option name="localTasksCounter" value="163" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -580,10 +575,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update trends to Inversion of control" />
-    <MESSAGE value="add trends screen" />
-    <MESSAGE value="fix: userbloc not emiting UserFetch state" />
-    <MESSAGE value="Add chat messages screen" />
     <MESSAGE value="Allow entering space on trend page" />
     <MESSAGE value="use custom themedata for app theme" />
     <MESSAGE value="replace notifications up and add events in replacement" />
@@ -605,13 +596,17 @@
     <MESSAGE value="refractor" />
     <MESSAGE value="create section domain logic" />
     <MESSAGE value="add department entity domain logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="add department entity domain logic" />
+    <MESSAGE value="add base api" />
+    <MESSAGE value="add university and department entity" />
+    <MESSAGE value="fill signup form with server universities" />
+    <MESSAGE value="use department and university id for user signup" />
+    <option name="LAST_COMMIT_MESSAGE" value="use department and university id for user signup" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1628140072593">
+    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1628178854826">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1628140072593" />
+    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1628178854826" />
     <state x="626" y="356" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1624212009488">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -620,10 +615,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="541" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1624251443504" />
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1628170129048">
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1628181187898">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1628170129048" />
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1628181187898" />
     <state x="580" y="127" key="FileChooserDialogImpl" timestamp="1626933225318">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -652,10 +647,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" width="1161" height="709" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1628152079372" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628163397291">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628181802942">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628163397291" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628181802942" />
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626876457269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -672,10 +667,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1628024823986" />
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1628139419885">
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1628178433054">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1628139419885" />
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1628178433054" />
     <state x="447" y="41" key="spring file set editor" timestamp="1628152077471">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
