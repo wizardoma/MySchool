@@ -1,13 +1,18 @@
 package com.wizardom.backend.domain.students.model;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 import lombok.experimental.Accessors;
 
 import javax.persistence.Embeddable;
 
 @Accessors(chain = true)
 @Embeddable
-@Data
+@Getter
+@Setter
+@ToString
 public class Name {
     private String firstName;
     private String lastName;

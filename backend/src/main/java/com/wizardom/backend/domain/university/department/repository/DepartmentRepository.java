@@ -8,4 +8,5 @@ import java.util.Optional;
 
 public interface DepartmentRepository extends JpaRepository<Department, Long> {
     Optional<Department> findByNameAndUniversity(String name, University university);
+
 }

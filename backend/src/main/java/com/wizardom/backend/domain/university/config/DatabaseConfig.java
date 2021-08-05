@@ -7,18 +7,19 @@ import com.wizardom.backend.domain.university.repository.UniversityRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import static com.wizardom.backend.domain.university.department.config.DepartmentConfig.*;
 
+@Transactional
 @RequiredArgsConstructor
 @Configuration
 public class DatabaseConfig implements CommandLineRunner {
 
     private final Map<String, String> universities = new HashMap<>();
-
     private final UniversityRepository universityRepository;
     private final DepartmentRepository departmentRepository;
 
@@ -34,12 +35,16 @@ public class DatabaseConfig implements CommandLineRunner {
         }
 
         University futo = universityRepository.findByShortNameIgnoreCase("futo").get();
-        University imsu = universityRepository.findByShortNameIgnoreCase("futo").get();
-        University palm = universityRepository.findByShortNameIgnoreCase("futo").get();
+        University imsu = universityRepository.findByShortNameIgnoreCase("imsu").get();
+        University palm = universityRepository.findByShortNameIgnoreCase("palm").get();
+        System.out.println("Saving User");
+
         futoDepartments.stream().map(department -> new Department().setName(department).setUniversity(futo)).forEach(department -> {
             if (departmentRepository.findByNameAndUniversity(department.getName(), futo).isEmpty()) {
                 System.out.println("Adding department " + department.toString());
                 departmentRepository.save(department);
+            } else {
+                System.out.println("Not Adding department");
             }
         });
 

@@ -3,6 +3,7 @@ package com.wizardom.backend.domain.university.department.model;
 import com.wizardom.backend.domain.students.model.Student;
 import com.wizardom.backend.domain.university.model.University;
 import lombok.Data;
+import lombok.ToString;
 import lombok.experimental.Accessors;
 
 import javax.persistence.*;
@@ -18,9 +19,11 @@ public class Department {
 
     private String name;
 
+    @ToString.Exclude
     @ManyToOne
     private University university;
 
+    @ToString.Exclude
     @OneToMany
     private List<Student> students;
 }
