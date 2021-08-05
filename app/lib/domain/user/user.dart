@@ -35,16 +35,6 @@ class User {
     this.level,
   });
 
-  factory User.fromSignUpUser(SignUpUser user) {
-    return User(
-      id: user.id,
-      email: user.email,
-      department: user.department,
-      name: user.name,
-      university: user.university,
-      level: user.level,
-    );
-  }
 
   factory User.fromServer(Map<String, dynamic> map) {
     print("user from map ${map.toString()}");

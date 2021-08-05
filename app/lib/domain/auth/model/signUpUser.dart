@@ -7,9 +7,9 @@ class SignUpUser {
   final String name;
   final String email;
   final String matricNo;
-  final String department;
+  final int department;
   final String level;
-  final String university;
+  final int university;
 
   const SignUpUser(
       {this.matricNo,
@@ -26,9 +26,9 @@ class SignUpUser {
       name: map['name'] as String,
       matricNo: map['matricNo'] as String,
       email: map['email'] as String,
-      department: map['department'] as String,
+      department: map['department'] as int,
       level: map['level'] as String,
-      university: map['university'] as String,
+      university: map['university'] as int,
     );
   }
 

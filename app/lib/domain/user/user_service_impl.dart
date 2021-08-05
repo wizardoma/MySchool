@@ -1,3 +1,4 @@
+import 'package:app/commons/api.dart';
 import 'package:app/domain/auth/model/signUpUser.dart';
 import 'package:app/domain/response.dart';
 import 'package:app/domain/user/user.dart';
@@ -13,9 +14,9 @@ class UserServiceImpl extends UserService {
     try {
       print(" user id $id");
       response =
-          await Dio(BaseOptions(connectTimeout: 15000, receiveTimeout: 15000))
+          await dioClient
               .get(
-        "https://myschool-project.herokuapp.com/students/$id",
+        "/students/$id",
       );
 
       var user = User.fromServer(response.data["data"]);

@@ -6,9 +6,9 @@ class SignUpRequest {
   final String name;
   final String password;
   final String email;
-  final String department;
+  final String departmentId;
   final String level;
-  final String university;
+  final String universityId;
 
   final String matricNo;
 
@@ -17,18 +17,18 @@ class SignUpRequest {
       @required this.password,
       @required this.email,
       @required this.matricNo,
-      @required this.department,
+      @required this.departmentId,
       @required this.level,
-      @required this.university});
+      @required this.universityId});
 
   factory SignUpRequest.fromMap(Map<String, dynamic> map) {
     return new SignUpRequest(
       name: map['name'] as String,
       password: map['password'] as String,
       email: map['email'] as String,
-      department: map['department'] as String,
+      departmentId: map['department'] as String,
       level: map['level'] as String,
-      university: map['university'] as String,
+      universityId: map['university'] as String,
       matricNo: map['matricNo'] as String,
     );
   }
@@ -39,14 +39,14 @@ class SignUpRequest {
       'name': this.name,
       'password': this.password,
       'email': this.email,
-      'department': this.department,
+      'department': this.departmentId,
       'level': this.level,
-      'university': this.university,
+      'university': this.universityId,
     } as Map<String, dynamic>;
   }
 
   @override
   String toString() {
-    return 'SignUpRequest{name: $name, password: $password, email: $email, department: $department, level: $level, university: $university, matricNo: $matricNo}';
+    return 'SignUpRequest{name: $name, password: $password, email: $email, department: $departmentId, level: $level, university: $universityId, matricNo: $matricNo}';
   }
 }

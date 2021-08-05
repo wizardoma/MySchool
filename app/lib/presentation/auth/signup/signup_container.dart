@@ -300,8 +300,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
       matricNo: _matricNoController.text.trim(),
       email: _emailController.text.trim(),
       password: _passwordController.text,
-      department: _departmentController.trim(),
-      university: _universityController,
+      departmentId: _departmentController.trim(),
+      universityId: _universityController,
       name: _nameController.text.trim(),
       level: _levelController,
     );

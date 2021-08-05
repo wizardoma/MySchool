@@ -1,5 +1,6 @@
 import 'package:app/application/auth/login_request.dart';
 import 'package:app/application/auth/signup_request.dart';
+import 'package:app/commons/api.dart';
 import 'package:app/domain/auth/authentication_client.dart';
 import 'package:app/domain/auth/authentication_service.dart';
 import 'package:app/domain/auth/model/authUser.dart';
@@ -43,24 +44,20 @@ class AuthenticationServiceImpl extends AuthenticationService
     var response = await authenticationClient.signUp(signUpRequest);
     if (response.isError) return response;
     var userData = SignUpUser(
-            id: (response.data as AuthUser).id,
-            email: signUpRequest.email,
-            department: signUpRequest.department,
-            matricNo: signUpRequest.matricNo,
-            level: signUpRequest.level,
-            university: signUpRequest.university,
-            name: signUpRequest.name)
-        ;
+        id: (response.data as AuthUser).id,
+        email: signUpRequest.email,
+        department: int.parse(signUpRequest.departmentId),
+        matricNo: signUpRequest.matricNo,
+        level: signUpRequest.level,
+        university: int.parse(signUpRequest.universityId),
+        name: signUpRequest.name);
 
     Response serverResponse;
     try {
       print(" userdata $userData");
-      serverResponse =
-          await Dio(BaseOptions(connectTimeout: 15000, receiveTimeout: 15000))
-              .post("https://myschool-project.herokuapp.com/api/v1/students",
-                  data: FormData.fromMap(userData.toMap()));
-          return ResponseEntity.Data(userData);
-
+      serverResponse = await dioClient.post("/students",
+          data: FormData.fromMap(userData.toMap()));
+      return ResponseEntity.Data(userData);
     } on DioError catch (e) {
       authenticationClient.delete();
       print("DioError: ${e.error}");
