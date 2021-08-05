@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://ec2-34-195-143-54.compute-1.amazonaws.com:5432/d18tf4j12rgpnu
+    username: hauivxnmskbvxb
+    initialization-mode: always
+    password: cb34a945a08acf9bbfebfeb9ed109d921988ea9c0cbe84f943783cd8d12e3a8a
+  jpa:
+    hibernate:
+      ddl-auto: update

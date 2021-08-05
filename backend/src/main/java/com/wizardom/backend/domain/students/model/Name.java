@@ -10,11 +10,10 @@ import javax.persistence.Embeddable;
 @Data
 public class Name {
     private String firstName;
-    private String middleName;
     private String lastName;
 
     public String fullName(){
-        return firstName + " "+ middleName + " " + lastName;
+        return firstName  + " " + lastName;
     }
 
 

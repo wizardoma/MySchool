@@ -2,6 +2,7 @@ package com.wizardom.backend.domain.students.service;
 
 import com.wizardom.backend.application.students.controller.request.CreateStudentRequest;
 import com.wizardom.backend.domain.students.exceptions.StudentExistsException;
+import com.wizardom.backend.domain.students.exceptions.StudentNotFoundException;
 import com.wizardom.backend.domain.students.model.Name;
 import com.wizardom.backend.domain.students.model.Student;
 import com.wizardom.backend.domain.students.repository.StudentRepository;
@@ -9,12 +10,15 @@ import com.wizardom.backend.domain.university.service.UniversityService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+/**
+ * @author Ibekason Alexander Onyebuchi
+ */
+
 @RequiredArgsConstructor
 @Service
 public class StudentServiceImpl extends StudentService {
     private final UniversityService universityService;
     private final StudentRepository studentRepository;
-
 
     @Override
     public Student saveStudent(CreateStudentRequest request) {
@@ -26,8 +30,10 @@ public class StudentServiceImpl extends StudentService {
                 .setLevel(request.getLevel())
                 .setEmail(request.getEmail())
                 .setId(request.getId())
+                .setMatricNo(request.getMatricNo())
                 .setDepartment(request.getDepartment())
-                .setName(extractName(request.getName())).setDepartment(request.getDepartment());
+                .setName(extractName(request.getName()))
+                .setDepartment(request.getDepartment());
 
         return studentRepository.save(student);
     }
@@ -44,7 +50,7 @@ public class StudentServiceImpl extends StudentService {
 
     @Override
     public Student getStudentById(String id) {
-        return studentRepository.findById(id).get();
+        return studentRepository.findById(id).orElseThrow(() -> new StudentNotFoundException("User not found"));
     }
 
     private Name extractName(String name) {

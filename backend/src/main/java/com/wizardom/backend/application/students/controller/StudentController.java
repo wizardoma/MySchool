@@ -9,22 +9,25 @@ import com.wizardom.backend.domain.students.model.Student;
 import com.wizardom.backend.domain.students.service.StudentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("api/v1/students")
+@RequestMapping("students")
 public class StudentController {
     final StudentService studentService;
 
     @PostMapping("")
     public ResponseEntity<?> saveUser(@ModelAttribute CreateStudentRequest userRequest) {
+        System.out.println(userRequest.toString());
         Student student = studentService.saveStudent(userRequest);
         return created(StudentMapper.toDto(student));
     }
 
+    @GetMapping("{id}")
+    public ResponseEntity<?> getUser(@PathVariable("id") String id) {
+        Student student = studentService.getStudentById(id);
+        return ok(student);
+    }
 
 }

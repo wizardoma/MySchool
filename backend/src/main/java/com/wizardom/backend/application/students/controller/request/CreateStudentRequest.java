@@ -8,6 +8,7 @@ import lombok.experimental.Accessors;
 public class CreateStudentRequest {
     private String id;
     private String name;
+    private String matricNo;
     private String department;
     private String university;
     private String email;

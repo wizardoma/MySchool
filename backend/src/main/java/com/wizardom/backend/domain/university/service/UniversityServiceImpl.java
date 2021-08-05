@@ -8,6 +8,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * @author  Ibekason Alexander Onyebuchi
+ */
+
 @RequiredArgsConstructor
 @Service
 public class UniversityServiceImpl extends UniversityService{

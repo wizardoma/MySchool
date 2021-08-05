@@ -1,6 +1,7 @@
 package com.wizardom.backend.domain.students.model;
 
 import com.wizardom.backend.domain.posts.model.Post;
+import com.wizardom.backend.domain.section.model.Section;
 import com.wizardom.backend.domain.space.model.Space;
 import com.wizardom.backend.domain.university.model.University;
 import lombok.Data;
@@ -19,6 +20,12 @@ public class Student {
 
     @Embedded()
     private Name name;
+
+
+    private  String matricNo;
+
+    @ManyToOne
+    private Section section;
 
     @ManyToOne
     private University university;

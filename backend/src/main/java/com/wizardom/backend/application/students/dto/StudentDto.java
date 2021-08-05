@@ -8,6 +8,7 @@ import lombok.experimental.Accessors;
 public class StudentDto {
     private String id;
     private String name;
+    private  String matricNo;
     private String university;
     private String department;
     private String level;

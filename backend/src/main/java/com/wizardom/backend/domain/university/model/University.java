@@ -18,7 +18,8 @@ public class University {
     private String shortName;
     private String fullName;
 
-    @OneToMany(mappedBy = "university")
+    @JsonIgnore
+    @OneToMany(mappedBy = "university", fetch = FetchType.LAZY)
     private List<Student> students;
 
 }
