@@ -15,7 +15,7 @@ class UserServiceImpl extends UserService {
       response =
           await Dio(BaseOptions(connectTimeout: 15000, receiveTimeout: 15000))
               .get(
-        "https://myschool-project.herokuapp.com/api/v1/students/$id",
+        "https://myschool-project.herokuapp.com/students/$id",
       );
 
       var user = User.fromServer(response.data["data"]);
