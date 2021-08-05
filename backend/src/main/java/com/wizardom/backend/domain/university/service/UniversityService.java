@@ -1,9 +1,8 @@
 package com.wizardom.backend.domain.university.service;
 
 import com.wizardom.backend.domain.BaseService;
-import com.wizardom.backend.domain.department.model.Department;
+import com.wizardom.backend.domain.university.department.model.Department;
 import com.wizardom.backend.domain.university.model.University;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 

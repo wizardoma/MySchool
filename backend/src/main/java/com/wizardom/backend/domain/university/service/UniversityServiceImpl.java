@@ -1,6 +1,6 @@
 package com.wizardom.backend.domain.university.service;
 
-import com.wizardom.backend.domain.department.model.Department;
+import com.wizardom.backend.domain.university.department.model.Department;
 import com.wizardom.backend.domain.exception.ResourceNotFoundException;
 import com.wizardom.backend.domain.university.exception.UniversityNotFoundException;
 import com.wizardom.backend.domain.university.model.University;

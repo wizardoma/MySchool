@@ -1,6 +1,6 @@
-package com.wizardom.backend.domain.department.service;
+package com.wizardom.backend.domain.university.department.service;
 
-import com.wizardom.backend.domain.department.model.Department;
+import com.wizardom.backend.domain.university.department.model.Department;
 import com.wizardom.backend.domain.students.model.Student;
 
 import java.util.List;

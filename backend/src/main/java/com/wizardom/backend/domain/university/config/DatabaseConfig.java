@@ -1,24 +1,29 @@
 package com.wizardom.backend.domain.university.config;
 
+import com.wizardom.backend.domain.university.department.model.Department;
+import com.wizardom.backend.domain.university.department.repository.DepartmentRepository;
 import com.wizardom.backend.domain.university.model.University;
 import com.wizardom.backend.domain.university.repository.UniversityRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.wizardom.backend.domain.university.department.config.DepartmentConfig.*;
+
+@RequiredArgsConstructor
 @Configuration
 public class DatabaseConfig implements CommandLineRunner {
 
     private final Map<String, String> universities = new HashMap<>();
 
-    @Autowired
-    private UniversityRepository universityRepository;
+    private final UniversityRepository universityRepository;
+    private final DepartmentRepository departmentRepository;
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         universities.put("futo", "Federal University of Technology Owerri");
         universities.put("imsu", "Imo State University");
         universities.put("palm", "Eastern Palm University");
@@ -27,6 +32,29 @@ public class DatabaseConfig implements CommandLineRunner {
                 universityRepository.save(new University().setFullName(entry.getValue()).setShortName(entry.getKey().toLowerCase()));
             }
         }
-    }
 
+        University futo = universityRepository.findByShortNameIgnoreCase("futo").get();
+        University imsu = universityRepository.findByShortNameIgnoreCase("futo").get();
+        University palm = universityRepository.findByShortNameIgnoreCase("futo").get();
+        futoDepartments.stream().map(department -> new Department().setName(department).setUniversity(futo)).forEach(department -> {
+            if (departmentRepository.findByNameAndUniversity(department.getName(), futo).isEmpty()) {
+                System.out.println("Adding department " + department.toString());
+                departmentRepository.save(department);
+            }
+        });
+
+        imsuDepartments.stream().map(department -> new Department().setName(department).setUniversity(imsu)).forEach(department -> {
+            if (departmentRepository.findByNameAndUniversity(department.getName(), imsu).isEmpty()) {
+                System.out.println("Adding department " + department.toString());
+                departmentRepository.save(department);
+            }
+        });
+
+        palmUniversities.stream().map(department -> new Department().setName(department).setUniversity(palm)).forEach(department -> {
+            if (departmentRepository.findByNameAndUniversity(department.getName(), palm).isEmpty()) {
+                System.out.println("Adding department " + department.toString());
+                departmentRepository.save(department);
+            }
+        });
+    }
 }

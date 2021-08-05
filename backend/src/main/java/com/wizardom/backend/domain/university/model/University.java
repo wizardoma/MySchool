@@ -1,7 +1,7 @@
 package com.wizardom.backend.domain.university.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.wizardom.backend.domain.department.model.Department;
+import com.wizardom.backend.domain.university.department.model.Department;
 import com.wizardom.backend.domain.students.model.Student;
 import lombok.Data;
 import lombok.experimental.Accessors;
