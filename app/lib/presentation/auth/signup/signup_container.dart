@@ -1,12 +1,16 @@
 import 'package:app/application/auth/auth_bloc.dart';
 import 'package:app/application/auth/auth_event.dart';
 import 'package:app/application/auth/signup_request.dart';
+import 'package:app/application/university/department.dart';
+import 'package:app/application/university/university.dart';
+import 'package:app/commons/api.dart';
 import 'package:app/commons/ui_helpers.dart';
 import 'package:app/domain/department/futo_departments.dart';
 import 'package:app/domain/department/imsu_departments.dart';
 import 'package:app/domain/department/palm_departments.dart';
 import 'package:app/domain/user/user.dart';
 import 'package:app/presentation/widgets/text_input_field.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -23,6 +27,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
   var _selectedLevel = "Select your level";
   var _selectedDepartment = "Select your department";
 
+  List<University> universities;
+
   TextEditingController _nameController;
   var _departmentController = "";
   TextEditingController _emailController;
@@ -36,6 +42,51 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   @override
   void initState() {
+    dioClient.get("/universities").then((response) {
+      List<University> unis = [];
+      response.data["data"].forEach(
+        (uni) {
+          unis.add(
+            University.fromServer(uni),
+          );
+        },
+      );
+      setState(() {
+        universities = unis;
+      });
+      return universities;
+    }).catchError((response) {
+      print(
+        "error fetching universities",
+      );
+    }).then((unis) async {
+      List<University> universitiesWithDepartment = [];
+      unis.forEach((element) async {
+        List<Department> departments = [];
+        var response = await dioClient
+            .get("/universities/departments/${element.shortName}");
+        response.data["data"].forEach(
+          (dep) {
+            departments.add(
+              Department.fromServer(dep),
+            );
+          },
+        );
+        universitiesWithDepartment.add(University(
+          id: element.id,
+          fullName: element.fullName,
+          shortName: element.shortName,
+          department: departments,
+        ));
+      });
+
+      while (universitiesWithDepartment.length < unis.length) {
+        await Future.delayed(Duration(milliseconds: 100));
+      }
+      setState(() {
+        universities = universitiesWithDepartment;
+      });
+    });
     _matricNoController = TextEditingController();
     _nameController = TextEditingController();
     _emailController = TextEditingController();
@@ -99,19 +150,29 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 setState(() {
                   _universityController = s.toString();
 
-                  _selectedUniversity = userSchools["$s"];
+                  _selectedUniversity = universities
+                      .firstWhere((element) => element.id == s)
+                      .fullName;
 
                   _selectedDepartment = "Select your department";
                 });
               },
-              items: userSchools.keys
-                  .map(
-                    (e) => DropdownMenuItem(
-                      value: e,
-                      child: Text(userSchools["$e"]),
-                    ),
-                  )
-                  .toList(),
+              items: universities == null
+                  ? [
+                      DropdownMenuItem(
+                        child: Text(
+                          "Loading Universities",
+                        ),
+                      )
+                    ]
+                  : universities
+                      .map(
+                        (e) => DropdownMenuItem(
+                          value: e.id,
+                          child: Text(e.fullName),
+                        ),
+                      )
+                      .toList(),
             ),
           ),
           kVerticalSpaceRegular,
@@ -157,18 +218,42 @@ class _SignUpScreenState extends State<SignUpScreen> {
               onChanged: (s) {
                 unfocusNodes();
                 setState(() {
-                  _departmentController = s.toString();
-                  _selectedDepartment = s.toString();
+                  _departmentController = s["id"].toString();
+                  _selectedDepartment = s["name"];
                 });
               },
-              items: _getDepartmentList()
-                  .map(
-                    (e) => DropdownMenuItem(
-                      value: e,
-                      child: Text(e),
-                    ),
-                  )
-                  .toList(),
+              items: universities == null
+                  ? [
+                      DropdownMenuItem(
+                        child: Text(
+                          "Loading Departments",
+                        ),
+                      ),
+                    ]
+                  : _universityController.isEmpty
+                      ? [
+                          DropdownMenuItem(
+                            child: Text(
+                              "Select a University",
+                            ),
+                          )
+                        ]
+                      : universities
+                          .firstWhere(
+                            (element) =>
+                                element.id ==
+                                int.parse(
+                                  _universityController,
+                                ),
+                          )
+                          .department
+                          .map(
+                            (e) => DropdownMenuItem(
+                              value: {"id" : e.id, "name": e.name},
+                              child: Text(e.name),
+                            ),
+                          )
+                          .toList(),
             ),
           ),
           kVerticalSpaceRegular,
