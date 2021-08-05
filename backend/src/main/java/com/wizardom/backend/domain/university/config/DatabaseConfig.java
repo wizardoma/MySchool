@@ -12,7 +12,7 @@ import java.util.Map;
 @Configuration
 public class DatabaseConfig implements CommandLineRunner {
 
-    private Map<String, String> universities = new HashMap<>();
+    private final Map<String, String> universities = new HashMap<>();
 
     @Autowired
     private UniversityRepository universityRepository;
@@ -27,6 +27,6 @@ public class DatabaseConfig implements CommandLineRunner {
                 universityRepository.save(new University().setFullName(entry.getValue()).setShortName(entry.getKey().toLowerCase()));
             }
         }
-
     }
+
 }

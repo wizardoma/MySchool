@@ -19,7 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="create section domain logic" />
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="create section domain logic">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/department/imsu_departments.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/department/imsu_departments.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/config/DatabaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/config/DatabaseConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/controller/UniversityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/controller/UniversityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/model/University.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/model/University.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/service/UniversityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/service/UniversityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/service/UniversityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/service/UniversityServiceImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +50,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/backend" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="ProjectId" id="1rd2asS3JvBByg79NAVInNTU5oD" />
@@ -209,7 +217,7 @@
       <workItem from="1628090705250" duration="6329000" />
       <workItem from="1629673126651" duration="314000" />
       <workItem from="1628151131837" duration="864000" />
-      <workItem from="1628156000082" duration="1646000" />
+      <workItem from="1628156000082" duration="3533000" />
     </task>
     <task id="LOCAL-00109" summary="update new space impl to dependencies">
       <created>1626855327187</created>

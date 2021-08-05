@@ -7,6 +7,7 @@ import com.wizardom.backend.domain.university.service.UniversityService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,4 +24,15 @@ public class UniversityController {
         List<University> universities = universityService.getUniversities();
         return ok(universities);
     }
+
+    @GetMapping("departments/{id}")
+    public ResponseEntity<?> getDepartmentsOfUniversity(@PathVariable("id") long universityId) {
+        return ok(universityService.getDepartmentsOfUniversity(universityId));
+    }
+
+    @GetMapping("{id}")
+    public ResponseEntity<?> getUniversityById(@PathVariable("id") long universityId) {
+        return ok(universityService.getUniversityById(universityId));
+    }
+
 }

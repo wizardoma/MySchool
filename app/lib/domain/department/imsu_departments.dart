@@ -1,6 +1,6 @@
 List<String> imsuDepartments = [
   "Accountancy",
-  "Accountancy/Accounting",
+  "Accountancy / Accounting",
   "Agricultural Engineering",
   "Agricultural Science and Education",
   "Agriculture",
