@@ -20,7 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="refractor">
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/space/model/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/space/model/Space.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/model/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +73,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -210,6 +211,8 @@
       <workItem from="1628076954259" duration="991000" />
       <workItem from="1628090705250" duration="6329000" />
       <workItem from="1629673126651" duration="314000" />
+      <workItem from="1628151131837" duration="864000" />
+      <workItem from="1628156000082" duration="1190000" />
     </task>
     <task id="LOCAL-00108" summary="update space to iOC">
       <created>1626855264079</created>
@@ -613,10 +616,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="541" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1624251443504" />
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1628140961675">
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1628143554468">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1628140961675" />
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1628143554468" />
     <state x="580" y="127" key="FileChooserDialogImpl" timestamp="1626933225318">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -641,14 +644,14 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="330" y="85" key="Maven.ArtifactSearchDialog/0.0.1600.860@0.0.1600.860" timestamp="1624250579299" />
-    <state x="280" y="4" width="1161" height="709" key="SettingsEditor" timestamp="1628090490052">
+    <state x="280" y="4" width="1161" height="709" key="SettingsEditor" timestamp="1628152079372">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="280" y="4" width="1161" height="709" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1628090490052" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628139860284">
+    <state x="280" y="4" width="1161" height="709" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1628152079372" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628142800612">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628139860284" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628142800612" />
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626876457269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -669,5 +672,9 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1628139419885" />
+    <state x="447" y="41" key="spring file set editor" timestamp="1628152077471">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="447" y="41" key="spring file set editor/0.0.1600.860@0.0.1600.860" timestamp="1628152077471" />
   </component>
 </project>
