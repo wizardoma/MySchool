@@ -19,12 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="fix: incorrect user mapping from server">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add input validators for signup and login forms">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/flutter_native_splash.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/flutter_native_splash.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/commons/utils/input_validator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/commons/utils/input_validator.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/user/user.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/user/user.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/presentation/auth/login/login_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/auth/login/login_container.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/auth/signup/signup_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/auth/signup/signup_container.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/text_input_field.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/text_input_field.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/dto/StudentDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/dto/StudentDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/mapper/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/mapper/StudentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/config/DatabaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/config/DatabaseConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +37,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="DEFNW18C21001964" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Huawei_Android_10_API_29_" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -216,14 +219,7 @@
       <workItem from="1629673126651" duration="314000" />
       <workItem from="1628151131837" duration="864000" />
       <workItem from="1628156000082" duration="17052000" />
-      <workItem from="1628198985827" duration="2798000" />
-    </task>
-    <task id="LOCAL-00115" summary="update departments to signup screens">
-      <created>1626883571540</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1626883571542</updated>
+      <workItem from="1628198985827" duration="4892000" />
     </task>
     <task id="LOCAL-00116" summary="add native splash screen">
       <created>1626933161431</created>
@@ -561,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628184525751</updated>
     </task>
-    <option name="localTasksCounter" value="164" />
+    <task id="LOCAL-00164" summary="add input validators for signup and login forms">
+      <created>1628208657080</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1628208657084</updated>
+    </task>
+    <option name="localTasksCounter" value="165" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -580,7 +583,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="use custom themedata for app theme" />
     <MESSAGE value="replace notifications up and add events in replacement" />
     <MESSAGE value="add events business domain" />
     <MESSAGE value="add events state management" />
@@ -605,13 +607,14 @@
     <MESSAGE value="fill signup form with server universities" />
     <MESSAGE value="use department and university id for user signup" />
     <MESSAGE value="fix: incorrect user mapping from server" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: incorrect user mapping from server" />
+    <MESSAGE value="add input validators for signup and login forms" />
+    <option name="LAST_COMMIT_MESSAGE" value="add input validators for signup and login forms" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1628182872102">
+    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1628210432366">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1628182872102" />
+    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1628210432366" />
     <state x="626" y="356" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1624212009488">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -652,10 +655,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" width="1161" height="709" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1628152079372" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628184527546">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628208660702">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628184527546" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628208660702" />
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626876457269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

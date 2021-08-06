@@ -19,6 +19,7 @@ final userSchools = <String, String>{
 class User {
   final String id;
   final String name;
+  final String imageUrl;
   final String department;
   final String description;
   final String university;
@@ -27,6 +28,7 @@ class User {
 
   User({
     this.id,
+    this.imageUrl,
     this.name,
     this.department,
     this.description,
@@ -35,12 +37,11 @@ class User {
     this.level,
   });
 
-
   factory User.fromServer(Map<String, dynamic> map) {
     return new User(
       id: map['id'] as String,
-      name:
-          "${map['name']['firstName']} ${map['name']['lastName']}",
+      imageUrl: map['imageUrl'],
+      name: "${map['name']['firstName']} ${map['name']['lastName']}",
       department: map['department']['name'] as String,
       description: map['description'] as String,
       university: map['university']["fullName"] as String,
@@ -89,6 +90,6 @@ class User {
 
   @override
   String toString() {
-    return 'User{id: $id, name: $name, department: $department, university: $university, email: $email, level: $level}';
+    return 'User{id: $id, name: $name, imageUrl: $imageUrl, department: $department, description: $description, university: $university, email: $email, level: $level}';
   }
 }

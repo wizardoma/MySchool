@@ -5,12 +5,15 @@ mixin InputValidator {
       return null;
     }
     return "Please check your email";
-
   }
 
   String validatePassword(String password){
-    if (password.isEmpty || password.length<6){
+    if (password.isEmpty){
       return "Password cannot be empty";
+    }
+
+    if (password.length < 6) {
+      return "password must not be less than 6";
     }
     return null;
   }

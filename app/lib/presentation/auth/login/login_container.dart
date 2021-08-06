@@ -46,12 +46,14 @@ class _LoginScreenState extends State<LoginScreen> with InputValidator {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               TextInputField(
+                inputValidator: validateEmail,
                 textEditingController: _emailController,
                 title: "Email",
                 placeholder: "Your email",
               ),
               kVerticalSpaceSmall,
               TextInputField(
+                inputValidator: validatePassword,
                 textEditingController: _passwordController,
                 title: "Password",
                 placeholder: "Your password",
