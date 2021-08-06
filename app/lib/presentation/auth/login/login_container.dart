@@ -2,6 +2,7 @@ import 'package:app/application/auth/auth_bloc.dart';
 import 'package:app/application/auth/auth_event.dart';
 import 'package:app/application/auth/login_request.dart';
 import 'package:app/commons/ui_helpers.dart';
+import 'package:app/commons/utils/input_validator.dart';
 import '../../widgets/form_bottom_sheet.dart';
 import 'package:app/presentation/widgets/text_input_field.dart';
 import 'package:flutter/material.dart';
@@ -12,15 +13,18 @@ class LoginScreen extends StatefulWidget {
   _LoginScreenState createState() => _LoginScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _LoginScreenState extends State<LoginScreen> with InputValidator {
   TextEditingController _emailController;
   TextEditingController _passwordController;
+  var _formKey = GlobalKey<FormState>();
 
   void _login() {
-    var loginRequest =
-        LoginRequest(_emailController.text, _passwordController.text);
-    var authenticationBloc = context.read<AuthenticationBloc>();
-    authenticationBloc.add(LoginEvent(loginRequest));
+    if (_formKey.currentState.validate()) {
+      var loginRequest =
+          LoginRequest(_emailController.text, _passwordController.text);
+      var authenticationBloc = context.read<AuthenticationBloc>();
+      authenticationBloc.add(LoginEvent(loginRequest));
+    }
   }
 
   @override
@@ -30,34 +34,36 @@ class _LoginScreenState extends State<LoginScreen> {
     super.initState();
   }
 
-
   @override
   Widget build(BuildContext context) {
     return FormBottomSheet(
       title: "Login",
       onButtonPressed: _login,
-      form: Container(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            TextInputField(
-              textEditingController: _emailController,
-              title: "Email",
-              placeholder: "Your email",
-            ),
-            kVerticalSpaceSmall,
-            TextInputField(
-              textEditingController: _passwordController,
-              title: "Password",
-              placeholder: "Your password",
-              isPassword: true,
-            ),
-            kVerticalSpaceSmall,
-            Text(
-              "Forgot password?",
-              style: TextStyle(color: Colors.grey),
-            ),
-          ],
+      form: Form(
+        key: _formKey,
+        child: Container(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              TextInputField(
+                textEditingController: _emailController,
+                title: "Email",
+                placeholder: "Your email",
+              ),
+              kVerticalSpaceSmall,
+              TextInputField(
+                textEditingController: _passwordController,
+                title: "Password",
+                placeholder: "Your password",
+                isPassword: true,
+              ),
+              kVerticalSpaceSmall,
+              Text(
+                "Forgot password?",
+                style: TextStyle(color: Colors.grey),
+              ),
+            ],
+          ),
         ),
       ),
     );

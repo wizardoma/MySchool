@@ -5,6 +5,7 @@ import 'package:app/application/university/department.dart';
 import 'package:app/application/university/university.dart';
 import 'package:app/commons/api.dart';
 import 'package:app/commons/ui_helpers.dart';
+import 'package:app/commons/utils/input_validator.dart';
 import 'package:app/domain/department/futo_departments.dart';
 import 'package:app/domain/department/imsu_departments.dart';
 import 'package:app/domain/department/palm_departments.dart';
@@ -17,12 +18,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../widgets/form_bottom_sheet.dart';
 
 /// Author: Ibekason Alexander
-class SignUpScreen extends StatefulWidget {
+class SignUpScreen extends StatefulWidget{
   @override
   _SignUpScreenState createState() => _SignUpScreenState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen> {
+class _SignUpScreenState extends State<SignUpScreen> with InputValidator{
   var _selectedUniversity = "Select university";
   var _selectedLevel = "Select your level";
   var _selectedDepartment = "Select your department";
@@ -39,6 +40,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   FocusNode _passwordFocusNode;
   FocusNode _emailFocusNode;
   FocusNode _nameFocusNode;
+  var _formKey = GlobalKey<FormState>();
 
   @override
   void initState() {
@@ -87,6 +89,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         universities = universitiesWithDepartment;
       });
     });
+
     _matricNoController = TextEditingController();
     _nameController = TextEditingController();
     _emailController = TextEditingController();
@@ -102,166 +105,173 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return FormBottomSheet(
       title: "Sign up",
       onButtonPressed: _signUp,
-      form: ListView(
-        shrinkWrap: true,
-        physics: ScrollPhysics(),
-        children: [
-          TextInputField(
-            focusNode: _nameFocusNode,
-            textEditingController: _nameController,
-            title: "Name",
-            placeholder: "What would you like to be called?",
-          ),
-          kVerticalSpaceRegular,
-          TextInputField(
-            focusNode: _emailFocusNode,
-            textEditingController: _emailController,
-            title: "Email",
-            placeholder: "Your email",
-          ),
-          kVerticalSpaceRegular,
-          TextInputField(
-            textEditingController: _passwordController,
-            focusNode: _passwordFocusNode,
-            title: "Password",
-            isPassword: true,
-            placeholder: "Your password",
-          ),
-          kVerticalSpaceRegular,
-          TextInputField(
-            textEditingController: _matricNoController,
-            title: "Matriculation Number",
-            isPassword: false,
-            placeholder: "Your Matric Number",
-          ),
-          kVerticalSpaceRegular,
-          Container(
-            padding: EdgeInsets.all(defaultSpacing * 0.5),
-            decoration: BoxDecoration(
-                border: Border.all(color: Colors.grey.shade300, width: 0.5)),
-            child: DropdownButton(
-              isExpanded: true,
-              iconSize: 30,
-              underline: SizedBox(),
-              iconEnabledColor: Theme.of(context).primaryColor,
-              hint: Text(_selectedUniversity),
-              onChanged: (s) {
-                unfocusNodes();
-                setState(() {
-                  _universityController = s.toString();
-
-                  _selectedUniversity = universities
-                      .firstWhere((element) => element.id == s)
-                      .fullName;
-
-                  _selectedDepartment = "Select your department";
-                });
-              },
-              items: universities == null
-                  ? [
-                      DropdownMenuItem(
-                        child: Text(
-                          "Loading Universities",
-                        ),
-                      )
-                    ]
-                  : universities
-                      .map(
-                        (e) => DropdownMenuItem(
-                          value: e.id,
-                          child: Text(e.fullName),
-                        ),
-                      )
-                      .toList(),
+      form: Form(
+        key: _formKey,
+        child: ListView(
+          shrinkWrap: true,
+          physics: ScrollPhysics(),
+          children: [
+            TextInputField(
+              inputValidator: validateName,
+              focusNode: _nameFocusNode,
+              textEditingController: _nameController,
+              title: "Name",
+              placeholder: "What would you like to be called?",
             ),
-          ),
-          kVerticalSpaceRegular,
-          Container(
-            padding: EdgeInsets.all(defaultSpacing * 0.5),
-            decoration: BoxDecoration(
-                border: Border.all(color: Colors.grey.shade300, width: 0.5)),
-            child: DropdownButton(
-              isExpanded: true,
-              iconSize: 30,
-              underline: SizedBox(),
-              iconEnabledColor: Theme.of(context).primaryColor,
-              hint: Text(_selectedLevel),
-              onChanged: (s) {
-                unfocusNodes();
-
-                setState(() {
-                  _levelController = s.toString();
-                  _selectedLevel = s.toString();
-                });
-              },
-              items: userLevels
-                  .map(
-                    (e) => DropdownMenuItem(
-                      value: e,
-                      child: Text(e),
-                    ),
-                  )
-                  .toList(),
+            kVerticalSpaceRegular,
+            TextInputField(
+              inputValidator: validateEmail,
+              focusNode: _emailFocusNode,
+              textEditingController: _emailController,
+              title: "Email",
+              placeholder: "Your email",
             ),
-          ),
-          kVerticalSpaceRegular,
-          Container(
-            padding: EdgeInsets.all(defaultSpacing * 0.5),
-            decoration: BoxDecoration(
-                border: Border.all(color: Colors.grey.shade300, width: 0.5)),
-            child: DropdownButton(
-              isExpanded: true,
-              iconSize: 30,
-              underline: SizedBox(),
-              iconEnabledColor: Theme.of(context).primaryColor,
-              hint: Text(_selectedDepartment),
-              onChanged: (s) {
-                unfocusNodes();
-                setState(() {
-                  _departmentController = s["id"].toString();
-                  _selectedDepartment = s["name"];
-                });
-              },
-              items: universities == null
-                  ? [
-                      DropdownMenuItem(
-                        child: Text(
-                          "Loading Departments",
-                        ),
+            kVerticalSpaceRegular,
+            TextInputField(
+              inputValidator: validatePassword,
+              textEditingController: _passwordController,
+              focusNode: _passwordFocusNode,
+              title: "Password",
+              isPassword: true,
+              placeholder: "Your password",
+            ),
+            kVerticalSpaceRegular,
+            TextInputField(
+              inputValidator: validateName,
+              textEditingController: _matricNoController,
+              title: "Matriculation Number",
+              isPassword: false,
+              placeholder: "Your Matric Number",
+            ),
+            kVerticalSpaceRegular,
+            Container(
+              padding: EdgeInsets.all(defaultSpacing * 0.5),
+              decoration: BoxDecoration(
+                  border: Border.all(color: Colors.grey.shade300, width: 0.5)),
+              child: DropdownButton(
+                isExpanded: true,
+                iconSize: 30,
+                underline: SizedBox(),
+                iconEnabledColor: Theme.of(context).primaryColor,
+                hint: Text(_selectedUniversity),
+                onChanged: (s) {
+                  unfocusNodes();
+                  setState(() {
+                    _universityController = s.toString();
+
+                    _selectedUniversity = universities
+                        .firstWhere((element) => element.id == s)
+                        .fullName;
+
+                    _selectedDepartment = "Select your department";
+                  });
+                },
+                items: universities == null
+                    ? [
+                        DropdownMenuItem(
+                          child: Text(
+                            "Loading Universities",
+                          ),
+                        )
+                      ]
+                    : universities
+                        .map(
+                          (e) => DropdownMenuItem(
+                            value: e.id,
+                            child: Text(e.fullName),
+                          ),
+                        )
+                        .toList(),
+              ),
+            ),
+            kVerticalSpaceRegular,
+            Container(
+              padding: EdgeInsets.all(defaultSpacing * 0.5),
+              decoration: BoxDecoration(
+                  border: Border.all(color: Colors.grey.shade300, width: 0.5)),
+              child: DropdownButton(
+                isExpanded: true,
+                iconSize: 30,
+                underline: SizedBox(),
+                iconEnabledColor: Theme.of(context).primaryColor,
+                hint: Text(_selectedLevel),
+                onChanged: (s) {
+                  unfocusNodes();
+
+                  setState(() {
+                    _levelController = s.toString();
+                    _selectedLevel = s.toString();
+                  });
+                },
+                items: userLevels
+                    .map(
+                      (e) => DropdownMenuItem(
+                        value: e,
+                        child: Text(e),
                       ),
-                    ]
-                  : _universityController.isEmpty
-                      ? [
-                          DropdownMenuItem(
-                            child: Text(
-                              "Select a University",
-                            ),
-                          )
-                        ]
-                      : universities
-                          .firstWhere(
-                            (element) =>
-                                element.id ==
-                                int.parse(
-                                  _universityController,
-                                ),
-                          )
-                          .department
-                          .map(
-                            (e) => DropdownMenuItem(
-                              value: {"id" : e.id, "name": e.name},
-                              child: Text(e.name),
-                            ),
-                          )
-                          .toList(),
+                    )
+                    .toList(),
+              ),
             ),
-          ),
-          kVerticalSpaceRegular,
-          Text(
-            "By continuing, you indicate that you agree to MySchool's Terms of Services and Privacy Policy?",
-            style: TextStyle(color: Colors.grey),
-          ),
-        ],
+            kVerticalSpaceRegular,
+            Container(
+              padding: EdgeInsets.all(defaultSpacing * 0.5),
+              decoration: BoxDecoration(
+                  border: Border.all(color: Colors.grey.shade300, width: 0.5)),
+              child: DropdownButton(
+                isExpanded: true,
+                iconSize: 30,
+                underline: SizedBox(),
+                iconEnabledColor: Theme.of(context).primaryColor,
+                hint: Text(_selectedDepartment),
+                onChanged: (s) {
+                  unfocusNodes();
+                  setState(() {
+                    _departmentController = s["id"].toString();
+                    _selectedDepartment = s["name"];
+                  });
+                },
+                items: universities == null
+                    ? [
+                        DropdownMenuItem(
+                          child: Text(
+                            "Loading Departments",
+                          ),
+                        ),
+                      ]
+                    : _universityController.isEmpty
+                        ? [
+                            DropdownMenuItem(
+                              child: Text(
+                                "Select a University",
+                              ),
+                            )
+                          ]
+                        : universities
+                            .firstWhere(
+                              (element) =>
+                                  element.id ==
+                                  int.parse(
+                                    _universityController,
+                                  ),
+                            )
+                            .department
+                            .map(
+                              (e) => DropdownMenuItem(
+                                value: {"id" : e.id, "name": e.name},
+                                child: Text(e.name),
+                              ),
+                            )
+                            .toList(),
+              ),
+            ),
+            kVerticalSpaceRegular,
+            Text(
+              "By continuing, you indicate that you agree to MySchool's Terms of Services and Privacy Policy?",
+              style: TextStyle(color: Colors.grey),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -295,6 +305,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
     _nameFocusNode.unfocus();
   }
 
+
   void _signUp() {
     var signUpRequest = SignUpRequest(
       matricNo: _matricNoController.text.trim(),
@@ -306,7 +317,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
       level: _levelController,
     );
 //    print(signUpRequest);
+    if (_formKey.currentState.validate()) {
     var authenticationBloc = context.read<AuthenticationBloc>();
     authenticationBloc.add(SignUpEvent(signUpRequest));
+    }
+
   }
 }
