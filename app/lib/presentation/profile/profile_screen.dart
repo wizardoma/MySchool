@@ -137,7 +137,7 @@ class _ProfileScreenState extends State<ProfileScreen> with SingleTickerProvider
                   kVerticalSpaceSmall,
                   Container(
                     child: Text(
-                      postBodyShort,
+                      _user.description ?? _user.name,
                       style: TextStyle(height: 1.3),
                     ),
                   ),

@@ -11,10 +11,28 @@ final String postBodyFull =
     "Praesent ac eros ac nulla dignissim cursus at in lorem. Curabitur non nisl ipsum. Ut tincidunt viverra vestibulum. Etiam sodales porta mauris vel rhoncus. Morbi nec odio turpis. Quisque viverra et libero et vehicula. Aliquam tempor metus enim, quis auctor tellus vehicula in. In sapien arcu, mollis ornare augue vel, consequat venenatis purus. Duis lectus ligula, accumsan efficitur venenatis pellentesque, dictum sit amet orci. Sed volutpat porta sem vitae egestas. Nulla facilisi. Aenean tellus massa, tincidunt tristique faucibus vel, pharetra non elit. Integer eget nibh in metus iaculis porta. Suspendisse a lacus sapien."
     "Integer rhoncus justo in porttitor malesuada. Pellentesque tincidunt diam ut euismod pulvinar. Curabitur mattis, quam quis hendrerit pulvinar, enim risus egestas nulla, at pretium libero velit quis eros. Nulla lacinia, ex vitae volutpat hendrerit, massa diam efficitur tortor, vitae mattis magna urna in erat. Morbi a suscipit libero. Fusce fermentum quam eu nibh congue ornare. Cras pulvinar felis eget placerat elementum. Pellentesque cursus congue tellus ut facilisis. Sed quam orci, suscipit non dui eget, pulvinar pulvinar ex. Suspendisse luctus libero et nulla venenatis, sit amet egestas sapien rutrum. Sed convallis rhoncus felis ac bibendum. Fusce in odio ipsum. Suspendisse suscipit enim eget libero gravida aliquam.";
 
+final String postBodyFull2 = "Cloud technologies offer lots of advantages for businesses of all shapes and sizes. If you want to get the full potential of them, you should choose the right model."
+    " To make this challenging task easier, we prepared a guide that explained such popular cloud service models as SaaS, PaaS, and IaaS and the differences between them. 5 characteristics of a cloud services by NIST In traditional on-premises models, platforms, infrastructure, and applications are built on top of each other to provide a functional environment where end users can perform their tasks. Cloud services, on the contrary, allow customers to choose how much of the traditional process they want to manage. Cloud computing stack Virtualization technology allows us to deliver a number of cloud computing services, which can be roughly split into three big groups: infrastructure as a service (IaaS), platform as a service (PaaS), and software as a service (SaaS)."
+    " Let’s break down the components that vendors and customers manage with each service model (In the graphics, orange components are provided by a cloud computing vendor and green components are handled by customers). "
+    "And take a look at how responsibilities are divided between a cloud vendor (marked in orange) and a customer (marked in green) for each service model: "
+    "IaaS model features Infrastructure as a service (IaaS) is a scalable cloud computing infrastructure provided on demand through means of virtualization technology. The technologies and capabilities delivered by IaaS systems are similar to those offered by traditional data centers, only without the need for clients to physically maintain or manage servers. The IaaS model works great for companies that need to save money or experience spikes in demand for hardware resources. PaaS model features Platform as a service (PaaS) can be defined as middleware provided on demand via the internet. PaaS solutions mainly target developers and software vendors, since they provide them with environments in which to develop, test, deploy, host, and maintain their applications. "
+    "Many cloud companies embrace PaaS as a way to allow developers to integrate with their own proprietary software without leaving the company ecosystem. This helps companies create development communities around their products without going completely open source. "
+    "SaaS model features "
+    "Software as a service (SaaS) is a software delivery model where centrally hosted applications are made available on demand via the internet. SaaS applications are fully managed by a vendor, without the need for users to worry about their configuration and maintenance. "
+    "The SaaS model is convenient for customers since it ensures automatic updates and remote access from various devices, offers on-demand scalability, and provides pay-as-you-go or subscription pricing models. "
+    "What cloud computing model should you choose? "
+    "Each technology stack brings incremental advantages compared to the previous: a PaaS technology stack is easier to work with than IaaS, and SaaS is easier still. "
+    "Let’s take a look at the most common use cases for each cloud computing model: "
+    "Doing your best work means choosing the right stack for your goals and allowing your cloud service vendor to take care of the things you don’t need to manage yourself. "
+    "For instance, the IaaS model is a decent solution for companies that want to have their infrastructure properly managed by a third party and benefit from scalable on-demand computing services. "
+    "PaaS vendors take on the responsibilities of hardware and middleware management, allowing developers to focus purely on their software. "
+    "The SaaS model is perfect for rapidly creating standardized solutions and ecommerce software without spending time on server or software issues. "
+    "Explore more insights on SaaS, PaaS, and IaaS from the full article in our blog.";
+
 final String postBodyShort =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus lorem non mollis suscipit. Proin eget dui fermentum, maximus purus a, convallis sem. Praesent sollicitudin ipsum eget finibus lacinia.";
 
-final List<String> postBody = [postBodyFull, postBodyShort];
+final List<String> postBody = [postBodyFull, postBodyShort, postBodyFull2];
 final List<String> mathPostTitles = [
   "Is there a convention on how to interpret the inverse of the uniform distribution?",
   "Convert NFA to DFA using intersection",
@@ -26,6 +44,7 @@ final List<String> mathPostTitles = [
 
 final List<String> generalPostTitles = [
   "How to read properly for your exams",
+  "Explaining Cloud Computing Models",
   "Is there any interesting event coming up in your area?",
   "Why we are not making straight A's",
   "How to combine skills and work with school",
@@ -34,6 +53,7 @@ final List<String> generalPostTitles = [
 ];
 
 final List<String> imageUrls = [
+  "https://qph.fs.quoracdn.net/main-qimg-6712a047a1ca17a78929dac915d6890b"
   "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c3R1ZGVudHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
   "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2Nob29sfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
   "https://images.unsplash.com/photo-1509191436522-d296cf87d244?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c2Nob29sfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
