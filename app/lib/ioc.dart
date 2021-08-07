@@ -47,7 +47,7 @@ class IoC {
   AuthenticationService _authenticationService;
   AuthenticationBloc _authenticationBloc;
   EventBloc _eventBloc;
-  PostBloc _homeFeedsBloc;
+  PostBloc _postBloc;
   FollowingPostBloc _followingPostBloc;
   PostService _postService;
   PostClient _postClient;
@@ -72,7 +72,7 @@ class IoC {
     _postClient = PostClient();
     _postService = PostService(_postClient);
     _notificationBloc = NotificationBloc(_notificationService);
-    _homeFeedsBloc = PostBloc(_postService);
+    _postBloc = PostBloc(_postService);
     _followingPostBloc = FollowingPostBloc(_postService);
     _services = {
       "auth": _authenticationService,
@@ -82,7 +82,7 @@ class IoC {
     _blocs = {
       "trend": _trendsBloc,
       "auth": _authenticationBloc,
-      "home_feeds": _homeFeedsBloc,
+      "post": _postBloc,
       "following": _followingPostBloc,
       "user": _userBloc,
       "space": _spaceBloc,

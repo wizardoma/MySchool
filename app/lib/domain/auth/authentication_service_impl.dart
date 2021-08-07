@@ -60,8 +60,9 @@ class AuthenticationServiceImpl extends AuthenticationService
       return ResponseEntity.Data(userData);
     } on DioError catch (e) {
       authenticationClient.delete();
-      print("DioError: ${e.error}");
-      var errorSummary = "An error occurred trying to register";
+      print("DioError: ${e.error} data: ${e.response.data}");
+      var errorSummary = e.response.data["errors"]["summary"] ??
+          "An error occurred fetching user";
       return ResponseEntity.Error(errorSummary);
     } catch (e) {
       authenticationClient.delete();

@@ -54,7 +54,7 @@ class MyApp extends StatelessWidget {
           value: (ioC.getBloc("user") as UserBloc),
         ),
         BlocProvider.value(
-          value: (ioC.getBloc("home_feeds") as PostBloc),
+          value: (ioC.getBloc("post") as PostBloc),
         ),
         BlocProvider.value(
           value: (ioC.getBloc("trend") as TrendsBloc),

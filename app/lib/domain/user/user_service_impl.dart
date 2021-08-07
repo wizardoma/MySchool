@@ -22,8 +22,8 @@ class UserServiceImpl extends UserService {
       print("user from server $user");
       return ResponseEntity.Data(user);
     } on DioError catch (e) {
-      print("DioError: ${e.error} and ${e.response}");
-      return ResponseEntity.Error("An error occurred fetching user");
+      print("DioError: ${e.error} and ${e.response.data}");
+      return ResponseEntity.Error(e.response.data["errors"] ?? "An error occurred fetching user");
     } catch (e) {
       print("Exception $e");
       return ResponseEntity.Error("An error occurred fetching user");

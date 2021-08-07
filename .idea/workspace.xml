@@ -19,31 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="replace lorem with user description">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="refractor: Change home feeds to posts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/application/following/following_posts_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/following/following_posts_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/application/following/following_posts_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/following/following_posts_state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/application/homefeeds/home_feeds_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/post/posts_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/application/homefeeds/homefeeds_event.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/post/posts_event.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/application/homefeeds/homefeeds_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/post/post_state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/application/notification/notifications_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/notification/notifications_state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/application/space/spaces_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/space/spaces_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/application/space/spaces_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/space/spaces_state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/feeds/posts_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/post/posts_client.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/feeds/posts_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/post/posts_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/notification/notification.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/notification/notification.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/posts/post.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/post/post.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/space/space.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/space/space.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/space/space_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/space/space_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/space/spaces_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/space/spaces_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/auth/authentication_service_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/auth/authentication_service_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/user/user_service_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/user/user_service_impl.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/ioc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/ioc.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/bookmarks/bookmark_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/bookmarks/bookmark_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/home_feeds.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/home/home_feeds.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/profile/profile_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/profile/profile_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/question_answer_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/question_answer_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_view_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_view_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/posts/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/posts/controller/PostController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/posts/dto/PostDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/posts/dto/PostDto.java" afterDir="false" />
     </list>
@@ -240,14 +221,7 @@
       <workItem from="1628198985827" duration="5544000" />
       <workItem from="1628250179897" duration="4151000" />
       <workItem from="1628319235665" duration="584000" />
-      <workItem from="1628365430968" duration="2072000" />
-    </task>
-    <task id="LOCAL-00118" summary="make ui helpers use defaultPadding">
-      <created>1627236651549</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1627236651550</updated>
+      <workItem from="1628365430968" duration="3155000" />
     </task>
     <task id="LOCAL-00119" summary="refractor code">
       <created>1627242793033</created>
@@ -585,7 +559,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628252425891</updated>
     </task>
-    <option name="localTasksCounter" value="167" />
+    <task id="LOCAL-00167" summary="refractor: Change home feeds to posts">
+      <created>1628367580093</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1628367580095</updated>
+    </task>
+    <option name="localTasksCounter" value="168" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -604,7 +585,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add events state management" />
     <MESSAGE value="update Inversion of Control with events" />
     <MESSAGE value="add events screen" />
     <MESSAGE value="fix: copy existing style instead of overriding" />
@@ -629,7 +609,8 @@
     <MESSAGE value="add input validators for signup and login forms" />
     <MESSAGE value="add profileUrl field to user for profile photos" />
     <MESSAGE value="replace lorem with user description" />
-    <option name="LAST_COMMIT_MESSAGE" value="replace lorem with user description" />
+    <MESSAGE value="refractor: Change home feeds to posts" />
+    <option name="LAST_COMMIT_MESSAGE" value="refractor: Change home feeds to posts" />
   </component>
   <component name="WindowStateProjectService">
     <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1628210432366">
@@ -676,10 +657,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" width="1161" height="709" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1628152079372" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628252465106">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628367582580">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628252465106" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628367582580" />
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626876457269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
