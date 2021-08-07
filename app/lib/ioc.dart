@@ -1,7 +1,7 @@
 import 'package:app/application/auth/auth_bloc.dart';
 import 'package:app/application/event/event_bloc.dart';
 import 'package:app/application/following/following_posts_bloc.dart';
-import 'package:app/application/homefeeds/home_feeds_bloc.dart';
+import 'package:app/application/post/posts_bloc.dart';
 import 'package:app/application/notification/notification_bloc.dart';
 import 'package:app/application/space/spaces_bloc.dart';
 import 'package:app/application/trends/trends_bloc.dart';
@@ -12,8 +12,8 @@ import 'package:app/domain/auth/authentication_service_impl.dart';
 import 'package:app/domain/auth/firebase_auth_service.dart';
 import 'package:app/domain/event/event_client.dart';
 import 'package:app/domain/event/event_service.dart';
-import 'package:app/domain/feeds/posts_client.dart';
-import 'package:app/domain/feeds/posts_service.dart';
+import 'package:app/domain/post/posts_client.dart';
+import 'package:app/domain/post/posts_service.dart';
 import 'package:app/domain/notification/notification_client.dart';
 import 'package:app/domain/notification/notification_service.dart';
 import 'package:app/domain/service.dart';
@@ -47,7 +47,7 @@ class IoC {
   AuthenticationService _authenticationService;
   AuthenticationBloc _authenticationBloc;
   EventBloc _eventBloc;
-  HomeFeedsBloc _homeFeedsBloc;
+  PostBloc _homeFeedsBloc;
   FollowingPostBloc _followingPostBloc;
   PostService _postService;
   PostClient _postClient;
@@ -72,7 +72,7 @@ class IoC {
     _postClient = PostClient();
     _postService = PostService(_postClient);
     _notificationBloc = NotificationBloc(_notificationService);
-    _homeFeedsBloc = HomeFeedsBloc(_postService);
+    _homeFeedsBloc = PostBloc(_postService);
     _followingPostBloc = FollowingPostBloc(_postService);
     _services = {
       "auth": _authenticationService,

@@ -1,6 +1,6 @@
-import 'package:app/application/homefeeds/home_feeds_bloc.dart';
-import 'package:app/application/homefeeds/homefeeds_event.dart';
-import 'package:app/application/homefeeds/homefeeds_state.dart';
+import 'package:app/application/post/posts_bloc.dart';
+import 'package:app/application/post/posts_event.dart';
+import 'package:app/application/post/post_state.dart';
 import 'package:app/commons/styles.dart';
 import 'package:app/presentation/widgets/post_container.dart';
 import 'package:flutter/material.dart';
@@ -14,11 +14,11 @@ class BookMarkScreen extends StatefulWidget {
 }
 
 class _BookMarkScreenState extends State<BookMarkScreen> {
-  HomeFeedsBloc _feedsBloc;
+  PostBloc _feedsBloc;
 
   @override
   void initState() {
-    _feedsBloc = context.read<HomeFeedsBloc>()..add(FetchHomeFeedsEvent());
+    _feedsBloc = context.read<PostBloc>()..add(FetchPostFeedsEvent());
 
     super.initState();
   }
@@ -37,14 +37,14 @@ class _BookMarkScreenState extends State<BookMarkScreen> {
           style: kPostTitleTextStyle,
         ),
       ),
-      body: BlocBuilder<HomeFeedsBloc, HomeFeedsState>(
+      body: BlocBuilder<PostBloc, PostState>(
           // ignore: missing_return
           builder: (context, state) {
-        if (state is FetchingHomeFeedsState ||
-            state is HomeFeedsUnInitializedState) {
+        if (state is FetchingPostsState ||
+            state is PostUnInitializedState) {
           return Center(child: CircularProgressIndicator());
         }
-        if (state is FetchHomeFeedsSuccessState) {
+        if (state is PostFetchSuccessState) {
           var feeds = state.feeds;
           return ListView.separated(
               separatorBuilder: (context, index) => Divider(

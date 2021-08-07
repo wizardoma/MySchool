@@ -2,7 +2,7 @@ import 'package:app/application/following/following_posts_event.dart';
 import 'package:app/application/following/following_posts_state.dart';
 import 'package:app/application/space/spaces_event.dart';
 import 'package:app/application/space/spaces_state.dart';
-import 'package:app/domain/feeds/posts_service.dart';
+import 'package:app/domain/post/posts_service.dart';
 import 'package:app/domain/space/space_service.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

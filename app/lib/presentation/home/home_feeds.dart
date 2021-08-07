@@ -1,6 +1,6 @@
-import 'package:app/application/homefeeds/home_feeds_bloc.dart';
-import 'package:app/application/homefeeds/homefeeds_event.dart';
-import 'package:app/application/homefeeds/homefeeds_state.dart';
+import 'package:app/application/post/posts_bloc.dart';
+import 'package:app/application/post/posts_event.dart';
+import 'package:app/application/post/post_state.dart';
 import 'package:app/presentation/widgets/post_container.dart';
 import 'package:app/presentation/widgets/post_shimmer.dart';
 import 'package:flutter/material.dart';
@@ -14,22 +14,22 @@ class HomeFeeds extends StatefulWidget {
 }
 
 class _HomeFeedsState extends State<HomeFeeds> {
-  HomeFeedsBloc _feedsBloc;
+  PostBloc _feedsBloc;
 
   @override
   void initState() {
-    _feedsBloc = context.read<HomeFeedsBloc>()..add(FetchHomeFeedsEvent());
+    _feedsBloc = context.read<PostBloc>()..add(FetchPostFeedsEvent());
 
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<HomeFeedsBloc, HomeFeedsState>(
+    return BlocBuilder<PostBloc, PostState>(
         // ignore: missing_return
         builder: (context, state) {
-      if (state is FetchingHomeFeedsState ||
-          state is HomeFeedsUnInitializedState) {
+      if (state is FetchingPostsState ||
+          state is PostUnInitializedState) {
         return ListView.separated(
             separatorBuilder: (context, index) => Divider(
                   height: 5,
@@ -40,7 +40,7 @@ class _HomeFeedsState extends State<HomeFeeds> {
               return PostShimmer();
             });
       }
-      if (state is FetchHomeFeedsSuccessState) {
+      if (state is PostFetchSuccessState) {
         var feeds = state.feeds;
         return ListView.separated(
             separatorBuilder: (context, index) => Divider(

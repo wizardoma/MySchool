@@ -1,6 +1,6 @@
 import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
-import 'package:app/domain/posts/post.dart';
+import '../../domain/post/post.dart';
 import 'package:app/presentation/profile/profile_screen.dart';
 import 'package:app/presentation/widgets/post_view_screen.dart';
 import 'package:auto_size_text/auto_size_text.dart';

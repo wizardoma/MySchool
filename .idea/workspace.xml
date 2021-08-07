@@ -21,9 +21,31 @@
   <component name="ChangeListManager">
     <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="replace lorem with user description">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/posts/post.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/posts/post.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/repository/StudentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/service/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/service/StudentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/application/following/following_posts_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/following/following_posts_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/application/following/following_posts_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/following/following_posts_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/application/homefeeds/home_feeds_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/post/posts_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/application/homefeeds/homefeeds_event.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/post/posts_event.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/application/homefeeds/homefeeds_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/post/post_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/application/notification/notifications_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/notification/notifications_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/application/space/spaces_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/space/spaces_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/application/space/spaces_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/space/spaces_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/feeds/posts_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/post/posts_client.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/feeds/posts_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/post/posts_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/notification/notification.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/notification/notification.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/posts/post.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/post/post.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/space/space.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/space/space.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/space/space_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/space/space_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/space/spaces_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/space/spaces_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/ioc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/ioc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/bookmarks/bookmark_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/bookmarks/bookmark_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/home_feeds.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/home/home_feeds.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/profile/profile_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/profile/profile_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/question_answer_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/question_answer_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_view_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_view_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/posts/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/posts/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/posts/dto/PostDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/posts/dto/PostDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,14 +62,14 @@
         <option value="stateful_widget" />
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="package" />
         <option value="Dart File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/backend" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="ProjectId" id="1rd2asS3JvBByg79NAVInNTU5oD" />
@@ -82,19 +104,19 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain\post" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\university" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\presentation\widgets" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain\notification" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\following" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\commons\utils" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\assets\icons" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain\space" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\university" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\presentation\widgets" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain\notification" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\following" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\android\app" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -218,7 +240,7 @@
       <workItem from="1628198985827" duration="5544000" />
       <workItem from="1628250179897" duration="4151000" />
       <workItem from="1628319235665" duration="584000" />
-      <workItem from="1628365430968" duration="855000" />
+      <workItem from="1628365430968" duration="2072000" />
     </task>
     <task id="LOCAL-00118" summary="make ui helpers use defaultPadding">
       <created>1627236651549</created>
@@ -622,30 +644,30 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="541" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1624251443504" />
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1628184644334">
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1628367113988">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1628184644334" />
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1628367113988" />
     <state x="580" y="127" key="FileChooserDialogImpl" timestamp="1626933225318">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="127" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1626933225318" />
-    <state width="1557" height="166" key="GridCell.Tab.0.bottom" timestamp="1628256651996">
+    <state width="1557" height="166" key="GridCell.Tab.0.bottom" timestamp="1628367324228">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="166" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628256651996" />
-    <state width="1557" height="166" key="GridCell.Tab.0.center" timestamp="1628256651994">
+    <state width="1557" height="166" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628367324228" />
+    <state width="1557" height="166" key="GridCell.Tab.0.center" timestamp="1628367324227">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="166" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628256651994" />
-    <state width="1557" height="166" key="GridCell.Tab.0.left" timestamp="1628256651992">
+    <state width="1557" height="166" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628367324227" />
+    <state width="1557" height="166" key="GridCell.Tab.0.left" timestamp="1628367324227">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="166" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628256651992" />
-    <state width="1557" height="166" key="GridCell.Tab.0.right" timestamp="1628256651994">
+    <state width="1557" height="166" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628367324227" />
+    <state width="1557" height="166" key="GridCell.Tab.0.right" timestamp="1628367324227">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="166" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628256651994" />
+    <state width="1557" height="166" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628367324227" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -662,10 +684,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1600.860@0.0.1600.860" timestamp="1626876457269" />
-    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1628183786334">
+    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1628367386626">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1628183786334" />
+    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1628367386626" />
     <state x="182" y="51" width="1235" height="649" key="new project wizard" timestamp="1627927781240">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

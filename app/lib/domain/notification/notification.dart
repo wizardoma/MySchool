@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:app/domain/posts/post.dart';
+import '../post/post.dart';
 import 'package:app/domain/space/spaces_list.dart';
 import 'package:app/domain/user/usersList.dart';
 

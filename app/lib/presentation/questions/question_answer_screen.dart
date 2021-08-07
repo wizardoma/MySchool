@@ -1,6 +1,6 @@
 import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
-import 'package:app/domain/posts/post.dart';
+import '../../domain/post/post.dart';
 import 'package:app/domain/question/question.dart';
 import 'package:app/presentation/questions/answer_container.dart';
 import 'package:app/presentation/widgets/post_container.dart';

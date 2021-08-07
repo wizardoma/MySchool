@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:app/domain/event/events_list.dart';
-import 'package:app/domain/posts/post.dart';
+import '../post/post.dart';
 import 'package:app/domain/question/question.dart';
 import 'package:app/domain/space/space.dart';
 import 'package:app/domain/user/user.dart';

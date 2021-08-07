@@ -1,4 +1,4 @@
-import 'package:app/domain/posts/post.dart';
+import '../../domain/post/post.dart';
 import 'package:app/domain/space/space.dart';
 
 abstract class SpaceState {}

@@ -1,4 +1,4 @@
-import 'package:app/domain/posts/post.dart';
+import 'post.dart';
 import 'package:app/domain/response.dart';
 
 class PostClient {
