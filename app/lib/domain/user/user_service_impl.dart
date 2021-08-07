@@ -1,5 +1,4 @@
 import 'package:app/commons/api.dart';
-import 'package:app/domain/auth/model/signUpUser.dart';
 import 'package:app/domain/response.dart';
 import 'package:app/domain/user/user.dart';
 import 'package:app/domain/user/user_service.dart';

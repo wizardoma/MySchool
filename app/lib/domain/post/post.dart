@@ -93,6 +93,18 @@ class Post {
       this.noOfShares,
       this.noOfComments});
 
+  factory Post.fromServer(dynamic data){
+    return Post(
+      id: data["id"],
+      body: data["body"],
+      title: data["title"],
+      postType: _getPostType("${data["postType"]}"),
+      imageUrl: data["imageUrl"],
+      user: User.fromServer(data["student"]),
+      date: DateTime.fromMillisecondsSinceEpoch(data["date"]),
+    );
+  }
+
   factory Post.Random() {
     int noOfLikes = Random().nextInt(50000);
     int noOfViews = Random().nextInt(500000);
@@ -180,5 +192,9 @@ class Post {
   @override
   String toString() {
     return 'Post{user: $user, id: $id, title: $title, body: $body, imageUrl: $imageUrl, noOfLikes: $noOfLikes, noOfViews: $noOfViews, noOfShares: $noOfShares, date: $date, noOfComments: $noOfComments}';
+  }
+
+  static PostType _getPostType(String type) {
+    return type == "question" ? PostType.question : PostType.post;
   }
 }

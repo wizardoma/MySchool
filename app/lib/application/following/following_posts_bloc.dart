@@ -13,15 +13,8 @@ class FollowingPostBloc extends Bloc<FollowingPostEvent, FollowingPostState> {
   Stream<FollowingPostState> mapEventToState(FollowingPostEvent event) async* {
     if (event is FetchFollowingPostEvent) {
       yield FetchingFollowingPostState();
-      yield await fetchFollowingPosts();
+//      yield await fetchFollowingPosts();
     }
   }
 
-  Future<FollowingPostState> fetchFollowingPosts() async {
-    var responseEntity = await _postService.fetchFollowingPosts();
-    if (responseEntity.isError) {
-      return FetchFollowingPostStateFailure(responseEntity.errors.message);
-    }
-    return FetchFollowingPostStateSuccess(responseEntity.data);
-  }
 }

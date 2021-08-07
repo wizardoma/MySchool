@@ -14,11 +14,11 @@ class HomeFeeds extends StatefulWidget {
 }
 
 class _HomeFeedsState extends State<HomeFeeds> {
-  PostBloc _feedsBloc;
+  PostBloc _postBloc;
 
   @override
   void initState() {
-    _feedsBloc = context.read<PostBloc>()..add(FetchPostFeedsEvent());
+    _postBloc = context.read<PostBloc>()..add(FetchPostFeedsEvent());
 
     super.initState();
   }
@@ -42,6 +42,8 @@ class _HomeFeedsState extends State<HomeFeeds> {
       }
       if (state is PostFetchSuccessState) {
         var feeds = state.feeds;
+        if (state.feeds.length == 0 )
+          return Center(child: Text("No Feeds for now. Try to follow friends or join spaces"),);
         return ListView.separated(
             separatorBuilder: (context, index) => Divider(
                   height: 5,

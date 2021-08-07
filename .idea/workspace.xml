@@ -19,14 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="refractor: Change home feeds to posts">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="refractor: show error message from server on sign up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/auth/authentication_service_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/auth/authentication_service_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/application/following/following_posts_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/following/following_posts_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/post/post.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/post/post.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/post/posts_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/post/posts_client.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/post/posts_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/post/posts_service.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/domain/user/user_service_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/user/user_service_impl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/ioc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/ioc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/posts/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/posts/controller/PostController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/posts/dto/PostDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/posts/dto/PostDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/posts/mapper/PostMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/posts/mapper/PostMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,14 +222,7 @@
       <workItem from="1628198985827" duration="5544000" />
       <workItem from="1628250179897" duration="4151000" />
       <workItem from="1628319235665" duration="584000" />
-      <workItem from="1628365430968" duration="3155000" />
-    </task>
-    <task id="LOCAL-00119" summary="refractor code">
-      <created>1627242793033</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1627242793033</updated>
+      <workItem from="1628365430968" duration="5456000" />
     </task>
     <task id="LOCAL-00120" summary="fix no error response on exception">
       <created>1627242823046</created>
@@ -566,7 +560,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628367580095</updated>
     </task>
-    <option name="localTasksCounter" value="168" />
+    <task id="LOCAL-00168" summary="refractor: show error message from server on sign up">
+      <created>1628368838987</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1628368838987</updated>
+    </task>
+    <option name="localTasksCounter" value="169" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -585,7 +586,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update Inversion of Control with events" />
     <MESSAGE value="add events screen" />
     <MESSAGE value="fix: copy existing style instead of overriding" />
     <MESSAGE value="Add event details screen" />
@@ -610,7 +610,8 @@
     <MESSAGE value="add profileUrl field to user for profile photos" />
     <MESSAGE value="replace lorem with user description" />
     <MESSAGE value="refractor: Change home feeds to posts" />
-    <option name="LAST_COMMIT_MESSAGE" value="refractor: Change home feeds to posts" />
+    <MESSAGE value="refractor: show error message from server on sign up" />
+    <option name="LAST_COMMIT_MESSAGE" value="refractor: show error message from server on sign up" />
   </component>
   <component name="WindowStateProjectService">
     <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1628210432366">
@@ -657,10 +658,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" width="1161" height="709" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1628152079372" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628367582580">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628368843688">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628367582580" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628368843688" />
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626876457269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
