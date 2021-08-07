@@ -1,4 +1,4 @@
-package com.wizardom.backend.domain.university.config;
+package com.wizardom.backend.domain.config;
 
 import com.wizardom.backend.domain.university.department.model.Department;
 import com.wizardom.backend.domain.university.department.repository.DepartmentRepository;
@@ -13,6 +13,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static com.wizardom.backend.domain.university.department.config.DepartmentConfig.*;
+
+/**
+ * @author Ibekason Alexander Onyebuchi
+ *
+ *  Class that bootstraps universities and students
+ */
+
 
 @Transactional
 @RequiredArgsConstructor
@@ -37,14 +44,11 @@ public class DatabaseConfig implements CommandLineRunner {
         University futo = universityRepository.findByShortNameIgnoreCase("futo").get();
         University imsu = universityRepository.findByShortNameIgnoreCase("imsu").get();
         University palm = universityRepository.findByShortNameIgnoreCase("palm").get();
-        System.out.println("Saving User");
 
         futoDepartments.stream().map(department -> new Department().setName(department).setUniversity(futo)).forEach(department -> {
             if (departmentRepository.findByNameAndUniversity(department.getName(), futo).isEmpty()) {
                 System.out.println("Adding department " + department.toString());
                 departmentRepository.save(department);
-            } else {
-                System.out.println("Not Adding department");
             }
         });
 
@@ -62,4 +66,6 @@ public class DatabaseConfig implements CommandLineRunner {
             }
         });
     }
+
+
 }

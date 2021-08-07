@@ -15,6 +15,12 @@ public class DepartmentServiceImpl implements DepartmentService {
     private final DepartmentRepository departmentRepository;
 
     @Override
+    public Department getDepartmentById(long id) {
+        return departmentRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("No User found"));
+    }
+
+    @Override
     public List<Department> getDepartments() {
         return departmentRepository.findAll();
     }
@@ -24,3 +30,4 @@ public class DepartmentServiceImpl implements DepartmentService {
         return departmentRepository.findById(departmentId).orElseThrow(() -> new ResourceNotFoundException("No department found")).getStudents();
     }
 }
+

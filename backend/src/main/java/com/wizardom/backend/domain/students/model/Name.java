@@ -1,9 +1,6 @@
 package com.wizardom.backend.domain.students.model;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.Accessors;
 
 import javax.persistence.Embeddable;
@@ -18,7 +15,7 @@ public class Name {
     private String lastName;
 
     public String fullName(){
-        return firstName  + " " + lastName;
+        return this.firstName  + " " + this.lastName;
     }
 
 

@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface DepartmentService {
 
+    Department getDepartmentById(long id);
     List<Department> getDepartments();
     List<Student> getStudentsOfDepartment(long departmentId);
 }

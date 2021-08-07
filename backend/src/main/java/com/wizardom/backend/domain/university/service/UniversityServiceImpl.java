@@ -2,11 +2,13 @@ package com.wizardom.backend.domain.university.service;
 
 import com.wizardom.backend.domain.university.department.model.Department;
 import com.wizardom.backend.domain.exception.ResourceNotFoundException;
+import com.wizardom.backend.domain.university.department.repository.DepartmentRepository;
 import com.wizardom.backend.domain.university.exception.UniversityNotFoundException;
 import com.wizardom.backend.domain.university.model.University;
 import com.wizardom.backend.domain.university.repository.UniversityRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -17,6 +19,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @Service
 public class UniversityServiceImpl extends UniversityService {
+    private final DepartmentRepository departmentRepository;
     private final UniversityRepository universityRepository;
 
     @Override
@@ -37,11 +40,16 @@ public class UniversityServiceImpl extends UniversityService {
         );
     }
 
+    @Transactional
     @Override
-    public List<Department> getDepartmentsOfUniversity(long universityId) {
-        return universityRepository.findById(universityId)
-                .orElseThrow(() -> new ResourceNotFoundException("No university found"))
-                .getDepartments();
+    public List<Department> getDepartmentsOfUniversity(String universityName) {
+        return departmentRepository.findByUniversity(universityRepository.findByShortNameIgnoreCase(universityName)
+                .orElseThrow(() -> new ResourceNotFoundException("No university found")));
+    }
+
+    @Override
+    public List<Department> getAllDepartments() {
+        return departmentRepository.findAll();
     }
 
 }

@@ -3,6 +3,7 @@ package com.wizardom.backend.domain.students.model;
 import com.wizardom.backend.domain.posts.model.Post;
 import com.wizardom.backend.domain.section.model.Section;
 import com.wizardom.backend.domain.space.model.Space;
+import com.wizardom.backend.domain.university.department.model.Department;
 import com.wizardom.backend.domain.university.model.University;
 import lombok.Data;
 import lombok.experimental.Accessors;
@@ -20,12 +21,16 @@ public class Student {
 
     @Embedded()
     private Name name;
+    
+    private String description;
 
 
     private  String matricNo;
 
     @ManyToOne
     private Section section;
+
+    private String profileUrl;
 
     @ManyToOne
     private University university;
@@ -36,7 +41,8 @@ public class Student {
     @ManyToMany()
     private Collection<Space> spaces;
 
-    private String department;
+    @ManyToOne
+    private Department department;
 
     private String level;
 

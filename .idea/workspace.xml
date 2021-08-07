@@ -19,15 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add input validators for signup and login forms">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="replace lorem with user description">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/commons/utils/input_validator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/commons/utils/input_validator.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/user/user.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/user/user.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/auth/login/login_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/auth/login/login_container.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/dto/StudentDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/dto/StudentDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/mapper/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/mapper/StudentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/config/DatabaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/university/config/DatabaseConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/posts/post.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/posts/post.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/repository/StudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/service/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/service/StudentServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +47,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/backend" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="ProjectId" id="1rd2asS3JvBByg79NAVInNTU5oD" />
@@ -86,19 +82,19 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\university" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\presentation\widgets" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain\notification" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\following" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\android\app" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\commons\utils" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\assets\icons" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain\space" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\university" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\presentation\widgets" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain\notification" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\following" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\android\app" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -219,21 +215,10 @@
       <workItem from="1629673126651" duration="314000" />
       <workItem from="1628151131837" duration="864000" />
       <workItem from="1628156000082" duration="17052000" />
-      <workItem from="1628198985827" duration="4892000" />
-    </task>
-    <task id="LOCAL-00116" summary="add native splash screen">
-      <created>1626933161431</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1626933161433</updated>
-    </task>
-    <task id="LOCAL-00117" summary="optimize auth screen with defaultPadding">
-      <created>1627195788071</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1627195788073</updated>
+      <workItem from="1628198985827" duration="5544000" />
+      <workItem from="1628250179897" duration="4151000" />
+      <workItem from="1628319235665" duration="584000" />
+      <workItem from="1628365430968" duration="855000" />
     </task>
     <task id="LOCAL-00118" summary="make ui helpers use defaultPadding">
       <created>1627236651549</created>
@@ -564,7 +549,21 @@
       <option name="project" value="LOCAL" />
       <updated>1628208657084</updated>
     </task>
-    <option name="localTasksCounter" value="165" />
+    <task id="LOCAL-00165" summary="add profileUrl field to user for profile photos">
+      <created>1628211154535</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1628211154535</updated>
+    </task>
+    <task id="LOCAL-00166" summary="replace lorem with user description">
+      <created>1628252425887</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1628252425891</updated>
+    </task>
+    <option name="localTasksCounter" value="167" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -583,8 +582,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="replace notifications up and add events in replacement" />
-    <MESSAGE value="add events business domain" />
     <MESSAGE value="add events state management" />
     <MESSAGE value="update Inversion of Control with events" />
     <MESSAGE value="add events screen" />
@@ -608,7 +605,9 @@
     <MESSAGE value="use department and university id for user signup" />
     <MESSAGE value="fix: incorrect user mapping from server" />
     <MESSAGE value="add input validators for signup and login forms" />
-    <option name="LAST_COMMIT_MESSAGE" value="add input validators for signup and login forms" />
+    <MESSAGE value="add profileUrl field to user for profile photos" />
+    <MESSAGE value="replace lorem with user description" />
+    <option name="LAST_COMMIT_MESSAGE" value="replace lorem with user description" />
   </component>
   <component name="WindowStateProjectService">
     <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1628210432366">
@@ -631,22 +630,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="127" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1626933225318" />
-    <state width="1557" height="239" key="GridCell.Tab.0.bottom" timestamp="1628208492533">
+    <state width="1557" height="166" key="GridCell.Tab.0.bottom" timestamp="1628256651996">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="239" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628208492533" />
-    <state width="1557" height="239" key="GridCell.Tab.0.center" timestamp="1628208492532">
+    <state width="1557" height="166" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628256651996" />
+    <state width="1557" height="166" key="GridCell.Tab.0.center" timestamp="1628256651994">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="239" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628208492532" />
-    <state width="1557" height="239" key="GridCell.Tab.0.left" timestamp="1628208492532">
+    <state width="1557" height="166" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628256651994" />
+    <state width="1557" height="166" key="GridCell.Tab.0.left" timestamp="1628256651992">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="239" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628208492532" />
-    <state width="1557" height="239" key="GridCell.Tab.0.right" timestamp="1628208492533">
+    <state width="1557" height="166" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628256651992" />
+    <state width="1557" height="166" key="GridCell.Tab.0.right" timestamp="1628256651994">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="239" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628208492533" />
+    <state width="1557" height="166" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628256651994" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -655,10 +654,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" width="1161" height="709" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1628152079372" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628208660702">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628252465106">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628208660702" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628252465106" />
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626876457269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

@@ -11,5 +11,6 @@ public abstract class UniversityService extends BaseService {
     public abstract University getUniversityById(long universityId);
     public abstract List<University> getUniversities();
     public abstract University getByShortName(String shortName);
-    public abstract List<Department> getDepartmentsOfUniversity(long universityId);
+    public abstract List<Department> getDepartmentsOfUniversity(String universityName);
+    public abstract List<Department> getAllDepartments();
 }

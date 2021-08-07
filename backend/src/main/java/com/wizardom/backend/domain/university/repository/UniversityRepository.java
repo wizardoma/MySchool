@@ -1,6 +1,5 @@
 package com.wizardom.backend.domain.university.repository;
 
-import com.wizardom.backend.domain.students.model.Student;
 import com.wizardom.backend.domain.university.model.University;
 import org.springframework.data.jpa.repository.JpaRepository;
 

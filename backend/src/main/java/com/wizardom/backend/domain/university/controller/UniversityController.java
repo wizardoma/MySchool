@@ -26,13 +26,18 @@ public class UniversityController {
     }
 
     @GetMapping("departments/{id}")
-    public ResponseEntity<?> getDepartmentsOfUniversity(@PathVariable("id") long universityId) {
-        return ok(universityService.getDepartmentsOfUniversity(universityId));
+    public ResponseEntity<?> getDepartmentsOfUniversity(@PathVariable("id") String universityName) {
+        return ok(universityService.getDepartmentsOfUniversity(universityName));
     }
 
     @GetMapping("{id}")
     public ResponseEntity<?> getUniversityById(@PathVariable("id") long universityId) {
         return ok(universityService.getUniversityById(universityId));
+    }
+
+    @GetMapping("departments")
+    public ResponseEntity<?> getAllDepartments() {
+        return ok(universityService.getAllDepartments());
     }
 
 }

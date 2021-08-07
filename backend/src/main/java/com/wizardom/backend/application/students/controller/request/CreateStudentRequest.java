@@ -9,8 +9,8 @@ public class CreateStudentRequest {
     private String id;
     private String name;
     private String matricNo;
-    private String department;
-    private String university;
+    private long departmentId;
+    private long universityId;
     private String email;
     private String level;
 

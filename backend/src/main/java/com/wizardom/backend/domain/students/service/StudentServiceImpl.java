@@ -6,6 +6,10 @@ import com.wizardom.backend.domain.students.exceptions.StudentNotFoundException;
 import com.wizardom.backend.domain.students.model.Name;
 import com.wizardom.backend.domain.students.model.Student;
 import com.wizardom.backend.domain.students.repository.StudentRepository;
+import com.wizardom.backend.domain.university.department.model.Department;
+import com.wizardom.backend.domain.university.department.repository.DepartmentRepository;
+import com.wizardom.backend.domain.university.department.service.DepartmentService;
+import com.wizardom.backend.domain.university.model.University;
 import com.wizardom.backend.domain.university.service.UniversityService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -19,21 +23,22 @@ import org.springframework.stereotype.Service;
 public class StudentServiceImpl extends StudentService {
     private final UniversityService universityService;
     private final StudentRepository studentRepository;
+    private final DepartmentService departmentService;
 
     @Override
     public Student saveStudent(CreateStudentRequest request) {
-        studentRepository.findById(request.getId()).ifPresent((s) -> {
-            throw new StudentExistsException("Student already exists");
-        });
-
-        Student student = new Student().setUniversity(universityService.getByShortName(request.getUniversity()))
+        abortIfUserExists(request);
+        University university = universityService
+                .getUniversityById(request.getUniversityId());
+        Department department = departmentService
+                .getDepartmentById(request.getDepartmentId());
+        Student student = new Student().setUniversity(university)
                 .setLevel(request.getLevel())
                 .setEmail(request.getEmail())
                 .setId(request.getId())
                 .setMatricNo(request.getMatricNo())
-                .setDepartment(request.getDepartment())
-                .setName(extractName(request.getName()))
-                .setDepartment(request.getDepartment());
+                .setDepartment(department)
+                .setName(extractName(request.getName()));
 
         return studentRepository.save(student);
     }
@@ -58,4 +63,13 @@ public class StudentServiceImpl extends StudentService {
         return new Name().setFirstName(arrays[0]).setLastName(arrays[1]);
     }
 
+    private void abortIfUserExists(CreateStudentRequest request) {
+        studentRepository.findById(request.getId()).ifPresent((s) -> {
+            throw new StudentExistsException("Student already exists");
+        });
+        studentRepository.findByMatricNo(request.getMatricNo()).ifPresent((s) -> {
+            throw new StudentExistsException("Student already exists");
+        });
+
+    }
 }
