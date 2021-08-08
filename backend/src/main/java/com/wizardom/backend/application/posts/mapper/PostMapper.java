@@ -7,7 +7,6 @@ import com.wizardom.backend.domain.posts.model.Post;
 import java.time.ZoneOffset;
 
 public class PostMapper {
-
     public static PostDto toDto(Post post) {
         return new PostDto()
                 .setPostType(post.getPostType().name())
@@ -15,6 +14,7 @@ public class PostMapper {
                 .setDate(post.getPostDate().toEpochSecond(ZoneOffset.UTC))
                 .setSpace(post.getSpace())
                 .setTitle(post.getTitle())
+                .setComments(post.getComments())
                 .setId(post.getId())
                 .setStudent(StudentMapper.toDto(post.getStudent()));
 
