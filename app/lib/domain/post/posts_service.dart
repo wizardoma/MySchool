@@ -17,4 +17,8 @@ class PostService extends Service {
   Future<ResponseEntity> fetchFeeds() async {
     return await _postClient.fetchFeeds();
   }
+
+  Future<ResponseEntity> fetchQuestions() async {
+    return await _postClient.fetchQuestionsPost();
+  }
 }

@@ -31,10 +31,25 @@ class PostClient {
   }
 
   Future<ResponseEntity> fetchQuestionsPost() async {
-    return await Future.delayed(
-        Duration(seconds: 1),
-        () => ResponseEntity.Data(
-            List.generate(20, (index) => Post.RandomQuestions())));
+    Response response;
+    try {
+      response = await dioClient.get(
+        "/posts/questions",
+      );
+      List<Post> posts = [];
+      response.data["data"].forEach((post) {
+        posts.add(Post.fromServer(post));
+      });
+
+      return ResponseEntity.Data(posts);
+    } on DioError catch (e) {
+      print("DioError: ${e.error} and ${e.response.data}");
+      return ResponseEntity.Error(
+          e.response.data["errors"] ?? "An error occurred fetching posts");
+    } catch (e) {
+      print("Exception from questions $e");
+      return ResponseEntity.Error("An error occurred fetching posts");
+    }
   }
 
   Future<ResponseEntity> create(FormData data) async {
