@@ -40,6 +40,11 @@ class _HomeFeedsState extends State<HomeFeeds> {
               return PostShimmer();
             });
       }
+      if (state is PostFetchErrorState) {
+        return Center(
+          child: Text(state.errorMessage,),
+        );
+      }
       if (state is PostFetchSuccessState) {
         var feeds = state.feeds;
         if (state.feeds.length == 0 )

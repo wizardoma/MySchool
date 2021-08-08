@@ -47,6 +47,7 @@ class _SpacesScreenState extends State<SpacesScreen> {
             Row(
               children: [
                 Container(
+                  height: 30,
                   padding: EdgeInsets.symmetric(horizontal: defaultSpacing * 0.5, vertical: defaultSpacing * 0.3),
                   decoration: BoxDecoration(
                     border: Border.all(color: Theme.of(context).primaryColor),

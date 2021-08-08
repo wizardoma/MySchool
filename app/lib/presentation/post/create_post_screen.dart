@@ -1,12 +1,11 @@
 import 'package:app/application/post/create_post_request.dart';
 import 'package:app/application/post/post_crud_cubit.dart';
 import 'package:app/application/post/post_state.dart';
-import 'package:app/application/post/posts_bloc.dart';
-import 'package:app/application/post/posts_event.dart';
 import 'package:app/application/user/user_bloc.dart';
 import 'package:app/application/user/user_state.dart';
 import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
+import 'package:app/domain/user/user.dart';
 import 'package:app/presentation/widgets/post_bottom_sheet.dart';
 import 'package:app/presentation/widgets/post_view_screen.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +17,7 @@ class CreatePostScreen extends StatefulWidget {
 }
 
 class _CreatePostScreenState extends State<CreatePostScreen> {
+  User _currentUser;
   TextEditingController _titleController;
   TextEditingController _bodyController;
   static List<String> _postTypeOptions = ["Create Post", "Add a question"];
@@ -31,6 +31,7 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
 
   @override
   void initState() {
+    _currentUser = (context.read<UserBloc>().state as FetchedUserState).user;
     _titleController = TextEditingController();
     _bodyController = TextEditingController();
     super.initState();
@@ -98,7 +99,7 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
                         ),
                         kHorizontalSpaceTiny,
                         Text(
-                          "Alexander Ibekason ${!isPost() ? "Asked" : "Posted"}",
+                          "${_currentUser.name} ${!isPost() ? "Asked" : "Posted"}",
                           style: kSubtitleTextStyle.copyWith(fontSize: 13),
                         ),
                       ],
@@ -187,7 +188,7 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
 
   void _createPost() {
     var postRequest = CreatePostRequest(
-      userId: (context.read<UserBloc>().state as FetchedUserState).user.id,
+      userId: _currentUser.id,
       title: _titleController.text,
       body: _bodyController?.text,
       type: _postTypeIndex == 1 ? "question" : "post",

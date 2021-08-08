@@ -17,7 +17,7 @@ final Space cscSpace = Space(
   imageUrl:
       "https://images.unsplash.com/photo-1617240016072-d92174e44171?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29tcHV0ZXIlMjBzY2llbmNlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60",
   spaceName: "Computer Science",
-  about:
+  description:
       "Computer Science official space for students. Post and ask questions related to computer science",
   noOfFollowers: Random().nextInt(2000),
   events: eventsList,
@@ -33,7 +33,7 @@ final Space eeSpace = Space(
   spaceName: "Electrical and Electronics Engineering",
   events: eventsList,
 
-  about:
+  description:
       "Official Space for electrical and electronics engineers. Post and ask questions related to Electrical and Electronic Engineering",
   noOfFollowers: Random().nextInt(2000),
   noOfPostsInAWeek: 6,
@@ -48,7 +48,7 @@ final Space pharmacySpace = Space(
   spaceName: "Pharmacy",
   events: eventsList,
 
-  about:
+  description:
       "Official Space for pharmacists. Post and ask questions related to Pharmacy",
   noOfFollowers: Random().nextInt(2000),
   noOfPostsInAWeek: 6,
@@ -63,7 +63,7 @@ final Space medicineSpace = Space(
   spaceName: "Medical Science",
   events: eventsList,
 
-  about:
+  description:
       "Official Space for Medical Students. Post and ask questions related to Medicine",
   noOfFollowers: Random().nextInt(2000),
   noOfPostsInAWeek: 6,

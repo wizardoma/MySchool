@@ -256,7 +256,7 @@ class _SpacePageScreenState extends State<SpacePageScreen>
                                         ),
                                         kVerticalSpaceTiny,
                                         Text(
-                                          _space.about,
+                                          _space.description,
                                           style: TextStyle(height: 1.3),
                                         ),
                                       ],
@@ -309,7 +309,7 @@ class _SpacePageScreenState extends State<SpacePageScreen>
                       Container(
                         padding: EdgeInsets.all(defaultSpacing),
                         child: Text(
-                          _space.about,
+                          _space.description,
                         ),
                       ),
                     if (_currIndex == 1) ..._spacePosts(),
@@ -346,7 +346,7 @@ class _SpacePageScreenState extends State<SpacePageScreen>
     return List.generate(
         _space.questions.length,
         (index) => QuestionItem(
-              question: _space.questions[index],
+              question: _space.posts[index],
             ));
   }
 

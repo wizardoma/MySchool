@@ -1,10 +1,7 @@
 import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
-import '../../domain/post/post.dart';
-import 'package:app/domain/question/question.dart';
+import 'package:app/domain/post/post.dart';
 import 'package:app/presentation/questions/answer_container.dart';
-import 'package:app/presentation/widgets/post_container.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class QuestionAnswerScreen extends StatefulWidget {
@@ -16,7 +13,7 @@ class QuestionAnswerScreen extends StatefulWidget {
 
 class _QuestionAnswerScreenState extends State<QuestionAnswerScreen> {
   var hasRun = false;
-  Question _question;
+  Post _question;
 
   @override
   void didChangeDependencies() {
@@ -43,7 +40,7 @@ class _QuestionAnswerScreenState extends State<QuestionAnswerScreen> {
           Container(
             padding: EdgeInsets.all(defaultSpacing),
             child: Text(
-              _question.question,
+              _question.title,
               style: kPostTitleTextStyle.copyWith(fontSize: 25),
             ),
           ),
@@ -52,34 +49,39 @@ class _QuestionAnswerScreenState extends State<QuestionAnswerScreen> {
               child: Column(
             children: [
               Container(
-                padding: EdgeInsets.symmetric(vertical: defaultSpacing * 0.5, horizontal: defaultSpacing * 0.5),
+                padding: EdgeInsets.symmetric(
+                    vertical: defaultSpacing * 0.5,
+                    horizontal: defaultSpacing * 0.5),
                 color: Colors.grey.shade200,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "${_question.answers.length} Answer(s)",
+                      "${0} Answer(s)",
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      "Asked in ${_question.spaceName}",
-                      style: TextStyle(color: Colors.black54),
-                    ),
+                        "Asked ${_question.space == null ? " by ${_question.user.name}" : " in ${_question.space.spaceName}"}"),
+
                   ],
                 ),
               ),
               Expanded(
-                child: ListView.separated(
+                child: _question.comments.length == 0
+                    ? Center(
+                  child: Text("No Answers yet"),
+                )
+                    : ListView.separated(
                   separatorBuilder: (context, index) => Divider(
                     color: Colors.grey.shade200,
                     thickness: 4,
                   ),
-                  itemCount: _question.answers.length,
+                  itemCount: _question.comments.length,
                   itemBuilder: (context, index) {
-                    return AnswerContainer(
-                      answer: _question.answers[index],
-                    );
+                    return  AnswerContainer(
+                            answer: _question.comments[index],
+                          );
                   },
                 ),
               ),

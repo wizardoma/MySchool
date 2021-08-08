@@ -1,8 +1,12 @@
+import 'package:app/application/question/question_bloc.dart';
+import 'package:app/application/question/question_state.dart';
 import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
+import 'package:app/domain/post/post.dart';
 import 'package:app/domain/question/question.dart';
 import 'package:app/presentation/questions/question_item.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class QuestionScreen extends StatefulWidget {
   static const title = "Questions";
@@ -12,6 +16,14 @@ class QuestionScreen extends StatefulWidget {
 }
 
 class _QuestionScreenState extends State<QuestionScreen> {
+  QuestionCubit _questionCubit;
+
+  @override
+  void initState() {
+    _questionCubit = context.read<QuestionCubit>()..fetchQuestions();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -78,17 +90,38 @@ class _QuestionScreenState extends State<QuestionScreen> {
                         ),
                       ),
                       Divider(),
-                      ListView.separated(
-                          separatorBuilder: (c, i) => Divider(
+                      BlocBuilder<QuestionCubit, QuestionState>(
+                        // ignore: missing_return
+                        builder: (context, state) {
+                          if (state is QuestionLoadingState ||
+                              state is QuestionUnInitializedState) {
+                            return Center(
+                              child: CircularProgressIndicator(),
+                            );
+                          }
+                          if (state is QuestionFetchErrorState) {
+                            return Center(
+                              child: Text(state.errorMessage),
+                            );
+                          }
+                          if (state is QuestionFetchedState) {
+                            List<Post> questions = state.posts;
+                            return ListView.separated(
+                              separatorBuilder: (c, i) => Divider(
                                 thickness: 4,
                                 color: Colors.grey.shade200,
                               ),
-                          shrinkWrap: true,
-                          physics: ScrollPhysics(),
-                          itemCount: answersList.length,
+                              shrinkWrap: true,
+                              physics: ScrollPhysics(),
+                              itemCount: questions?.length ?? 0,
 //                            crossAxisAlignment: CrossAxisAlignment.start,
-                          itemBuilder: (ctx, index) =>
-                              QuestionItem(question: Question.Random()))
+                              itemBuilder: (ctx, index) => QuestionItem(
+                                question: questions[index],
+                              ),
+                            );
+                          }
+                        },
+                      )
                     ],
                   ),
                 ]),

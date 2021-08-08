@@ -1,23 +1,20 @@
-
 import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
+import 'package:app/domain/post/post.dart';
 import 'package:app/domain/question/question.dart';
 import 'package:app/presentation/questions/question_answer_screen.dart';
 import 'package:flutter/material.dart';
 
 class QuestionItem extends StatelessWidget {
-  final Question question;
+  final Post question;
 
   const QuestionItem({Key key, this.question}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigator.pushNamed(
-        context,
-        QuestionAnswerScreen.routeName,
-        arguments: {"question": question}
-      ),
+      onTap: () => Navigator.pushNamed(context, QuestionAnswerScreen.routeName,
+          arguments: {"question": question}),
       child: Padding(
         padding: const EdgeInsets.all(defaultSpacing),
         child: Column(
@@ -27,7 +24,8 @@ class QuestionItem extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Asked in ${question.spaceName}"),
+                  Text(
+                      "Asked ${question.space == null ? " by ${question.user.name}" : " in ${question.space.spaceName}"}"),
                   CloseButton(),
                 ],
               ),
@@ -35,13 +33,13 @@ class QuestionItem extends StatelessWidget {
             kVerticalSpaceSmall,
             Container(
               child: Text(
-                question.question,
+                question.title,
                 style: kPostTitleTextStyle,
               ),
             ),
             kVerticalSpaceSmall,
             Text(
-              "${question.answers.length} answer(s)",
+              "${question.noOfComments} answer(s)",
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 14,

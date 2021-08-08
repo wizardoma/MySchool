@@ -1,13 +1,13 @@
 import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
-import 'package:app/domain/question/answer.dart';
+import 'package:app/domain/question/comment.dart';
 import 'package:app/domain/question/question.dart';
 import 'package:app/presentation/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class AnswerContainer extends StatelessWidget {
-  final Answer answer;
+  final Comment answer;
 
   const AnswerContainer({Key key, this.answer}) : super(key: key);
   @override
@@ -92,7 +92,7 @@ class AnswerContainer extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            answer.answer,
+                            answer.body,
                             style: TextStyle(height: 1.3),
                           ),
                           kVerticalSpaceMedium,

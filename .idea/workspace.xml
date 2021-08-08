@@ -19,8 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="Allow post title and body in create post screen">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="extend post client to fetch questions and comments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/question/question.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/question/question.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/space/space.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/space/space.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/space/spaces_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/space/spaces_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/home_feeds.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/home/home_feeds.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/post/create_post_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/post/create_post_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/answer_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/answer_container.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/question_answer_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/question_answer_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/question_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/question_item.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/questions_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/questions_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,28 +227,9 @@
       <workItem from="1628250179897" duration="4151000" />
       <workItem from="1628319235665" duration="584000" />
       <workItem from="1628365430968" duration="9291000" />
-      <workItem from="1628403080305" duration="10496000" />
-    </task>
-    <task id="LOCAL-00124" summary="allow fetch user on signup">
-      <created>1627281963201</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1627281963203</updated>
-    </task>
-    <task id="LOCAL-00125" summary=" refractor post container to use defaulPadding">
-      <created>1627282025197</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1627282025197</updated>
-    </task>
-    <task id="LOCAL-00126" summary="refractor: change all app screens to use defaultSpacing">
-      <created>1627282761836</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1627282761836</updated>
+      <workItem from="1628403080305" duration="11724000" />
+      <workItem from="1628415744761" duration="11342000" />
+      <workItem from="1628442941230" duration="469000" />
     </task>
     <task id="LOCAL-00127" summary="add line icons package">
       <created>1627283054841</created>
@@ -561,7 +553,28 @@
       <option name="project" value="LOCAL" />
       <updated>1628413687555</updated>
     </task>
-    <option name="localTasksCounter" value="173" />
+    <task id="LOCAL-00173" summary="create question state management">
+      <created>1628422183559</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1628422183561</updated>
+    </task>
+    <task id="LOCAL-00174" summary="refractor: add comments and space to post">
+      <created>1628443264253</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1628443264255</updated>
+    </task>
+    <task id="LOCAL-00175" summary="extend post client to fetch questions and comments">
+      <created>1628443340394</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1628443340394</updated>
+    </task>
+    <option name="localTasksCounter" value="176" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -580,9 +593,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix: recursion on universities querying" />
-    <MESSAGE value="refractor: Change primary color to red" />
-    <MESSAGE value="register student on server on signup" />
     <MESSAGE value="fetch User from server on authenticated" />
     <MESSAGE value="fix: User showing null middlename from server" />
     <MESSAGE value="change app name to Myschool" />
@@ -605,13 +615,16 @@
     <MESSAGE value="add post crud operations cubit" />
     <MESSAGE value="add ability to create post" />
     <MESSAGE value="Allow post title and body in create post screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Allow post title and body in create post screen" />
+    <MESSAGE value="create question state management" />
+    <MESSAGE value="refractor: add comments and space to post" />
+    <MESSAGE value="extend post client to fetch questions and comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="extend post client to fetch questions and comments" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1628405879069">
+    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1628425406444">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1628405879069" />
+    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1628425406444" />
     <state x="626" y="356" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1624212009488">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -620,30 +633,30 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="541" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1624251443504" />
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1628412163103">
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1628443416578">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1628412163103" />
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1628443416578" />
     <state x="580" y="127" key="FileChooserDialogImpl" timestamp="1626933225318">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="127" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1626933225318" />
-    <state width="1557" height="171" key="GridCell.Tab.0.bottom" timestamp="1628410991439">
+    <state width="1557" height="241" key="GridCell.Tab.0.bottom" timestamp="1628429931599">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="171" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628410991439" />
-    <state width="1557" height="171" key="GridCell.Tab.0.center" timestamp="1628410991438">
+    <state width="1557" height="241" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628429931599" />
+    <state width="1557" height="241" key="GridCell.Tab.0.center" timestamp="1628429931598">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="171" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628410991438" />
-    <state width="1557" height="171" key="GridCell.Tab.0.left" timestamp="1628410991438">
+    <state width="1557" height="241" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628429931598" />
+    <state width="1557" height="241" key="GridCell.Tab.0.left" timestamp="1628429931598">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="171" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628410991438" />
-    <state width="1557" height="171" key="GridCell.Tab.0.right" timestamp="1628410991439">
+    <state width="1557" height="241" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628429931598" />
+    <state width="1557" height="241" key="GridCell.Tab.0.right" timestamp="1628429931598">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="171" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628410991439" />
+    <state width="1557" height="241" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628429931598" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -652,10 +665,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" width="1161" height="709" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1628152079372" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628413690074">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628443342376">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628413690074" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628443342376" />
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626876457269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -668,10 +681,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="182" y="51" width="1235" height="649" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1627927781240" />
-    <state x="456" y="195" key="run.anything.popup" timestamp="1628024823986">
+    <state x="456" y="195" key="run.anything.popup" timestamp="1628419538243">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1628024823986" />
+    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1628419538243" />
     <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1628178433054">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

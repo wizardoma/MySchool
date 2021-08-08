@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:app/domain/question/answer.dart';
+import 'package:app/domain/question/comment.dart';
 import 'package:app/domain/user/user.dart';
 
 final Map<String, List<String>> answersList = {
@@ -33,7 +33,7 @@ class Question {
   final String question;
   final String spaceName;
   final User user;
-  final List<Answer> answers;
+  final List<Comment> answers;
 
   Question({this.spaceName, this.question, this.user, this.answers});
 
@@ -47,13 +47,13 @@ class Question {
       user: User.Random(),
       answers: List.generate(
         answerLength,
-        (index) => Answer(
+        (index) => Comment(
           noOfLikes: Random().nextInt(50),
           noOfViews: Random().nextInt(500),
           noOfShares: Random().nextInt(20),
           noOfComments: Random().nextInt(20),
           user: User.Random(),
-          answer: answersList["$question"][--answerLength],
+          body: answersList["$question"][--answerLength],
           date: DateTime.now().subtract(
             Duration(
               hours: Random().nextInt(pow(2, 3)),
@@ -63,4 +63,6 @@ class Question {
       ),
     );
   }
+
+
 }
