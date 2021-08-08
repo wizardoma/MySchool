@@ -38,9 +38,7 @@ class UserBloc extends HydratedBloc<UserEvent, UserState> {
   }
 
   Future<UserState> fetchUser(AuthUser authUser) async {
-    print("fetching user");
     var response = await userService.getUserById(authUser.id);
-    print("fetch user ${response.data}");
     if (response.isError) {
       return FetchUserErrorState(response.errors.message);
     }

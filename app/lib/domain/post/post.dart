@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:math';
 
 import 'package:app/domain/user/user.dart';
@@ -67,7 +68,7 @@ final List<String> imageUrls = [
 
 class Post {
   final User user;
-  final String id;
+  final int id;
   final String title;
   final bool isFollowing;
   final String body;
@@ -94,14 +95,41 @@ class Post {
       this.noOfComments});
 
   factory Post.fromServer(dynamic data){
+    print(jsonEncode(data));
+
+    var id = data["id"];
+    print("id $id");
+
+    var body = data["body"];
+    print("body $body");
+
+    var title = data["title"];
+    print("title $title");
+    var postType = _getPostType("${data["postType"]}");
+    print("postType $postType");
+
+
+    var date = DateTime.fromMillisecondsSinceEpoch(data["date"]);
+    print("date $date");
+
+    var image = data["imageUrl"];
+    print("image $image");
+    var user = User.fromServer(data["student"]);
+    print("student $user");
+    print(" post details $body $title $postType $user $date $image $id");
     return Post(
-      id: data["id"],
-      body: data["body"],
-      title: data["title"],
-      postType: _getPostType("${data["postType"]}"),
-      imageUrl: data["imageUrl"],
-      user: User.fromServer(data["student"]),
-      date: DateTime.fromMillisecondsSinceEpoch(data["date"]),
+      id: id,
+      body: body,
+      title: title,
+      postType: postType,
+      imageUrl: image,
+
+      user: user,
+      date: date,
+      noOfLikes: Random().nextInt(500),
+      noOfViews: Random().nextInt(5000),
+      noOfShares: Random().nextInt(20),
+      noOfComments: Random().nextInt(50),
     );
   }
 
@@ -116,7 +144,7 @@ class Post {
     DateTime date =
         DateTime.now().subtract(Duration(hours: Random().nextInt(7000)));
     String body = postBody[Random().nextInt(postBody.length)];
-    String id = "${Random().nextInt(1000000)}";
+    int id = Random().nextInt(1000000);
     User user = User.Random();
     return Post(
       id: id,

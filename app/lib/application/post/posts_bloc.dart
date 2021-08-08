@@ -1,3 +1,4 @@
+import 'package:app/application/post/create_post_request.dart';
 import 'package:app/application/post/posts_event.dart';
 import 'package:app/application/post/post_state.dart';
 import 'package:app/domain/post/posts_service.dart';
@@ -11,12 +12,15 @@ class PostBloc extends Bloc<PostEvent, PostState> {
   @override
   Stream<PostState> mapEventToState(PostEvent event) async* {
     if (event is FetchPostFeedsEvent) {
-      yield FetchingPostsState();
-      yield await fetchHomeFeeds();
+      yield PostLoadingState();
+      yield await _fetchFeeds();
     }
+
   }
 
-  Future<PostState> fetchHomeFeeds() async {
+
+
+  Future<PostState> _fetchFeeds() async {
     var response = await postService.fetchFeeds();
 
     if (!response.isError) {

@@ -2,12 +2,12 @@ import 'package:app/commons/ui_helpers.dart';
 import 'package:flutter/material.dart';
 
 class PostBottomSheet extends StatefulWidget {
-  final String title;
+  final Widget button;
   final Widget headerTitle;
   final Widget body;
 
   const PostBottomSheet(
-      {Key key, @required this.title, @required this.headerTitle, this.body})
+      {Key key, @required this.button, @required this.headerTitle, this.body})
       : super(key: key);
 
   @override
@@ -40,13 +40,7 @@ class _PostBottomSheetState extends State<PostBottomSheet> {
                     color: Theme.of(context).primaryColor,
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  child: Text(
-                    widget.title,
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18),
-                  ),
+                  child: widget.button
                 ),
               ],
             ),

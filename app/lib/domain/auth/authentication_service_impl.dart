@@ -54,7 +54,6 @@ class AuthenticationServiceImpl extends AuthenticationService
 
     Response serverResponse;
     try {
-      print(" userdata $userData");
       serverResponse = await dioClient.post("/students",
           data: FormData.fromMap(userData.toMap()));
       return ResponseEntity.Data(userData);

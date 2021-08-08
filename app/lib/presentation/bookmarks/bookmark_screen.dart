@@ -40,7 +40,7 @@ class _BookMarkScreenState extends State<BookMarkScreen> {
       body: BlocBuilder<PostBloc, PostState>(
           // ignore: missing_return
           builder: (context, state) {
-        if (state is FetchingPostsState ||
+        if (state is PostLoadingState ||
             state is PostUnInitializedState) {
           return Center(child: CircularProgressIndicator());
         }

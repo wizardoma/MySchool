@@ -73,10 +73,11 @@ class IoC {
     _userBloc = UserBloc(_userService, _authenticationBloc);
     _eventBloc = EventBloc(_eventService);
     _postClient = PostClient();
-    _postCrudCubit = PostCrudCubit(_postService);
     _postService = PostService(_postClient);
     _notificationBloc = NotificationBloc(_notificationService);
     _postBloc = PostBloc(_postService);
+    _postCrudCubit = PostCrudCubit(_postService);
+
     _followingPostBloc = FollowingPostBloc(_postService);
     _services = {
       "auth": _authenticationService,

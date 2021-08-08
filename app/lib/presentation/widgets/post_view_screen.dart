@@ -38,65 +38,70 @@ class _PostViewScreenState extends State<PostViewScreen> {
         elevation: 0,
         leadingWidth: 30,
         leading: BackButton(
-
           color: Colors.black54,
         ),
         backgroundColor: Colors.white,
-        title: Container(child: GestureDetector(
-          onTap: () => Navigator.pushNamed(context, ProfileScreen.routeName, arguments: {"user": _post.user}),
-          child: Row(
-            children: [
-              Container(
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                    image: AssetImage("assets/icons/google.png"),
+        title: Container(
+          child: GestureDetector(
+            onTap: () => Navigator.pushNamed(context, ProfileScreen.routeName,
+                arguments: {"user": _post.user}),
+            child: Row(
+              children: [
+                Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                      image: AssetImage("assets/icons/google.png"),
+                    ),
                   ),
                 ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Text(
-                        _post.user.name,
-                        style: kAuthorNameStyle.copyWith(color: Colors.black54),
-                      ),
-                      kHorizontalSpaceSmall,
-                      Text(
-                        "Follow",
-                        style: TextStyle(color: Theme.of(context).primaryColor, fontSize: 14),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        _post.user.university,
-                        style: kSubtitleTextStyle,
-                      ),
-                      Text(
-                        DateFormat('MMM d, y').format(_post.date),
-                        style: kSubtitleTextStyle,
-                      ),
-                    ],
-                  ),
-                ],
-              )
-            ],
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          _post.user.name,
+                          style:
+                              kAuthorNameStyle.copyWith(color: Colors.black54),
+                        ),
+                        kHorizontalSpaceSmall,
+                        Text(
+                          "Follow",
+                          style: TextStyle(
+                              color: Theme.of(context).primaryColor,
+                              fontSize: 14),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          _post.user.university,
+                          style: kSubtitleTextStyle,
+                        ),
+                        Text(
+                          DateFormat('MMM d, y').format(_post.date),
+                          style: kSubtitleTextStyle,
+                        ),
+                      ],
+                    ),
+                  ],
+                )
+              ],
+            ),
           ),
         ),
-      ), ),
+      ),
       body: ListView(
 //        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           kVerticalSpaceSmall,
           Container(
-            padding: EdgeInsets.all(defaultSpacing ),
+            padding: EdgeInsets.all(defaultSpacing),
             child: Text(
               _post.title,
               style: kPostTitleTextStyle,
@@ -111,7 +116,7 @@ class _PostViewScreenState extends State<PostViewScreen> {
           ),
           kVerticalSpaceSmall,
           Container(
-            padding: EdgeInsets.all(defaultSpacing ),
+            padding: EdgeInsets.all(defaultSpacing),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -120,12 +125,14 @@ class _PostViewScreenState extends State<PostViewScreen> {
                   style: TextStyle(height: 1.3),
                 ),
                 kVerticalSpaceMedium,
-                Text(_post.noOfViews.toString() + " views", style: kSubtitleTextStyle,),
+                Text(
+                  _post.noOfViews.toString() + " views",
+                  style: kSubtitleTextStyle,
+                ),
               ],
             ),
           ),
           kVerticalSpaceSmall,
-
         ],
       ),
       bottomNavigationBar: Container(
@@ -139,7 +146,9 @@ class _PostViewScreenState extends State<PostViewScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal: defaultSpacing * 0.5, vertical: defaultSpacing * 0.2),
+                    padding: EdgeInsets.symmetric(
+                        horizontal: defaultSpacing * 0.5,
+                        vertical: defaultSpacing * 0.2),
                     decoration: BoxDecoration(
                         color: Colors.grey.shade200,
                         borderRadius: BorderRadius.circular(10)),

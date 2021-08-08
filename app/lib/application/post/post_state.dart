@@ -10,4 +10,17 @@ class PostFetchSuccessState extends PostState {
   PostFetchSuccessState(this.feeds);
 }
 
-class FetchingPostsState extends PostState {}
+class PostCreateSuccess extends PostState {
+  final Post post;
+
+  PostCreateSuccess(this.post);
+}
+
+class PostCreateFailureState extends PostState {
+  final String errorMessage;
+
+  PostCreateFailureState(this.errorMessage);
+}
+
+
+class PostLoadingState extends PostState {}

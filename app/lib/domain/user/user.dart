@@ -20,6 +20,7 @@ class User {
   final String id;
   final String name;
   final String imageUrl;
+  final String matricNo;
   final String department;
   final String description;
   final String university;
@@ -30,6 +31,7 @@ class User {
     this.id,
     this.imageUrl,
     this.name,
+    this.matricNo,
     this.department,
     this.description,
     this.university,
@@ -40,11 +42,12 @@ class User {
   factory User.fromServer(Map<String, dynamic> map) {
     return new User(
       id: map['id'] as String,
+      matricNo: map['matricNo'],
       imageUrl: map['imageUrl'],
-      name: "${map['name']['firstName']} ${map['name']['lastName']}",
-      department: map['department']['name'] as String,
+      name: "${map['name']}",
+      department: map['department'] as String,
       description: map['description'] as String,
-      university: map['university']["fullName"] as String,
+      university: map['university'] as String,
       email: map['email'] as String,
       level: map['level'] as String,
     );
@@ -54,6 +57,8 @@ class User {
     return new User(
       id: map['id'] as String,
       name: map['name'] as String,
+      matricNo: map['matricNo'],
+      imageUrl: map['imageUrl'],
       department: map['department'] as String,
       description: map['description'] as String,
       university: map['university'] as String,
@@ -67,6 +72,7 @@ class User {
     return {
       'id': this.id,
       'name': this.name,
+      'matricNo': this.matricNo,
       'department': this.department,
       'description': this.description,
       'university': this.university,

@@ -27,4 +27,9 @@ class CreatePostRequest {
       'type': this.type,
     } as Map<String, dynamic>;
   }
+
+  @override
+  String toString() {
+    return 'CreatePostRequest{userId: $userId, title: $title, spaceId: $spaceId, body: $body, type: $type}';
+  }
 }

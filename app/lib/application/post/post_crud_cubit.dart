@@ -11,6 +11,8 @@ class PostCrudCubit extends Cubit<PostState> {
   Future<void> createPost(CreatePostRequest request) async {
     emit(PostLoadingState());
     var response = await _postService.createPost(request);
+    print("response $response");
+
     if (response.isError) {
       emit(PostCreateFailureState(response.errors.message));
     }

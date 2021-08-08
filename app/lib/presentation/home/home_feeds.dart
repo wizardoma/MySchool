@@ -28,7 +28,7 @@ class _HomeFeedsState extends State<HomeFeeds> {
     return BlocBuilder<PostBloc, PostState>(
         // ignore: missing_return
         builder: (context, state) {
-      if (state is FetchingPostsState ||
+      if (state is PostLoadingState ||
           state is PostUnInitializedState) {
         return ListView.separated(
             separatorBuilder: (context, index) => Divider(
