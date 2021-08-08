@@ -9,10 +9,13 @@ import com.wizardom.backend.domain.students.exceptions.StudentNotFoundException;
 import com.wizardom.backend.domain.students.model.Student;
 import com.wizardom.backend.domain.students.repository.StudentRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class PostServiceImpl implements PostService {
@@ -21,13 +24,17 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public List<Post> getFeeds() {
-        return postRepository.findAll();
+        List<Post> posts = postRepository.findAll();
+        Collections.reverse(posts);
+        return posts;
     }
 
     @Override
     public List<Post> getPostsByUser(String userId) {
         Student student = studentRepository.findById(userId).orElseThrow(() -> new StudentNotFoundException("No student found"));
-        return postRepository.findByStudent(student);
+        List<Post> posts = postRepository.findByStudent(student);
+        Collections.reverse(posts);
+        return posts;
     }
 
     @Override
@@ -37,9 +44,10 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public Post createPost(CreatePostRequest request) {
-        Student student = studentRepository.findById(request.getUserID()).orElseThrow(() -> new StudentNotFoundException("No student found with ID"));
+        Student student = studentRepository.findById(request.getUserId()).orElseThrow(() -> new StudentNotFoundException("No student found with ID"));
 
-        return postRepository.save(new Post().setBody(request.getBody())
+        return postRepository.save(new Post()
+                .setBody(request.getBody())
                 .setStudent(student)
                 .setPostType(PostType.valueOf(request.getType()))
                 .setTitle(request.getTitle())

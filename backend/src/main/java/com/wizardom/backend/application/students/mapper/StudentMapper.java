@@ -10,6 +10,7 @@ import com.wizardom.backend.domain.students.model.Student;
 public class StudentMapper {
     public static StudentDto toDto(Student student) {
         return new StudentDto()
+
                 .setName(student.getFullName())
                 .setImageUrl(student.getProfileUrl())
                 .setMatricNo(student.getMatricNo())

@@ -7,5 +7,6 @@ public class CreatePostRequest {
     private String title;
     private String type;
     private String body;
-    private String userID;
+    private long spaceId;
+    private String userId;
 }

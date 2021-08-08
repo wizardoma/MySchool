@@ -19,12 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add ability to create post">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="Allow post title and body in create post screen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/application/post/post_crud_cubit.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/post/post_crud_cubit.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/post/post.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/post/post.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/post/create_post_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/post/create_post_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_view_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_view_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,14 +216,7 @@
       <workItem from="1628250179897" duration="4151000" />
       <workItem from="1628319235665" duration="584000" />
       <workItem from="1628365430968" duration="9291000" />
-      <workItem from="1628403080305" duration="9791000" />
-    </task>
-    <task id="LOCAL-00123" summary="Add matriculation ID to backend">
-      <created>1627245709142</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1627245709142</updated>
+      <workItem from="1628403080305" duration="10496000" />
     </task>
     <task id="LOCAL-00124" summary="allow fetch user on signup">
       <created>1627281963201</created>
@@ -565,7 +554,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628412157417</updated>
     </task>
-    <option name="localTasksCounter" value="172" />
+    <task id="LOCAL-00172" summary="Allow post title and body in create post screen">
+      <created>1628413687555</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1628413687555</updated>
+    </task>
+    <option name="localTasksCounter" value="173" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,7 +580,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add dummy profile photo" />
     <MESSAGE value="fix: recursion on universities querying" />
     <MESSAGE value="refractor: Change primary color to red" />
     <MESSAGE value="register student on server on signup" />
@@ -609,7 +604,8 @@
     <MESSAGE value="make post feeds client fetch from server" />
     <MESSAGE value="add post crud operations cubit" />
     <MESSAGE value="add ability to create post" />
-    <option name="LAST_COMMIT_MESSAGE" value="add ability to create post" />
+    <MESSAGE value="Allow post title and body in create post screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Allow post title and body in create post screen" />
   </component>
   <component name="WindowStateProjectService">
     <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1628405879069">
@@ -656,10 +652,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" width="1161" height="709" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1628152079372" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628412161520">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628413690074">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628412161520" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628413690074" />
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626876457269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
