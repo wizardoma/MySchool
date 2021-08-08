@@ -1,6 +1,7 @@
-import 'dart:convert';
 import 'dart:math';
 
+import 'package:app/domain/question/comment.dart';
+import 'package:app/domain/space/space.dart';
 import 'package:app/domain/user/user.dart';
 
 enum PostType { post, question }
@@ -72,7 +73,9 @@ class Post {
   final String title;
   final bool isFollowing;
   final String body;
+  final List<Comment> comments;
   final PostType postType;
+  final Space space;
   final String imageUrl;
   final int noOfLikes;
   final int noOfViews;
@@ -82,6 +85,8 @@ class Post {
 
   const Post(
       {this.user,
+      this.comments,
+      this.space,
       this.isFollowing = false,
       this.id,
       this.date,
@@ -94,20 +99,27 @@ class Post {
       this.noOfShares,
       this.noOfComments});
 
-  factory Post.fromServer(dynamic data){
+  factory Post.fromServer(dynamic data) {
+    List<Comment> comments = [];
+    data["comments"].forEach((comment) {
+      comments.add(Comment.fromServer(comment));
+    });
+    print("all comments $comments");
+
     return Post(
+      space: Space.fromServer(data["space"]),
       id: data["id"],
       body: data["body"],
       title: data["title"],
+      comments: comments,
       postType: _getPostType("${data["postType"]}"),
       imageUrl: data["imageUrl"],
-
       user: User.fromServer(data["student"]),
       date: DateTime.fromMillisecondsSinceEpoch(data["date"]),
       noOfLikes: Random().nextInt(500),
       noOfViews: Random().nextInt(5000),
       noOfShares: Random().nextInt(20),
-      noOfComments: Random().nextInt(50),
+      noOfComments: comments.length,
     );
   }
 
@@ -152,11 +164,13 @@ class Post {
 
   Post copyWith({
     User user,
-    String id,
-    PostType postType,
+    int id,
     String title,
     bool isFollowing,
     String body,
+    List<Comment> comments,
+    PostType postType,
+    Space space,
     String imageUrl,
     int noOfLikes,
     int noOfViews,
@@ -169,7 +183,9 @@ class Post {
         (title == null || identical(title, this.title)) &&
         (isFollowing == null || identical(isFollowing, this.isFollowing)) &&
         (body == null || identical(body, this.body)) &&
+        (comments == null || identical(comments, this.comments)) &&
         (postType == null || identical(postType, this.postType)) &&
+        (space == null || identical(space, this.space)) &&
         (imageUrl == null || identical(imageUrl, this.imageUrl)) &&
         (noOfLikes == null || identical(noOfLikes, this.noOfLikes)) &&
         (noOfViews == null || identical(noOfViews, this.noOfViews)) &&
@@ -185,9 +201,11 @@ class Post {
       title: title ?? this.title,
       isFollowing: isFollowing ?? this.isFollowing,
       body: body ?? this.body,
+      comments: comments ?? this.comments,
+      postType: postType ?? this.postType,
+      space: space ?? this.space,
       imageUrl: imageUrl ?? this.imageUrl,
       noOfLikes: noOfLikes ?? this.noOfLikes,
-      postType: postType ?? this.postType,
       noOfViews: noOfViews ?? this.noOfViews,
       noOfShares: noOfShares ?? this.noOfShares,
       date: date ?? this.date,
@@ -197,7 +215,7 @@ class Post {
 
   @override
   String toString() {
-    return 'Post{user: $user, id: $id, title: $title, body: $body, imageUrl: $imageUrl, noOfLikes: $noOfLikes, noOfViews: $noOfViews, noOfShares: $noOfShares, date: $date, noOfComments: $noOfComments}';
+    return 'Post{user: $user, id: $id, title: $title, isFollowing: $isFollowing, body: $body, comments: $comments, postType: $postType, space: $space, imageUrl: $imageUrl, noOfLikes: $noOfLikes, noOfViews: $noOfViews, noOfShares: $noOfShares, date: $date, noOfComments: $noOfComments}';
   }
 
   static PostType _getPostType(String type) {

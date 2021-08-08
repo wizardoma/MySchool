@@ -4,6 +4,12 @@ abstract class PostState {}
 
 class PostUnInitializedState extends PostState {}
 
+class PostFetchErrorState extends PostState {
+  final String errorMessage;
+
+  PostFetchErrorState(this.errorMessage);
+
+}
 class PostFetchSuccessState extends PostState {
   final List<Post> feeds;
 

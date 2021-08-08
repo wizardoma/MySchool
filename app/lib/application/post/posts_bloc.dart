@@ -15,10 +15,7 @@ class PostBloc extends Bloc<PostEvent, PostState> {
       yield PostLoadingState();
       yield await _fetchFeeds();
     }
-
   }
-
-
 
   Future<PostState> _fetchFeeds() async {
     var response = await postService.fetchFeeds();
@@ -26,5 +23,7 @@ class PostBloc extends Bloc<PostEvent, PostState> {
     if (!response.isError) {
       return PostFetchSuccessState(response.data);
     }
+
+    return PostFetchErrorState(response.errors.message);
   }
 }
