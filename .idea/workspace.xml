@@ -19,27 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add post crud operations cubit">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add ability to create post">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/application/post/create_post_request.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/post/create_post_request.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/application/post/post_crud_cubit.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/post/post_crud_cubit.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/application/post/post_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/post/post_state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/application/post/posts_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/post/posts_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/application/post/posts_event.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/post/posts_event.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/application/user/user_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/user/user_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/auth/authentication_service_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/auth/authentication_service_impl.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/domain/post/post.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/post/post.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/post/posts_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/post/posts_client.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/post/posts_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/post/posts_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/user/user.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/user/user.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/user/user_service_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/user/user_service_impl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/ioc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/ioc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/bookmarks/bookmark_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/bookmarks/bookmark_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/home_feeds.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/home/home_feeds.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/presentation/post/create_post_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/post/create_post_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_bottom_sheet.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_bottom_sheet.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_view_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_view_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/mapper/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/mapper/StudentMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,14 +220,7 @@
       <workItem from="1628250179897" duration="4151000" />
       <workItem from="1628319235665" duration="584000" />
       <workItem from="1628365430968" duration="9291000" />
-      <workItem from="1628403080305" duration="7653000" />
-    </task>
-    <task id="LOCAL-00122" summary="add hydrated bloc for user persistence">
-      <created>1627243305114</created>
-      <option name="number" value="00122" />
-      <option name="presentableId" value="LOCAL-00122" />
-      <option name="project" value="LOCAL" />
-      <updated>1627243305114</updated>
+      <workItem from="1628403080305" duration="9791000" />
     </task>
     <task id="LOCAL-00123" summary="Add matriculation ID to backend">
       <created>1627245709142</created>
@@ -580,7 +558,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628404729505</updated>
     </task>
-    <option name="localTasksCounter" value="171" />
+    <task id="LOCAL-00171" summary="add ability to create post">
+      <created>1628412157417</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1628412157417</updated>
+    </task>
+    <option name="localTasksCounter" value="172" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -599,7 +584,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add event details screen" />
     <MESSAGE value="Add dummy profile photo" />
     <MESSAGE value="fix: recursion on universities querying" />
     <MESSAGE value="refractor: Change primary color to red" />
@@ -624,7 +608,8 @@
     <MESSAGE value="refractor: show error message from server on sign up" />
     <MESSAGE value="make post feeds client fetch from server" />
     <MESSAGE value="add post crud operations cubit" />
-    <option name="LAST_COMMIT_MESSAGE" value="add post crud operations cubit" />
+    <MESSAGE value="add ability to create post" />
+    <option name="LAST_COMMIT_MESSAGE" value="add ability to create post" />
   </component>
   <component name="WindowStateProjectService">
     <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1628405879069">
@@ -639,30 +624,30 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="541" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1624251443504" />
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1628405184515">
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1628412163103">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1628405184515" />
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1628412163103" />
     <state x="580" y="127" key="FileChooserDialogImpl" timestamp="1626933225318">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="127" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1626933225318" />
-    <state width="1557" height="263" key="GridCell.Tab.0.bottom" timestamp="1628375212439">
+    <state width="1557" height="171" key="GridCell.Tab.0.bottom" timestamp="1628410991439">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="263" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628375212439" />
-    <state width="1557" height="263" key="GridCell.Tab.0.center" timestamp="1628375212438">
+    <state width="1557" height="171" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628410991439" />
+    <state width="1557" height="171" key="GridCell.Tab.0.center" timestamp="1628410991438">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="263" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628375212438" />
-    <state width="1557" height="263" key="GridCell.Tab.0.left" timestamp="1628375212437">
+    <state width="1557" height="171" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628410991438" />
+    <state width="1557" height="171" key="GridCell.Tab.0.left" timestamp="1628410991438">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="263" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628375212437" />
-    <state width="1557" height="263" key="GridCell.Tab.0.right" timestamp="1628375212438">
+    <state width="1557" height="171" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628410991438" />
+    <state width="1557" height="171" key="GridCell.Tab.0.right" timestamp="1628410991439">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="263" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628375212438" />
+    <state width="1557" height="171" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628410991439" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -671,10 +656,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" width="1161" height="709" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1628152079372" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628404734050">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628412161520">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628404734050" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628412161520" />
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626876457269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

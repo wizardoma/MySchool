@@ -107,7 +107,7 @@ class _PostViewScreenState extends State<PostViewScreen> {
               style: kPostTitleTextStyle,
             ),
           ),
-          Container(
+          if (_post.imageUrl!= null) Container(
             height: 400,
             width: double.infinity,
             decoration: BoxDecoration(

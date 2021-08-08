@@ -95,37 +95,15 @@ class Post {
       this.noOfComments});
 
   factory Post.fromServer(dynamic data){
-    print(jsonEncode(data));
-
-    var id = data["id"];
-    print("id $id");
-
-    var body = data["body"];
-    print("body $body");
-
-    var title = data["title"];
-    print("title $title");
-    var postType = _getPostType("${data["postType"]}");
-    print("postType $postType");
-
-
-    var date = DateTime.fromMillisecondsSinceEpoch(data["date"]);
-    print("date $date");
-
-    var image = data["imageUrl"];
-    print("image $image");
-    var user = User.fromServer(data["student"]);
-    print("student $user");
-    print(" post details $body $title $postType $user $date $image $id");
     return Post(
-      id: id,
-      body: body,
-      title: title,
-      postType: postType,
-      imageUrl: image,
+      id: data["id"],
+      body: data["body"],
+      title: data["title"],
+      postType: _getPostType("${data["postType"]}"),
+      imageUrl: data["imageUrl"],
 
-      user: user,
-      date: date,
+      user: User.fromServer(data["student"]),
+      date: DateTime.fromMillisecondsSinceEpoch(data["date"]),
       noOfLikes: Random().nextInt(500),
       noOfViews: Random().nextInt(5000),
       noOfShares: Random().nextInt(20),

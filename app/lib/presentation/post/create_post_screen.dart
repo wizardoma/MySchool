@@ -23,6 +23,7 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
   static List<String> _postTypeOptions = ["Create Post", "Add a question"];
   int _postTypeIndex = 0;
   var _postType = _postTypeOptions[0];
+  String _postTitleHint = "Your post topic";
   String _postHintText =
       "Post about studies, your activities, useful academic insights etc.";
   String _questionHintText =
@@ -104,16 +105,14 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
                     ),
                     kVerticalSpaceMedium,
                     TextField(
-                      controller: _postTypeIndex == 1
-                          ? _titleController
-                          : _bodyController,
-                      minLines: 2,
-                      maxLines: 10,
+                      controller: _titleController,
+                      minLines: 1,
+                      maxLines: 2,
                       decoration: InputDecoration(
                           hintStyle:
                               TextStyle(color: Colors.grey, fontSize: 20),
                           hintText:
-                              isPost() ? _postHintText : _questionHintText,
+                              isPost() ? _postTitleHint : _questionHintText,
                           border: UnderlineInputBorder(
                             borderSide: BorderSide(
                               color: Colors.grey.shade300,
@@ -125,6 +124,27 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
                             ),
                           )),
                     ),
+                    kVerticalSpaceRegular,
+                    if (_postTypeIndex == 0)
+                      TextField(
+                        controller: _bodyController,
+                        minLines: 2,
+                        maxLines: 10,
+                        decoration: InputDecoration(
+                            hintStyle:
+                                TextStyle(color: Colors.grey, fontSize: 20),
+                            hintText: _postHintText,
+                            border: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Colors.grey.shade300,
+                              ),
+                            ),
+                            enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Colors.grey.shade300,
+                              ),
+                            )),
+                      ),
                   ],
                 ),
               ),
