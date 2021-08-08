@@ -3,6 +3,7 @@ import 'package:app/application/auth/auth_event.dart';
 import 'package:app/application/auth/auth_state.dart';
 import 'package:app/application/event/event_bloc.dart';
 import 'package:app/application/following/following_posts_bloc.dart';
+import 'package:app/application/post/post_crud_cubit.dart';
 import 'package:app/application/post/posts_bloc.dart';
 import 'package:app/application/notification/notification_bloc.dart';
 import 'package:app/application/space/spaces_bloc.dart';
@@ -58,6 +59,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider.value(
           value: (ioC.getBloc("trend") as TrendsBloc),
+        ),
+        BlocProvider.value(
+          value: (ioC.getCubit("post_crud") as PostCrudCubit),
         ),
         BlocProvider.value(
           value: (ioC.getBloc("following") as FollowingPostBloc),

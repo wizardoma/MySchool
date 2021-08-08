@@ -1,6 +1,7 @@
 import 'package:app/application/auth/auth_bloc.dart';
 import 'package:app/application/event/event_bloc.dart';
 import 'package:app/application/following/following_posts_bloc.dart';
+import 'package:app/application/post/post_crud_cubit.dart';
 import 'package:app/application/post/posts_bloc.dart';
 import 'package:app/application/notification/notification_bloc.dart';
 import 'package:app/application/space/spaces_bloc.dart';
@@ -30,6 +31,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class IoC {
   Map<String, Service> _services;
   Map<String, Bloc> _blocs;
+  Map<String, Cubit> _cubits;
 
   AuthenticationClient _authenticationClient;
   NotificationClient _notificationClient;
@@ -50,6 +52,7 @@ class IoC {
   PostBloc _postBloc;
   FollowingPostBloc _followingPostBloc;
   PostService _postService;
+  PostCrudCubit _postCrudCubit;
   PostClient _postClient;
 
   IoC() {
@@ -70,6 +73,7 @@ class IoC {
     _userBloc = UserBloc(_userService, _authenticationBloc);
     _eventBloc = EventBloc(_eventService);
     _postClient = PostClient();
+    _postCrudCubit = PostCrudCubit(_postService);
     _postService = PostService(_postClient);
     _notificationBloc = NotificationBloc(_notificationService);
     _postBloc = PostBloc(_postService);
@@ -77,6 +81,10 @@ class IoC {
     _services = {
       "auth": _authenticationService,
       "post": _postService,
+    };
+
+    _cubits = {
+      "post_crud": _postCrudCubit,
     };
 
     _blocs = {
@@ -98,5 +106,14 @@ class IoC {
     }
 
     return bloc;
+  }
+
+  Cubit getCubit(String cubitName) {
+    Cubit cubit = _cubits["$cubitName"];
+    if (cubit == null) {
+      throw Exception("Cubit specified was not found");
+    }
+
+    return cubit;
   }
 }
