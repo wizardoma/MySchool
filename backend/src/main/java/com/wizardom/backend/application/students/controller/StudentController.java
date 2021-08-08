@@ -27,7 +27,7 @@ public class StudentController {
     @GetMapping("{id}")
     public ResponseEntity<?> getUser(@PathVariable("id") String id) {
         Student student = studentService.getStudentById(id);
-        return ok(student);
+        return ok(StudentMapper.toDto(student));
     }
 
 }
