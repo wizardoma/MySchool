@@ -4,6 +4,7 @@ import 'package:app/application/following/following_posts_bloc.dart';
 import 'package:app/application/post/post_crud_cubit.dart';
 import 'package:app/application/post/posts_bloc.dart';
 import 'package:app/application/notification/notification_bloc.dart';
+import 'package:app/application/question/question_bloc.dart';
 import 'package:app/application/space/spaces_bloc.dart';
 import 'package:app/application/trends/trends_bloc.dart';
 import 'package:app/application/user/user_bloc.dart';
@@ -44,6 +45,7 @@ class IoC {
   EventClient _eventClient;
   SpaceBloc _spaceBloc;
   UserBloc _userBloc;
+  QuestionCubit _questionCubit;
   EventService _eventService;
   UserService _userService;
   AuthenticationService _authenticationService;
@@ -76,6 +78,7 @@ class IoC {
     _postService = PostService(_postClient);
     _notificationBloc = NotificationBloc(_notificationService);
     _postBloc = PostBloc(_postService);
+    _questionCubit = QuestionCubit(_postService);
     _postCrudCubit = PostCrudCubit(_postService);
 
     _followingPostBloc = FollowingPostBloc(_postService);
@@ -86,6 +89,7 @@ class IoC {
 
     _cubits = {
       "post_crud": _postCrudCubit,
+      "question": _questionCubit,
     };
 
     _blocs = {
