@@ -1,6 +1,8 @@
 package com.wizardom.backend.domain.students.service;
 
 import com.wizardom.backend.application.students.controller.request.CreateStudentRequest;
+import com.wizardom.backend.domain.space.model.Space;
+import com.wizardom.backend.domain.space.repository.SpaceRepository;
 import com.wizardom.backend.domain.students.exceptions.StudentExistsException;
 import com.wizardom.backend.domain.students.exceptions.StudentNotFoundException;
 import com.wizardom.backend.domain.students.model.Name;
@@ -13,11 +15,15 @@ import com.wizardom.backend.domain.university.model.University;
 import com.wizardom.backend.domain.university.service.UniversityService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Collections;
 
 /**
  * @author Ibekason Alexander Onyebuchi
  */
 
+@Transactional
 @RequiredArgsConstructor
 @Service
 public class StudentServiceImpl extends StudentService {
@@ -32,10 +38,12 @@ public class StudentServiceImpl extends StudentService {
                 .getUniversityById(request.getUniversityId());
         Department department = departmentService
                 .getDepartmentById(request.getDepartmentId());
+        Space space = department.getSpace();
         Student student = new Student().setUniversity(university)
                 .setLevel(request.getLevel())
                 .setEmail(request.getEmail())
                 .setId(request.getId())
+                .setSpaces(Collections.singletonList(space))
                 .setMatricNo(request.getMatricNo())
                 .setDepartment(department)
                 .setName(extractName(request.getName()));
