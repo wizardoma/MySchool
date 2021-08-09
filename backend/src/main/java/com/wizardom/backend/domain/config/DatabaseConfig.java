@@ -86,9 +86,13 @@ public class DatabaseConfig implements CommandLineRunner {
                 Space space = spaceRepository
                         .save(new Space()
                                 .setName(key)
-                                .setDescription("This the official space of " + key + " . Share posts and ask questions about " + key)
+                                .setDescription("This is the Official Space of " + key + " . Share posts and ask questions about " + key)
                                 .setDepartments(departments));
-                System.out.println("save space " + space.toString());
+                for (Department department : departments) {
+                    log.info("saving space to departments");
+                    departmentRepository.save(department.setSpace(space));
+                }
+                log.info("save space " + space.toString());
             }
         });
 

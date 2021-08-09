@@ -21,11 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="bootstrap all spaces">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/config/DatabaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/config/DatabaseConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/space/repository/SpaceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/space/repository/SpaceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/service/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/service/StudentServiceImpl.java" afterDir="false" />
     </list>
-    <list id="3361c1a4-1f46-45d9-a762-2020feb3d975" name="Revert &quot;refractor: add comment creation API&quot;" comment="Revert &quot;refractor: add comment creation API&quot;&#10;&#10;This reverts commit f764d34b" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,7 +30,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Huawei_Android_10_API_29_" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="DEFNW18C21001964" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -48,7 +44,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/backend" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
@@ -229,7 +225,8 @@
       <workItem from="1628445998738" duration="784000" />
       <workItem from="1628451539431" duration="1995000" />
       <workItem from="1628493846836" duration="1026000" />
-      <workItem from="1628499087173" duration="3675000" />
+      <workItem from="1628499087173" duration="4205000" />
+      <workItem from="1628527252836" duration="2102000" />
     </task>
     <task id="LOCAL-00132" summary="update trends to Inversion of control">
       <created>1627377382137</created>
@@ -649,22 +646,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="127" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1628494646507" />
-    <state width="1557" height="248" key="GridCell.Tab.0.bottom" timestamp="1628502705629">
+    <state width="1557" height="183" key="GridCell.Tab.0.bottom" timestamp="1628533394546">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="248" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628502705629" />
-    <state width="1557" height="248" key="GridCell.Tab.0.center" timestamp="1628502705628">
+    <state width="1557" height="183" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628533394546" />
+    <state width="1557" height="183" key="GridCell.Tab.0.center" timestamp="1628533394546">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="248" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628502705628" />
-    <state width="1557" height="248" key="GridCell.Tab.0.left" timestamp="1628502705628">
+    <state width="1557" height="183" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628533394546" />
+    <state width="1557" height="183" key="GridCell.Tab.0.left" timestamp="1628533394545">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="248" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628502705628" />
-    <state width="1557" height="248" key="GridCell.Tab.0.right" timestamp="1628502705629">
+    <state width="1557" height="183" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628533394545" />
+    <state width="1557" height="183" key="GridCell.Tab.0.right" timestamp="1628533394546">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="248" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628502705629" />
+    <state width="1557" height="183" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628533394546" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

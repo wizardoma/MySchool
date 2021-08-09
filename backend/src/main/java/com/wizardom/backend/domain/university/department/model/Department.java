@@ -21,7 +21,7 @@ public class Department {
     private String name;
 
     @ToString.Exclude
-    @ManyToOne
+    @ManyToOne()
     private Space space;
 
     @ToString.Exclude

@@ -14,6 +14,7 @@ import com.wizardom.backend.domain.university.department.service.DepartmentServi
 import com.wizardom.backend.domain.university.model.University;
 import com.wizardom.backend.domain.university.service.UniversityService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,6 +24,7 @@ import java.util.Collections;
  * @author Ibekason Alexander Onyebuchi
  */
 
+@Slf4j
 @Transactional
 @RequiredArgsConstructor
 @Service
@@ -39,6 +41,7 @@ public class StudentServiceImpl extends StudentService {
         Department department = departmentService
                 .getDepartmentById(request.getDepartmentId());
         Space space = department.getSpace();
+        log.info("space after registration: "+space);
         Student student = new Student().setUniversity(university)
                 .setLevel(request.getLevel())
                 .setEmail(request.getEmail())
@@ -48,7 +51,9 @@ public class StudentServiceImpl extends StudentService {
                 .setDepartment(department)
                 .setName(extractName(request.getName()));
 
-        return studentRepository.save(student);
+        throw new StudentExistsException("Student already exists");
+
+//        return studentRepository.save(student);
     }
 
     @Override

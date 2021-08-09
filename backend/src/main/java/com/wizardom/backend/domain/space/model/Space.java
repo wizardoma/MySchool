@@ -24,7 +24,7 @@ public class Space {
 
     private String description;
 
-    @OneToMany(fetch = FetchType.LAZY)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "space")
     @JsonIgnore
     private List<Department> departments;
 
