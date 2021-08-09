@@ -1,3 +1,6 @@
+import 'package:app/application/space/spaces_bloc.dart';
+import 'package:app/application/space/spaces_event.dart';
+import 'package:app/application/space/spaces_state.dart';
 import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
 import 'package:app/domain/space/space.dart';
@@ -5,6 +8,7 @@ import 'package:app/presentation/events/event_item_widget.dart';
 import 'package:app/presentation/questions/question_item.dart';
 import 'package:app/presentation/widgets/post_container.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SpacePageScreen extends StatefulWidget {
   static const routeName = "/space-page";
@@ -31,6 +35,7 @@ class _SpacePageScreenState extends State<SpacePageScreen>
     if (!hasRun) {
       dynamic arguments = ModalRoute.of(context).settings.arguments;
       _space = arguments["space"];
+      BlocProvider.of<SpaceBloc>(context).add(FetchSingleSpaceEvent(_space.id));
       super.didChangeDependencies();
     }
   }
@@ -74,221 +79,229 @@ class _SpacePageScreenState extends State<SpacePageScreen>
       body: SafeArea(
         child: GestureDetector(
           onHorizontalDragEnd: _detectUserSwipe,
-          child: CustomScrollView(
-            slivers: [
-              SliverAppBar(
-                leading: BackButton(
-                  color: Colors.white,
-                ),
-                title: Visibility(
-                  visible: !isExpanded,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(_space.spaceName),
-                      kVerticalSpaceTiny,
-                      Text(
-                        "${_space.users.length} Contributors",
-                        style: kSubtitleTextStyle.copyWith(fontSize: 14),
-                      ),
-                    ],
-                  ),
-                ),
-                actions: [
-                  IconButton(
-                    onPressed: null,
-                    icon: Icon(Icons.notifications_off_outlined,
-                        color: Colors.white),
-                  ),
-                ],
-                expandedHeight: mediaQuery.height * 0.47,
-                pinned: true,
-                snap: false,
-                floating: false,
-                bottom: PreferredSize(
-                  preferredSize: tabBar.preferredSize,
-                  child: ColoredBox(
+          child: BlocBuilder<SpaceBloc, SpaceState>(
+            // ignore: missing_return
+            builder: (context, state) {
+              if (state is FetchingSpaceState) {
+                return Center(child: CircularProgressIndicator(),);
+              }
+             if (state is FetchSingleSpaceSuccessState){
+               Space space = state.space;
+               return CustomScrollView(
+              slivers: [
+                SliverAppBar(
+                  leading: BackButton(
                     color: Colors.white,
-                    child: Container(
-                      width: mediaQuery.width,
-                      child: tabBar,
-                    ),
                   ),
-                ),
-                backgroundColor: Colors.black87,
-                flexibleSpace: FlexibleSpaceBar(
-                  background: LayoutBuilder(builder:
-                      (BuildContext context, BoxConstraints constraints) {
-                    return Column(
+                  title: Visibility(
+                    visible: !isExpanded,
+                    child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
+                        Text(space.spaceName),
+                        kVerticalSpaceTiny,
+                        Text(
+                          "${space.users.length} Contributors",
+                          style: kSubtitleTextStyle.copyWith(fontSize: 14),
+                        ),
+                      ],
+                    ),
+                  ),
+                  actions: [
+                    IconButton(
+                      onPressed: null,
+                      icon: Icon(Icons.notifications_off_outlined,
+                          color: Colors.white),
+                    ),
+                  ],
+                  expandedHeight: mediaQuery.height * 0.47,
+                  pinned: true,
+                  snap: false,
+                  floating: false,
+                  bottom: PreferredSize(
+                    preferredSize: tabBar.preferredSize,
+                    child: ColoredBox(
+                      color: Colors.white,
+                      child: Container(
+                        width: mediaQuery.width,
+                        child: tabBar,
+                      ),
+                    ),
+                  ),
+                  backgroundColor: Colors.black87,
+                  flexibleSpace: FlexibleSpaceBar(
+                    background: LayoutBuilder(builder:
+                        (BuildContext context, BoxConstraints constraints) {
+                      return Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
 //                        height: constraints.maxHeight,
-                          width: constraints.maxWidth,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: NetworkImage(_space.imageUrl),
-                            ),
-                          ),
-                          child: DefaultTextStyle(
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: Colors.black.withOpacity(0.85),
+                            width: constraints.maxWidth,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: NetworkImage(space.imageUrl),
                               ),
-                              margin: EdgeInsets.only(
-                                top: kToolbarHeight * 2,
+                            ),
+                            child: DefaultTextStyle(
+                              style: TextStyle(
+                                color: Colors.white,
                               ),
-                              padding: EdgeInsets.only(
-                                  left: defaultSpacing,
-                                  right: defaultSpacing,
-                                  bottom: defaultSpacing),
-                              child: Column(
-                                children: [
-                                  Container(
-                                    constraints: BoxConstraints.expand(
-                                        height: 80, width: mediaQuery.width),
-                                    child: Stack(
-                                        clipBehavior: Clip.none,
-                                        children: [
-                                          Positioned(
-                                            top: -20,
-                                            child: Container(
-                                              height: 65,
-                                              width: 65,
-                                              decoration: BoxDecoration(
-                                                image: DecorationImage(
-                                                    fit: BoxFit.cover,
-                                                    image: NetworkImage(
-                                                        _space.imageUrl)),
-                                                color: Theme.of(context)
-                                                    .primaryColor,
-                                                borderRadius:
-                                                    BorderRadius.circular(10),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.black.withOpacity(0.85),
+                                ),
+                                margin: EdgeInsets.only(
+                                  top: kToolbarHeight * 2,
+                                ),
+                                padding: EdgeInsets.only(
+                                    left: defaultSpacing,
+                                    right: defaultSpacing,
+                                    bottom: defaultSpacing),
+                                child: Column(
+                                  children: [
+                                    Container(
+                                      constraints: BoxConstraints.expand(
+                                          height: 80, width: mediaQuery.width),
+                                      child: Stack(
+                                          clipBehavior: Clip.none,
+                                          children: [
+                                            Positioned(
+                                              top: -20,
+                                              child: Container(
+                                                height: 65,
+                                                width: 65,
+                                                decoration: BoxDecoration(
+                                                  image: DecorationImage(
+                                                      fit: BoxFit.cover,
+                                                      image: NetworkImage(
+                                                          space.imageUrl)),
+                                                  color: Theme.of(context)
+                                                      .primaryColor,
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
+                                                ),
                                               ),
                                             ),
-                                          ),
-                                          Positioned.fill(
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              children: [
-                                                Spacer(),
-                                                Row(
-                                                  children: [
-                                                    IconButton(
-                                                      onPressed: null,
-                                                      icon: Icon(
-                                                        Icons
-                                                            .notifications_off_outlined,
-                                                        color: Colors.white,
+                                            Positioned.fill(
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceBetween,
+                                                children: [
+                                                  Spacer(),
+                                                  Row(
+                                                    children: [
+                                                      IconButton(
+                                                        onPressed: null,
+                                                        icon: Icon(
+                                                          Icons
+                                                              .notifications_off_outlined,
+                                                          color: Colors.white,
+                                                        ),
                                                       ),
-                                                    ),
-                                                    kHorizontalSpaceSmall,
-                                                    Container(
-                                                      height: 40,
-                                                      padding: EdgeInsets.all(
-                                                          defaultSpacing * 0.5),
-                                                      decoration: BoxDecoration(
-                                                        border: Border.all(
-                                                            color:
-                                                                Colors.white),
-                                                        color: Colors.black54,
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(20),
-                                                      ),
-                                                      alignment:
-                                                          Alignment.center,
-                                                      child: Row(
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .center,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .center,
-                                                        children: [
-                                                          Text(
-                                                            "Following",
-                                                          ),
-//                                                  kHorizontalSpaceTiny,
-                                                          FittedBox(
-                                                            child: Column(
-                                                              children: [
-                                                                Icon(
-                                                                  Icons
-                                                                      .arrow_drop_down,
-                                                                  color: Colors
-                                                                      .white,
-                                                                ),
-                                                                kVerticalSpaceTiny
-                                                              ],
+                                                      kHorizontalSpaceSmall,
+                                                      Container(
+                                                        height: 40,
+                                                        padding: EdgeInsets.all(
+                                                            defaultSpacing * 0.5),
+                                                        decoration: BoxDecoration(
+                                                          border: Border.all(
+                                                              color:
+                                                                  Colors.white),
+                                                          color: Colors.black54,
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(20),
+                                                        ),
+                                                        alignment:
+                                                            Alignment.center,
+                                                        child: Row(
+                                                          crossAxisAlignment:
+                                                              CrossAxisAlignment
+                                                                  .center,
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .center,
+                                                          children: [
+                                                            Text(
+                                                              "Following",
                                                             ),
-                                                          )
-                                                        ],
-                                                      ),
-                                                    )
-                                                  ],
-                                                )
-                                              ],
+//                                                  kHorizontalSpaceTiny,
+                                                            FittedBox(
+                                                              child: Column(
+                                                                children: [
+                                                                  Icon(
+                                                                    Icons
+                                                                        .arrow_drop_down,
+                                                                    color: Colors
+                                                                        .white,
+                                                                  ),
+                                                                  kVerticalSpaceTiny
+                                                                ],
+                                                              ),
+                                                            )
+                                                          ],
+                                                        ),
+                                                      )
+                                                    ],
+                                                  )
+                                                ],
+                                              ),
                                             ),
-                                          ),
-                                        ]),
-                                  ),
-                                  Container(
-                                    padding: EdgeInsets.symmetric(
-                                      vertical: defaultSpacing * 0.5,
+                                          ]),
                                     ),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          _space.spaceName,
-                                          style: TextStyle(
-                                            fontSize: 22,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                        kVerticalSpaceTiny,
-                                        Text(
-                                          _space.description,
-                                          style: TextStyle(height: 1.3),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  DefaultTextStyle(
-                                    style:
-                                        TextStyle(color: Colors.grey.shade400),
-                                    child: Container(
+                                    Container(
                                       padding: EdgeInsets.symmetric(
-                                          vertical: defaultSpacing * 0.5),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                        vertical: defaultSpacing * 0.5,
+                                      ),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            "${_space.noOfFollowers} followers",
+                                            space.spaceName,
+                                            style: TextStyle(
+                                              fontSize: 22,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                           ),
-                                          kHorizontalSpaceSmall,
+                                          kVerticalSpaceTiny,
                                           Text(
-                                            "${_space.noOfPostsInAWeek} posts today",
+                                            space.description,
+                                            style: TextStyle(height: 1.3),
                                           ),
-                                          Spacer()
                                         ],
                                       ),
                                     ),
-                                  ),
-                                ],
+                                    DefaultTextStyle(
+                                      style:
+                                          TextStyle(color: Colors.grey.shade400),
+                                      child: Container(
+                                        padding: EdgeInsets.symmetric(
+                                            vertical: defaultSpacing * 0.5),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              "${space.noOfFollowers} followers",
+                                            ),
+                                            kHorizontalSpaceSmall,
+                                            Text(
+                                              "${space.noOfPostsInAWeek} posts today",
+                                            ),
+                                            Spacer()
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
-                        ),
 //                      Expanded(
 //                        child: Container(
 ////                          height: 50,
@@ -297,28 +310,30 @@ class _SpacePageScreenState extends State<SpacePageScreen>
 //                          child:
 //                        ),
 //                      ),
-                      ],
-                    );
-                  }),
+                        ],
+                      );
+                    }),
+                  ),
                 ),
-              ),
-              SliverList(
-                delegate: SliverChildListDelegate(
-                  [
-                    if (_currIndex == 0)
-                      Container(
-                        padding: EdgeInsets.all(defaultSpacing),
-                        child: Text(
-                          _space.description,
+                SliverList(
+                  delegate: SliverChildListDelegate(
+                    [
+                      if (_currIndex == 0)
+                        Container(
+                          padding: EdgeInsets.all(defaultSpacing),
+                          child: Text(
+                            space.description,
+                          ),
                         ),
-                      ),
-                    if (_currIndex == 1) ..._spacePosts(),
-                    if (_currIndex == 2) ..._spaceQuestions(),
-                    if (_currIndex == 3) ..._spaceEvents(),
-                  ],
-                ),
-              )
-            ],
+                      if (_currIndex == 1) ..._spacePosts(),
+                      if (_currIndex == 2) ..._spaceQuestions(),
+                      if (_currIndex == 3) ..._spaceEvents(),
+                    ],
+                  ),
+                )
+              ],
+            );}
+            },
           ),
         ),
       ),

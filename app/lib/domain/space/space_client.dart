@@ -4,6 +4,24 @@ import 'package:app/domain/space/space.dart';
 import 'package:dio/dio.dart';
 
 class SpaceClient {
+  Future<ResponseEntity> fetchSpaceById(int spaceId) async {
+    Response response;
+    try {
+      response = await dioClient.get(
+        "/spaces/$spaceId",
+      );
+
+      var space = Space.fromServer(response.data["data"]);
+      return ResponseEntity.Data(space);
+    } on DioError catch (e) {
+      print("DioError: ${e.error} and ${e.response.data}");
+      return ResponseEntity.Error(
+          e.response.data["errors"] ?? "An error occurred fetching space");
+    } catch (e) {
+      print("Exception $e");
+      return ResponseEntity.Error("An error occurred fetching space");
+    }
+  }
 
 
   Future<ResponseEntity> fetchSpacesByUser(String userId) async {

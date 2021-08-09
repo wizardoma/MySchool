@@ -10,4 +10,9 @@ class SpaceService extends Service {
   Future<ResponseEntity> fetchSpacesByUser(String userId) async {
     return await _spaceClient.fetchSpacesByUser(userId);
   }
+
+
+  Future<ResponseEntity> fetchSpaceById(int spaceId) async {
+    return await _spaceClient.fetchSpaceById(spaceId);
+  }
 }

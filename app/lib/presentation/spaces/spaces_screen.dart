@@ -1,6 +1,7 @@
 import 'package:app/application/space/spaces_bloc.dart';
 import 'package:app/application/space/spaces_state.dart';
 import 'package:app/commons/ui_helpers.dart';
+import 'package:app/domain/space/space.dart';
 import 'package:app/presentation/spaces/space_page_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -16,8 +17,11 @@ class SpacesScreen extends StatefulWidget {
 }
 
 class _SpacesScreenState extends State<SpacesScreen> {
+
+  SpaceBloc _spaceBloc;
   @override
   void initState() {
+    _spaceBloc = context.read<SpaceBloc>();
     super.initState();
   }
 
@@ -113,7 +117,8 @@ class _SpacesScreenState extends State<SpacesScreen> {
             child: CircularProgressIndicator(),
           );
         }
-        if (state is FetchSpaceStateSuccess) {
+        if (state is FetchSpaceStateSuccess || _spaceBloc.userSpaces.isNotEmpty) {
+          List<Space> spaces = _spaceBloc.userSpaces;
           return Expanded(
               child: ListView.separated(
             physics: ScrollPhysics(),
@@ -126,19 +131,19 @@ class _SpacesScreenState extends State<SpacesScreen> {
               onTap: () => Navigator.pushNamed(
                   context, SpacePageScreen.routeName,
                   arguments: {
-                    "space": state.spaces[index],
+                    "space": spaces[index],
                   }),
               child: CustomListTile(
                 leading: Image.asset("assets/images/group_task.png",
                     width: 20, height: 20),
                 title: Text(
-                  state.spaces[index].spaceName,
+                  spaces[index].spaceName,
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
                 ),
                 trailing: Icon(Icons.arrow_forward_ios),
               ),
             ),
-            itemCount: state.spaces.length,
+            itemCount: spaces.length,
           ));
         }
       }),

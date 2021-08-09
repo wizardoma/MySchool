@@ -1,9 +1,8 @@
-import 'dart:math';
-
 import 'package:app/domain/event/event.dart';
-import '../post/post.dart';
 import 'package:app/domain/question/question.dart';
 import 'package:app/domain/user/user.dart';
+
+import '../post/post.dart';
 
 class Space {
   final int id;
@@ -22,20 +21,25 @@ class Space {
       this.imageUrl,
       this.id,
       this.spaceName,
-      this.posts,
+      this.posts ,
       this.description,
       this.questions,
       this.users,
-      this.noOfFollowers,
-      this.noOfPostsInAWeek});
+      this.noOfFollowers = 0,
+      this.noOfPostsInAWeek = 0});
 
   factory Space.fromServer(dynamic data) {
     if (data == null) return null;
     return Space(
       id: data["id"],
       spaceName: data["name"],
+      users: [],
+      events: [],
+      questions: [],
+      posts: [],
       description: data["description"],
-      imageUrl: data["imageUrl"],
+      imageUrl: data["imageUrl"] ??
+          "https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg",
     );
   }
 }

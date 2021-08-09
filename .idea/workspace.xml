@@ -19,14 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="refractor: disallow single names in name field">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="refractor: fetch real spaces from user">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/application/space/spaces_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/space/spaces_bloc.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/application/space/spaces_event.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/space/spaces_event.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/application/space/spaces_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/space/spaces_state.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/domain/space/space.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/space/space.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/domain/space/space_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/space/space_client.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/domain/space/space_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/space/space_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/ioc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/ioc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -233,14 +234,7 @@
       <workItem from="1628451539431" duration="1995000" />
       <workItem from="1628493846836" duration="1026000" />
       <workItem from="1628499087173" duration="4205000" />
-      <workItem from="1628527252836" duration="6211000" />
-    </task>
-    <task id="LOCAL-00133" summary="add trends screen">
-      <created>1627386193226</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1627386193226</updated>
+      <workItem from="1628527252836" duration="9389000" />
     </task>
     <task id="LOCAL-00134" summary="fix: userbloc not emiting UserFetch state">
       <created>1627387296491</created>
@@ -578,7 +572,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628537142081</updated>
     </task>
-    <option name="localTasksCounter" value="182" />
+    <task id="LOCAL-00182" summary="refractor: fetch real spaces from user">
+      <created>1628539836862</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1628539836862</updated>
+    </task>
+    <option name="localTasksCounter" value="183" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -597,7 +598,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="create section domain logic" />
     <MESSAGE value="add department entity domain logic" />
     <MESSAGE value="add base api" />
     <MESSAGE value="add university and department entity" />
@@ -622,7 +622,8 @@
     <MESSAGE value="Revert &quot;refractor: add comment creation API&quot;&#10;&#10;This reverts commit f764d34b" />
     <MESSAGE value="bootstrap all spaces" />
     <MESSAGE value="refractor: disallow single names in name field" />
-    <option name="LAST_COMMIT_MESSAGE" value="refractor: disallow single names in name field" />
+    <MESSAGE value="refractor: fetch real spaces from user" />
+    <option name="LAST_COMMIT_MESSAGE" value="refractor: fetch real spaces from user" />
   </component>
   <component name="WindowStateProjectService">
     <state x="392" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1628494179686">
@@ -681,10 +682,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="650" y="346" key="VCS.ChangelistChooser/0.0.1600.860@0.0.1600.860" timestamp="1628502720675" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628537151031">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628539838984">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628537151031" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628539838984" />
     <state x="530" y="235" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1628494580928">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
