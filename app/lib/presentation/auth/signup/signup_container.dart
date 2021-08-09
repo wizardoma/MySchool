@@ -137,7 +137,7 @@ class _SignUpScreenState extends State<SignUpScreen> with InputValidator{
             ),
             kVerticalSpaceRegular,
             TextInputField(
-              inputValidator: validateName,
+              inputValidator: emptyFieldValidator,
               textEditingController: _matricNoController,
               title: "Matriculation Number",
               isPassword: false,

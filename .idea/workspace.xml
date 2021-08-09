@@ -21,6 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="bootstrap all spaces">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/commons/utils/input_validator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/commons/utils/input_validator.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/auth/authentication_service_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/auth/authentication_service_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/auth/signup/signup_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/auth/signup/signup_container.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/model/Name.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/model/Name.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/service/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/service/StudentServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +231,7 @@
       <workItem from="1628451539431" duration="1995000" />
       <workItem from="1628493846836" duration="1026000" />
       <workItem from="1628499087173" duration="4205000" />
-      <workItem from="1628527252836" duration="2102000" />
+      <workItem from="1628527252836" duration="3956000" />
     </task>
     <task id="LOCAL-00132" summary="update trends to Inversion of control">
       <created>1627377382137</created>
@@ -646,22 +651,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="127" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1628494646507" />
-    <state width="1557" height="183" key="GridCell.Tab.0.bottom" timestamp="1628533394546">
+    <state width="1557" height="183" key="GridCell.Tab.0.bottom" timestamp="1628534926917">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="183" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628533394546" />
-    <state width="1557" height="183" key="GridCell.Tab.0.center" timestamp="1628533394546">
+    <state width="1557" height="183" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628534926917" />
+    <state width="1557" height="183" key="GridCell.Tab.0.center" timestamp="1628534926917">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="183" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628533394546" />
-    <state width="1557" height="183" key="GridCell.Tab.0.left" timestamp="1628533394545">
+    <state width="1557" height="183" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628534926917" />
+    <state width="1557" height="183" key="GridCell.Tab.0.left" timestamp="1628534926917">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="183" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628533394545" />
-    <state width="1557" height="183" key="GridCell.Tab.0.right" timestamp="1628533394546">
+    <state width="1557" height="183" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628534926917" />
+    <state width="1557" height="183" key="GridCell.Tab.0.right" timestamp="1628534926917">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="183" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628533394546" />
+    <state width="1557" height="183" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628534926917" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -686,10 +691,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1600.860@0.0.1600.860" timestamp="1626876457269" />
-    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1628403941152">
+    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1628535910969">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1628403941152" />
+    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1628535910969" />
     <state x="182" y="51" width="1235" height="649" key="new project wizard" timestamp="1627927781240">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

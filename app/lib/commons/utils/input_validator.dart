@@ -1,14 +1,14 @@
 mixin InputValidator {
-  String validateEmail(String email){
+  String validateEmail(String email) {
     RegExp regex = RegExp(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}");
-    if (regex.hasMatch(email)){
+    if (regex.hasMatch(email)) {
       return null;
     }
     return "Please check your email";
   }
 
-  String validatePassword(String password){
-    if (password.isEmpty){
+  String validatePassword(String password) {
+    if (password.isEmpty) {
       return "Password cannot be empty";
     }
 
@@ -18,8 +18,12 @@ mixin InputValidator {
     return null;
   }
 
-  String validateName(String value){
-    return value.isNotEmpty ? null : "Please enter a name";
+  String emptyFieldValidator(String input) {
+    return input.isNotEmpty ? null : "This cannot be empty";
   }
 
+  String validateName(String value) {
+    if (value.split(" ").length == 1) return "Please enter your full name";
+    return value.isNotEmpty ? null : "Please enter a name";
+  }
 }
