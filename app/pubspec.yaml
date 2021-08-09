@@ -79,6 +79,11 @@ flutter:
     - assets/images/question_mark.png
     - assets/images/group_task.png
     - assets/icons/profile_photo.jpg
+    - assets/icons/comment.png
+    - assets/icons/edit_answer.png
+    - assets/icons/follow_answer.png
+    - assets/icons/like_post.png
+    - assets/icons/share.png
 
 
   # To add custom fonts to your application, add a fonts section here,

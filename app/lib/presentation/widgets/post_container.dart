@@ -82,7 +82,7 @@ class _PostContainerState extends State<PostContainer> {
                                                 "Follow",
                                                 style:
                                                     TextStyle(color: Theme.of(context).primaryColor),
-                                              )
+                                              ),
                                           ],
                                         ),
                                         Container(
@@ -182,10 +182,7 @@ class _PostContainerState extends State<PostContainer> {
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Icon(
-                              Icons.arrow_upward_outlined,
-                              color: Colors.black54,
-                            ),
+                            Image.asset("assets/icons/like.png", width: 10, height: 10,),
                             Text("9.8K")
                           ],
                         ),
@@ -194,10 +191,8 @@ class _PostContainerState extends State<PostContainer> {
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Icon(
-                            Icons.circle_outlined,
-                            color: Colors.black54,
-                          ),
+                          Image.asset("assets/icons/share.png", width: 10, height: 10,),
+
                           kHorizontalSpaceTiny,
                           Text(widget.post.noOfShares.toString()),
                         ],
@@ -206,10 +201,8 @@ class _PostContainerState extends State<PostContainer> {
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Icon(
-                            Icons.message_outlined,
-                            color: Colors.black54,
-                          ),
+                          Image.asset("assets/icons/comment.png", width: 10, height: 10,),
+
                           kHorizontalSpaceTiny,
                           Text(widget.post.noOfComments.toString()),
                         ],
