@@ -41,13 +41,16 @@ class _PostContainerState extends State<PostContainer> {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: defaultSpacing),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: defaultSpacing),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
                         child: GestureDetector(
-                          onTap: () => Navigator.pushNamed(context, ProfileScreen.routeName, arguments: {"user": widget.post.user}),
+                          onTap: () => Navigator.pushNamed(
+                              context, ProfileScreen.routeName,
+                              arguments: {"user": widget.post.user}),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -80,8 +83,9 @@ class _PostContainerState extends State<PostContainer> {
                                             if (!widget.post.isFollowing)
                                               Text(
                                                 "Follow",
-                                                style:
-                                                    TextStyle(color: Theme.of(context).primaryColor),
+                                                style: TextStyle(
+                                                    color: Theme.of(context)
+                                                        .primaryColor),
                                               ),
                                           ],
                                         ),
@@ -131,7 +135,8 @@ class _PostContainerState extends State<PostContainer> {
                         widget.post.body,
                         maxLines: 2,
                         style: TextStyle(height: 1.3),
-                        overflowReplacement: Column( // This widget will be replaced.
+                        overflowReplacement: Column(
+                          // This widget will be replaced.
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Text(
@@ -141,11 +146,11 @@ class _PostContainerState extends State<PostContainer> {
                             ),
                             Text(
                               "Read more",
-                              style: TextStyle(color: Colors.grey, fontSize: 17),
+                              style:
+                                  TextStyle(color: Colors.grey, fontSize: 17),
                             )
                           ],
                         ),
-
                       ),
                     ],
                   ),
@@ -174,15 +179,20 @@ class _PostContainerState extends State<PostContainer> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: defaultSpacing * 0.5, vertical: defaultSpacing * 0.2),
+                        padding: EdgeInsets.symmetric(
+                            horizontal: defaultSpacing * 0.5,
+                            vertical: defaultSpacing * 0.2),
                         decoration: BoxDecoration(
                             color: Colors.grey.shade200,
                             borderRadius: BorderRadius.circular(10)),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Image.asset("assets/icons/like.png", width: 10, height: 10,),
+                            Image.asset(
+                              "assets/icons/like_post.png",
+                              width: 20,
+                              height: 20,
+                            ),
                             Text("9.8K")
                           ],
                         ),
@@ -191,8 +201,11 @@ class _PostContainerState extends State<PostContainer> {
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Image.asset("assets/icons/share.png", width: 10, height: 10,),
-
+                          Image.asset(
+                            "assets/icons/share.png",
+                            width: 20,
+                            height: 20,
+                          ),
                           kHorizontalSpaceTiny,
                           Text(widget.post.noOfShares.toString()),
                         ],
@@ -201,8 +214,11 @@ class _PostContainerState extends State<PostContainer> {
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Image.asset("assets/icons/comment.png", width: 10, height: 10,),
-
+                          Image.asset(
+                            "assets/icons/comment.png",
+                            width: 20,
+                            height: 20,
+                          ),
                           kHorizontalSpaceTiny,
                           Text(widget.post.noOfComments.toString()),
                         ],
