@@ -71,8 +71,9 @@ class IoC {
     _authenticationService = AuthenticationServiceImpl(_authenticationClient);
     _authenticationBloc =
         AuthenticationBloc(authenticationService: _authenticationService);
-    _spaceBloc = SpaceBloc(_spaceService);
     _userBloc = UserBloc(_userService, _authenticationBloc);
+    _spaceBloc = SpaceBloc(_spaceService, _userBloc);
+
     _eventBloc = EventBloc(_eventService);
     _postClient = PostClient();
     _postService = PostService(_postClient);

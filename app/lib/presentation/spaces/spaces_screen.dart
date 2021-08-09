@@ -1,8 +1,6 @@
 import 'package:app/application/space/spaces_bloc.dart';
-import 'package:app/application/space/spaces_event.dart';
 import 'package:app/application/space/spaces_state.dart';
 import 'package:app/commons/ui_helpers.dart';
-import 'package:app/domain/space/spaces_list.dart';
 import 'package:app/presentation/spaces/space_page_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -20,7 +18,6 @@ class SpacesScreen extends StatefulWidget {
 class _SpacesScreenState extends State<SpacesScreen> {
   @override
   void initState() {
-    BlocProvider.of<SpaceBloc>(context).add(FetchSpaceEvent());
     super.initState();
   }
 
@@ -47,8 +44,8 @@ class _SpacesScreenState extends State<SpacesScreen> {
             Row(
               children: [
                 Container(
-                  height: 30,
-                  padding: EdgeInsets.symmetric(horizontal: defaultSpacing * 0.5, vertical: defaultSpacing * 0.3),
+//                  height: 40,
+                  padding: EdgeInsets.symmetric(horizontal: defaultSpacing * 0.5 , vertical: defaultSpacing * 0.5),
                   decoration: BoxDecoration(
                     border: Border.all(color: Theme.of(context).primaryColor),
                     borderRadius: BorderRadius.circular(20),

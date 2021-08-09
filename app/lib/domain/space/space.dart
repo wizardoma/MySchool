@@ -33,7 +33,7 @@ class Space {
     if (data == null) return null;
     return Space(
       id: data["id"],
-      spaceName: data["spaceName"],
+      spaceName: data["name"],
       description: data["description"],
       imageUrl: data["imageUrl"],
     );

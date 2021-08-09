@@ -7,7 +7,7 @@ class SpaceService extends Service {
 
   SpaceService(this._spaceClient);
 
-  Future<ResponseEntity> fetchSpaces() async {
-    return await _spaceClient.fetchSpaces();
+  Future<ResponseEntity> fetchSpacesByUser(String userId) async {
+    return await _spaceClient.fetchSpacesByUser(userId);
   }
 }

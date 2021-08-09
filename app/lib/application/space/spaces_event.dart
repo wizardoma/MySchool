@@ -2,6 +2,10 @@ abstract class SpaceEvent {
 
 }
 
-class FetchSpaceEvent extends SpaceEvent{
+class FetchSpaceByUserEvent extends SpaceEvent{
+  final String userId;
+
+  FetchSpaceByUserEvent(this.userId);
 
 }
+
