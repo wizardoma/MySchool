@@ -101,11 +101,12 @@ class Post {
 
   factory Post.fromServer(dynamic data) {
     List<Comment> comments = [];
-    data["comments"].forEach((comment) {
-      comments.add(Comment.fromServer(comment));
-    });
-    print("all comments $comments");
-
+    if (data["comments"]!=null) {
+      data["comments"].forEach((comment) {
+        comments.add(Comment.fromServer(comment));
+      });
+      print("all comments $comments");
+    }
     return Post(
       space: Space.fromServer(data["space"]),
       id: data["id"],

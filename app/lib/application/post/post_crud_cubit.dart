@@ -15,6 +15,7 @@ class PostCrudCubit extends Cubit<PostState> {
     if (response.isError) {
       emit(PostCreateFailureState(response.errors.message));
     }
-    emit(PostCreateSuccess(response.data));
+    else {
+    emit(PostCreateSuccess(response.data)); }
   }
 }

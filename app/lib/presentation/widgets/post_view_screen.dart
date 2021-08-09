@@ -33,6 +33,7 @@ class _PostViewScreenState extends State<PostViewScreen> {
 
   @override
   Widget build(BuildContext context) {
+    print("the post $_post");
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
