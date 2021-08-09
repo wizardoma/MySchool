@@ -1,7 +1,9 @@
 package com.wizardom.backend.domain.space.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.wizardom.backend.domain.posts.model.Post;
 import com.wizardom.backend.domain.students.model.Student;
+import com.wizardom.backend.domain.university.department.model.Department;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
@@ -21,6 +23,10 @@ public class Space {
     public Student owner;
 
     private String description;
+
+    @OneToMany(fetch = FetchType.LAZY)
+    @JsonIgnore
+    private List<Department> departments;
 
     private String imageUrl;
 

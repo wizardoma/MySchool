@@ -1,5 +1,6 @@
 package com.wizardom.backend.domain.university.department.model;
 
+import com.wizardom.backend.domain.space.model.Space;
 import com.wizardom.backend.domain.students.model.Student;
 import com.wizardom.backend.domain.university.model.University;
 import lombok.Data;
@@ -18,6 +19,10 @@ public class Department {
     private long id;
 
     private String name;
+
+    @ToString.Exclude
+    @ManyToOne
+    private Space space;
 
     @ToString.Exclude
     @ManyToOne

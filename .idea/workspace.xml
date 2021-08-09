@@ -19,20 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="extend post client to fetch questions and comments">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="bootstrap all spaces">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/question/question.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/question/question.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/space/space.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/space/space.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/space/spaces_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/space/spaces_list.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/home_feeds.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/home/home_feeds.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/post/create_post_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/post/create_post_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/answer_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/answer_container.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/question_answer_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/question_answer_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/question_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/question_item.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/questions_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/questions_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/config/DatabaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/config/DatabaseConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/space/repository/SpaceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/space/repository/SpaceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/service/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/service/StudentServiceImpl.java" afterDir="false" />
     </list>
+    <list id="3361c1a4-1f46-45d9-a762-2020feb3d975" name="Revert &quot;refractor: add comment creation API&quot;" comment="Revert &quot;refractor: add comment creation API&quot;&#10;&#10;This reverts commit f764d34b" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +48,8 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/backend" />
+    <option name="RESET_MODE" value="HARD" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="ProjectId" id="1rd2asS3JvBByg79NAVInNTU5oD" />
@@ -67,14 +61,16 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="database.data.extractors.current.id" value="Pretty-Groovy.txt.groovy" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/lib/commons/utils" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -229,42 +225,11 @@
       <workItem from="1628365430968" duration="9291000" />
       <workItem from="1628403080305" duration="11724000" />
       <workItem from="1628415744761" duration="11342000" />
-      <workItem from="1628442941230" duration="469000" />
-    </task>
-    <task id="LOCAL-00127" summary="add line icons package">
-      <created>1627283054841</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1627283054841</updated>
-    </task>
-    <task id="LOCAL-00128" summary="use font awesome package for icons instead">
-      <created>1627286782369</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1627286782370</updated>
-    </task>
-    <task id="LOCAL-00129" summary="refractor">
-      <created>1627375083813</created>
-      <option name="number" value="00129" />
-      <option name="presentableId" value="LOCAL-00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1627375083814</updated>
-    </task>
-    <task id="LOCAL-00130" summary="add trends business logic">
-      <created>1627377333301</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1627377333301</updated>
-    </task>
-    <task id="LOCAL-00131" summary="Add trends state management logic">
-      <created>1627377357281</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1627377357281</updated>
+      <workItem from="1628442941230" duration="1727000" />
+      <workItem from="1628445998738" duration="784000" />
+      <workItem from="1628451539431" duration="1995000" />
+      <workItem from="1628493846836" duration="1026000" />
+      <workItem from="1628499087173" duration="3675000" />
     </task>
     <task id="LOCAL-00132" summary="update trends to Inversion of control">
       <created>1627377382137</created>
@@ -574,7 +539,42 @@
       <option name="project" value="LOCAL" />
       <updated>1628443340394</updated>
     </task>
-    <option name="localTasksCounter" value="176" />
+    <task id="LOCAL-00176" summary="refractor: huge ui refractor">
+      <created>1628443516190</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1628443516190</updated>
+    </task>
+    <task id="LOCAL-00177" summary="refractor: change post action icons">
+      <created>1628501891517</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1628501891519</updated>
+    </task>
+    <task id="LOCAL-00178" summary="refractor: add comment creation API">
+      <created>1628502682872</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1628502682872</updated>
+    </task>
+    <task id="LOCAL-00179" summary="Revert &quot;refractor: add comment creation API&quot;&#10;&#10;This reverts commit f764d34b">
+      <created>1628502762467</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1628502762467</updated>
+    </task>
+    <task id="LOCAL-00180" summary="bootstrap all spaces">
+      <created>1628502807933</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1628502807933</updated>
+    </task>
+    <option name="localTasksCounter" value="181" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -593,11 +593,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fetch User from server on authenticated" />
-    <MESSAGE value="fix: User showing null middlename from server" />
-    <MESSAGE value="change app name to Myschool" />
-    <MESSAGE value="add launcher icons" />
-    <MESSAGE value="add events to space" />
     <MESSAGE value="refractor" />
     <MESSAGE value="create section domain logic" />
     <MESSAGE value="add department entity domain logic" />
@@ -618,9 +613,18 @@
     <MESSAGE value="create question state management" />
     <MESSAGE value="refractor: add comments and space to post" />
     <MESSAGE value="extend post client to fetch questions and comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="extend post client to fetch questions and comments" />
+    <MESSAGE value="refractor: huge ui refractor" />
+    <MESSAGE value="refractor: change post action icons" />
+    <MESSAGE value="refractor: add comment creation API" />
+    <MESSAGE value="Revert &quot;refractor: add comment creation API&quot;&#10;&#10;This reverts commit f764d34b" />
+    <MESSAGE value="bootstrap all spaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="bootstrap all spaces" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="392" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1628494179686">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="392" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1628494179686" />
     <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1628425406444">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -633,30 +637,34 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="541" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1624251443504" />
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1628443416578">
+    <state x="387" y="0" key="CommitChangelistDialog2" timestamp="1628502760719">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1628443416578" />
-    <state x="580" y="127" key="FileChooserDialogImpl" timestamp="1626933225318">
+    <state x="387" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1628502760719" />
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1628505163795">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="580" y="127" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1626933225318" />
-    <state width="1557" height="241" key="GridCell.Tab.0.bottom" timestamp="1628429931599">
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1628505163795" />
+    <state x="580" y="127" key="FileChooserDialogImpl" timestamp="1628494646507">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="241" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628429931599" />
-    <state width="1557" height="241" key="GridCell.Tab.0.center" timestamp="1628429931598">
+    <state x="580" y="127" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1628494646507" />
+    <state width="1557" height="248" key="GridCell.Tab.0.bottom" timestamp="1628502705629">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="241" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628429931598" />
-    <state width="1557" height="241" key="GridCell.Tab.0.left" timestamp="1628429931598">
+    <state width="1557" height="248" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628502705629" />
+    <state width="1557" height="248" key="GridCell.Tab.0.center" timestamp="1628502705628">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="241" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628429931598" />
-    <state width="1557" height="241" key="GridCell.Tab.0.right" timestamp="1628429931598">
+    <state width="1557" height="248" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628502705628" />
+    <state width="1557" height="248" key="GridCell.Tab.0.left" timestamp="1628502705628">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="241" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628429931598" />
+    <state width="1557" height="248" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628502705628" />
+    <state width="1557" height="248" key="GridCell.Tab.0.right" timestamp="1628502705629">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="248" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628502705629" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -665,10 +673,18 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="280" y="4" width="1161" height="709" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1628152079372" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628443342376">
+    <state x="650" y="346" key="VCS.ChangelistChooser" timestamp="1628502720675">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628443342376" />
+    <state x="650" y="346" key="VCS.ChangelistChooser/0.0.1600.860@0.0.1600.860" timestamp="1628502720675" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628502815519">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628502815519" />
+    <state x="530" y="235" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1628494580928">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="530" y="235" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/0.0.1600.860@0.0.1600.860" timestamp="1628494580928" />
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1626876457269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

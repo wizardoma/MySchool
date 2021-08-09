@@ -1,26 +1,29 @@
 package com.wizardom.backend.domain.config;
 
+import com.wizardom.backend.domain.space.model.Space;
+import com.wizardom.backend.domain.space.repository.SpaceRepository;
 import com.wizardom.backend.domain.university.department.model.Department;
 import com.wizardom.backend.domain.university.department.repository.DepartmentRepository;
 import com.wizardom.backend.domain.university.model.University;
 import com.wizardom.backend.domain.university.repository.UniversityRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
+import static com.wizardom.backend.domain.space.config.SpaceInitializer.defaultSpaces;
 import static com.wizardom.backend.domain.university.department.config.DepartmentConfig.*;
 
 /**
  * @author Ibekason Alexander Onyebuchi
- *
- *  Class that bootstraps universities and students
+ * <p>
+ * Class that bootstraps universities and students
  */
 
-
+@Slf4j
 @Transactional
 @RequiredArgsConstructor
 @Configuration
@@ -29,6 +32,7 @@ public class DatabaseConfig implements CommandLineRunner {
     private final Map<String, String> universities = new HashMap<>();
     private final UniversityRepository universityRepository;
     private final DepartmentRepository departmentRepository;
+    private final SpaceRepository spaceRepository;
 
     @Override
     public void run(String... args) {
@@ -65,6 +69,29 @@ public class DatabaseConfig implements CommandLineRunner {
                 departmentRepository.save(department);
             }
         });
+
+        log.info("Done with departments");
+
+
+        defaultSpaces.forEach((key, value) -> {
+            if (spaceRepository.findByNameIgnoreCase(key).isEmpty()) {
+                List<Department> departments = new ArrayList<>();
+                for (Integer integer : value) {
+                    Optional<Department> department = departmentRepository.findById(Long.valueOf(integer));
+                    department.ifPresent(departments::add);
+                }
+                log.info("Added all departments");
+
+                log.info("Space not empty");
+                Space space = spaceRepository
+                        .save(new Space()
+                                .setName(key)
+                                .setDescription("This the official space of " + key + " . Share posts and ask questions about " + key)
+                                .setDepartments(departments));
+                System.out.println("save space " + space.toString());
+            }
+        });
+
     }
 
 

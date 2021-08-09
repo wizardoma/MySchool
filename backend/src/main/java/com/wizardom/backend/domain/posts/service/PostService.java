@@ -18,7 +18,7 @@ public interface PostService {
 
     List<Comment> getCommentsOfPosts(long postId);
 
-    Comment createPostComment(long postId, String userId, CreateCommentRequest request);
+    Comment createPostComment(long postId, CreateCommentRequest request);
 
     List<Post> getQuestions();
 

@@ -38,7 +38,6 @@ public class PostServiceImpl implements PostService {
     }
 
 
-
     @Override
     public List<Post> getPostsByUser(String userId) {
         Student student = studentRepository.findById(userId).orElseThrow(() -> new StudentNotFoundException("No student found"));
@@ -54,7 +53,7 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public List<Comment> getAllComments() {
-        return  commentRepository.findAll();
+        return commentRepository.findAll();
 
     }
 
@@ -64,11 +63,10 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public Comment createPostComment(long postId, String userId, CreateCommentRequest request) {
+    public Comment createPostComment(long postId, CreateCommentRequest request) {
         return commentRepository.save(new Comment().setBody(request.getBody())
-                .setStudent(StudentById(userId))
-                .setPost(PostById(postId))
-        );
+                .setStudent(StudentById(request.getUserId()))
+                .setPost(PostById(postId)));
     }
 
     @Override
@@ -76,7 +74,6 @@ public class PostServiceImpl implements PostService {
         List<Post> posts = postRepository.findAll().stream()
                 .filter(post -> post.getPostType() == PostType.question)
                 .collect(Collectors.toList());
-
         Collections.reverse(posts);
         return posts;
 
@@ -93,11 +90,12 @@ public class PostServiceImpl implements PostService {
         );
     }
 
-    private Student StudentById(String userId){
+    private Student StudentById(String userId) {
         return studentRepository.findById(userId).orElseThrow(() -> new StudentNotFoundException("No student found with ID"));
 
     }
-    private Post PostById(long id){
-        return  postRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("No Posts Found"));
+
+    private Post PostById(long id) {
+        return postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("No Posts Found"));
     }
 }

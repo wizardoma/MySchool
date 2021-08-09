@@ -1,5 +1,6 @@
 package com.wizardom.backend.application.posts.controller;
 
+import com.wizardom.backend.application.posts.controller.request.CreateCommentRequest;
 import com.wizardom.backend.application.posts.controller.request.CreatePostRequest;
 import com.wizardom.backend.application.posts.mapper.PostMapper;
 import com.wizardom.backend.domain.posts.service.PostService;
@@ -46,6 +47,10 @@ public class PostController {
     }
 
 
+    @PostMapping("{postId}/comments")
+    public ResponseEntity<?> createComment(@PathVariable long postId, @ModelAttribute CreateCommentRequest request) {
+        return ok(postService.createPostComment(postId, request));
+    }
 
     @GetMapping("/{postId}/comments")
     public ResponseEntity<?> getCommentsOfPost(@PathVariable long postId){

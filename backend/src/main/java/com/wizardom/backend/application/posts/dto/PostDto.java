@@ -1,10 +1,13 @@
 package com.wizardom.backend.application.posts.dto;
 
 import com.wizardom.backend.application.students.dto.StudentDto;
+import com.wizardom.backend.domain.posts.comments.Comment;
 import com.wizardom.backend.domain.space.model.Space;
 import com.wizardom.backend.domain.students.model.Student;
 import lombok.Data;
 import lombok.experimental.Accessors;
+
+import java.util.List;
 
 @Data
 @Accessors(chain = true)
@@ -16,6 +19,7 @@ public class PostDto {
     private String imageUrl;
     private StudentDto student;
     private Space space;
+    private List<Comment> comments;
     private long date;
     
 }

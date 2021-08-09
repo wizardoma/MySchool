@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.*;
 
 import static com.wizardom.backend.commons.response.ResponseEntityUtils.ok;
 
+@RestController
 @RequiredArgsConstructor
-@RequestMapping("/spaces")
+@RequestMapping("spaces")
 public class SpaceController {
     private final SpaceService spaceService;
 
@@ -43,7 +44,7 @@ public class SpaceController {
         return ok(spaceService.getPostsInSpace(spaceId));
     }
 
-    @GetMapping("posts/{id}")
+    @GetMapping("questions/{id}")
     public ResponseEntity<?> getQuestionsInSpace(@PathVariable("id") long spaceId){
         return ok(spaceService.getQuestionsInSpace(spaceId));
     }
