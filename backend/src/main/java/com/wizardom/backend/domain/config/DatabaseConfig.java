@@ -51,21 +51,21 @@ public class DatabaseConfig implements CommandLineRunner {
 
         futoDepartments.stream().map(department -> new Department().setName(department).setUniversity(futo)).forEach(department -> {
             if (departmentRepository.findByNameAndUniversity(department.getName(), futo).isEmpty()) {
-                System.out.println("Adding department " + department.toString());
+                log.info("Adding department " + department.toString());
                 departmentRepository.save(department);
             }
         });
 
         imsuDepartments.stream().map(department -> new Department().setName(department).setUniversity(imsu)).forEach(department -> {
             if (departmentRepository.findByNameAndUniversity(department.getName(), imsu).isEmpty()) {
-                System.out.println("Adding department " + department.toString());
+                log.info("Adding department " + department.toString());
                 departmentRepository.save(department);
             }
         });
 
         palmUniversities.stream().map(department -> new Department().setName(department).setUniversity(palm)).forEach(department -> {
             if (departmentRepository.findByNameAndUniversity(department.getName(), palm).isEmpty()) {
-                System.out.println("Adding department " + department.toString());
+                log.info("Adding department " + department.toString());
                 departmentRepository.save(department);
             }
         });

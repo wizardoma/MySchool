@@ -51,9 +51,8 @@ public class StudentServiceImpl extends StudentService {
                 .setDepartment(department)
                 .setName(extractName(request.getName()));
 
-        throw new StudentExistsException("Student already exists");
 
-//        return studentRepository.save(student);
+        return studentRepository.save(student);
     }
 
     @Override
@@ -73,7 +72,10 @@ public class StudentServiceImpl extends StudentService {
 
     private Name extractName(String name) {
         String[] arrays = name.split(" ");
+        if (arrays.length>1)
         return new Name().setFirstName(arrays[0]).setLastName(arrays[1]);
+
+        return new Name().setLastName(name);
     }
 
     private void abortIfUserExists(CreateStudentRequest request) {

@@ -10,6 +10,7 @@ import lombok.experimental.Accessors;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Data
@@ -36,10 +37,10 @@ public class Student {
     private University university;
 
     @OneToMany
-    private Collection<Post> posts;
+    private List<Post> posts;
 
     @ManyToMany()
-    private Collection<Space> spaces;
+    private List<Space> spaces;
 
     @ManyToOne
     private Department department;

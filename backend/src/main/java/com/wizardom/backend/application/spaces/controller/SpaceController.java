@@ -40,12 +40,12 @@ public class SpaceController {
     }
 
     @GetMapping("posts/{id}")
-    public ResponseEntity<?> getPostsInSpace(@PathVariable("id") long spaceId){
+    public ResponseEntity<?> getPostsInSpace(@PathVariable("id") long spaceId) {
         return ok(spaceService.getPostsInSpace(spaceId));
     }
 
     @GetMapping("questions/{id}")
-    public ResponseEntity<?> getQuestionsInSpace(@PathVariable("id") long spaceId){
+    public ResponseEntity<?> getQuestionsInSpace(@PathVariable("id") long spaceId) {
         return ok(spaceService.getQuestionsInSpace(spaceId));
     }
 }

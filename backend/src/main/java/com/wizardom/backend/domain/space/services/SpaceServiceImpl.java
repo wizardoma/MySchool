@@ -27,7 +27,7 @@ public class SpaceServiceImpl implements SpaceService {
 
     @Override
     public Space getSpaceById(long id) {
-        return spaceRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("No spaces found"));
+        return spaceById(id);
     }
 
     @Override
@@ -42,18 +42,19 @@ public class SpaceServiceImpl implements SpaceService {
 
     @Override
     public List<Space> getSpacesByUser(String userId) {
-        return spaceRepository.findByOwner(studentRepository.findById(userId).orElseThrow(()-> new ResourceNotFoundException("No User Found")));
+        return studentRepository.findById(userId)
+                .orElseThrow(() -> new ResourceNotFoundException("No User Found")).getSpaces();
     }
 
     @Override
     public List<Student> getSpaceContributors(long spaceId) {
-        return spaceRepository.findById(spaceId).orElseThrow(()-> new ResourceNotFoundException("No Space Found")).getStudents();
+        return spaceById(spaceId).getStudents();
     }
 
     @Override
     public List<Post> getPostsInSpace(long spaceId) {
 
-        return spaceRepository.findById(spaceId).orElseThrow(() -> new ResourceNotFoundException("No space found")).getPosts()
+        return spaceById(spaceId).getPosts()
                 .stream()
                 .filter(post -> post.getPostType() == PostType.post)
                 .collect(Collectors.toList());
@@ -61,10 +62,15 @@ public class SpaceServiceImpl implements SpaceService {
 
     @Override
     public List<Post> getQuestionsInSpace(long spaceId) {
-        return spaceRepository.findById(spaceId).orElseThrow(() -> new ResourceNotFoundException("No space found")).getPosts()
+        return spaceById(spaceId).getPosts()
                 .stream()
                 .filter(post -> post.getPostType() == PostType.question)
                 .collect(Collectors.toList());
     }
+
+    private Space spaceById(long spaceId) {
+        return spaceRepository.findById(spaceId).orElseThrow(() -> new ResourceNotFoundException("No space found"));
+    }
+
 
 }

@@ -28,6 +28,13 @@ public class PostController {
         );
     }
 
+    @GetMapping("{postId}")
+    public ResponseEntity<?> getPostById(@PathVariable long postId){
+        return  ok(
+                PostMapper.toDto(postService.getPostById(postId))
+        );
+    }
+
     @PostMapping("")
     public ResponseEntity<?> createPost(@ModelAttribute CreatePostRequest request) {
         return ok(

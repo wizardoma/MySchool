@@ -15,7 +15,7 @@ public class Name {
     private String lastName;
 
     public String fullName(){
-        return this.firstName  + " " + this.lastName;
+        return this.firstName  + " " + (this.lastName == null || this.lastName.isEmpty() ? "" : this.lastName);
     }
 
 
