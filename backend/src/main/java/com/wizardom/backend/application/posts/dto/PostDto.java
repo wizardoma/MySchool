@@ -19,7 +19,7 @@ public class PostDto {
     private String imageUrl;
     private StudentDto student;
     private Space space;
-    private List<Comment> comments;
+    private List<CommentDto> comments;
     private long date;
     
 }

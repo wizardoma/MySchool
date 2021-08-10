@@ -22,6 +22,8 @@
     <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add api for comment creating and post fetching">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/domain/post/posts_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/post/posts_client.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/posts/dto/PostDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/posts/dto/PostDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/posts/mapper/PostMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/posts/mapper/PostMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,13 +41,13 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="package" />
-        <option value="Class" />
         <option value="Dart File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/backend" />
     <option name="RESET_MODE" value="HARD" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
@@ -228,7 +230,8 @@
       <workItem from="1628493846836" duration="1026000" />
       <workItem from="1628499087173" duration="4205000" />
       <workItem from="1628527252836" duration="12868000" />
-      <workItem from="1628600697450" duration="9126000" />
+      <workItem from="1628600697450" duration="9406000" />
+      <workItem from="1628620048006" duration="1936000" />
     </task>
     <task id="LOCAL-00140" summary="add events business domain">
       <created>1627893541614</created>
@@ -648,22 +651,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="127" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1628494646507" />
-    <state width="1557" height="254" key="GridCell.Tab.0.bottom" timestamp="1628610831312">
+    <state width="1557" height="254" key="GridCell.Tab.0.bottom" timestamp="1628611704454">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="254" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628610831312" />
-    <state width="1557" height="254" key="GridCell.Tab.0.center" timestamp="1628610831312">
+    <state width="1557" height="254" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628611704454" />
+    <state width="1557" height="254" key="GridCell.Tab.0.center" timestamp="1628611704454">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="254" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628610831312" />
-    <state width="1557" height="254" key="GridCell.Tab.0.left" timestamp="1628610831312">
+    <state width="1557" height="254" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628611704454" />
+    <state width="1557" height="254" key="GridCell.Tab.0.left" timestamp="1628611704453">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="254" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628610831312" />
-    <state width="1557" height="254" key="GridCell.Tab.0.right" timestamp="1628610831312">
+    <state width="1557" height="254" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628611704453" />
+    <state width="1557" height="254" key="GridCell.Tab.0.right" timestamp="1628611704454">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="254" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628610831312" />
+    <state width="1557" height="254" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628611704454" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

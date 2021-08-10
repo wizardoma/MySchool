@@ -49,7 +49,7 @@ class PostClient {
           e.response.data["errors"] ?? "An error occurred fetching posts");
     } catch (e) {
       print("Exception from questions $e");
-      return ResponseEntity.Error("An error occurred fetching posts");
+      return ResponseEntity.Error("An error occurred fetching questions");
     }
   }
 
@@ -73,7 +73,7 @@ class PostClient {
   Future<ResponseEntity> createComment(int postId, FormData formData) async {
     Response response;
     try {
-      response = await dioClient.post("/posts/$postId/comments}", data: formData);
+      response = await dioClient.post("/posts/$postId/comments", data: formData);
 
       return ResponseEntity.Data(Comment.fromServer(response.data["data"]));
     } on DioError catch (e) {

@@ -1,5 +1,6 @@
 package com.wizardom.backend.domain.posts.comments;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.wizardom.backend.domain.posts.model.Post;
 import com.wizardom.backend.domain.students.model.Student;
 import lombok.Data;
@@ -18,6 +19,7 @@ public class Comment {
 
     private String body;
 
+    @JsonIgnore
     @ManyToOne
     private Post post;
 

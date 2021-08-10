@@ -5,6 +5,7 @@ import com.wizardom.backend.application.students.mapper.StudentMapper;
 import com.wizardom.backend.domain.posts.model.Post;
 
 import java.time.ZoneId;
+import java.util.stream.Collectors;
 
 public class PostMapper {
     public static PostDto toDto(Post post) {
@@ -14,7 +15,7 @@ public class PostMapper {
                 .setDate(post.getPostDate().atZone(ZoneId.systemDefault()).toInstant().toEpochMilli())
                 .setSpace(post.getSpace())
                 .setTitle(post.getTitle())
-                .setComments(post.getComments())
+                .setComments(post.getComments().stream().map(CommentMapper::toDto).collect(Collectors.toList()))
                 .setId(post.getId())
                 .setStudent(StudentMapper.toDto(post.getStudent()));
     }
