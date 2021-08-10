@@ -1,3 +1,4 @@
+import 'package:app/application/post/create_comment_request.dart';
 import 'package:app/application/post/create_post_request.dart';
 import 'package:app/application/post/post_crud_cubit.dart';
 import 'package:app/application/post/post_state.dart';
@@ -7,6 +8,7 @@ import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
 import 'package:app/domain/post/post.dart';
 import 'package:app/domain/user/user.dart';
+import 'package:app/presentation/questions/question_answer_details_screen.dart';
 import 'package:app/presentation/widgets/post_bottom_sheet.dart';
 import 'package:app/presentation/widgets/post_view_screen.dart';
 import 'package:flutter/material.dart';
@@ -35,98 +37,97 @@ class _AnswerQuestionSheetState extends State<AnswerQuestionSheet> {
 
   @override
   Widget build(BuildContext context) {
-    return  BlocConsumer<PostCrudCubit, PostState>(
-        builder: (context, state) {
-          return Container(
-            height: MediaQuery.of(context).size.height * 0.95,
-            child: PostBottomSheet(
-              headerTitle: Container(),
-              button: state is PostLoadingState
-                  ? SizedBox(
-                      height: 20,
-                      width: 20,
-                      child: CircularProgressIndicator(
-                        valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-                      ),
-                    )
-                  : Container(
-                      child: GestureDetector(
-                        onTap: _answerQuestion,
-                        child: Text(
-                          "Submit",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18),
-                        ),
+    return BlocConsumer<PostCrudCubit, PostState>(
+      builder: (context, state) {
+        return Container(
+          height: MediaQuery.of(context).size.height * 0.95,
+          child: PostBottomSheet(
+            headerTitle: Container(),
+            button: state is PostLoadingState
+                ? SizedBox(
+                    height: 20,
+                    width: 20,
+                    child: CircularProgressIndicator(
+                      valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                    ),
+                  )
+                : Container(
+                    child: GestureDetector(
+                      onTap: _answerQuestion,
+                      child: Text(
+                        "Submit",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18),
                       ),
                     ),
-              body: SingleChildScrollView(
-                child: Container(
-                  padding: EdgeInsets.all(defaultSpacing),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          CircleAvatar(
-                            radius: 15,
-                            backgroundImage:
-                                AssetImage("assets/icons/student.png"),
-                          ),
-                          kHorizontalSpaceTiny,
-                          Text(
-                            "${_currentUser.name} Answered",
-                            style: kSubtitleTextStyle.copyWith(fontSize: 13),
-                          ),
-                        ],
-                      ),
-                      kVerticalSpaceMedium,
-                      Text(
-                        widget.question.title,
-                        style: kPostTitleTextStyle,
-                      ),
-                      kVerticalSpaceRegular,
-                      TextField(
-                        controller: _answerController,
-                        minLines: 2,
-                        maxLines: 10,
-                        decoration: InputDecoration(
-                            hintStyle:
-                                TextStyle(color: Colors.grey, fontSize: 20),
-                            hintText: _postHintText,
-                            border: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Colors.grey.shade300,
-                              ),
-                            ),
-                            enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Colors.grey.shade300,
-                              ),
-                            )),
-                      ),
-                    ],
                   ),
+            body: SingleChildScrollView(
+              child: Container(
+                padding: EdgeInsets.all(defaultSpacing),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        CircleAvatar(
+                          radius: 15,
+                          backgroundImage:
+                              AssetImage("assets/icons/student.png"),
+                        ),
+                        kHorizontalSpaceTiny,
+                        Text(
+                          "${_currentUser.name} Answered",
+                          style: kSubtitleTextStyle.copyWith(fontSize: 13),
+                        ),
+                      ],
+                    ),
+                    kVerticalSpaceMedium,
+                    Text(
+                      widget.question.title,
+                      style: kPostTitleTextStyle,
+                    ),
+                    kVerticalSpaceRegular,
+                    TextField(
+                      controller: _answerController,
+                      minLines: 2,
+                      maxLines: 10,
+                      decoration: InputDecoration(
+                          hintStyle:
+                              TextStyle(color: Colors.grey, fontSize: 20),
+                          hintText: _postHintText,
+                          border: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.grey.shade300,
+                            ),
+                          ),
+                          enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.grey.shade300,
+                            ),
+                          )),
+                    ),
+                  ],
                 ),
               ),
             ),
-          );
-        },
-        listener: (BuildContext context, state) {
-          if (state is PostCreateSuccess) {
-            print("created post from server ${state.post}");
-            _showSnackBar("Your post was created successfully");
-            Future.delayed(Duration(seconds: 1), () {
-              Navigator.popAndPushNamed(context, PostViewScreen.routeName,
-                  arguments: {"post": state.post});
-            });
-          }
-          if (state is PostCreateFailureState) {
-            _showSnackBar(state.errorMessage);
-          }
-        },
-
+          ),
+        );
+      },
+      listener: (BuildContext context, state) {
+        if (state is PostCommentAddedSuccessState) {
+          print("created comment from server ${state.comment}");
+          _showSnackBar("Your comment was created successfully");
+          Future.delayed(Duration(seconds: 1), () {
+            Navigator.popAndPushNamed(context, QuestionAnswerScreen.routeName,
+                arguments: {"question": widget.question});
+          });
+        }
+        if (state is PostCommentAddedFailureState) {
+          _showSnackBar(state.errorMessage);
+        }
+      },
     );
   }
 
@@ -144,7 +145,13 @@ class _AnswerQuestionSheetState extends State<AnswerQuestionSheet> {
   }
 
   void _answerQuestion() {
-    print("answered question ${_answerController.text}");
+    context.read<PostCrudCubit>().addComment(
+          widget.question.id,
+          CreateCommentRequest(
+            userId: _currentUser.id,
+            body: _answerController.text,
+          ),
+        );
   }
 
   @override

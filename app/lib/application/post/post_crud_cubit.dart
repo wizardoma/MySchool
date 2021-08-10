@@ -1,3 +1,4 @@
+import 'package:app/application/post/create_comment_request.dart';
 import 'package:app/application/post/create_post_request.dart';
 import 'package:app/application/post/post_state.dart';
 import 'package:app/domain/post/posts_service.dart';
@@ -17,5 +18,16 @@ class PostCrudCubit extends Cubit<PostState> {
     }
     else {
     emit(PostCreateSuccess(response.data)); }
+  }
+
+  Future<void> addComment(int postId, CreateCommentRequest request) async {
+    emit(PostLoadingState());
+    var response = await _postService.createComment(postId,request);
+
+    if (response.isError) {
+      emit(PostCommentAddedFailureState(response.errors.message));
+    }
+    else {
+      emit(PostCommentAddedFailureState(response.data)); }
   }
 }

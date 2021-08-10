@@ -1,5 +1,6 @@
 import 'package:app/application/post/create_post_request.dart';
 import 'package:app/commons/api.dart';
+import 'package:app/domain/question/comment.dart';
 import 'package:dio/dio.dart';
 
 import 'post.dart';
@@ -59,7 +60,7 @@ class PostClient {
 
       return ResponseEntity.Data(Post.fromServer(response.data["data"]));
     } on DioError catch (e) {
-      print("DioError: ${e.error} and ${e.response.data}");
+      print("DioError: ${e.error} and ${e.response}");
       return ResponseEntity.Error(
           e.response.data["errors"] ?? "An error occurred creating a post");
     } catch (e) {
@@ -67,5 +68,23 @@ class PostClient {
       return ResponseEntity.Error(
           "An error occurred creating a post, please try again later");
     }
+  }
+
+  Future<ResponseEntity> createComment(int postId, FormData formData) async {
+    Response response;
+    try {
+      response = await dioClient.post("/posts/$postId/comments}", data: formData);
+
+      return ResponseEntity.Data(Comment.fromServer(response.data["data"]));
+    } on DioError catch (e) {
+      print("DioError: ${e.error} and ${e.response}");
+      return ResponseEntity.Error(
+          e.response.data["errors"] ?? "An error occurred creating a comment");
+    } catch (e) {
+      print("Exception $e");
+      return ResponseEntity.Error(
+          "An error occurred creating a comment, please try again later");
+    }
+
   }
 }

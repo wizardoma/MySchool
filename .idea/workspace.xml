@@ -19,13 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add smartrefresher to home feeds">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add answer question bottom sheet widget">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/commons/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/commons/routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/question_answer_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/question_answer_details_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/question_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/question_item.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/questions_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/questions_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_bottom_sheet.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_bottom_sheet.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/application/post/post_crud_cubit.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/post/post_crud_cubit.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/application/post/post_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/post/post_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/application/post/posts_event.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/post/posts_event.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/post/posts_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/post/posts_client.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/post/posts_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/post/posts_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/answer_question_sheet.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/answer_question_sheet.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/question_answer_details_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/question_answer_details_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,14 +234,7 @@
       <workItem from="1628493846836" duration="1026000" />
       <workItem from="1628499087173" duration="4205000" />
       <workItem from="1628527252836" duration="12868000" />
-      <workItem from="1628600697450" duration="5854000" />
-    </task>
-    <task id="LOCAL-00138" summary="use custom themedata for app theme">
-      <created>1627854013337</created>
-      <option name="number" value="00138" />
-      <option name="presentableId" value="LOCAL-00138" />
-      <option name="project" value="LOCAL" />
-      <updated>1627854013339</updated>
+      <workItem from="1628600697450" duration="8360000" />
     </task>
     <task id="LOCAL-00139" summary="replace notifications up and add events in replacement">
       <created>1627890168615</created>
@@ -577,7 +572,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628606234412</updated>
     </task>
-    <option name="localTasksCounter" value="187" />
+    <task id="LOCAL-00187" summary="add answer question bottom sheet widget">
+      <created>1628608151346</created>
+      <option name="number" value="00187" />
+      <option name="presentableId" value="LOCAL-00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1628608151346</updated>
+    </task>
+    <option name="localTasksCounter" value="188" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -596,7 +598,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="use department and university id for user signup" />
     <MESSAGE value="fix: incorrect user mapping from server" />
     <MESSAGE value="add input validators for signup and login forms" />
     <MESSAGE value="add profileUrl field to user for profile photos" />
@@ -621,7 +622,8 @@
     <MESSAGE value="fix: incorrect timestamp from backend, null check for comments" />
     <MESSAGE value="add pull to refresh to question posts" />
     <MESSAGE value="add smartrefresher to home feeds" />
-    <option name="LAST_COMMIT_MESSAGE" value="add smartrefresher to home feeds" />
+    <MESSAGE value="add answer question bottom sheet widget" />
+    <option name="LAST_COMMIT_MESSAGE" value="add answer question bottom sheet widget" />
   </component>
   <component name="WindowStateProjectService">
     <state x="392" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1628494179686">
@@ -680,10 +682,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="650" y="346" key="VCS.ChangelistChooser/0.0.1600.860@0.0.1600.860" timestamp="1628502720675" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628606236159">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628608155412">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628606236159" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628608155412" />
     <state x="530" y="235" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1628494580928">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

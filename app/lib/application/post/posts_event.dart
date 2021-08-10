@@ -11,3 +11,9 @@ class CreatePostEvent extends PostEvent {
 
   CreatePostEvent(this.request);
 }
+
+class FetchSinglePostEvent extends PostEvent {
+  final int postId;
+
+  FetchSinglePostEvent(this.postId);
+}

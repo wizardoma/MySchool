@@ -1,3 +1,4 @@
+import 'package:app/application/post/create_comment_request.dart';
 import 'package:app/application/post/create_post_request.dart';
 import 'package:app/domain/post/posts_client.dart';
 import 'package:app/domain/response.dart';
@@ -20,5 +21,11 @@ class PostService extends Service {
 
   Future<ResponseEntity> fetchQuestions() async {
     return await _postClient.fetchQuestionsPost();
+  }
+  
+  Future<ResponseEntity> createComment(int postId, CreateCommentRequest request) async {
+    var response = await _postClient.createComment(postId, FormData.fromMap(request.toMap()));
+  return response;
+
   }
 }

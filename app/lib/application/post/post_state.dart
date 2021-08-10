@@ -1,3 +1,5 @@
+import 'package:app/domain/question/comment.dart';
+
 import '../../domain/post/post.dart';
 
 abstract class PostState {}
@@ -8,8 +10,8 @@ class PostFetchErrorState extends PostState {
   final String errorMessage;
 
   PostFetchErrorState(this.errorMessage);
-
 }
+
 class PostFetchSuccessState extends PostState {
   final List<Post> feeds;
 
@@ -28,5 +30,28 @@ class PostCreateFailureState extends PostState {
   PostCreateFailureState(this.errorMessage);
 }
 
-
 class PostLoadingState extends PostState {}
+
+class PostCommentAddedSuccessState extends PostState {
+  final Comment comment;
+
+  PostCommentAddedSuccessState(this.comment);
+}
+
+class PostCommentAddedFailureState extends PostState {
+  final String errorMessage;
+
+  PostCommentAddedFailureState(this.errorMessage);
+}
+
+class PostSingleFetchErrorState extends PostState {
+  final String errorMessage;
+
+  PostSingleFetchErrorState(this.errorMessage);
+}
+
+class PostSingleFetchedState extends PostState {
+  final Post post;
+
+  PostSingleFetchedState(this.post);
+}
