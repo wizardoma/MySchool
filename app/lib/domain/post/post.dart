@@ -105,7 +105,6 @@ class Post {
       data["comments"].forEach((comment) {
         comments.add(Comment.fromServer(comment));
       });
-      print("all comments $comments");
     }
     return Post(
       space: Space.fromServer(data["space"]),

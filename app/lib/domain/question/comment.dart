@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:app/domain/user/user.dart';
 
 class Comment {
@@ -26,10 +28,10 @@ class Comment {
       body: map['body'] as String,
       user: User.fromServer(map['student']),
       date: DateTime.fromMillisecondsSinceEpoch(map["date"]),
-      noOfLikes: map['noOfLikes'] as int,
-      noOfComments: map['noOfComments'] as int,
-      noOfShares: map['noOfShares'] as int,
-      noOfViews: map['noOfViews'] as int,
+      noOfLikes: Random().nextInt(345),
+      noOfComments: Random().nextInt(345),
+      noOfShares: Random().nextInt(345),
+      noOfViews: Random().nextInt(3450),
     );
   }
 

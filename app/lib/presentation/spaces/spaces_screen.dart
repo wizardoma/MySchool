@@ -1,8 +1,10 @@
 import 'package:app/application/space/spaces_bloc.dart';
 import 'package:app/application/space/spaces_state.dart';
+import 'package:app/commons/api.dart';
 import 'package:app/commons/ui_helpers.dart';
 import 'package:app/domain/space/space.dart';
 import 'package:app/presentation/spaces/space_page_screen.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -126,7 +128,12 @@ class _SpacesScreenState extends State<SpacesScreen> {
         if (state is FetchSpaceStateSuccess ||
             _spaceBloc.userSpaces.isNotEmpty) {
           List<Space> spaces = _spaceBloc.userSpaces;
-          return Expanded(
+          if (spaces.length == 0) {
+            return Center(
+              child: Text("You have not joined any spaces"),
+            );
+          }
+          return Flexible(
               child: ListView.separated(
             physics: ScrollPhysics(),
             shrinkWrap: true,
@@ -154,7 +161,121 @@ class _SpacesScreenState extends State<SpacesScreen> {
           ));
         }
       }),
+      kVerticalSpaceRegular,
+      Container(
+        padding: EdgeInsets.all(defaultSpacing),
+        height: 300,
+        child: LayoutBuilder(
+          builder: (context, cons) {
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Discover Spaces",
+                  style: TextStyle(
+                    color: Colors.black87,
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                kVerticalSpaceRegular,
+                Expanded(
+                  child: FutureBuilder(
+                      future: _fetchSpaces(),
+                      // ignore: missing_return
+                      builder: (context, snapshot) {
+                        if (snapshot.connectionState != ConnectionState.done) {
+                          return Center(child: CircularProgressIndicator());
+                        }
+                        if (snapshot.connectionState == ConnectionState.done) {
+                          List<Space> spaces = snapshot.data;
+                          return Container(
+                            height: 200,
+                            child: ListView(
+                                shrinkWrap: true,
+                                scrollDirection: Axis.horizontal,
+                                children: List.generate(spaces.length, (index) {
+                                  return GestureDetector(
+                                    onTap: () => Navigator.pushNamed(context, SpacePageScreen.routeName, arguments: {"space": spaces[index]}),
+                                    child: Container(
+                                      height: 200,
+                                      width: 150,
+                                      margin:
+                                          EdgeInsets.symmetric(horizontal: 10),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(15),
+                                      ),
+                                      child: Column(
+                                        children: [
+                                          Expanded(
+                                            child: Container(
+                                              width: cons.maxWidth,
+                                              decoration: BoxDecoration(
+                                                borderRadius: BorderRadius.only(
+                                                  topRight: Radius.circular(15),
+                                                  topLeft: Radius.circular(15),
+                                                ),
+                                                color: Theme.of(context)
+                                                    .primaryColor,
+                                              ),
+                                            ),
+                                          ),
+                                          Expanded(
+                                            flex: 4,
+                                            child: Container(
+                                              height: 160,
+                                              padding:
+                                                  EdgeInsets.all(defaultSpacing),
+                                              child: Column(
+                                                children: [
+                                                  Text(
+                                                    "${spaces[index].spaceName}",
+                                                    style: TextStyle(
+                                                        color: Colors.black87,
+                                                        fontWeight:
+                                                            FontWeight.bold),
+                                                  ),
+                                                  kVerticalSpaceSmall,
+                                                  Text(
+                                                      "${spaces[index].description}" , style: TextStyle(fontSize: 12,),softWrap: true,)
+                                                ],
+                                              ),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  );
+                                })),
+                          );
+                        }
+                      }),
+                )
+              ],
+            );
+          },
+        ),
+      ),
     ]));
+  }
+}
+
+Future<List<Space>> _fetchSpaces() async {
+  Response response;
+  try {
+    response = await dioClient.get(
+      "/spaces",
+    );
+
+    List<Space> spaces = [];
+
+    response.data["data"].forEach((post) {
+      spaces.add(Space.fromServer(post));
+    });
+
+    return spaces;
+  } catch (e) {
+    print(e);
   }
 }
 

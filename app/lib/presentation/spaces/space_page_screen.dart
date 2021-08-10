@@ -1,12 +1,14 @@
 import 'package:app/application/space/spaces_bloc.dart';
 import 'package:app/application/space/spaces_event.dart';
 import 'package:app/application/space/spaces_state.dart';
+import 'package:app/commons/api.dart';
 import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
 import 'package:app/domain/space/space.dart';
 import 'package:app/presentation/events/event_item_widget.dart';
 import 'package:app/presentation/questions/question_item.dart';
 import 'package:app/presentation/widgets/post_container.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -35,7 +37,7 @@ class _SpacePageScreenState extends State<SpacePageScreen>
     if (!hasRun) {
       dynamic arguments = ModalRoute.of(context).settings.arguments;
       _space = arguments["space"];
-      BlocProvider.of<SpaceBloc>(context).add(FetchSingleSpaceEvent(_space.id));
+//      BlocProvider.of<SpaceBloc>(context).add(FetchSingleSpaceEvent(_space.id));
       super.didChangeDependencies();
     }
   }
@@ -79,16 +81,17 @@ class _SpacePageScreenState extends State<SpacePageScreen>
       body: SafeArea(
         child: GestureDetector(
           onHorizontalDragEnd: _detectUserSwipe,
-          child: BlocBuilder<SpaceBloc, SpaceState>(
+          child: FutureBuilder(
+            future: _fetchSpace(),
             // ignore: missing_return
-            builder: (context, state) {
-              if (state is FetchingSpaceState) {
+            builder: (context, snapshot) {
+              if (snapshot.connectionState!= ConnectionState.done) {
                 return Center(
                   child: CircularProgressIndicator(),
                 );
               }
-              if (state is FetchSingleSpaceSuccessState) {
-                Space space = state.space;
+              if (snapshot.connectionState == ConnectionState.done) {
+                Space space = snapshot.data;
                 return CustomScrollView(
                   slivers: [
                     SliverAppBar(
@@ -349,6 +352,21 @@ class _SpacePageScreenState extends State<SpacePageScreen>
         ),
       ),
     );
+  }
+
+  Future<Space> _fetchSpace()async {
+    Response response;
+    try {
+      response = await dioClient.get(
+        "/spaces/${_space.id}",
+      );
+
+      var space = Space.fromServer(response.data["data"]);
+      return space;
+    }
+    catch (e) {
+      print("Exception $e");
+    }
   }
 
   List<Widget> _spacePosts() {

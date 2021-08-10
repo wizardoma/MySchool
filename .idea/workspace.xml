@@ -19,13 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add api for comment creating and post fetching">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add fetch single post state management">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/application/post/post_crud_cubit.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/post/post_crud_cubit.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/post/post.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/post/post.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/domain/post/posts_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/post/posts_client.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/post/posts_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/post/posts_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/question/comment.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/question/comment.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/home_feeds.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/home/home_feeds.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/post/create_post_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/post/create_post_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/answer_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/answer_container.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/answer_question_sheet.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/answer_question_sheet.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/question_answer_details_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/question_answer_details_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,14 +239,7 @@
       <workItem from="1628499087173" duration="4205000" />
       <workItem from="1628527252836" duration="12868000" />
       <workItem from="1628600697450" duration="9406000" />
-      <workItem from="1628620048006" duration="4133000" />
-    </task>
-    <task id="LOCAL-00140" summary="add events business domain">
-      <created>1627893541614</created>
-      <option name="number" value="00140" />
-      <option name="presentableId" value="LOCAL-00140" />
-      <option name="project" value="LOCAL" />
-      <updated>1627893541614</updated>
+      <workItem from="1628620048006" duration="14114000" />
     </task>
     <task id="LOCAL-00141" summary="add events state management">
       <created>1627893570038</created>
@@ -578,7 +577,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628610826746</updated>
     </task>
-    <option name="localTasksCounter" value="189" />
+    <task id="LOCAL-00189" summary="add fetch single post state management">
+      <created>1628624519429</created>
+      <option name="number" value="00189" />
+      <option name="presentableId" value="LOCAL-00189" />
+      <option name="project" value="LOCAL" />
+      <updated>1628624519430</updated>
+    </task>
+    <option name="localTasksCounter" value="190" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -597,7 +603,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add input validators for signup and login forms" />
     <MESSAGE value="add profileUrl field to user for profile photos" />
     <MESSAGE value="replace lorem with user description" />
     <MESSAGE value="refractor: Change home feeds to posts" />
@@ -622,7 +627,8 @@
     <MESSAGE value="add smartrefresher to home feeds" />
     <MESSAGE value="add answer question bottom sheet widget" />
     <MESSAGE value="add api for comment creating and post fetching" />
-    <option name="LAST_COMMIT_MESSAGE" value="add api for comment creating and post fetching" />
+    <MESSAGE value="add fetch single post state management" />
+    <option name="LAST_COMMIT_MESSAGE" value="add fetch single post state management" />
   </component>
   <component name="WindowStateProjectService">
     <state x="392" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1628494179686">
@@ -645,30 +651,30 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="387" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1628502760719" />
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1628622370556">
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1628624596070">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1628622370556" />
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1628624596070" />
     <state x="580" y="127" key="FileChooserDialogImpl" timestamp="1628494646507">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="127" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1628494646507" />
-    <state width="1557" height="234" key="GridCell.Tab.0.bottom" timestamp="1628623606475">
+    <state width="1557" height="178" key="GridCell.Tab.0.bottom" timestamp="1628634227848">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="234" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628623606475" />
-    <state width="1557" height="234" key="GridCell.Tab.0.center" timestamp="1628623606474">
+    <state width="1557" height="178" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628634227848" />
+    <state width="1557" height="178" key="GridCell.Tab.0.center" timestamp="1628634227847">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="234" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628623606474" />
-    <state width="1557" height="234" key="GridCell.Tab.0.left" timestamp="1628623606473">
+    <state width="1557" height="178" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628634227847" />
+    <state width="1557" height="178" key="GridCell.Tab.0.left" timestamp="1628634227847">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="234" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628623606473" />
-    <state width="1557" height="234" key="GridCell.Tab.0.right" timestamp="1628623606474">
+    <state width="1557" height="178" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628634227847" />
+    <state width="1557" height="178" key="GridCell.Tab.0.right" timestamp="1628634227848">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="234" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628623606474" />
+    <state width="1557" height="178" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628634227848" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -681,10 +687,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="650" y="346" key="VCS.ChangelistChooser/0.0.1600.860@0.0.1600.860" timestamp="1628502720675" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628610828797">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628624521953">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628610828797" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628624521953" />
     <state x="530" y="235" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1628494580928">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -693,10 +699,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1600.860@0.0.1600.860" timestamp="1626876457269" />
-    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1628605539183">
+    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1628625043379">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1628605539183" />
+    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1628625043379" />
     <state x="182" y="51" width="1235" height="649" key="new project wizard" timestamp="1627927781240">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

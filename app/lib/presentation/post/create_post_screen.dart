@@ -154,7 +154,6 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
         },
         listener: (BuildContext context, state) {
           if (state is PostCreateSuccess) {
-            print("created post from server ${state.post}");
             _showSnackBar("Your post was created successfully");
             Future.delayed(Duration(seconds: 1), () {
               Navigator.popAndPushNamed(context, PostViewScreen.routeName,
@@ -194,7 +193,6 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
       type: _postTypeIndex == 1 ? "question" : "post",
     );
 
-    print("postRequest $postRequest");
     context.read<PostCrudCubit>().createPost(postRequest);
   }
 

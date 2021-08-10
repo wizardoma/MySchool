@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
 import 'package:app/domain/question/comment.dart';
@@ -130,7 +132,7 @@ class AnswerContainer extends StatelessWidget {
                               Icons.arrow_upward_outlined,
                               color: Colors.black54,
                             ),
-                            Text("9.8K")
+                            Text(Random().nextInt(302).toString())
                           ],
                         ),
                       ),

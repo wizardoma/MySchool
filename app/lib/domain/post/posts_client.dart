@@ -75,7 +75,8 @@ class PostClient {
     try {
       response = await dioClient.post("/posts/$postId/comments", data: formData);
 
-      return ResponseEntity.Data(Comment.fromServer(response.data["data"]));
+      var comment = Comment.fromServer(response.data["data"]);
+      return ResponseEntity.Data(comment);
     } on DioError catch (e) {
       print("DioError: ${e.error} and ${e.response}");
       return ResponseEntity.Error(

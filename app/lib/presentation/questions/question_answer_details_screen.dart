@@ -74,7 +74,7 @@ class _QuestionAnswerScreenState extends State<QuestionAnswerScreen> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              "${0} Answer(s)",
+                              "${_question.comments.length} Answer(s)",
                               style: TextStyle(
                                   fontSize: 16, fontWeight: FontWeight.bold),
                             ),

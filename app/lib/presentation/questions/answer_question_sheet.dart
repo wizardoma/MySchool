@@ -117,8 +117,6 @@ class _AnswerQuestionSheetState extends State<AnswerQuestionSheet> {
       },
       listener: (BuildContext context, state) {
         if (state is PostCommentAddedSuccessState) {
-          print("Your commment was successfull");
-//          print("created comment from server ${state.comment}");
           _showSnackBar("Your comment was created successfully");
           Future.delayed(Duration(seconds: 1), () {
             Navigator.popAndPushNamed(context, QuestionAnswerScreen.routeName,

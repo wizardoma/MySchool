@@ -76,7 +76,6 @@ class _HomeFeedsState extends State<HomeFeeds> {
   }
 
   void _onRefresh() async {
-    print("refreshing");
     context.read<PostBloc>().add(FetchPostFeedsEvent());
     await Future.delayed(
         Duration(seconds: 2), () => _refreshController.refreshCompleted());
