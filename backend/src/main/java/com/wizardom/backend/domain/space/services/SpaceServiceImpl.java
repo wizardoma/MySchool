@@ -10,6 +10,7 @@ import com.wizardom.backend.domain.students.model.Student;
 import com.wizardom.backend.domain.students.repository.StudentRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -42,14 +43,15 @@ public class SpaceServiceImpl implements SpaceService {
 
     @Override
     public List<Space> getSpacesByUser(String userId) {
-        return studentRepository.findById(userId)
-                .orElseThrow(() -> new ResourceNotFoundException("No User Found")).getSpaces();
+        return studentById(userId).getSpaces();
     }
 
     @Override
     public List<Student> getSpaceContributors(long spaceId) {
         return spaceById(spaceId).getStudents();
     }
+
+
 
     @Override
     public List<Post> getPostsInSpace(long spaceId) {
@@ -68,8 +70,26 @@ public class SpaceServiceImpl implements SpaceService {
                 .collect(Collectors.toList());
     }
 
+    @Transactional
+    @Override
+    public void followSpace(long spaceId, String userId) {
+        Space space = spaceById(spaceId);
+        Student student = studentById(userId);
+        student.getSpaces().add(space);
+        studentRepository.save(student);
+
+        space.getStudents().add(student);
+        spaceRepository.save(space);
+
+    }
+
     private Space spaceById(long spaceId) {
         return spaceRepository.findById(spaceId).orElseThrow(() -> new ResourceNotFoundException("No space found"));
+    }
+
+    private Student studentById(String studentId){
+        return studentRepository.findById(studentId)
+                .orElseThrow(() -> new ResourceNotFoundException("No User Found"));
     }
 
 

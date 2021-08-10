@@ -23,6 +23,8 @@ class _SpacePageScreenState extends State<SpacePageScreen>
     with SingleTickerProviderStateMixin {
   Space _space;
 
+  String _followText = "Follow +";
+
   var hasRun = false;
 
   static List<String> _tabs = ["About", "Posts", "Questions", "Events"];
@@ -210,51 +212,43 @@ class _SpacePageScreenState extends State<SpacePageScreen>
                                                             ),
                                                           ),
                                                           kHorizontalSpaceSmall,
-                                                          Container(
-                                                            height: 40,
-                                                            padding: EdgeInsets.all(
-                                                                defaultSpacing *
-                                                                    0.5),
-                                                            decoration:
-                                                                BoxDecoration(
-                                                              border: Border.all(
-                                                                  color: Colors
-                                                                      .white),
-                                                              color: Colors
-                                                                  .black54,
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          20),
-                                                            ),
-                                                            alignment: Alignment
-                                                                .center,
-                                                            child: Row(
-                                                              crossAxisAlignment:
-                                                                  CrossAxisAlignment
-                                                                      .center,
-                                                              mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .center,
-                                                              children: [
-                                                                Text(
-                                                                  "Following",
-                                                                ),
-//                                                  kHorizontalSpaceTiny,
-                                                                FittedBox(
-                                                                  child: Column(
-                                                                    children: [
-                                                                      Icon(
-                                                                        Icons
-                                                                            .arrow_drop_down,
-                                                                        color: Colors
-                                                                            .white,
-                                                                      ),
-                                                                      kVerticalSpaceTiny
-                                                                    ],
+                                                          GestureDetector(
+                                                            onTap: _followSpace,
+                                                            child: Container(
+                                                              height: 40,
+                                                              padding: EdgeInsets.all(
+                                                                  defaultSpacing *
+                                                                      0.5),
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                border: Border.all(
+                                                                    color: Colors
+                                                                        .white),
+                                                                color: Colors
+                                                                    .black54,
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            20),
+                                                              ),
+                                                              alignment: Alignment
+                                                                  .center,
+                                                              child: Row(
+                                                                crossAxisAlignment:
+                                                                    CrossAxisAlignment
+                                                                        .center,
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .center,
+                                                                children: [
+                                                                  Text(
+
+                                                                    _followText,
                                                                   ),
-                                                                )
-                                                              ],
+//                                                  kHorizontalSpaceTiny,
+
+                                                                ],
+                                                              ),
                                                             ),
                                                           )
                                                         ],
@@ -352,6 +346,21 @@ class _SpacePageScreenState extends State<SpacePageScreen>
         ),
       ),
     );
+  }
+
+  Future<void> _followSpace() async {
+    Response response;
+    try {
+      response = await dioClient.post(
+        "/spaces/${_space.id}",
+      );
+
+      var space = Space.fromServer(response.data["data"]);
+      return space;
+    }
+    catch (e) {
+      print("Exception $e");
+    }
   }
 
   Future<Space> _fetchSpace()async {

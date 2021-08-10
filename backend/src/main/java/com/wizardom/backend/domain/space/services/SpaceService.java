@@ -20,5 +20,7 @@ public interface SpaceService {
     List<Post> getPostsInSpace(long spaceId);
 
     List<Post> getQuestionsInSpace(long spaceId);
+    
+    void followSpace(long spaceId, String userId);
 
 }

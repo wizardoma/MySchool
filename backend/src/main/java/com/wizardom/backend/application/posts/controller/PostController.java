@@ -2,6 +2,7 @@ package com.wizardom.backend.application.posts.controller;
 
 import com.wizardom.backend.application.posts.controller.request.CreateCommentRequest;
 import com.wizardom.backend.application.posts.controller.request.CreatePostRequest;
+import com.wizardom.backend.application.posts.mapper.CommentMapper;
 import com.wizardom.backend.application.posts.mapper.PostMapper;
 import com.wizardom.backend.domain.posts.service.PostService;
 import lombok.RequiredArgsConstructor;
@@ -29,8 +30,8 @@ public class PostController {
     }
 
     @GetMapping("{postId}")
-    public ResponseEntity<?> getPostById(@PathVariable long postId){
-        return  ok(
+    public ResponseEntity<?> getPostById(@PathVariable long postId) {
+        return ok(
                 PostMapper.toDto(postService.getPostById(postId))
         );
     }
@@ -53,15 +54,14 @@ public class PostController {
                 .collect(Collectors.toList()));
     }
 
-
     @PostMapping("{postId}/comments")
     public ResponseEntity<?> createComment(@PathVariable long postId, @ModelAttribute CreateCommentRequest request) {
-        return ok(postService.createPostComment(postId, request));
+        return ok(CommentMapper.toDto(postService.createPostComment(postId, request)));
     }
 
     @GetMapping("/{postId}/comments")
-    public ResponseEntity<?> getCommentsOfPost(@PathVariable long postId){
-        return ok(postService.getCommentsOfPosts(postId));
+    public ResponseEntity<?> getCommentsOfPost(@PathVariable long postId) {
+        return ok(postService.getCommentsOfPosts(postId).stream().map(CommentMapper::toDto).collect(Collectors.toList()));
     }
 }
 

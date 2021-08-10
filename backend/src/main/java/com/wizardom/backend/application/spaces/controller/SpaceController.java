@@ -13,6 +13,12 @@ import static com.wizardom.backend.commons.response.ResponseEntityUtils.ok;
 @RequestMapping("spaces")
 public class SpaceController {
     private final SpaceService spaceService;
+    
+    @PostMapping("{spaceId}/follows/{userId}")
+    public ResponseEntity<?> followSpace(@PathVariable long spaceId, @PathVariable String userId){
+        spaceService.followSpace(spaceId,userId);
+        return ok();
+    }
 
     @PostMapping
     public ResponseEntity<?> saveSpaces(@ModelAttribute CreateSpaceRequest request) {
