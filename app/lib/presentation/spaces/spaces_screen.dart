@@ -17,8 +17,8 @@ class SpacesScreen extends StatefulWidget {
 }
 
 class _SpacesScreenState extends State<SpacesScreen> {
-
   SpaceBloc _spaceBloc;
+
   @override
   void initState() {
     _spaceBloc = context.read<SpaceBloc>();
@@ -49,7 +49,9 @@ class _SpacesScreenState extends State<SpacesScreen> {
               children: [
                 Container(
 //                  height: 40,
-                  padding: EdgeInsets.symmetric(horizontal: defaultSpacing * 0.5 , vertical: defaultSpacing * 0.5),
+                  padding: EdgeInsets.symmetric(
+                      horizontal: defaultSpacing * 0.5,
+                      vertical: defaultSpacing * 0.5),
                   decoration: BoxDecoration(
                     border: Border.all(color: Theme.of(context).primaryColor),
                     borderRadius: BorderRadius.circular(20),
@@ -60,7 +62,8 @@ class _SpacesScreenState extends State<SpacesScreen> {
                         padding: EdgeInsets.all(0),
                         decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            border: Border.all(color: Theme.of(context).primaryColor)),
+                            border: Border.all(
+                                color: Theme.of(context).primaryColor)),
                         child: Icon(
                           Icons.add,
                           size: 15,
@@ -77,7 +80,9 @@ class _SpacesScreenState extends State<SpacesScreen> {
                 ),
                 kHorizontalSpaceSmall,
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: defaultSpacing * 0.5, vertical: defaultSpacing * 0.5),
+                  padding: EdgeInsets.symmetric(
+                      horizontal: defaultSpacing * 0.5,
+                      vertical: defaultSpacing * 0.5),
                   decoration: BoxDecoration(
                     border: Border.all(color: Theme.of(context).primaryColor),
                     borderRadius: BorderRadius.circular(20),
@@ -88,7 +93,8 @@ class _SpacesScreenState extends State<SpacesScreen> {
                         padding: EdgeInsets.all(0),
                         decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            border: Border.all(color: Theme.of(context).primaryColor)),
+                            border: Border.all(
+                                color: Theme.of(context).primaryColor)),
                         child: Icon(
                           Icons.search,
                           size: 15,
@@ -117,7 +123,8 @@ class _SpacesScreenState extends State<SpacesScreen> {
             child: CircularProgressIndicator(),
           );
         }
-        if (state is FetchSpaceStateSuccess || _spaceBloc.userSpaces.isNotEmpty) {
+        if (state is FetchSpaceStateSuccess ||
+            _spaceBloc.userSpaces.isNotEmpty) {
           List<Space> spaces = _spaceBloc.userSpaces;
           return Expanded(
               child: ListView.separated(
@@ -163,7 +170,8 @@ class CustomListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(border: Border.all(color: Colors.transparent)),
-      padding: EdgeInsets.symmetric(horizontal: defaultSpacing, vertical: defaultSpacing ),
+      padding: EdgeInsets.symmetric(
+          horizontal: defaultSpacing, vertical: defaultSpacing),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

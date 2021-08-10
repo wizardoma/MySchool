@@ -63,27 +63,26 @@ class _QuestionAnswerScreenState extends State<QuestionAnswerScreen> {
                     ),
                     Text(
                         "Asked ${_question.space == null ? " by ${_question.user.name}" : " in ${_question.space.spaceName}"}"),
-
                   ],
                 ),
               ),
               Expanded(
                 child: _question.comments.length == 0
                     ? Center(
-                  child: Text("No Answers yet"),
-                )
+                        child: Text("No Answers yet"),
+                      )
                     : ListView.separated(
-                  separatorBuilder: (context, index) => Divider(
-                    color: Colors.grey.shade200,
-                    thickness: 4,
-                  ),
-                  itemCount: _question.comments.length,
-                  itemBuilder: (context, index) {
-                    return  AnswerContainer(
+                        separatorBuilder: (context, index) => Divider(
+                          color: Colors.grey.shade200,
+                          thickness: 4,
+                        ),
+                        itemCount: _question.comments.length,
+                        itemBuilder: (context, index) {
+                          return AnswerContainer(
                             answer: _question.comments[index],
                           );
-                  },
-                ),
+                        },
+                      ),
               ),
             ],
           ))
