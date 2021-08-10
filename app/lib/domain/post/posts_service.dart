@@ -28,4 +28,11 @@ class PostService extends Service {
   return response;
 
   }
+  Future<ResponseEntity> fetchPost(int postId) async {
+    var response = await _postClient.fetchPost(postId);
+    return response;
+
+  }
+
+
 }

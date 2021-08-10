@@ -9,6 +9,17 @@ class PostCrudCubit extends Cubit<PostState> {
 
   PostCrudCubit(this._postService) : super(PostUnInitializedState());
 
+  Future<void> fetchPost(int postId) async{
+    emit(PostLoadingState());
+
+    var response = await _postService.fetchPost(postId);
+    if (response.isError) {
+      emit(PostSingleFetchErrorState(response.errors.message));
+    }
+    else {
+      emit(PostSingleFetchedState(response.data));
+    }
+  }
   Future<void> createPost(CreatePostRequest request) async {
     emit(PostLoadingState());
     var response = await _postService.createPost(request);

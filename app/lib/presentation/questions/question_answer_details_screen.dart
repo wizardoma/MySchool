@@ -1,3 +1,4 @@
+import 'package:app/application/post/post_crud_cubit.dart';
 import 'package:app/application/post/post_state.dart';
 import 'package:app/application/post/posts_bloc.dart';
 import 'package:app/application/post/posts_event.dart';
@@ -24,8 +25,7 @@ class _QuestionAnswerScreenState extends State<QuestionAnswerScreen> {
     if (!hasRun) {
       dynamic arguments = ModalRoute.of(context).settings.arguments;
       _question = arguments["question"];
-      BlocProvider.of<PostBloc>(context)
-          .add(FetchSinglePostEvent(_question.id));
+      BlocProvider.of<PostCrudCubit>(context).fetchPost(_question.id);
       super.didChangeDependencies();
     }
   }
@@ -41,14 +41,9 @@ class _QuestionAnswerScreenState extends State<QuestionAnswerScreen> {
         ),
         backgroundColor: Colors.white,
       ),
-      body: BlocBuilder<PostBloc, PostState>(
+      body: BlocBuilder<PostCrudCubit, PostState>(
         // ignore: missing_return
         builder: (context, state) {
-          if (state is PostLoadingState) {
-            return Center(
-              child: CircularProgressIndicator(),
-            );
-          }
           if (state is PostSingleFetchErrorState) {
             return Center(
               child: Text("An error occurred fetching post"),
@@ -110,6 +105,12 @@ class _QuestionAnswerScreenState extends State<QuestionAnswerScreen> {
                   ))
                 ],
               ),
+            );
+          }
+
+          if (state is PostLoadingState) {
+            return Center(
+              child: CircularProgressIndicator(),
             );
           }
         },

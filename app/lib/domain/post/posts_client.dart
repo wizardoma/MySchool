@@ -87,4 +87,23 @@ class PostClient {
     }
 
   }
+
+  Future<ResponseEntity> fetchPost(int postId) async {
+    Response response;
+    try {
+      response = await dioClient.get("/posts/$postId");
+
+      return ResponseEntity.Data(Post.fromServer(response.data["data"]));
+    } on DioError catch (e) {
+      print("DioError: ${e.error} and ${e.response}");
+      return ResponseEntity.Error(
+          e.response.data["errors"] ?? "An error occurred fetching a post");
+    } catch (e) {
+      print("Exception $e");
+      return ResponseEntity.Error(
+          "An error occurred fetching a post, please try again later");
+    }
+
+
+  }
 }
