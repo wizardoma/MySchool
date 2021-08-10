@@ -1,3 +1,4 @@
+import 'package:app/application/post/posts_bloc.dart';
 import 'package:app/application/question/question_bloc.dart';
 import 'package:app/application/question/question_state.dart';
 import 'package:app/commons/styles.dart';
@@ -7,6 +8,7 @@ import 'package:app/domain/question/question.dart';
 import 'package:app/presentation/questions/question_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 class QuestionScreen extends StatefulWidget {
   static const title = "Questions";
@@ -17,9 +19,11 @@ class QuestionScreen extends StatefulWidget {
 
 class _QuestionScreenState extends State<QuestionScreen> {
   QuestionCubit _questionCubit;
+  RefreshController _refreshController;
 
   @override
   void initState() {
+    _refreshController = RefreshController(initialRefresh: false);
     _questionCubit = context.read<QuestionCubit>()..fetchQuestions();
     super.initState();
   }
@@ -70,61 +74,66 @@ class _QuestionScreenState extends State<QuestionScreen> {
             ),
             Expanded(
               child: TabBarView(children: [
-                ListView(shrinkWrap: true, children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      kVerticalSpaceSmall,
-                      Container(
-                        padding: EdgeInsets.all(defaultSpacing),
-                        child: Row(
-                          children: [
-                            Image.asset(
-                              "assets/images/question_mark.png",
-                              width: 20,
-                              height: 20,
-                            ),
-                            kHorizontalSpaceTiny,
-                            Text("Questions for you"),
-                          ],
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    kVerticalSpaceSmall,
+                    Container(
+                      padding: EdgeInsets.all(defaultSpacing),
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            "assets/images/question_mark.png",
+                            width: 20,
+                            height: 20,
+                          ),
+                          kHorizontalSpaceTiny,
+                          Text("Questions for you"),
+                        ],
+                      ),
+                    ),
+                    Divider(),
+                    Expanded(
+                      child: SmartRefresher(
+                        enablePullDown: true,
+                        onRefresh: _onRefresh,
+                        controller: _refreshController,
+                        child: BlocBuilder<QuestionCubit, QuestionState>(
+                          // ignore: missing_return
+                          builder: (context, state) {
+                            if (state is QuestionLoadingState ||
+                                state is QuestionUnInitializedState) {
+                              return Center(
+                                child: CircularProgressIndicator(),
+                              );
+                            }
+                            if (state is QuestionFetchErrorState) {
+                              return Center(
+                                child: Text(state.errorMessage),
+                              );
+                            }
+                            if (state is QuestionFetchedState) {
+                              List<Post> questions = state.posts;
+                              return ListView.separated(
+                                separatorBuilder: (c, i) => Divider(
+                                  thickness: 4,
+                                  color: Colors.grey.shade200,
+                                ),
+                                shrinkWrap: true,
+                                physics: ScrollPhysics(),
+                                itemCount: questions?.length ?? 0,
+//                            crossAxisAlignment: CrossAxisAlignment.start,
+                                itemBuilder: (ctx, index) => QuestionItem(
+                                  question: questions[index],
+                                ),
+                              );
+                            }
+                          },
                         ),
                       ),
-                      Divider(),
-                      BlocBuilder<QuestionCubit, QuestionState>(
-                        // ignore: missing_return
-                        builder: (context, state) {
-                          if (state is QuestionLoadingState ||
-                              state is QuestionUnInitializedState) {
-                            return Center(
-                              child: CircularProgressIndicator(),
-                            );
-                          }
-                          if (state is QuestionFetchErrorState) {
-                            return Center(
-                              child: Text(state.errorMessage),
-                            );
-                          }
-                          if (state is QuestionFetchedState) {
-                            List<Post> questions = state.posts;
-                            return ListView.separated(
-                              separatorBuilder: (c, i) => Divider(
-                                thickness: 4,
-                                color: Colors.grey.shade200,
-                              ),
-                              shrinkWrap: true,
-                              physics: ScrollPhysics(),
-                              itemCount: questions?.length ?? 0,
-//                            crossAxisAlignment: CrossAxisAlignment.start,
-                              itemBuilder: (ctx, index) => QuestionItem(
-                                question: questions[index],
-                              ),
-                            );
-                          }
-                        },
-                      )
-                    ],
-                  ),
-                ]),
+                    )
+                  ],
+                ),
                 Container(
                   height: double.infinity,
                   color: Colors.grey.shade300,
@@ -174,5 +183,10 @@ class _QuestionScreenState extends State<QuestionScreen> {
         length: 2,
       ),
     );
+  }
+
+  void _onRefresh() async {
+    await context.read<QuestionCubit>().fetchQuestions();
+    _refreshController.refreshCompleted();
   }
 }

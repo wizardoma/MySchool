@@ -1,3 +1,4 @@
+import 'package:app/application/user/user_bloc.dart';
 import 'package:app/commons/ui_helpers.dart';
 import 'package:app/presentation/events/events_screen.dart';
 import 'package:app/presentation/home/home_feeds.dart';
@@ -8,6 +9,7 @@ import 'package:app/presentation/spaces/spaces_screen.dart';
 import 'package:app/presentation/trends/trends_screen.dart';
 import 'package:app/presentation/widgets/drawer/drawer.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeScreen extends StatefulWidget {
   static const routeName = "/home";
@@ -44,6 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
     super.initState();
   }
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
-                  image: AssetImage("assets/icons/profile_photo.jpg"),
+                  image: AssetImage("assets/icons/student.png"),
 
                 )
               ),

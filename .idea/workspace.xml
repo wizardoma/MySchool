@@ -19,12 +19,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add fetch single space client">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="fix: incorrect timestamp from backend, null check for comments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/application/post/post_crud_cubit.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/post/post_crud_cubit.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/post/post.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/post/post.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_view_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_view_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/application/question/question_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/question/question_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/post/posts_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/post/posts_client.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/home_feeds.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/home/home_feeds.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/home/home_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/questions_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/questions_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/drawer/drawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/drawer/drawer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app/pubspec.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/posts/mapper/PostMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/posts/mapper/PostMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/spaces/controller/SpaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/spaces/controller/SpaceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/config/DatabaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/config/DatabaseConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +42,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="DEFNW18C21001964" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Huawei_Android_10_API_29_" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -230,14 +238,8 @@
       <workItem from="1628451539431" duration="1995000" />
       <workItem from="1628493846836" duration="1026000" />
       <workItem from="1628499087173" duration="4205000" />
-      <workItem from="1628527252836" duration="10533000" />
-    </task>
-    <task id="LOCAL-00135" summary="refractor">
-      <created>1627389348109</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1627389348109</updated>
+      <workItem from="1628527252836" duration="12868000" />
+      <workItem from="1628600697450" duration="2748000" />
     </task>
     <task id="LOCAL-00136" summary="Add chat messages screen">
       <created>1627393648258</created>
@@ -575,7 +577,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628543195431</updated>
     </task>
-    <option name="localTasksCounter" value="184" />
+    <task id="LOCAL-00184" summary="fix: incorrect timestamp from backend, null check for comments">
+      <created>1628544312065</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1628544312065</updated>
+    </task>
+    <option name="localTasksCounter" value="185" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -594,7 +603,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add base api" />
     <MESSAGE value="add university and department entity" />
     <MESSAGE value="fill signup form with server universities" />
     <MESSAGE value="use department and university id for user signup" />
@@ -619,7 +627,8 @@
     <MESSAGE value="refractor: disallow single names in name field" />
     <MESSAGE value="refractor: fetch real spaces from user" />
     <MESSAGE value="add fetch single space client" />
-    <option name="LAST_COMMIT_MESSAGE" value="add fetch single space client" />
+    <MESSAGE value="fix: incorrect timestamp from backend, null check for comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: incorrect timestamp from backend, null check for comments" />
   </component>
   <component name="WindowStateProjectService">
     <state x="392" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1628494179686">
@@ -642,30 +651,30 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="387" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1628502760719" />
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1628505163795">
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1628544647104">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1628505163795" />
+    <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1628544647104" />
     <state x="580" y="127" key="FileChooserDialogImpl" timestamp="1628494646507">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="127" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1628494646507" />
-    <state width="1557" height="183" key="GridCell.Tab.0.bottom" timestamp="1628534926917">
+    <state width="1557" height="258" key="GridCell.Tab.0.bottom" timestamp="1628557448350">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="183" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628534926917" />
-    <state width="1557" height="183" key="GridCell.Tab.0.center" timestamp="1628534926917">
+    <state width="1557" height="258" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628557448350" />
+    <state width="1557" height="258" key="GridCell.Tab.0.center" timestamp="1628557448350">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="183" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628534926917" />
-    <state width="1557" height="183" key="GridCell.Tab.0.left" timestamp="1628534926917">
+    <state width="1557" height="258" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628557448350" />
+    <state width="1557" height="258" key="GridCell.Tab.0.left" timestamp="1628557448349">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="183" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628534926917" />
-    <state width="1557" height="183" key="GridCell.Tab.0.right" timestamp="1628534926917">
+    <state width="1557" height="258" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628557448349" />
+    <state width="1557" height="258" key="GridCell.Tab.0.right" timestamp="1628557448350">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="183" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628534926917" />
+    <state width="1557" height="258" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628557448350" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -678,10 +687,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="650" y="346" key="VCS.ChangelistChooser/0.0.1600.860@0.0.1600.860" timestamp="1628502720675" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628543221597">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628544314731">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628543221597" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628544314731" />
     <state x="530" y="235" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1628494580928">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -690,10 +699,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1600.860@0.0.1600.860" timestamp="1626876457269" />
-    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1628535910969">
+    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1628601657588">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1628535910969" />
+    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1628601657588" />
     <state x="182" y="51" width="1235" height="649" key="new project wizard" timestamp="1627927781240">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

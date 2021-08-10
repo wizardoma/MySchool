@@ -8,13 +8,19 @@ class QuestionCubit extends Cubit<QuestionState> {
   QuestionCubit(this._postService) : super(QuestionUnInitializedState());
 
 
-  Future<void> fetchQuestions()async {
+  Future<QuestionState> fetchQuestions()async {
+    emit(QuestionLoadingState());
     var response = await _postService.fetchQuestions();
     if (response.isError) {
-      emit(QuestionFetchErrorState(response.errors.message));
+      var questionFetchErrorState = QuestionFetchErrorState(response.errors.message);
+      emit(questionFetchErrorState);
+      return questionFetchErrorState;
+
     }
 
-    emit(QuestionFetchedState(response.data));
+    var questionFetchedState = QuestionFetchedState(response.data);
+    emit(questionFetchedState);
+    return questionFetchedState;
   }
 
 }

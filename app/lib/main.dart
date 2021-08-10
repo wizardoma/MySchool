@@ -22,6 +22,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 /// Author: Ibekason Alexander
 
@@ -81,28 +82,30 @@ class MyApp extends StatelessWidget {
       ],
       child: Builder(
         builder: (context) {
-          return MaterialApp(
-            home: FutureBuilder(
-                future:
-                    BlocProvider.of<AuthenticationBloc>(context).checkAuth(),
-                // ignore: missing_return
-                builder: (context, snapshot) {
-                  if (snapshot.connectionState == ConnectionState.waiting) {
-                    return Scaffold(
-                      body: CircularProgressIndicator(),
-                    );
-                  } else {
-                    var state = snapshot.data as AuthenticationState;
-                    if (state is AuthenticatedState) {
-                      return HomeScreen();
+          return RefreshConfiguration(
+            child: MaterialApp(
+              home: FutureBuilder(
+                  future:
+                      BlocProvider.of<AuthenticationBloc>(context).checkAuth(),
+                  // ignore: missing_return
+                  builder: (context, snapshot) {
+                    if (snapshot.connectionState == ConnectionState.waiting) {
+                      return Scaffold(
+                        body: CircularProgressIndicator(),
+                      );
+                    } else {
+                      var state = snapshot.data as AuthenticationState;
+                      if (state is AuthenticatedState) {
+                        return HomeScreen();
+                      }
+                      if (state is NotAuthenticatedState) {
+                        return AuthScreen();
+                      }
                     }
-                    if (state is NotAuthenticatedState) {
-                      return AuthScreen();
-                    }
-                  }
-                }),
-            routes: appRoutes,
-            theme: customTheme(context.watch<ThemeCubit>().state),
+                  }),
+              routes: appRoutes,
+              theme: customTheme(context.watch<ThemeCubit>().state),
+            ),
           );
         },
       ),

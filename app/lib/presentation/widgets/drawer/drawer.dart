@@ -119,7 +119,7 @@ class HomeDrawer extends StatelessWidget {
                             child: CircleAvatar(
                               radius: 40,
                               backgroundImage: AssetImage(
-                                "assets/icons/profile_photo.jpg",
+                                "assets/icons/student.png",
                               ),
                             ),
                           ),
