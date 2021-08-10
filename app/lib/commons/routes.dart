@@ -9,7 +9,7 @@ import 'package:app/presentation/messages/direct_message_screen.dart';
 import 'package:app/presentation/messages/message_screen.dart';
 import 'package:app/presentation/notifications/notifications_screen.dart';
 import 'package:app/presentation/profile/profile_screen.dart';
-import 'package:app/presentation/questions/question_answer_screen.dart';
+import 'package:app/presentation/questions/question_answer_details_screen.dart';
 import 'package:app/presentation/spaces/space_page_screen.dart';
 import 'package:app/presentation/widgets/post_view_screen.dart';
 import 'package:flutter/material.dart';

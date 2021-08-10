@@ -17,37 +17,39 @@ class PostBottomSheet extends StatefulWidget {
 class _PostBottomSheetState extends State<PostBottomSheet> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            padding: EdgeInsets.all(defaultSpacing * 0.3),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    CloseButton(
-                      color: Colors.black54,
-                    ),
-                    if (widget.headerTitle != null) widget.headerTitle,
-                  ],
-                ),
-                Container(
-                  padding: EdgeInsets.symmetric(vertical: defaultSpacing * 0.5, horizontal: defaultSpacing),
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor,
-                    borderRadius: BorderRadius.circular(30),
+    return Scaffold(
+      body: Container(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              padding: EdgeInsets.all(defaultSpacing * 0.3),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      CloseButton(
+                        color: Colors.black54,
+                      ),
+                      if (widget.headerTitle != null) widget.headerTitle,
+                    ],
                   ),
-                  child: widget.button
-                ),
-              ],
+                  Container(
+                    padding: EdgeInsets.symmetric(vertical: defaultSpacing * 0.5, horizontal: defaultSpacing),
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).primaryColor,
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    child: widget.button
+                  ),
+                ],
+              ),
             ),
-          ),
-          kVerticalSpaceSmall,
-          widget.body,
-        ],
+            kVerticalSpaceSmall,
+            widget.body,
+          ],
+        ),
       ),
     );
   }

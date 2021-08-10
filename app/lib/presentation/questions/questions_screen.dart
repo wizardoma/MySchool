@@ -5,6 +5,7 @@ import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
 import 'package:app/domain/post/post.dart';
 import 'package:app/domain/question/question.dart';
+import 'package:app/presentation/questions/answer_question_sheet.dart';
 import 'package:app/presentation/questions/question_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -125,6 +126,8 @@ class _QuestionScreenState extends State<QuestionScreen> {
 //                            crossAxisAlignment: CrossAxisAlignment.start,
                                 itemBuilder: (ctx, index) => QuestionItem(
                                   question: questions[index],
+                                  onAnswerQuestion: () =>
+                                      _answerQuestion(questions[index]),
                                 ),
                               );
                             }
@@ -188,5 +191,17 @@ class _QuestionScreenState extends State<QuestionScreen> {
   void _onRefresh() async {
     await context.read<QuestionCubit>().fetchQuestions();
     _refreshController.refreshCompleted();
+  }
+
+  void _answerQuestion(Post question) {
+    showModalBottomSheet(
+        isScrollControlled: true,
+        enableDrag: true,
+        context: context,
+        builder: (context) {
+          return AnswerQuestionSheet(
+            question: question,
+          );
+        });
   }
 }

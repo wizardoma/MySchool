@@ -2,13 +2,16 @@ import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
 import 'package:app/domain/post/post.dart';
 import 'package:app/domain/question/question.dart';
-import 'package:app/presentation/questions/question_answer_screen.dart';
+import 'package:app/presentation/questions/answer_question_sheet.dart';
+import 'package:app/presentation/questions/question_answer_details_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class QuestionItem extends StatelessWidget {
   final Post question;
+  final Function onAnswerQuestion;
 
-  const QuestionItem({Key key, this.question}) : super(key: key);
+  const QuestionItem({Key key, this.question, this.onAnswerQuestion}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -55,16 +58,19 @@ class QuestionItem extends StatelessWidget {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Container(
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.post_add,
-                                color: Theme.of(context).primaryColor,
-                              ),
-                              Text("Answer")
-                            ],
+                        GestureDetector(
+                          onTap: onAnswerQuestion,
+                          child: Container(
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.post_add,
+                                  color: Theme.of(context).primaryColor,
+                                ),
+                                Text("Answer")
+                              ],
+                            ),
                           ),
                         ),
                         kHorizontalSpaceSmall,
@@ -111,4 +117,6 @@ class QuestionItem extends StatelessWidget {
       ),
     );
   }
+
+
 }

@@ -19,12 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add pull to refresh to question posts">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="add smartrefresher to home feeds">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/events/events_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/events/events_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/home_feeds.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/home/home_feeds.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/question_answer_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/question_answer_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/commons/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/commons/routes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/question_answer_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/question_answer_details_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/question_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/question_item.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/questions/questions_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/questions/questions_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_bottom_sheet.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_bottom_sheet.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +71,7 @@
     <property name="database.data.extractors.current.id" value="Pretty-Groovy.txt.groovy" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/lib/presentation/questions" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -86,19 +87,19 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\presentation\questions" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\commons\utils" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\assets\icons" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain\space" />
+      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain\post" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\university" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\presentation\widgets" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain\notification" />
       <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application\following" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\commons\utils" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\assets\icons" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain\space" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\domain" />
-      <recent name="C:\Users\Wizardom\PersonalProject\StudentCommunity\app\lib\application" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -231,14 +232,7 @@
       <workItem from="1628493846836" duration="1026000" />
       <workItem from="1628499087173" duration="4205000" />
       <workItem from="1628527252836" duration="12868000" />
-      <workItem from="1628600697450" duration="3931000" />
-    </task>
-    <task id="LOCAL-00137" summary="Allow entering space on trend page">
-      <created>1627394587533</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1627394587533</updated>
+      <workItem from="1628600697450" duration="5854000" />
     </task>
     <task id="LOCAL-00138" summary="use custom themedata for app theme">
       <created>1627854013337</created>
@@ -576,7 +570,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628605042421</updated>
     </task>
-    <option name="localTasksCounter" value="186" />
+    <task id="LOCAL-00186" summary="add smartrefresher to home feeds">
+      <created>1628606234412</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1628606234412</updated>
+    </task>
+    <option name="localTasksCounter" value="187" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -595,7 +596,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fill signup form with server universities" />
     <MESSAGE value="use department and university id for user signup" />
     <MESSAGE value="fix: incorrect user mapping from server" />
     <MESSAGE value="add input validators for signup and login forms" />
@@ -620,7 +620,8 @@
     <MESSAGE value="add fetch single space client" />
     <MESSAGE value="fix: incorrect timestamp from backend, null check for comments" />
     <MESSAGE value="add pull to refresh to question posts" />
-    <option name="LAST_COMMIT_MESSAGE" value="add pull to refresh to question posts" />
+    <MESSAGE value="add smartrefresher to home feeds" />
+    <option name="LAST_COMMIT_MESSAGE" value="add smartrefresher to home feeds" />
   </component>
   <component name="WindowStateProjectService">
     <state x="392" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1628494179686">
@@ -679,10 +680,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="650" y="346" key="VCS.ChangelistChooser/0.0.1600.860@0.0.1600.860" timestamp="1628502720675" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628605047427">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628606236159">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628605047427" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628606236159" />
     <state x="530" y="235" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1628494580928">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
