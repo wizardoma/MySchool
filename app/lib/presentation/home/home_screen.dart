@@ -5,6 +5,7 @@ import 'package:app/presentation/home/home_feeds.dart';
 import 'package:app/presentation/notifications/notifications_screen.dart';
 import 'package:app/presentation/post/create_post_screen.dart';
 import 'package:app/presentation/questions/questions_screen.dart';
+import 'package:app/presentation/search/search_screen.dart';
 import 'package:app/presentation/spaces/spaces_screen.dart';
 import 'package:app/presentation/trends/trends_screen.dart';
 import 'package:app/presentation/widgets/drawer/drawer.dart';
@@ -92,7 +93,7 @@ class _HomeScreenState extends State<HomeScreen> {
               color: Colors.black87,
               size: 30,
             ),
-            onPressed: null,
+            onPressed: ()=> Navigator.pushNamed(context, SearchScreen.routeName),
           ),
           kHorizontalSpaceTiny,
           IconButton(
