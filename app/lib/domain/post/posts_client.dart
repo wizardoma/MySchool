@@ -1,10 +1,9 @@
-import 'package:app/application/post/create_post_request.dart';
 import 'package:app/commons/api.dart';
 import 'package:app/domain/question/comment.dart';
+import 'package:app/domain/response.dart';
 import 'package:dio/dio.dart';
 
 import 'post.dart';
-import 'package:app/domain/response.dart';
 
 class PostClient {
   Future<ResponseEntity> fetchFeeds() async {

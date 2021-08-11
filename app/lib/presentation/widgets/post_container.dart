@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
 import '../../domain/post/post.dart';
@@ -193,7 +195,7 @@ class _PostContainerState extends State<PostContainer> {
                               width: 20,
                               height: 20,
                             ),
-                            Text("9.8K")
+                            Text(Random().nextInt(302).toString())
                           ],
                         ),
                       ),

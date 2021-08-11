@@ -19,18 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="huge refractor">
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="fix: student repository">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/commons/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/commons/routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/home/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/home/home_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/search/search_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/search/search_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/spaces/controller/SpaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/spaces/controller/SpaceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/space/services/SpaceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/space/services/SpaceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/space/services/SpaceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/space/services/SpaceServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/repository/StudentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/service/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/service/StudentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/post/posts_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/post/posts_client.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/user/user_service_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/user/user_service_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/trends/following_trends_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/trends/following_trends_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/dto/StudentDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/dto/StudentDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/mapper/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/mapper/StudentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/model/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +37,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="DEFNW18C21001964" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Huawei_Android_10_API_29_" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -239,21 +236,7 @@
       <workItem from="1628527252836" duration="12868000" />
       <workItem from="1628600697450" duration="9406000" />
       <workItem from="1628620048006" duration="15723000" />
-      <workItem from="1628657257877" duration="2441000" />
-    </task>
-    <task id="LOCAL-00142" summary="update Inversion of Control with events">
-      <created>1627893600260</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1627893600260</updated>
-    </task>
-    <task id="LOCAL-00143" summary="add events screen">
-      <created>1627915252144</created>
-      <option name="number" value="00143" />
-      <option name="presentableId" value="LOCAL-00143" />
-      <option name="project" value="LOCAL" />
-      <updated>1627915252148</updated>
+      <workItem from="1628657257877" duration="6000000" />
     </task>
     <task id="LOCAL-00144" summary="fix: copy existing style instead of overriding">
       <created>1627924318879</created>
@@ -584,7 +567,21 @@
       <option name="project" value="LOCAL" />
       <updated>1628634783275</updated>
     </task>
-    <option name="localTasksCounter" value="191" />
+    <task id="LOCAL-00191" summary="add searching user">
+      <created>1628659837042</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1628659837043</updated>
+    </task>
+    <task id="LOCAL-00192" summary="fix: student repository">
+      <created>1628660188618</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1628660188618</updated>
+    </task>
+    <option name="localTasksCounter" value="193" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -603,8 +600,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="replace lorem with user description" />
-    <MESSAGE value="refractor: Change home feeds to posts" />
     <MESSAGE value="refractor: show error message from server on sign up" />
     <MESSAGE value="make post feeds client fetch from server" />
     <MESSAGE value="add post crud operations cubit" />
@@ -628,7 +623,9 @@
     <MESSAGE value="add api for comment creating and post fetching" />
     <MESSAGE value="add fetch single post state management" />
     <MESSAGE value="huge refractor" />
-    <option name="LAST_COMMIT_MESSAGE" value="huge refractor" />
+    <MESSAGE value="add searching user" />
+    <MESSAGE value="fix: student repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: student repository" />
   </component>
   <component name="WindowStateProjectService">
     <state x="392" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1628494179686">
@@ -659,22 +656,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="127" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1628494646507" />
-    <state width="1557" height="178" key="GridCell.Tab.0.bottom" timestamp="1628636736550">
+    <state width="1557" height="185" key="GridCell.Tab.0.bottom" timestamp="1628665112888">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="178" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628636736549" />
-    <state width="1557" height="178" key="GridCell.Tab.0.center" timestamp="1628636736549">
+    <state width="1557" height="185" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628665112888" />
+    <state width="1557" height="185" key="GridCell.Tab.0.center" timestamp="1628665112887">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="178" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628636736549" />
-    <state width="1557" height="178" key="GridCell.Tab.0.left" timestamp="1628636736549">
+    <state width="1557" height="185" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628665112887" />
+    <state width="1557" height="185" key="GridCell.Tab.0.left" timestamp="1628665112887">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="178" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628636736549" />
-    <state width="1557" height="178" key="GridCell.Tab.0.right" timestamp="1628636736549">
+    <state width="1557" height="185" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628665112887" />
+    <state width="1557" height="185" key="GridCell.Tab.0.right" timestamp="1628665112887">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="178" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628636736549" />
+    <state width="1557" height="185" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628665112887" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -687,10 +684,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="650" y="346" key="VCS.ChangelistChooser/0.0.1600.860@0.0.1600.860" timestamp="1628502720675" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628634786563">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628660190405">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628634786563" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628660190405" />
     <state x="530" y="235" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1628494580928">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -699,10 +696,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1600.860@0.0.1600.860" timestamp="1626876457269" />
-    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1628625043379">
+    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1628666116006">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1628625043379" />
+    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1628666116006" />
     <state x="182" y="51" width="1235" height="649" key="new project wizard" timestamp="1627927781240">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
