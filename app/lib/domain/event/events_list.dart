@@ -43,4 +43,24 @@ List<Event> eventsList = [
         "1:00 PM – 2:00 PM WAT",
     noOfGoings: Random().nextInt(300),
   ),
+  Event(
+    name:
+        "FREE WEBSITE TRAINING FOR UNDERGRADUATES, YOUTH CORPERS AND BUSINESS OWNERS",
+    organizer: "StartWeb Africa",
+    description:
+        "You can easily make a website for your business using StartWeb! YOU DON’T HAVE TO PAY A WEB DEVELOPER "
+        "All you need is a laptop and an internet connection. "
+        "No prior knowledge is required WHAT WE’LL BE COVERING "
+        "- How to customize your website to look exactly how you want  "
+        "- How to use website templates to make your website look professional "
+        "Side Attraction - Snacks, drinks & networking opportunity! "
+        "NOTE: Please come along with a laptop & bring a friend!",
+    noOfGoings: Random().nextInt(300),
+    date: "Fri, Aug 13, 2021, 10:00 AM WAT",
+    price: "free",
+    imageUrl:
+        "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F143302879%2F532971245667%2F1%2Foriginal.20210802-091545?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C6912%2C3456&s=4ed4c91b96664524688d89cd00dba6c1",
+    id: Random().nextInt(30000).toString(),
+    location: "Emblue Space and Studios 2b Oyetola Street Ikeja, LA",
+  )
 ];

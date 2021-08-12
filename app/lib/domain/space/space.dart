@@ -1,4 +1,5 @@
 import 'package:app/domain/event/event.dart';
+import 'package:app/domain/event/events_list.dart';
 import 'package:app/domain/question/question.dart';
 import 'package:app/domain/user/user.dart';
 
@@ -21,7 +22,7 @@ class Space {
       this.imageUrl,
       this.id,
       this.spaceName,
-      this.posts ,
+      this.posts,
       this.description,
       this.questions,
       this.users,
@@ -34,9 +35,9 @@ class Space {
       id: data["id"],
       spaceName: data["name"],
       users: [],
-      events: [],
+      events: eventsList,
       questions: [],
-      posts: [],
+      posts: List.generate(6, (index) => Post.Random()),
       description: data["description"],
       imageUrl: data["imageUrl"] ??
           "https://img.freepik.com/free-vector/colorful-palm-silhouettes-background_23-2148541792.jpg?size=626&ext=jpg",

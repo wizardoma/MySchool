@@ -21,13 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="fix: student repository">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/post/posts_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/post/posts_client.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/user/user_service_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/user/user_service_impl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/trends/following_trends_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/trends/following_trends_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/widgets/post_container.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/dto/StudentDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/dto/StudentDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/mapper/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/students/mapper/StudentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/domain/students/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/event/events_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/event/events_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/space/space.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/space/space.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/auth/auth_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/auth/auth_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/search/search_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/search/search_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +233,8 @@
       <workItem from="1628527252836" duration="12868000" />
       <workItem from="1628600697450" duration="9406000" />
       <workItem from="1628620048006" duration="15723000" />
-      <workItem from="1628657257877" duration="6000000" />
+      <workItem from="1628657257877" duration="11020000" />
+      <workItem from="1628773730673" duration="1191000" />
     </task>
     <task id="LOCAL-00144" summary="fix: copy existing style instead of overriding">
       <created>1627924318879</created>
@@ -656,22 +654,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="127" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1628494646507" />
-    <state width="1557" height="185" key="GridCell.Tab.0.bottom" timestamp="1628665112888">
+    <state width="1557" height="201" key="GridCell.Tab.0.bottom" timestamp="1628674916426">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="185" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628665112888" />
-    <state width="1557" height="185" key="GridCell.Tab.0.center" timestamp="1628665112887">
+    <state width="1557" height="201" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628674916426" />
+    <state width="1557" height="201" key="GridCell.Tab.0.center" timestamp="1628674916424">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="185" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628665112887" />
-    <state width="1557" height="185" key="GridCell.Tab.0.left" timestamp="1628665112887">
+    <state width="1557" height="201" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628674916424" />
+    <state width="1557" height="201" key="GridCell.Tab.0.left" timestamp="1628674916424">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="185" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628665112887" />
-    <state width="1557" height="185" key="GridCell.Tab.0.right" timestamp="1628665112887">
+    <state width="1557" height="201" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628674916424" />
+    <state width="1557" height="201" key="GridCell.Tab.0.right" timestamp="1628674916425">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="185" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628665112887" />
+    <state width="1557" height="201" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628674916425" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

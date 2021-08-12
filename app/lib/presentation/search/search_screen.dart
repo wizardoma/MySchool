@@ -1,6 +1,7 @@
 import 'package:app/commons/api.dart';
 import 'package:app/commons/ui_helpers.dart';
 import 'package:app/domain/user/user.dart';
+import 'package:app/presentation/profile/profile_screen.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -109,6 +110,9 @@ class _SearchScreenState extends State<SearchScreen> {
                           return ListView.builder(
                             itemBuilder: (context, index) {
                               return ListTile(
+                                onTap: () => Navigator.pushNamed(
+                                    context, ProfileScreen.routeName,
+                                    arguments: {"user": users[index]}),
                                 leading: CircleAvatar(
                                   child:
                                       Image.asset("assets/icons/student.png"),
