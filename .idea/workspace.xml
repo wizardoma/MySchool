@@ -21,10 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="fix: student repository">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/event/events_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/event/events_list.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/domain/space/space.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/space/space.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/auth/auth_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/auth/auth_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/search/search_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/search/search_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/application/post/posts_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/post/posts_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/ioc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/ioc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/posts/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/posts/controller/PostController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +42,8 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="package" />
-        <option value="Dart File" />
         <option value="Class" />
+        <option value="Dart File" />
       </list>
     </option>
   </component>
@@ -235,6 +235,7 @@
       <workItem from="1628620048006" duration="15723000" />
       <workItem from="1628657257877" duration="11020000" />
       <workItem from="1628773730673" duration="1191000" />
+      <workItem from="1628853031496" duration="3623000" />
     </task>
     <task id="LOCAL-00144" summary="fix: copy existing style instead of overriding">
       <created>1627924318879</created>

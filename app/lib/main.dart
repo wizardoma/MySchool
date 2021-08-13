@@ -7,6 +7,7 @@ import 'package:app/application/post/post_crud_cubit.dart';
 import 'package:app/application/post/posts_bloc.dart';
 import 'package:app/application/notification/notification_bloc.dart';
 import 'package:app/application/question/question_bloc.dart';
+import 'package:app/application/space/space_crud_cubit.dart';
 import 'package:app/application/space/spaces_bloc.dart';
 import 'package:app/application/theme/theme_cubit.dart';
 import 'package:app/application/trends/trends_bloc.dart';
@@ -78,7 +79,11 @@ class MyApp extends StatelessWidget {
           value: (ioC.getBloc("event") as EventBloc),
         ),
         BlocProvider.value(
-            value: (ioC.getBloc("notification") as NotificationBloc))
+          value: (ioC.getBloc("notification") as NotificationBloc),
+        ),
+        BlocProvider.value(
+          value: (ioC.getCubit("space_cubit") as SpaceCrudCubit),
+        )
       ],
       child: Builder(
         builder: (context) {
