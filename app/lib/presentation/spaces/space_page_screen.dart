@@ -1,3 +1,4 @@
+import 'package:app/application/space/space_crud_cubit.dart';
 import 'package:app/application/space/spaces_bloc.dart';
 import 'package:app/application/space/spaces_event.dart';
 import 'package:app/application/space/spaces_state.dart';
@@ -39,7 +40,7 @@ class _SpacePageScreenState extends State<SpacePageScreen>
     if (!hasRun) {
       dynamic arguments = ModalRoute.of(context).settings.arguments;
       _space = arguments["space"];
-//      BlocProvider.of<SpaceBloc>(context).add(FetchSingleSpaceEvent(_space.id));
+      context.read<SpaceCrudCubit>().fetchSpaceById(_space.id);
       super.didChangeDependencies();
     }
   }
@@ -83,17 +84,23 @@ class _SpacePageScreenState extends State<SpacePageScreen>
       body: SafeArea(
         child: GestureDetector(
           onHorizontalDragEnd: _detectUserSwipe,
-          child: FutureBuilder(
-            future: _fetchSpace(),
+          child: BlocBuilder<SpaceCrudCubit, SpaceState>(
             // ignore: missing_return
-            builder: (context, snapshot) {
-              if (snapshot.connectionState!= ConnectionState.done) {
+            builder: (context, state) {
+              if (state is SpaceLoadingState ||
+                  state is SpaceStateUnInitialized) {
                 return Center(
                   child: CircularProgressIndicator(),
                 );
               }
-              if (snapshot.connectionState == ConnectionState.done) {
-                Space space = snapshot.data;
+
+              if (state is FetchSingleSpaceFailureState) {
+                return Center(
+                  child: Text("An error occurred fetching space"),
+                );
+              }
+              if (state is FetchSingleSpaceSuccessState) {
+                Space space = state.space;
                 return CustomScrollView(
                   slivers: [
                     SliverAppBar(
@@ -216,9 +223,10 @@ class _SpacePageScreenState extends State<SpacePageScreen>
                                                             onTap: _followSpace,
                                                             child: Container(
                                                               height: 40,
-                                                              padding: EdgeInsets.all(
-                                                                  defaultSpacing *
-                                                                      0.5),
+                                                              padding:
+                                                                  EdgeInsets.all(
+                                                                      defaultSpacing *
+                                                                          0.5),
                                                               decoration:
                                                                   BoxDecoration(
                                                                 border: Border.all(
@@ -231,8 +239,9 @@ class _SpacePageScreenState extends State<SpacePageScreen>
                                                                         .circular(
                                                                             20),
                                                               ),
-                                                              alignment: Alignment
-                                                                  .center,
+                                                              alignment:
+                                                                  Alignment
+                                                                      .center,
                                                               child: Row(
                                                                 crossAxisAlignment:
                                                                     CrossAxisAlignment
@@ -242,11 +251,9 @@ class _SpacePageScreenState extends State<SpacePageScreen>
                                                                         .center,
                                                                 children: [
                                                                   Text(
-
                                                                     _followText,
                                                                   ),
 //                                                  kHorizontalSpaceTiny,
-
                                                                 ],
                                                               ),
                                                             ),
@@ -357,13 +364,12 @@ class _SpacePageScreenState extends State<SpacePageScreen>
 
       var space = Space.fromServer(response.data["data"]);
       return space;
-    }
-    catch (e) {
+    } catch (e) {
       print("Exception $e");
     }
   }
 
-  Future<Space> _fetchSpace()async {
+  Future<Space> _fetchSpace() async {
     Response response;
     try {
       response = await dioClient.get(
@@ -372,8 +378,7 @@ class _SpacePageScreenState extends State<SpacePageScreen>
 
       var space = Space.fromServer(response.data["data"]);
       return space;
-    }
-    catch (e) {
+    } catch (e) {
       print("Exception $e");
     }
   }

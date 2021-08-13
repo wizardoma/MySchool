@@ -120,7 +120,7 @@ class _SpacesScreenState extends State<SpacesScreen> {
       BlocBuilder<SpaceBloc, SpaceState>(
           // ignore: missing_return
           builder: (ctx, state) {
-        if (state is SpaceStateUnInitialized || state is FetchingSpaceState) {
+        if (state is SpaceStateUnInitialized || state is SpaceLoadingState) {
           return Center(
             child: CircularProgressIndicator(),
           );

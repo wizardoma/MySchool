@@ -19,6 +19,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author Ibekason Alexander Onyebuchi
@@ -68,6 +70,13 @@ public class StudentServiceImpl extends StudentService {
     @Override
     public Student getStudentById(String id) {
         return studentRepository.findById(id).orElseThrow(() -> new StudentNotFoundException("User not found"));
+    }
+
+    @Override
+    public List<Student> search(String text) {
+        return studentRepository.findAll().stream().filter(
+                student -> student.getFullName().toLowerCase().contains(text.toLowerCase())
+        ).collect(Collectors.toList());
     }
 
     private Name extractName(String name) {

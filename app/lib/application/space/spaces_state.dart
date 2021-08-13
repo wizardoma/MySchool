@@ -4,7 +4,7 @@ abstract class SpaceState {}
 
 class SpaceStateUnInitialized extends SpaceState {}
 
-class FetchingSpaceState extends SpaceState {}
+class SpaceLoadingState extends SpaceState {}
 
 class FetchSpaceStateSuccess extends SpaceState {
   final List<Space> spaces;

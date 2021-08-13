@@ -25,6 +25,8 @@ public class Student {
     
     private String description;
 
+    private String mobileNumber;
+
 
     private  String matricNo;
 

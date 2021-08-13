@@ -33,8 +33,8 @@ public class Post {
     private String imageUrl;
 
     private String title;
-
-
+    
+    @Column(name = "body", length = 3000)
     private String body;
 
     private LocalDateTime postDate = LocalDateTime.now();

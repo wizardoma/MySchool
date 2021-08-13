@@ -10,9 +10,11 @@ public class StudentDto {
     private String name;
     private String matricNo;
     private String description;
+    private String mobileNumber;
     private String imageUrl;
     private String university;
     private String department;
     private String level;
     private String email;
+
 }

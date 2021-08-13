@@ -44,6 +44,7 @@ public class PostController {
 
     @GetMapping("")
     public ResponseEntity<?> getFeeds() {
+
         return ok(postService.getFeeds().stream().map((PostMapper::toDto)).collect(Collectors.toList()));
     }
 

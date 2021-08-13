@@ -14,6 +14,7 @@ public class StudentMapper {
                 .setName(student.getFullName())
                 .setImageUrl(student.getProfileUrl())
                 .setMatricNo(student.getMatricNo())
+                .setMobileNumber(student.getMobileNumber())
                 .setDescription(student.getDescription())
                 .setDepartment(student.getDepartment().getName())
                 .setEmail(student.getEmail())

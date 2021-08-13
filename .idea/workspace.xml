@@ -19,12 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="fix: student repository">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/application/post/posts_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/post/posts_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/ioc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/ioc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/posts/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/wizardom/backend/application/posts/controller/PostController.java" afterDir="false" />
+    <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="Add space crud operatons application layer">
+      <change beforePath="$PROJECT_DIR$/app/lib/application/space/spaces_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/space/spaces_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/application/space/spaces_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/space/spaces_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,14 +234,7 @@
       <workItem from="1628620048006" duration="15723000" />
       <workItem from="1628657257877" duration="11020000" />
       <workItem from="1628773730673" duration="1191000" />
-      <workItem from="1628853031496" duration="3623000" />
-    </task>
-    <task id="LOCAL-00144" summary="fix: copy existing style instead of overriding">
-      <created>1627924318879</created>
-      <option name="number" value="00144" />
-      <option name="presentableId" value="LOCAL-00144" />
-      <option name="project" value="LOCAL" />
-      <updated>1627924318879</updated>
+      <workItem from="1628853031496" duration="4165000" />
     </task>
     <task id="LOCAL-00145" summary="Add event details screen">
       <created>1627924356549</created>
@@ -580,7 +572,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628660188618</updated>
     </task>
-    <option name="localTasksCounter" value="193" />
+    <task id="LOCAL-00193" summary="Add space crud operatons application layer">
+      <created>1628860049117</created>
+      <option name="number" value="00193" />
+      <option name="presentableId" value="LOCAL-00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1628860049119</updated>
+    </task>
+    <option name="localTasksCounter" value="194" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -599,7 +598,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refractor: show error message from server on sign up" />
     <MESSAGE value="make post feeds client fetch from server" />
     <MESSAGE value="add post crud operations cubit" />
     <MESSAGE value="add ability to create post" />
@@ -624,7 +622,8 @@
     <MESSAGE value="huge refractor" />
     <MESSAGE value="add searching user" />
     <MESSAGE value="fix: student repository" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: student repository" />
+    <MESSAGE value="Add space crud operatons application layer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add space crud operatons application layer" />
   </component>
   <component name="WindowStateProjectService">
     <state x="392" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1628494179686">
@@ -655,22 +654,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="127" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1628494646507" />
-    <state width="1557" height="201" key="GridCell.Tab.0.bottom" timestamp="1628674916426">
+    <state width="1557" height="2" key="GridCell.Tab.0.bottom" timestamp="1628860528159">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="201" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628674916426" />
-    <state width="1557" height="201" key="GridCell.Tab.0.center" timestamp="1628674916424">
+    <state width="1557" height="2" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1628860528159" />
+    <state width="1557" height="2" key="GridCell.Tab.0.center" timestamp="1628860528159">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="201" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628674916424" />
-    <state width="1557" height="201" key="GridCell.Tab.0.left" timestamp="1628674916424">
+    <state width="1557" height="2" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1628860528159" />
+    <state width="1557" height="2" key="GridCell.Tab.0.left" timestamp="1628860528158">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="201" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628674916424" />
-    <state width="1557" height="201" key="GridCell.Tab.0.right" timestamp="1628674916425">
+    <state width="1557" height="2" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1628860528158" />
+    <state width="1557" height="2" key="GridCell.Tab.0.right" timestamp="1628860528159">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="201" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628674916425" />
+    <state width="1557" height="2" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1628860528159" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1624250579299">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -683,10 +682,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="650" y="346" key="VCS.ChangelistChooser/0.0.1600.860@0.0.1600.860" timestamp="1628502720675" />
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628660190405">
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2" timestamp="1628860052349">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628660190405" />
+    <state x="392" y="163" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1628860052349" />
     <state x="530" y="235" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1628494580928">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

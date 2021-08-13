@@ -11,6 +11,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.stream.Collectors;
+
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("students")
@@ -28,6 +30,11 @@ public class StudentController {
     public ResponseEntity<?> getUser(@PathVariable("id") String id) {
         Student student = studentService.getStudentById(id);
         return ok(StudentMapper.toDto(student));
+    }
+
+    @GetMapping("search/{text}")
+    public ResponseEntity<?> searchUser(@PathVariable String text){
+        return ok(studentService.search(text).stream().map(StudentMapper::toDto).collect(Collectors.toList()));
     }
 
 }

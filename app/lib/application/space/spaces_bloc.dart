@@ -28,12 +28,12 @@ class SpaceBloc extends Bloc<SpaceEvent, SpaceState> {
   @override
   Stream<SpaceState> mapEventToState(SpaceEvent event) async* {
     if (event is FetchSpaceByUserEvent) {
-      yield FetchingSpaceState();
+      yield SpaceLoadingState();
       yield await fetchSpacesByUser(event.userId);
     }
 
     if (event is FetchSingleSpaceEvent){
-      yield FetchingSpaceState();
+      yield SpaceLoadingState();
       yield await fetchSpaceById(event.spaceId);
     }
   }
