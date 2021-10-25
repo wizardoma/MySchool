@@ -83,6 +83,7 @@ class PostClient {
     } catch (e) {
       print("Exception $e");
       return ResponseEntity.Error(
+
           "An error occurred creating a comment, please try again later");
     }
 

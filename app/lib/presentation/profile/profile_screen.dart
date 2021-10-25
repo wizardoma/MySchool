@@ -1,6 +1,5 @@
 import 'package:app/commons/styles.dart';
 import 'package:app/commons/ui_helpers.dart';
-import '../../domain/post/post.dart';
 import 'package:app/domain/user/user.dart';
 import 'package:flutter/material.dart';
 

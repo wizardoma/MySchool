@@ -98,14 +98,14 @@ class _AuthScreenState extends State<AuthScreen> {
                   ),
                 ),
                 kVerticalSpaceSmall,
-//                SocialMediaLoginContainer(
-//                    image: "assets/icons/google.png",
-//                    title: "Continue with Google",
-//                    onTap: _googleSignIn),
-//                kVerticalSpaceSmall,
-//                SocialMediaLoginContainer(
-//                    image: "assets/icons/facebook.png",
-//                    title: "Continue with Facebook"),
+                SocialMediaLoginContainer(
+                    image: "assets/icons/google.png",
+                    title: "Continue with Google",
+                    onTap: _googleSignIn),
+                kVerticalSpaceSmall,
+                SocialMediaLoginContainer(
+                    image: "assets/icons/facebook.png",
+                    title: "Continue with Facebook"),
                 kVerticalSpaceSmall,
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

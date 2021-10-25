@@ -20,10 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de0917c2-71f0-4a66-a277-36e84dd12058" name="Default Changelist" comment="Add space crud operatons application layer">
-      <change beforePath="$PROJECT_DIR$/app/lib/application/space/spaces_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/space/spaces_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/application/space/spaces_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/application/space/spaces_state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/space_page_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/spaces/spaces_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/domain/post/posts_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/domain/post/posts_client.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/ioc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/ioc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/auth/auth_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/auth/auth_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/presentation/profile/profile_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/presentation/profile/profile_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/pubspec.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +35,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Huawei_Android_10_API_29_" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="DEFNW18C21001964" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -234,7 +236,24 @@
       <workItem from="1628620048006" duration="15723000" />
       <workItem from="1628657257877" duration="11020000" />
       <workItem from="1628773730673" duration="1191000" />
-      <workItem from="1628853031496" duration="4165000" />
+      <workItem from="1628853031496" duration="7487000" />
+      <workItem from="1628921196777" duration="468000" />
+      <workItem from="1630402231183" duration="4621000" />
+      <workItem from="1630470144486" duration="555000" />
+      <workItem from="1630517375582" duration="2197000" />
+      <workItem from="1630522822072" duration="2383000" />
+      <workItem from="1630617834567" duration="1383000" />
+      <workItem from="1630658174388" duration="2054000" />
+      <workItem from="1630694018960" duration="557000" />
+      <workItem from="1631105585544" duration="1051000" />
+      <workItem from="1631118247814" duration="829000" />
+      <workItem from="1631124691065" duration="1711000" />
+      <workItem from="1631129226554" duration="470000" />
+      <workItem from="1631169313626" duration="23000" />
+      <workItem from="1631174049395" duration="2638000" />
+      <workItem from="1634879487842" duration="2082000" />
+      <workItem from="1635056568060" duration="2505000" />
+      <workItem from="1635144939760" duration="1384000" />
     </task>
     <task id="LOCAL-00145" summary="Add event details screen">
       <created>1627924356549</created>
@@ -694,10 +713,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="413" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1600.860@0.0.1600.860" timestamp="1626876457269" />
-    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1628666116006">
+    <state x="510" y="172" width="579" height="568" key="find.popup" timestamp="1631176424704">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1628666116006" />
+    <state x="510" y="172" width="579" height="568" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1631176424704" />
     <state x="182" y="51" width="1235" height="649" key="new project wizard" timestamp="1627927781240">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
